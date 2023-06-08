@@ -5,7 +5,7 @@
 - Tomas Soliz: soy un chico de 24, de Buenos Aires, Villa Celina que me gusta mucho aprender y entender las cosas
 
 - Ludmila Miceli : Vivo en Cañuelas, tengo 27 años. Me gustan los gatos y los shooters  aunque soy malisima. Aguante estudiar! Gracias Fundacion Formar :D
-- Ezequiel Paredes
+- Ezequiel Paredes : tengo 24 años, vivo en CABA, Constitución. Me gusta la ciencia ficcion, los videojuegos y aprender cosas nuevas.
 - Gaston Cane
 - Matias Naizke 
 
