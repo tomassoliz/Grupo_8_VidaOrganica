@@ -1,4 +1,4 @@
-# Nombre del Dietetica 
+# Nombre del proyecto: Vida Orgánica
 
 ## Nombre de integrantes
 
