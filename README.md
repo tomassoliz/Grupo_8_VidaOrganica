@@ -6,7 +6,7 @@
 
 - Ludmila Miceli : Vivo en Cañuelas, tengo 27 años. Me gustan los gatos y los shooters  aunque soy malisima. Aguante estudiar! Gracias Fundacion Formar :D
 - Ezequiel Paredes : tengo 24 años, vivo en CABA, Constitución. Me gusta la ciencia ficcion, los videojuegos y aprender cosas nuevas.
-- Gaston Cane
+- Gaston Cane: tengo 38 años, Vivo en la Ciudad de Córdoba, provincia de Córdoba. Soy una persona curiosa que le guta investigar a profundidad diversos temas, principamente ciencia y tenologia
 - Matias Naizke 
 
 - Proyecto E-commerce de una Dietetica -
