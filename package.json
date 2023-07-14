@@ -1,0 +1,15 @@
+{
+  "name": "grupo_8_proyectointegrador",
+  "version": "1.0.0",
+  "description": "- Tomas Soliz: soy un chico de 24, de Buenos Aires, Villa Celina que me gusta mucho aprender y entender las cosas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
