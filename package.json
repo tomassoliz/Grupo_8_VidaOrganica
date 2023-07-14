@@ -5,12 +5,19 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+<<<<<<< HEAD
     "start": "node app.js"
+=======
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+>>>>>>> 92d202a7c21893c3d550f3eb431db43c2906e83f
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "node": "^20.4.0",
+    "nodemon": "^3.0.1"
   }
 }
