@@ -4,7 +4,8 @@
   "description": "- Tomas Soliz: soy un chico de 24, de Buenos Aires, Villa Celina que me gusta mucho aprender y entender las cosas",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
