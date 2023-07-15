@@ -1,13 +1,14 @@
 main {
-
+    font-family: 'Cormorant Garamond', serif;
+    
 }
 
 .cabecera {
-
+    
 }
 
 h2 {
-
+    text-align: center;
 }
 
 p {
@@ -15,7 +16,7 @@ p {
 }
 
 .formulario {
-
+    font-family: 'Nanum Myeongjo', serif;
 }
 
 /* p {
@@ -25,7 +26,7 @@ p {
 /* DIV INPUTS */
 
 .inputs {
-
+    box-shadow: 3px saddlebrown;
 }
 
 button {
