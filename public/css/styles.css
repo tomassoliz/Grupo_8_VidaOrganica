@@ -1,3 +1,13 @@
+<<<<<<< HEAD
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+=======
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+>>>>>>> 3f553d5a0899552d8d62ad16c6c4a25a12494573
 @import 'vars.css';
 @import 'register.css';
+@import 'general.css';
+@import 'main.css'
+
+

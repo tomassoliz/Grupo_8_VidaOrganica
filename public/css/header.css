@@ -6,7 +6,6 @@
     width: 100%;
     display: flex;
 
-
 }
 .header__section .header__section--logo img{
     width: 40%;
@@ -15,3 +14,4 @@
  .header__section--ic i{
     margin-top: 20px;
 }
+

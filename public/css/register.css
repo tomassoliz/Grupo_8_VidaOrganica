@@ -18,17 +18,21 @@ p {
 .formulario {
     font-family: 'Nanum Myeongjo', serif;
 }
+/* FORMULARIO COMPLETO */
 
-/* p {
- dentro de formulario   
-}*/
+.column {
+    
+}
 
 /* DIV INPUTS */
 
 .inputs {
     box-shadow: 3px saddlebrown;
+    background-color: beige;
 }
-
+.inputs .col-8 {
+    margin-bottom: 5px;
+}
 button {
     background-color: var(--bbgc)
 }
