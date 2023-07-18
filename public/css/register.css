@@ -10,6 +10,10 @@ main .titular {
     text-align: center;
 }
 
+.cabecera p {
+    margin-top: 5%;
+}
+
 h2 {
     text-align: center;
     margin: 0;
@@ -17,6 +21,7 @@ h2 {
 
 p {
     font-size: 10px;
+    padding-left: 3%;
 }
 
 /* FORMULARIO COMPLETO */
@@ -24,6 +29,7 @@ p {
 .formulario {
     display: flex;
     flex-direction: column;
+    margin-top: 10%;
 }
 
 .formulario p {
@@ -40,14 +46,17 @@ p {
     margin: 0;
 }
 
+.newsletter {
+    display: flex;
+}
 
 /* DIV INPUTS */
 
 .formu {
-    background-color: var(--colorNaranja);
+    background-color: rgb(195, 239, 195);
     width: 95%;
     margin: 0 auto;
-    padding: 10px;
+    padding: 2%;
     font-size: 15px;
 }
 
@@ -64,5 +73,5 @@ button {
     border-radius: 10px;
     width: 45%;
     height: auto;
-    margin: 10px auto;
+    margin: 10% auto;
 }
