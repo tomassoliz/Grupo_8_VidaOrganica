@@ -1,38 +1,68 @@
-main {
+main .titular {
     font-family: 'Cormorant Garamond', serif;
-    
+    text-align: center;
+    margin: 10px;
 }
 
 .cabecera {
-    
+    margin-top: 10%;
+    padding: 10px;
+    text-align: center;
 }
 
 h2 {
     text-align: center;
+    margin: 0;
 }
 
 p {
-
+    font-size: 10px;
 }
 
-.formulario {
-    font-family: 'Nanum Myeongjo', serif;
-}
 /* FORMULARIO COMPLETO */
 
-.column {
-    
+.formulario {
+    display: flex;
+    flex-direction: column;
 }
+
+.formulario p {
+    margin: 3% 0
+}
+
+.formulario .newsletter {
+    font-size: 13px;
+    margin-top: 3%;
+}
+
+.formulario .newsletter input{
+    width: 10%;
+    margin: 0;
+}
+
 
 /* DIV INPUTS */
 
-.inputs {
-    box-shadow: 3px saddlebrown;
-    background-color: beige;
+.formu {
+    background-color: var(--colorNaranja);
+    width: 95%;
+    margin: 0 auto;
+    padding: 10px;
+    font-size: 15px;
 }
-.inputs .col-8 {
-    margin-bottom: 5px;
+
+input {
+    display: block;
+    width: 97%;
+    margin: 0 auto;
+    padding: 5px;
+    border-radius: 13px;
 }
+
 button {
-    background-color: var(--bbgc)
+    background-color: rgb(38, 167, 38);
+    border-radius: 10px;
+    width: 45%;
+    height: auto;
+    margin: 10px auto;
 }
