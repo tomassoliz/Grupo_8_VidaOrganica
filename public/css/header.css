@@ -306,6 +306,13 @@ opacity: 1;
 }
 .menu{
     display: flex;
-    justify-content: space-between;
-    
+
 }
+.header__section .header__section--logo img{
+    width: 40%;
+    margin-left: 28%;
+}
+ .header__section--ic i{
+    margin-top: 20px;
+}
+
