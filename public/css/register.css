@@ -1,38 +1,34 @@
 main {
-    font-family: 'Cormorant Garamond', serif;
-    
+
 }
 
 .cabecera {
-    
+
 }
 
 h2 {
-    text-align: center;
+
 }
 
 p {
 
+padding-left: 20px;
 }
 
 .formulario {
-    font-family: 'Nanum Myeongjo', serif;
-}
-/* FORMULARIO COMPLETO */
 
-.column {
-    
 }
+
+/* p {
+ dentro de formulario   
+}*/
 
 /* DIV INPUTS */
 
 .inputs {
-    box-shadow: 3px saddlebrown;
-    background-color: beige;
+
 }
-.inputs .col-8 {
-    margin-bottom: 5px;
-}
+
 button {
     background-color: var(--bbgc)
 }
