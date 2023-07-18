@@ -13,4 +13,5 @@ app.get('/header',(req,res) => res.sendFile(path.join(__dirname,'src/partials','
 app.get('/main',(req,res) => res.sendFile(path.join(__dirname,'src/partials','main.html'))) 
 app.get('/footer',(req,res) => res.sendFile(path.join(__dirname,'src/partials','footer.html'))) 
 
+
 app.listen(PORT, () => console.log(`Server running in http://localhost:${PORT}`));
