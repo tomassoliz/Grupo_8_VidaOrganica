@@ -2,4 +2,7 @@
 
 @import 'vars.css';
 @import 'register.css';
-@import'/css/header.css'
+@import'/css/header.css';
+@import 'main.css';
+@import 'general.css';
+

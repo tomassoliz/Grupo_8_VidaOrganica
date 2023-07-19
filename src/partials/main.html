@@ -4,12 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <link rel="stylesheet" href="/css/header2.css">
-    <script src="https://kit.fontawesome.com/32097754da.js" crossorigin="anonymous"></script>
-
-    <title>Document</title>
-=======
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js" defer></script>
@@ -17,29 +11,9 @@
     <script src="https://kit.fontawesome.com/89495ba4f7.js" crossorigin="anonymous" defer></script>
 
     <title>Main home</title>
->>>>>>> 4d9c6ae62cabefa48053a00b701ea1be92f3d41e
 </head>
 
 <body>
-<<<<<<< HEAD
-    <header class="home_header">
-        <nav class="header__nav--1">
-            <button class="header__nav--bt"><i class="fa-solid fa-bars fa-2xl" style="color: #20783d;"></i></i></button>
-            <img src="/img/logo.png" alt="log0 de la pagina">
-            <a href=""><i class="fa-solid fa-cart-shopping fa-2xl carrito_nav" style="color: #22783d;"></i></a>
-            <a href=""><i class="fal fa-user" style="color: #1e783d;"></i></a>
-            <a href=""><i class="far fa-map-marker-question" style="color: #20783d;"></i></a>
-            
-        </nav>
-            <div class="header__nav--form">
-                <form action="">
-                    <input type="text" class="icono" placeholder="Buscar productos" /> 
-                    <button class="header__nav--bt2" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl" style="color:#20783d"></i></button>
-                </form>
-            </div>
-         
-    </header>
-=======
     <main>
         <div class="swiper mySwiper container-swiper">
             <div class="swiper-wrapper ">
@@ -54,11 +28,9 @@
                 <div class="swiper-slide"><img class="imagen_carousel" src="/img/bebidas.jpg" alt=""></div>
                 <div class="swiper-slide"><img class="imagen_carousel" src="/img/images.jpg" alt=""></div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
         </div>
-        <div class="swiper mySwiper container-swiper">
+        <div class="swiper mySwiper container-swiper-envios">
             <div class="swiper-wrapper ">
                 <div class="swiper-slide">
                     <div class="envios">
@@ -97,34 +69,32 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div> -->
             <div class="swiper-pagination"></div>
         </div>
 
-        <div class="container-envios">
-            <div class="envios">
+        <div class="container-envios-secundario">
+            <div class="envios-secundario">
                 <i class="fa-solid fa-truck-fast fa-2xl icono"></i>
                 <div class="container-descripcion">
                     <h4 class="h4-descripcion">Envíos Gratis</h4>
                     <p class="parrafo_descripcion">$8000 (CABA/GBA), $8000 (Interior)*</p>
                 </div>
             </div>
-            <div class="envios">
+            <div class="envios-secundario">
                 <i class="fa-regular fa-credit-card fa-2xl icono"></i>
                 <div class="container-descripcion">
                     <h4 class="h4-descripcion">Tarjetas</h4>
                     <p class="parrafo_descripcion">Aceptamos todos los medios de pago</p>
                 </div>
             </div>
-            <div class="envios">
+            <div class="envios-secundario">
                 <i class="fa-regular fa-heart fa-2xl icono"></i>
                 <div class="container-descripcion">
                     <h4 class="h4-descripcion">Control de Calidad</h4>
                     <p class="parrafo_descripcion">Ofrecemos amplios productos en stock y de calidad</p>
                 </div>
             </div>
-            <div class="envios">
+            <div class="envios-secundario">
                 <i class="fa-solid fa-shield-halved fa-2xl icono"></i>
                 <div class="container-descripcion">
                     <h4 class="h4-descripcion">Compra Segura</h4>
@@ -142,12 +112,12 @@
             <div class="flex">
                 <div class="container_imagenes_main"><img class="imagen_main" src="/img/cosmetica-natural.jpeg" alt="">
                 </div>
-                <div class="container_imagenes_main"><img class="imagen_main" src="/img/bebidas.jpg" alt=""></div>
+                <div class="container_imagenes_main"><img class="imagen_main-none" src="/img/bebidas.jpg" alt=""></div>
             </div>
         </section>
         <div class="container-articulo">
             <h2>destacados</h2>
-            <div class="swiper mySwiper container-swiper">
+            <div class="swiper mySwiper container-swiper-destacados">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <section class="container-articulo-section">
@@ -230,12 +200,13 @@
                         </section>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
         <div class="container-articulo">
             <h2>novedades</h2>
-            <div class="swiper mySwiper container-swiper">
+            <div class="swiper mySwiper container-swiper-novedades">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <section class="container-articulo-section">
@@ -318,8 +289,9 @@
                         </section>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-            <div class="swiper-pagination"></div>
         </div>
 
         <div class="container_div_pie">
@@ -331,7 +303,6 @@
             <button class="button_pie">seguinos</button>
         </div>
     </main>
->>>>>>> 4d9c6ae62cabefa48053a00b701ea1be92f3d41e
 </body>
 
 </html>
