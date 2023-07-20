@@ -3,7 +3,7 @@
     width: 100vw;
     padding: 0;
     margin: 0;
-    background-color: rgb(199, 199, 159);
+    background-color: #ffff;
 }
 .carrito__main {
     width: 100vw;
@@ -18,9 +18,10 @@
 .carrito__main_section-product{
     display: flex;
     width: 90%;
-    background-color: rgb(199, 199, 159);
+    background-color: rgba(104, 189, 76, 0.767);
     margin-left: 5%;
     margin-bottom: 2%;
+    border-radius: 5px;
 }
 
 .carrito__main_section-product img{
@@ -56,8 +57,8 @@
     }
      */
 }
-
-@media (min-width: 769px),(max-height: 1279px) {
+/* smarthphone - tablet */
+@media (min-width: 769px)/* ,(max-height: 1279px)  */{
     .carrito__main_section-product img{
         width: 90px;
         height: 90px;   
@@ -78,9 +79,10 @@
 
     label.unit{
         margin-left: 2%;
-        width: 15%;
+        width: 10%;
     }
     p.precio {
+        display: flex;
         font-size: 23px;
         margin-left: 2%;
     }
@@ -92,13 +94,28 @@
     .precio-t{
         font-size: 35px;
     }
-
+    .pay-method {
+    }
 
     .pay-explore{
-        font-size: 20%;
+        
+    }
+
+    .boton_explore {
+        border: solid #245c7c;
+        border-radius: 10px;
+        background-color: rgb(111, 222, 75);
+    
+    }
+    button.boton_pagar{
+        font-size: 35px;
+        border: solid #245c7c;
+        background-color: rgb(111, 222, 75);
+        border-radius: 10px;
+        padding: 10px;
     }
 }
-
+/* ////////////////////////////////////////// */
 
 /* .unit-selector{
     background-color: #e09850;
@@ -109,7 +126,10 @@
     background-color: #e09850;
     border-radius: 15px; 
 } */
+/* //////////////////////////////////////////////// */
+@media (min-width: 769px){
 
+}
 .carrito__main_section-product select{
     display: inline-block;
     background-color: #e09850;
@@ -137,6 +157,7 @@
     justify-content: space-between;
     background-color: beige;
     padding-left: 10px;
+    border:solid rgb(111, 222, 75);
 }
 
 .precio-t {
@@ -151,23 +172,20 @@
     height: 25%;
 } */
 .carrito__main_section_pago{
-/* background-color: rgb(71, 168, 136); */
-background-color: rgb(199, 199, 159)
+/* background-color: rgb(199, 199, 159) */
+background-color: #ffff;
 }
-/* .carrito__main_section-pago{
-
-} */
 
 div.carrito__main_section-pago-botones {
     width: 100%;
     height: 30vh;
 };
-/* .pay-method {
+.pay-method {
     display: flex;
     width: 200px;
     margin-top: 20px;
-    margin-bottom: 40px; 
-} */
+    margin-bottom: 40px;
+}
 
 ul {
     display: flex;
@@ -187,16 +205,17 @@ li {
 
 a.boton{
     text-decoration: none;
+    font-size: 20px;
 }
 
 .boton_explore {
     border: solid #245c7c;
     border-radius: 10px;
-    background-color: #6eb98d;
+    background-color: rgb(111, 222, 75);
 
 }
 button.boton_pagar{
-    background-color: #48f576;
+    background-color: rgb(111, 222, 75);
     border-radius: 5px;
     padding: 10px;
 }
