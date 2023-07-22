@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+
+.footer__novedades h2{
+    font-size: 1.6rem;
+    font-family: 'Times New Roman', Times, serif;
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-right: 1em
+
+}
+
+.footer__novedades__email input{
+    width: 73vw;
+    padding: 0px 50px 0px 20px;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 13px;
+    border: solid 1px black;
+    position: relative;
+    left: 39px;
+    background-color: white;
+}
+
+.footer__novedades__email button {
+    width: 3vw;
+    padding: 0px 20px 0px 5px;
+    height: 30px;
+    position: relative;
+    right: 10px;
+    top: 4px;
+    border: none;
+    font-size: 30px;
+    background: none;
+}
