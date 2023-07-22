@@ -1,8 +1,3 @@
-main .titular {
-    font-family: 'Cormorant Garamond', serif;
-    text-align: center;
-    margin: 10px;
-}
 
 .cabecera {
     margin-top: 10%;
@@ -10,8 +5,13 @@ main .titular {
     text-align: center;
 }
 
+.cabecera i {
+    color: rgb(38, 167, 38);
+}
+
 .cabecera p {
-    margin-top: 5%;
+    margin-top: 15%;
+    margin-bottom: 0;
 }
 
 h2 {
@@ -20,8 +20,7 @@ h2 {
 }
 
 p {
-    font-size: 10px;
-    padding-left: 3%;
+    font-size: 15px;
 }
 
 /* FORMULARIO COMPLETO */
@@ -33,39 +32,40 @@ p {
 }
 
 .formulario p {
-    margin: 3% 0
+    padding-left: 3%;
 }
-
-.formulario .newsletter {
-    font-size: 13px;
-    margin-top: 3%;
-}
-
-.formulario .newsletter input{
-    width: 10%;
-    margin: 0;
-}
-
-.newsletter {
-    display: flex;
-}
-
-/* DIV INPUTS */
 
 .formu {
     background-color: rgb(195, 239, 195);
-    width: 95%;
+    width: 99%;
     margin: 0 auto;
     padding: 2%;
     font-size: 15px;
+    flex-wrap: wrap;
+}
+
+.espacio {
+    padding-bottom: 15px;
 }
 
 input {
     display: block;
     width: 97%;
     margin: 0 auto;
-    padding: 5px;
+    padding: 8px;
     border-radius: 13px;
+}
+
+.formulario .newsletter {
+    display: flex;
+    font-size: 13px;
+    margin-top: 3%;
+    padding-left: 3%;
+}
+
+.formulario .newsletter input{
+    width: 10%;
+    margin: 0;
 }
 
 button {
@@ -75,3 +75,4 @@ button {
     height: auto;
     margin: 10% auto;
 }
+
