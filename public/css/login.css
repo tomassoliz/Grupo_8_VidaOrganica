@@ -1,0 +1,76 @@
+
+
+h2 {
+    text-align: center;
+    height: 30px;
+    margin: 20% auto 5%;
+    padding: 2%;
+}
+
+
+.formulario p {
+    font-size: 12px;
+}
+
+.formulario .inputs .formu {
+    height: 20%;
+    margin-top: 5%;
+}
+
+
+.formulario .inputs .formu .espacio {
+    padding-bottom: 17px;
+}
+
+.formulario .inputs .formu .espacio input {
+    display: block;
+    width: 95%;
+    margin: 2px auto;
+    padding: 8px;
+    border-radius: 13px;
+}
+
+.formulario .inputs .formu .espacio p {
+    display: inline;
+    color: red;
+    padding-left: 1%;
+}
+
+.formulario .inputs .formu a {
+    color: green;
+    padding-left: 9%;
+}
+
+.formulario .btn {
+    text-align: center;
+    height: 65px;
+    width: 100%;
+}
+
+.formulario .btn button {
+    background-color: rgb(38, 167, 38);
+    border-radius: 10px;
+    width: 60%;
+    height: 30px;
+    margin: 10% auto; 
+}
+
+.formulario .extra .register {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+}
+
+.formulario .extra .register p {
+    margin-top: 5%;
+    margin-right: 10px;
+    color: black;
+    font-size: 14px;
+    text-align: center;
+}
+
+.formulario .extra .register a {
+    color: green;
+    margin-top: 5%;
+    font-size: 14px;
+}

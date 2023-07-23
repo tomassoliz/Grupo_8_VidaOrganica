@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/login.css">
+    <script src="https://kit.fontawesome.com/7645f80506.js" crossorigin="anonymous"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <main>
+        <!-- CABECERA -->
+
+        <h2>Iniciá Sesión</h2>
+
+        <!-- FORMULARIO -->
+
+        <section class="formulario">
+            <p>Los campos con (*) son obligatorios</p>
+            <div class="inputs">
+                <form class="formu" method="">
+                    <div class="espacio">
+                        <label for="email">E-mail<p>*</p></label>
+                        <input type="email" id="email" name="email" placeholder="Ej: mariaperez@mercadoliebre.com">
+                    </div>
+
+                    <div class="espacio">
+                        <label for="password">Contraseña<p>*</p></label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+
+                    <div class="user">
+                        <label for="user">Recordar mi usuario</label>
+                        <input type="checkbox" value="Suscripción">
+                        <a href="">¿Olvidaste tu contraseña?</a>
+                    </div>
+
+                    
+                </form>
+            </div>
+            <div class="btn">
+                <button type="submit"><b>INICIAR SESIÓN</b></button>
+            </div>
+            <section class="extra">
+                <div class="register">
+                    <p>¿No tenés cuenta aún?</p><a href="/src/views/register.html">Creá una</a>
+                </div>
+            </section>
+
+        </section>
+    </main>
+</body>
+
+</html>
