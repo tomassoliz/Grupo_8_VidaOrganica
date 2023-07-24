@@ -1,0 +1,224 @@
+/* MAIN */
+.carrito__body {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    background-color: #ffff;
+}
+.carrito__main {
+    width: 100vw;
+    margin-top: 20px;
+    height: 80vh;
+};
+
+.carrito__main_section{
+    width: 100vw;
+}
+
+.carrito__main_section-product{
+    display: flex;
+    width: 90%;
+    background-color: rgba(104, 189, 76, 0.767);
+    margin-left: 5%;
+    margin-bottom: 2%;
+    border-radius: 5px;
+}
+
+.carrito__main_section-product img{
+    width: 50px;
+    height: 50px;
+    border: #245c7c;
+    border-style: double;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.carrito__main_section-product h4{
+    width: 30%;
+    height: 80%;
+    background-color: #e09850;
+    border-radius: 15px;
+}
+
+@media (max-width: 481px),(max-height: 768px){
+    /* .carrito__main_section-product h4{
+        width: 30%;
+        height: 80%;
+        background-color: #e09850;
+        border-radius: 15px;
+    } */
+/*     .carrito__main_section-product img{
+        width: 50px;
+        height: 50px;
+        border: #245c7c;
+        border-style: double;
+        border-radius: 50%;
+        background-color: white;
+    }
+     */
+}
+/* smarthphone - tablet */
+@media (min-width: 769px)/* ,(max-height: 1279px)  */{
+    .carrito__main_section-product img{
+        width: 90px;
+        height: 90px;   
+    }
+
+    .carrito__main_section-product h4{
+        width: 50%;
+        height: 80%;
+        background-color: #e09850;
+        border-radius: 15px;
+        font-size: 20px;
+    }
+
+    .carrito__main_section-product select{
+        font-size: 18px;
+        width: 100%;
+    }
+
+    label.unit{
+        margin-left: 2%;
+        width: 10%;
+    }
+    p.precio {
+        display: flex;
+        font-size: 23px;
+        margin-left: 2%;
+    }
+
+    .total_compra{
+        font-size: 35px;
+    }
+
+    .precio-t{
+        font-size: 35px;
+    }
+    .pay-method {
+    }
+
+    .pay-explore{
+        
+    }
+
+    .boton_explore {
+        border: solid #245c7c;
+        border-radius: 10px;
+        background-color: rgb(111, 222, 75);
+    
+    }
+    button.boton_pagar{
+        font-size: 35px;
+        border: solid #245c7c;
+        background-color: rgb(111, 222, 75);
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
+/* ////////////////////////////////////////// */
+
+/* .unit-selector{
+    background-color: #e09850;
+   border-radius: 15px;
+} */
+
+/* .carrito__main_section-product label{
+    background-color: #e09850;
+    border-radius: 15px; 
+} */
+/* //////////////////////////////////////////////// */
+@media (min-width: 769px){
+
+}
+.carrito__main_section-product select{
+    display: inline-block;
+    background-color: #e09850;
+   width: 25px;
+   height: 25px;
+   margin-right: 5px;
+   margin-bottom: 30px;
+}
+.precio {
+    background-color: #e09850;
+    border-radius: 35%;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 30px;
+    height: 30px;
+    width: 60px;
+}
+.quit-product {
+    margin-left: 3px;
+}
+
+.total_compra {
+    display: flex;
+    justify-content: space-between;
+    background-color: beige;
+    padding-left: 10px;
+    border:solid rgb(111, 222, 75);
+}
+
+.precio-t {
+    background-color: #e09850;
+    border: solid;
+    border-radius: 5px;
+    margin-right: 15%;
+    font-size: larger;
+}
+/* .img_product {
+    width: 25%;
+    height: 25%;
+} */
+.carrito__main_section_pago{
+/* background-color: rgb(199, 199, 159) */
+background-color: #ffff;
+}
+
+div.carrito__main_section-pago-botones {
+    width: 100%;
+    height: 30vh;
+};
+.pay-method {
+    display: flex;
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+ul {
+    display: flex;
+    padding-top: 30px;
+    margin-bottom: 15px;
+    justify-content: space-around;
+}
+
+li {
+    list-style: none;
+}
+.pay-explore {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+a.boton{
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.boton_explore {
+    border: solid #245c7c;
+    border-radius: 10px;
+    background-color: rgb(111, 222, 75);
+
+}
+button.boton_pagar{
+    background-color: rgb(111, 222, 75);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.carrito__main_section-product :last-child {
+    margin-bottom: auto;
+}

@@ -1,0 +1,373 @@
+  .container-swiper {
+    margin: 0;
+    padding: 0;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    /* font-size: 18px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    /* object-fit: cover; */
+  }
+
+  .swiper {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cards {
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .container_imagenes_main {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+  }
+
+  .imagen_main {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .imagen_main-none {
+    width: 320px;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 24px;
+    margin: 50px;
+    text-transform: uppercase;
+  }
+
+  .container-articulo-section {
+    /* background: var(--colorNaranja); */
+    width: 300px;
+    margin: 5px;
+    margin-left: 10%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+  }
+
+  .container-descripcion {
+    align-items: center;
+    width: 100%;
+    /* text-align: start; */
+  }
+
+  .icono-card{
+    border: 1px solid var(--colorVerde);
+    border-radius: 50%;
+    padding: 40px 20px;
+    color: var(--colorVerde);
+  }
+
+  img.imagen_producto {
+    width: 100%;
+    align-items: center;
+    object-fit: contain;
+  }
+
+  .description {
+    margin-top: 30px;
+    font-size: 16px;
+    color: black;
+  }
+  .button-card{
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    background-color: var(--colorVerde);
+    text-transform: uppercase;
+    font-size: 14px; 
+    padding: 10px 25px;
+  }
+
+
+  .envios {
+    padding: 25px;
+    /* text-align: center; */
+    background: var(--colorNaranja);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 130px;
+  }
+
+  .envios-secundario {
+    background: var(--colorNaranja);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+  }
+
+  /* .swiper-button-next {
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 40px 40px;
+  }
+
+  .swiper-button-prev {
+    border: 1px solid green;
+    border-radius: 50%;
+    padding: 40px 40px;
+  } */
+
+  .h4-descripcion {
+    font-size: 17px;
+  }
+
+  .parrafo_descripcion {
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .precio-card{
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .container_section {
+    display: block;
+    padding: 30px;
+  }
+
+  .container_div_pie {
+    text-align: center;
+    margin: 20px;
+  }
+
+  .link_redes {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: orange;
+    justify-content: center;
+  }
+
+  .h3_pie {
+    color: black;
+    /* padding-top: 20px; */
+    font-size: 20px;
+  }
+
+  .parrafo_pie {
+    margin-top: 10px;
+    font-size: 17px
+  }
+
+  .button_pie {
+    border: 1px solid var(--colorVerde);
+    border-radius: 20px;
+    padding: 10px 25px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    color: var(--colorVerde);
+    background-color: white;
+  }
+
+  @media (min-width: 375px) {
+    .swiper-slide img {
+      height: 230px;
+    }
+
+    .container_imagenes_main {
+      text-align: center;
+    }
+
+    .imagen_main {
+      width: 320px;
+      height: 100%;
+    }
+
+    .container-envios-secundario {
+      display: none;
+    }
+
+    .icono-card{
+      margin-left: 50px;
+    }
+
+    .h4-descripcion {
+      text-align: center;
+    }
+
+    .parrafo_descripcion {
+      text-align: center;
+    }
+    /* .swiper-button-next {
+      display: none !important;
+    }
+
+    .swiper-button-prev {
+      display: none !important;
+    } */
+
+  }
+
+  @media (min-width: 768px) {
+    .swiper-slide img {
+      height: 400px;
+    }
+
+    .flex {
+      display: flex;
+      /* justify-content: space-evenly; */
+    }
+
+    .container-articulo-section {
+      width: 250px;
+      height: 100%;
+      margin: 5px;
+      margin-left: 17%;
+    }
+
+    img.imagen_producto {
+      height: 230px;
+    }
+
+  }
+
+  @media (min-width: 1024px) {
+    .swiper-slide img {
+      height: 500px;
+      object-fit: fill;
+    }
+
+    .envios {
+      display: none;
+    }
+
+    .flex {
+      gap: 20px;
+    }
+
+    .container-envios-secundario {
+      display: flex;
+      background-color: var(--colorNaranja);
+      height: 200px;
+    }
+
+    .icono-card{
+      padding: 30px 15px;
+    }
+
+    .h4-descripcion {
+      font-size: 17px;
+    }
+
+    .parrafo_descripcion {
+      font-size: 12px;
+      width: 120px;
+    }
+
+    .container_section {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .imagen_main {
+      width: 300px;
+      height: 230px;
+    }
+
+    .imagen_main-none {
+      display: none;
+    }
+
+    .container-articulo-section {
+      width: 250px;
+      height: 100%;
+      margin: 5px;
+      margin-left: 17%;
+    }
+
+    img.imagen_producto {
+      height: 230px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    .swiper-slide img {
+      height: 650px;
+      object-fit: fill;
+    }
+
+    .envios {
+      display: none;
+    }
+
+    .flex {
+      gap: 20px;
+    }
+
+    .container-envios-secundario {
+      display: flex;
+      background-color: var(--colorNaranja);
+      height: 200px;
+      gap: 50px;
+      justify-content: center;
+    }
+
+    .icono-card{
+      padding: 40px 20px;
+    }
+
+    .h4-descripcion {
+      font-size: 20px;
+    }
+
+    .parrafo_descripcion {
+      font-size: 13px;
+      /* width: 120px; */
+    }
+
+    .container_section {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .imagen_main {
+      width: 380px;
+      height: 230px;
+      margin: 20px;
+    }
+
+    .imagen_main-none {
+      display: none;
+    }
+
+    .container-articulo-section {
+      width: 250px;
+      height: 100%;
+      margin: 5px;
+      margin-left: 17%;
+    }
+
+    img.imagen_producto {
+      height: 230px;
+    }
+  }
