@@ -10,9 +10,83 @@
 </head>
 
 <body class="carrito__body">
-    <header>
-        
+    <header class="home__header">
+        <nav class="header__nav">
+            <div class="header__contenedor uno">
+                <button class="header__nav--bt"><i class="fa-solid fa-bars fa-2xl"
+                        style="color: rgb(111, 222, 75);"></i></i></button>
+            </div>
+            <div class="header__contenedor dos">
+                <a href="/"><img src="/img/logo.png" alt="log0 de la pagina"></a>
+            </div>
+            <div class="header__contenedor tres">
+                <a href="carrito" class="carrito"><i class="fa-solid fa-cart-shopping fa-2xl carrito_nav"
+                        style="color: rgb(111, 222, 75);"></i></a>
+            </div>
+            <div class="header__contenedor cuatro">
+                <a href=""><i class="far fa-question-circle fa-2xl" style="color: rgb(111, 222, 75);"></i></a>
+            </div>
+            <div class="header__contenedor cinco">
+                <a href="register"><i class="fas fa-user fa-2xl"
+                        style="color: rgb(111, 222, 75);"></i></a>
+            </div>
+            <div class="header__contenedor seis">
+                <form action="">
+                    <input type="text" class="icono_buscador" placeholder="Buscar productos" />
+                    <button class="header__nav--bt2" type="submit"><i class="fa-solid fa-magnifying-glass fa-xl"
+                            style="color:rgb(111, 222, 75)"></i></button>
+                </form>
+            </div>
+        </nav>
+        <nav class="header__nav--2">
+            <ul class="menu">
+                <li><a href="#">Alimentos Naturales <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Frutos Secos</a></li>
+                        <li><a href="">Barritas & Snacs</a></li>
+                        <li><a href="">Cereales & Granolas</a></li>
+                        <li><a href="">Dulces y Mermeladas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Despensa <i class="fas fa-angle-down fa-sm" style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Aceites</a></li>
+                        <li><a href="">Edulcorantes</a></li>
+                        <li><a href="">Especias</a></li>
+                        <li><a href="">Semillas & Legumbres</a></li>
+                        <li><a href="">Hierbas Naturales</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Bebidas e Infucuines <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Leches Vegetales</a></li>
+                        <li><a href="">Te & Cafe</a></li>
+                        <li><a href="">Yerba Mate</a></li>
+                        <li><a href="">Jugos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cosmetica <i class="fas fa-angle-down fa-sm" style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Cuidado Capilar</a></li>
+                        <li><a href="">Cuidado Dental</a></li>
+                        <li><a href="">Cuidado Corporal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Suplementos Naturales <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Suplementos Nutricionales</a></li>
+                        <li><a href="">Tinturas Madres</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
     </header>
+
     <main class="carrito__main">
         <h2 class="title"><i class="fa-solid fa-cart-shopping fa-2xl carrito_nav" style="color: rgb(111, 222, 75);"></i>Carrito</h2>
         <section class="carrito__main_section">
@@ -146,8 +220,39 @@
 
         </section>
     </main>
+    
     <footer>
-
+        <div class="footer__novedades">
+            <h2>Recibí nuestras novedades</h2>
+            <form class="footer__novedades__email">
+                <input type="email" name="Email">
+                <button type="submit" name="Submit" value="→">→</submit>
+            </form>
+        </div>
+        <div class="footer__info">
+            <ul>
+                <li class="footer__info__ul__li__institucional">Institucional</li>
+                <li class="footer__info__ul__li__sobre--dietetica">Sobre Dietética Vida Sana</li>
+                <li class="footer__info__ul__li__condiciones">Condiciones de envio</li>
+                <li class="footer__info__ul__li__devoluciones">Devoluciones</li>
+            </ul>
+        </div>
+        <div class="footer__contact">
+            <h2>Contactanos</h2>
+            <img src="/img/img-redes/gmail.png" alt="Gmail dietética">
+            <h4>pedidos@dietvidasana.com</h4>
+        </div>
+        <div class="footer__redes__sociales">
+            <h3 class="follow">Seguinos</h3>
+            <a href="https://www.instagram.com" target="_blank" class="footer__instagram"><img src="/img/img-redes/instagram.png" width="40px" height="40px" alt="instagram"></a>
+            <a href="https://www.facebook.com" target="_blank" class="footer__facebook"><img src="/img/img-redes/facebook.png" width="40px" height="40px" alt="facebook"></a>
+            <a href="https://www.twitter.com" target="_blank" class="footer__twitter"><img src="/img/img-redes/twitter.png" width="40px" height="40px" alt="twitter"></a>
+        </div>
+        <div class="footer__method--pay">
+            <ul>
+                <li>Mercado pago<a href="https://www.mercadopago.com" target="_blank"><img src="/img/img-redes/credit-card.png" width="40px" height="40px" alt="Mercado Pago"></a></li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

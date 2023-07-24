@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans';
+    list-style: none;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer__novedades {
+    font-size: 1.6rem;
+    display: inline-block;
+    width: 100vw;
+    text-align: center;
+    margin-bottom: 1em;
+    padding-right: 23px
+}
+
+.footer__novedades__email {
+    position: relative;
+    right: 22px
+}
+
+.footer__novedades__email input {
+    width: 300px;
+    padding: 0px 50px 0px 20px;
+    font-size: 15px;
+    height: 50px;
+    border-radius: 13px;
+    border: solid 1px black;
+    position: relative;
+    left: 39px;
+    background-color: white;
+}
+
+.footer__novedades__email button {
+    width: 3vw;
+    padding: 0px 20px 0px 5px;
+    height: 30px;
+    position: relative;
+    right: 10px;
+    top: 4px;
+    border: none;
+    font-size: 30px;
+    background: none;
+}
+
+.footer__info {
+    font-size: 20px;
+    padding: 5px;
+    width: 120vw;
+    height: 21vh;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+    margin-top: 4vh;
+    position: relative;
+    right: 50px;
+}
+
+.footer__info__ul__li__institucional {
+    margin-bottom: 15px;
+    margin-top: -14px;
+    font-size: 22px;
+}
+
+.footer__info__ul__li__sobre--dietetica {
+    margin-bottom: 13px;
+    font-size: 18px;
+}
+
+.footer__info__ul__li__condiciones {
+    margin-bottom: 13px;
+    font-size: 18px;
+}
+
+.footer__info__ul__li__devoluciones {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer__contact {
+    display: block;
+    width: 120vw;
+    text-align: center;
+    border-bottom: solid 2px black;
+    position: relative;
+    right: 55px;
+
+}
+
+.footer__contact h2 {
+    color: black;
+    font-size: 30px;
+    margin-top: 1px;
+}
+
+.footer__redes__sociales {
+    width: 100vw;
+    height: 15vh;
+}
+
+.follow {
+    display: block;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 1px;
+    padding: 0px 50px 0 20px;
+}
+
+.footer__redes__sociales a {
+    display: inline;
+    width: 100vw;
+    position: relative;
+    left: 10px;
+    padding: 0px 60px 0px 20px;
+}
+
+.footer__method--pay {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    width: 120vw;
+    height: 5vh;
+    padding-top: 15px;
+    text-align: left;
+    border-top: solid 2px black;
+    position: relative;
+    right: 40px;
+}
+
+
+@media (min-width: 481px) {
+
+    .footer__novedades__email input{
+        position: relative;
+        left: 42px;
+        width: 80%;
+    }
+
+    .footer__contact {
+        position: relative;
+        right: 65px;
+    }
+
+    .footer__redes__sociales a{
+        position: relative;
+        left: 60px;
+    }
+
+    .footer__method--pay {
+        text-align: center;
+        position: relative;
+        right: 15vw; 
+        padding-top: 0%;
+        font-size: 25px;
+    }
+
+    .footer__method--pay img {
+        display: block;
+        position: relative;
+        left: 52vw
+    }
+}
+
+@media (min-width: 1280) {
+
+}
