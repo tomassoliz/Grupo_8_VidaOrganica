@@ -9,6 +9,9 @@ a{
     text-decoration: none;
 }
 
+li{
+    list-style: none;
+}
 p{
     margin: 0;
     padding: 0;
