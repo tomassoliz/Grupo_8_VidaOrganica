@@ -82,12 +82,12 @@ input {
     display: none;
 }
 
-button {
-    /* background-color: rgb(38, 167, 38); */
-    /* border-radius: 10px; */
-    /* width: 45%; */
-    /* height: 30px; */
-    /* margin: 10% auto; */
+.btn-submit {
+    background-color: rgb(38, 167, 38);
+    border-radius: 10px;
+    width: 45%;
+    height: 30px;
+    margin: 10% auto;
 }
 
 
