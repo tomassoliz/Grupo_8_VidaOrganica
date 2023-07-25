@@ -1,5 +1,3 @@
-
-
 h2 {
     text-align: center;
     height: 30px;
@@ -52,7 +50,7 @@ h2 {
     border-radius: 10px;
     width: 60%;
     height: 30px;
-    margin: 10% auto; 
+    margin: 10% auto;
 }
 
 .formulario .extra .register {
@@ -73,4 +71,89 @@ h2 {
     color: green;
     margin-top: 5%;
     font-size: 14px;
+}
+
+
+/* MEDIA QUERYS */
+
+@media (min-width:768px) {
+
+    body {
+        margin: 4%;
+    }
+    
+
+
+    h2 {
+        text-align: center;
+        height: 30px;
+        margin: 20% auto 5%;
+        padding: 2%;
+        font-size: 40px;
+    }
+
+    .formulario p {
+        font-size: 17px;
+    }
+
+    .formulario .inputs .formu .espacio {
+        padding-bottom: 17px;
+        font-size: 25px;
+    }
+
+    .formulario .inputs .formu .espacio input {
+        display: block;
+        width: 95%;
+        margin: 10px auto;
+        height: 24px;
+        padding: 8px;
+        border-radius: 13px;
+        font-size: 20px; 
+    }
+
+    .formulario .inputs .formu a {
+        color: green;
+        float: right;
+        margin-right: 2%;
+    }
+
+    .formulario .inputs .formu .user {
+        font-size: 18px;
+    }
+
+    .formulario .inputs .formu .user input {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    .formulario .btn {
+        text-align: center;
+        height: 75px;
+        width: 100%;
+    }
+    
+    .formulario .btn button {
+        background-color: rgb(38, 167, 38);
+        border-radius: 10px;
+        width: 50%;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    /* EXTRA */
+
+    .formulario .extra .register p {
+        margin-top: 7%;
+        margin-right: 10px;
+        color: black;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .formulario .extra .register a {
+        color: green;
+        margin-top: 7%;
+        font-size: 20px;
+    }
+
 }
