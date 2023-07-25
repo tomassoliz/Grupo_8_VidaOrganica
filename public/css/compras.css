@@ -146,7 +146,6 @@
     margin-bottom: 30px;
     height: 30px;
     width: 60px;
-
 }
 .quit-product {
     margin-left: 3px;
@@ -206,6 +205,7 @@ li {
 a.boton{
     text-decoration: none;
     font-size: 20px;
+    color: black;
 }
 
 .boton_explore {

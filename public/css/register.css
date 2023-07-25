@@ -82,7 +82,7 @@ input {
     display: none;
 }
 
-button {
+.btn-submit {
     background-color: rgb(38, 167, 38);
     border-radius: 10px;
     width: 45%;
@@ -183,14 +183,14 @@ button {
         margin-left: 1.8%;
     }
 
-    button {
+    /* button {
         background-color: rgb(38, 167, 38);
         border-radius: 10px;
         font-size: 22px;
         width: 45%;
         height: 44px;
         margin: 10% auto;
-    }
+    } */
 
 }
 
@@ -274,7 +274,6 @@ button {
         font-size: 22px;
     }
 
-
     .formulario .promociones {
         display: flex;
         margin-top: 3%;
@@ -293,7 +292,7 @@ button {
 
     }
 
-    button {
+    /* button {
         background-color: rgb(38, 167, 38);
         border-radius: 10px;
         font-size: 25px;
@@ -301,10 +300,10 @@ button {
         height: 50px;
         margin: 10% auto;
         cursor: pointer;
-    }
-
+    } */
+/* 
     button:hover {
         background-color: rgb(195, 239, 195);
-    }
+    } */
 
 }
