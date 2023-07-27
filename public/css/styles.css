@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600&family=Roboto:wght@100;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
 
 @import 'vars.css';
-/* @import 'register.css'; */
-/* @import 'main.css'; */
+@import 'register.css';
+@import 'main.css';
 @import 'general.css';
-/* @import 'main.css'; */
-/* @import 'compras.css'; */
+@import 'compras.css';
 @import'header.css';
-/* @import 'footer.css'; */
+@import 'footer.css';
