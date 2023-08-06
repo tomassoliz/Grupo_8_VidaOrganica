@@ -14,5 +14,6 @@ app.get('/footer', (req, res) => { res.sendFile(path.join(__dirname, 'src/partia
 app.get('/register', (req, res) => { res.sendFile(path.join(__dirname, "src", "views", "register.html")) });
 app.get('/login', (req, res) => { res.sendFile(path.join(__dirname, "src", "views", "login.html")) });
 app.get('/carrito', (req, res) => { res.sendFile(path.join(__dirname, "src", "views", "carrito.html")) });
+app.get('/productsDetails', (req, res) => { res.sendFile(path.join(__dirname, "src", "views", "productsDetails.html")) });
 
 app.listen(PORT, () => console.log(`Server running in http://localhost:${PORT}`));
