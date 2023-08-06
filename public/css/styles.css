@@ -1,11 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap');
 
 @import 'vars.css';
-@import 'register.css';
-@import 'login.css';
-@import'/css/header.css';
+/* @import 'register.css'; */
+/* @import 'login.css'; */
+@import 'header.css';
 @import 'main.css';
 @import 'general.css';
-@import 'compras.css';
-@import'header.css';
+/* @import 'compras.css'; */
 @import 'footer.css';
