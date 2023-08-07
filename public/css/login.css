@@ -80,10 +80,10 @@ h2 {
 /* TABLET */
 
 @media (min-width:768px) {
-
-    body {
+/* ver este body */
+    /* body {
         margin: 4%;
-    }
+    } */
 
 
 
