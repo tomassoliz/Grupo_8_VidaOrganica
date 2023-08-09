@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/89495ba4f7.js" crossorigin="anonymous" defer></script>
+    <script src="/js/productsDetails.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Productos</title>
+</head>
+
+<body>
+    <header class="home__header">
+        <nav class="header__contenedor">
+            <div class="header__contenedor-uno">
+                <button class="header__nav--bt"><i class="fa-solid fa-bars"></i></button>
+            </div>
+            <div class="header__contenedor-dos">
+                <a href="/"><img src="/img/logo.png" alt="logo de la pagina" class="imagen_logo"></a>
+            </div>
+            <div class="header__contenedor--iconos">
+                <div class="header__contenedor-tres">
+                    <a href="carrito"><i class="fa-solid fa-cart-shopping fa-2xl header_icono "></i></a>
+                </div>
+                <div class="header__contenedor-cuatro">
+                    <a href=""><i class="far fa-question-circle fa-2xl header_icono"></i></a>
+                </div>
+                <div class="header__contenedor-cinco">
+                    <a href="register"><i class="fas fa-user fa-2xl header_icono"></i></a>
+                    <div class="menu__lista--3">
+
+                        <a href="login.html">Iniciar Sesion</a>
+                        <a href="./register.html">Registrate</a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="header__contenedor-seis">
+                <input type="text" class="input__buscador" placeholder="Buscar productos" />
+                <i class="fa-solid fa-magnifying-glass icono_buscador"></i>
+            </div>
+        </nav>
+
+        <nav class="header__nav--2">
+            <ul class="menu">
+                <li><a href="#">Alimentos Naturales <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Frutos Secos</a></li>
+                        <li><a href="">Barritas & Snacs</a></li>
+                        <li><a href="">Cereales & Granolas</a></li>
+                        <li><a href="">Dulces y Mermeladas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Despensa <i class="fas fa-angle-down fa-sm" style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Aceites</a></li>
+                        <li><a href="">Edulcorantes</a></li>
+                        <li><a href="">Especias</a></li>
+                        <li><a href="">Semillas & Legumbres</a></li>
+                        <li><a href="">Hierbas Naturales</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Bebidas e Infuciones <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Leches Vegetales</a></li>
+                        <li><a href="">Te & Cafe</a></li>
+                        <li><a href="">Yerba Mate</a></li>
+                        <li><a href="">Jugos</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Cosmetica <i class="fas fa-angle-down fa-sm" style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Cuidado Capilar</a></li>
+                        <li><a href="">Cuidado Dental</a></li>
+                        <li><a href="">Cuidado Corporal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Suplementos Naturales <i class="fas fa-angle-down fa-sm"
+                            style="color: rgb(111, 222, 75);"></i></a>
+                    <ul class="submenu">
+                        <li><a href="">Suplementos Nutricionales</a></li>
+                        <li><a href="">Tinturas Madres</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container-general">
+        <div class="container-img">
+            <img src="/img/almidon.jpeg" alt="">
+        </div>
+        <div class="container-info-product">
+            <div class="container-price">
+                <span>$95.00</span>
+            </div>
+            <div class="container-detail-product">
+                <div class="form-group">
+                    <label for="color">Producto deseado</label>
+                    <select name="color" id="color">
+                        <option disabled selected value="">Escoge una Opcion</option>
+                        <option value="rojo">producto 1</option>
+                        <option value="blanco">producto 2</option>
+                        <option value="Beige">producto 3</option>
+                        <option value="Beige">producto 4</option>
+                        <option value="Beige">producto 5</option>
+                    </select>
+                </div>
+            </div>
+            <div class="container-add-cart">
+                <div class="container-quantity">
+                    <input class="input-quantity" type="number" placeholder="1" value="1" min="1">
+                    <div class="btn-increment-decrement">
+                        <i class="fa-solid fa-chevron-up"></i>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </div>
+                </div>
+                <button class="btn-add-to-cart">
+                    <i class="fa-solid fa-plus"></i>
+                    Añadir al carrito
+                </button>
+            </div>
+            <div class="container-description">
+                <div class="title-decription">
+                    <h4>Descripcion</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="text-description">
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum facilis hic, autem ipsam qui
+                        voluptas tempore, consectetur tempora in eveniet corporis cupiditate? Quae iure architecto
+                        itaque eligendi ducimus quisquam minus? Lorem ipsum dolor, sit amet consectetur adipisicing
+                        elit. Earum placeat fugit, deserunt officia architecto molestiae atque consequatur. Beatae quod
+                        ex, omnis, voluptatem labore, quos voluptate dicta tempore sunt qui praesentium?
+                    </p>
+                </div>
+            </div>
+            <div class="container-additional-information">
+                <div class="title-additional-information">
+                    <h4>Informacion adicional</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="text-additional-information">
+                    <p> ----------------- </p>
+                </div>
+            </div>
+            <div class="container-reviews">
+                <div class="title-reviews">
+                    <h4>Reseñas</h4>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="text-reviews">
+                    <p> ----------------- </p>
+                </div>
+            </div>
+            <div class="container-social">
+                <span>Compartir</span>
+                <div class="container-buttons-social">
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+    </main>
+
+    <section class="container-related-products">
+        <h2>Productos relacionados</h2>
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                    <img src="/img/almidon.jpeg" alt="">
+                </div>
+                <div class="info-card">
+                    <div class="text-products">
+                        <h3>Nike-roshe Run</h3>
+                        <p class="category">Footwear, Sneakers</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="/img/almidon.jpeg" alt="">
+                </div>
+                <div class="info-card">
+                    <div class="text-products">
+                        <h3>Nike-roshe Run</h3>
+                        <p class="category">Footwear, Sneakers</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="/img/almidon.jpeg" alt="">
+                </div>
+                <div class="info-card">
+                    <div class="text-products">
+                        <h3>Nike-roshe Run</h3>
+                        <p class="category">Footwear, Sneakers</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <img src="/img/almidon.jpeg" alt="">
+                </div>
+                <div class="info-card">
+                    <div class="text-products">
+                        <h3>Nike-roshe Run</h3>
+                        <p class="category">Footwear, Sneakers</p>
+                    </div>
+                    <div class="price">$85.00</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    </div>
+
+    <footer class="contenedor_footer">
+        <h2 class="titulo_footer">Recibí nuestras novedades</h2>
+        <form action="" class="contenedor_input">
+            <input class="input_footer" type="email" name="Email" placeholder="Email">
+        </form>
+
+        <div class="contenedor_informacion">
+            <div class="contenedor_informacion-parte">
+                <h4 class="subtitulo_footer">Sobre Nosotros</h4>
+                <ul>
+                    <li><a href="#">¿Que es dietética Vida Orgánica?</a></li>
+                    <li><a href="#">Condiciones de Envío</a></li>
+                    <li><a href="#">Ventas Corporativas</a></li>
+                    <li><a href="#">Trabajá con Nosotros</a></li>
+                </ul>
+            </div>
+            <div class="contenedor_informacion-parte">
+                <h4 class="subtitulo_footer">Ayuda</h4>
+                <ul>
+                    <li><a href="#">¿Cómo comprar?</a></li>
+                    <li><a href="#">Medios de Pago</a></li>
+                    <li><a href="#">Política de cambios</a></li>
+                    <li><a href="#">Locales Asociados</a></li>
+                </ul>
+            </div>
+            <div class="contenedor_informacion-parte">
+                <h4 class="subtitulo_footer">Contactanos</h4>
+                <ul class="contenedor_contacto">
+                    <li><a href="#">Avenida libre 123<i class="fa fa-map-marker footer_icono-contacto"></i></a></li>
+                    <li><a href="#">+549 1141716541<i class="fa fa-phone footer_icono-contacto"></i></a></li>
+                    <li><a href="#">dieteticavidaorganica@gmail.com<i
+                                class="fa fa-envelope footer_icono-contacto"></i></a></li>
+                </ul>
+            </div>
+            <div class="contenedor_informacion-parte">
+                <h4 class="subtitulo_footer">Seguinos</h4>
+                <div class="contenedor_iconos">
+                    <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook footer_icono"
+                            style="color: #1877f2" ;></i></a>
+                    <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram footer_icono"
+                            style="color: #D43089" ;></i></a>
+                    <a href="https://www.tiktok.com" target="_blank"><i class="fa-brands fa-tiktok footer_icono" style="color: #000
+
+                        " ;></i></a>
+                    <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter footer_icono"
+                            style="color:#25F4EE" ;></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="titulo_footer-pie">
+            <h4 class="subtitulo_footer-pie">Medios de pago</h4>
+            <div class="contenedor_imagenes-footer">
+                <img class="imagenes_footer" src="/img/img-redes/americanExpress.png"></a>
+                <img class="imagenes_footer" src="/img/img-redes/mastercard.png"></a>
+                <img class="imagenes_footer" src="/img/img-redes/visa.png"></a>
+                <img class="imagenes_footer" src="/img/img-redes/mercadopago.jpg"></a>
+            </div>
+            <div class="contenedor_footer-copy">
+                <p class="copyright">Copyright © 1999-2023 <a href="/" class="copy">Dietética Vida Orgánica</a> S.R.L</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

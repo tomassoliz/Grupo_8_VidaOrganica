@@ -1,4 +1,4 @@
-var swiper = new Swiper(".container-swiper", {
+var swiper = new Swiper(".container-swiper-main", {
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true,
@@ -52,14 +52,14 @@ var swiper = new Swiper('.container-swiper-destacados', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 10,
+      spaceBetween: 30,
     },
     1024: {
       slidesPerView: 4,
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 6,
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   }
@@ -86,7 +86,7 @@ var swiper = new Swiper('.container-swiper-novedades', {
       spaceBetween: 30,
     },
     1440: {
-      slidesPerView: 6,
+      slidesPerView: 5,
       spaceBetween: 30,
     },
   }

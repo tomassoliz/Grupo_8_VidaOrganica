@@ -71,7 +71,7 @@
     /* text-align: start; */
   }
 
-  .icono {
+  .icono-card{
     border: 1px solid var(--colorVerde);
     border-radius: 50%;
     padding: 40px 20px;
@@ -89,17 +89,17 @@
     font-size: 16px;
     color: black;
   }
-
-  .button {
+  .button-card{
     margin-top: 10px;
     border: none;
     border-radius: 20px;
     color: white;
     background-color: var(--colorVerde);
-    padding: 10px 25px;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 14px; 
+    padding: 10px 25px;
   }
+
 
   .envios {
     padding: 25px;
@@ -139,7 +139,7 @@
     font-size: 14px;
   }
 
-  .precio {
+  .precio-card{
     margin-top: 10px;
     font-size: 20px;
   }
@@ -205,7 +205,7 @@
       display: none;
     }
 
-    .icono {
+    .icono-card{
       margin-left: 50px;
     }
 
@@ -269,7 +269,7 @@
       height: 200px;
     }
 
-    .icono {
+    .icono-card{
       padding: 30px 15px;
     }
 
@@ -331,7 +331,7 @@
       justify-content: center;
     }
 
-    .icono {
+    .icono-card{
       padding: 40px 20px;
     }
 
