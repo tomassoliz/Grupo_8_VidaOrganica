@@ -6,6 +6,12 @@
 @import 'main.css';
 @import 'footer.css';
 /* @import 'register.css'; */
+<<<<<<< HEAD:public/stylesheets/styles.css
 /* @import 'login.css'; 
 /* @import 'compras.css'; */
 /*@import 'productsDetails.css'*/
+=======
+/* @import 'login.css'; */
+@import 'carrito.css';
+@import 'productsDetails.css';
+>>>>>>> 4d9480c7cd549129dc821292d02d80299d008203:public/css/styles.css

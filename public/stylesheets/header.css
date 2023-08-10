@@ -63,12 +63,14 @@
     text-decoration: none;
     display: block;
 }
+
 .header__contenedor-cinco:hover .menu__lista--3 {
     display: block;
 }
+
 .menu__lista--3 a:hover {
     color: rgb(111, 222, 75);
-    
+
 }
 
 @media (min-width: 375px) {
@@ -124,6 +126,7 @@
         justify-content: center;
         background-color: #ffffffff;
         border-bottom: 0.5px solid rgb(111, 222, 75);
+        margin-bottom: 40px ;
     }
 
     .menu>li {
@@ -157,7 +160,7 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity 2s;
-
+        z-index: 100; /*agregue esto para que se vea el submenu*/
     }
 
     ul.submenu li a {
@@ -185,6 +188,7 @@
         display: flex;
         background-color: #ffffffff;
         border-bottom: 0.5px solid rgb(111, 222, 75);
+        padding-bottom: 20px;
     }
 
 
@@ -238,7 +242,7 @@
         display: flex;
         justify-content: space-between;
     }
-    
-    
-    
+
+
+
 }
