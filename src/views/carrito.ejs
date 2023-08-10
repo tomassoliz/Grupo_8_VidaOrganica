@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head') %>
+
+<body class="carrito__body">
+
+    <%- include('partials/header') %>
+    <main class="carrito_body_main">
+        <h2 class="carrito_main_title"><i class="fa-solid fa-cart-shopping fa-2xl carrito_nav"
+                style="color: rgb(111, 222, 75);"></i>Carrito</h2>
+        <section class="carrito_section_product-list">
+            <ul class="carrito_lista-de-pruductos">
+                <li class="carrito_producto">
+                    <img src="\images\leche-almendra.jpeg" alt="">
+                    <p class="product_name">Leche de almendras</p>
+                    <label class="unit" for="cant">unid
+                    <select name="cantidad" id="cant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></label>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i>500</p>
+                    <button class="quit-product" type="button"><i class="fa-solid fa-square-xmark"></i></button>
+                </li>
+                <li class="carrito_producto">
+                    <img src="\images\aceite-de-coco-gold-fish-x-500-ml.jpg" alt=>
+                    <p class="product_name">Aceite de coco</p>
+                    <label class="unit" for="cant">unid
+                    <select name="cantidad" id="cant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></label>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i>500</p>
+                    <button class="quit-product" type="button"><i class="fa-solid fa-square-xmark"></i></button>
+                </li>
+                <li class="carrito_producto">
+                    <img src="\images\mix-de-semillas-1.jpg" alt=>
+                    <p class="product_name">Mix de semillas</p>
+                    <label class="unit" for="cant">unid
+                    <select name="cantidad" id="cant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></label>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i>500</p>
+                    <button class="quit-product" type="button"><i class="fa-solid fa-square-xmark"></i></button>
+                </li>
+                <li class="carrito_producto">
+                    <img src="\images\miel-pura.jpeg" alt=>
+                    <p class="product_name">Miel pura</p>
+                    <label class="unit" for="cant">unid
+                    <select name="cantidad" id="cant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></label>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i>500</p>
+                    <button class="quit-product" type="button"><i class="fa-solid fa-square-xmark"></i></button>
+                </li>
+                <li class="carrito_producto">
+                    <img src="/images/salvado-1.png" alt=>
+                    <p class="product_name">Salvado</p>
+                    <label class="unit" for="cant">unid
+                    <select name="cantidad" id="cant">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select></label>
+                    <p class="precio"><i class="fa-solid fa-dollar-sign"></i>500</p>
+                    <button class="quit-product" type="button"><i class="fa-solid fa-square-xmark"></i></button>
+                </li>
+            </ul>
+        </section>
+        <section class="total_compra">
+            <h3>TOTAL</h3>
+            <p class="precio-t"><i class="fa-solid fa-dollar-sign"></i>3500</p>
+        </section>
+        <section class="carrito__main_section_pago">
+            <h3>Medios de Pago</h3>
+            <div class="carrito__main_section-pago-botones">
+                <ul class="pay-method">
+                    <li><label for="medio-de-pago"> credito<i class="fa-solid fa-credit-card"></i></label>
+                        <input type="radio" name="medio-de-pago" value="credito">
+                    <li><label for="medio-de-pago"> debito<i class="fa-solid fa-credit-card"></i></label>
+                        <input type="radio" name="medio-de-pago" value="debito">
+                    </li>
+                    <li><label for="medio-de-pago"> monedero virtual<i class="fa-solid fa-credit-card"></i></label>
+                        <input type="radio" name="medio-de-pago" value="mercadopago">
+                    </li>
+                    </li>
+                </ul>
+                <ul class="pay-explore">
+                    <button class="boton_explore"><a class="boton" href="/">Seguir
+                            Comprando</a></button>
+                    <button class="boton_pagar" type="button">PAGAR</button>
+                </ul>
+            </div>
+        </section>
+    </main>
+    
+    <%- include('partials/footer') %>
+</body>
+</html>
