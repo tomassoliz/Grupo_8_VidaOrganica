@@ -108,6 +108,9 @@
     padding: 10px;
 }
 
+.carrito__main_section-pago-botones i{
+    
+}
 .pay-explore{
     display: flex;
     justify-content: space-around;
