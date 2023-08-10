@@ -47,7 +47,7 @@
     border-radius: 5px;
   }
 
-  h2 {
+  .container-articulo h2 {
     text-align: center;
     font-size: 24px;
     margin: 50px;
@@ -84,8 +84,12 @@
     object-fit: contain;
   }
 
+  .container-info-main{
+    border-top: 1px solid grey;
+  }
+
   .description {
-    margin-top: 30px;
+    margin-top: 15px;
     font-size: 16px;
     color: black;
   }
@@ -99,7 +103,15 @@
     font-size: 14px; 
     padding: 10px 25px;
   }
+  .button-card:hover{
+    background-color: var(--colorVerdeClaro);
+    transition: .3s ;
+    cursor: pointer;
+  }
 
+  .link_card{
+    color: white;
+  }
 
   .envios {
     padding: 25px;
@@ -149,6 +161,8 @@
     padding: 30px;
   }
 
+  /* Seguinos */
+
   .container_div_pie {
     text-align: center;
     margin: 20px;
@@ -162,11 +176,14 @@
     color: orange;
     justify-content: center;
   }
-
+  
   .h3_pie {
     color: black;
     /* padding-top: 20px; */
     font-size: 20px;
+  }
+  .h3_pie:hover{
+    color: var(--colorVerdeClaro);
   }
 
   .parrafo_pie {
@@ -185,6 +202,13 @@
     font-weight: bold;
     color: var(--colorVerde);
     background-color: white;
+  }
+  .link_pie{
+    color: var(--colorVerde);
+  }
+
+  .link_pie:hover{
+    color: var(--colorVerdeClaro);
   }
 
   @media (min-width: 375px) {
