@@ -4,5 +4,7 @@ module.exports = {
     },
     carrito: (req, res) =>{
         return res.render('carrito')
-    }
+    },
+    edit: (req, res) =>{
+        return res.render('productEdit')}
 }
