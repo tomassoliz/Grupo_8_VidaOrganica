@@ -17,13 +17,12 @@ div.container_form-edit{
     margin-top: 5px;
 }
 textarea{
-    width: 80%;
-    height: 50px;
+    border: 1.2px solid #c4cae0;
+    border-radius: 5px;
 }
 
 textarea:focus,input:focus{
     outline: none;
-    border-color: var(--colorVerdeClaro);
 }
 
 .container_button-form{
@@ -31,10 +30,10 @@ textarea:focus,input:focus{
 }
 
 .container_form-edit input{
-    width: 130px;
+    /* width: 130px; */
 }
 .col-md-4 select{
-    width: 80px;
+    /* width: 80px; */
     font-size: small;
 }
 select#inputStock option{
@@ -54,23 +53,46 @@ input#inputImg{
     height: 40px;
 }
 
+@media (min-width: 375px) {
+    .col-md-12 .container_description-edit{
+        display: block;
+        margin-bottom: 10px;
+    }   
+    .col-md-12 textarea{
+        width: 100%;
+        padding: 13px 10px;
+    }
+}
+
 @media (min-width: 768px){
     div.container_form-edit{
-        width: 50%;
+        width: 80%;
     }
     textarea{
         resize: none;
         width: 260px;
         height: 55px;
     }
-    .col-md-4{
-        width: 60%;
+    .col-md-12 .container_description-edit{
+        display: block;
+        margin-bottom: 10px;
+    }   
+    .col-md-12 textarea{
+        width: 100%;
+        padding: 13px 10px;
+    }
+    .button_imagen{
+        margin-top: 30px;
+        margin-left: 20px;
     }
     
 }
 
 @media (min-width: 1024px){
-    .container_form-edit input{
-        width: 200px;
+    div.container_form-edit{
+        width: 70%;
+    }
+    .col-sm-3 button{
+        padding: 6px 20px;
     }
 }
