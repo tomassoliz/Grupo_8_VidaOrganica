@@ -2,13 +2,14 @@
     margin-top: 10%;
     padding: 10px;
     text-align: center;
+    background-color: rgb(195, 239, 195);
 }
 
 .cabecera h2 {
     text-align: center;
-    height: 80px;
-    margin: 3%;
-    padding: 2%;
+    font-size: 25px;
+    height: 50px;
+
 }
 
 .cabecera i {
@@ -16,8 +17,8 @@
 }
 
 .cabecera p {
-    margin-bottom: 0;
-    font-size: 14px;
+    margin-bottom: 10px;
+    font-size: 13px;
 }
 
 .cabecera .p-desktop {
@@ -28,22 +29,30 @@
 
 /* FORMULARIO COMPLETO */
 
-.formulario {
+.formulario-register {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     margin-top: 10%;
+    width: 90%;
+    margin: 100px auto ;
 }
 
-.formulario p {
-    padding-left: 3%;
+.formulario-register p {
+    padding-left: 3%;   
     font-size: 12px;
+}
+
+.inputs{
+    margin-top: 30px;
 }
 
 .formu {
     background-color: rgb(195, 239, 195);
-    width: 96%;
-    margin: 0 auto;
-    padding: 2%;
+    border-radius: 15px;
+    padding: 30px;
+    width: 100%;
+    /* padding: 2%; */
     font-size: 15px;
     flex-wrap: wrap;
 }
@@ -57,25 +66,30 @@
     color: red;
     padding-left: 1%;
 }
-
-input {
+.espacio input{
     display: block;
-    width: 97%;
-    margin: 0 auto;
+    width: 95%;
+    margin: auto;
     padding: 8px;
     border-radius: 13px;
+    border: 1px solid var(--colorVerdeClaro);
+    outline: none;
 }
 
-.formulario .promociones {
+.extras{
+    margin: 10px 0px ;
+}
+
+.promociones {
     display: flex;
     font-size: 13px;
     margin-top: 3%;
     padding-left: 3%;
 }
 
-.formulario .promociones input {
-    width: 10%;
-    margin: 0;
+.container-promociones input, 
+.container-newsletter input{
+    margin: 0px 10px;
 }
 
 .formulario .newsletter {
@@ -83,11 +97,13 @@ input {
 }
 
 .btn-submit {
-    background-color: rgb(38, 167, 38);
+    background-color: rgb(195, 239, 195);
     border-radius: 10px;
-    width: 45%;
-    height: 30px;
-    margin: 10% auto;
+    border: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 50px auto 0px auto;
+    font-weight: 600;
 }
 
 
@@ -114,11 +130,11 @@ input {
 
     /* FORMULARIO COMPLETO */
 
-    .formulario {
+    /* .formulario {
         display: flex;
         flex-direction: column;
         margin-top: 10%;
-    }
+    } */
 
     .formulario p {
         padding-left: 3%;
@@ -143,17 +159,17 @@ input {
         padding-left: 1%;
     }
 
-    input {
+    /* input {
         display: block;
         width: 97%;
         margin: 0 auto;
         padding: 8px;
         border-radius: 13px;
         font-size: 22px;
-        font-family: monospace;
+       
         border-color: green;
         outline-color: green;
-    }
+    } */
 
     .extras label {
         font-size: 18px;
