@@ -7,6 +7,6 @@ const { products, carrito, add, edit } = require('../controllers/productsControl
 router.get('/productsDetails', products)
 router.get('/carrito', carrito)
 router.get('/productsAdd', add)
-router.get('/productEdit', edit)
+router.get('/productsEdit', edit)
 
 module.exports = router;
