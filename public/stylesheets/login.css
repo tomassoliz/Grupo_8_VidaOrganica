@@ -19,7 +19,7 @@ h2 {
     padding-bottom: 17px;
 }
 
-.formulario .inputs .formu .espacio input {
+.formulario .inputs .formu .espacio input .completar{
     display: block;
     width: 95%;
     margin: 2px auto;
@@ -104,7 +104,7 @@ h2 {
         font-size: 25px;
     }
 
-    .formulario .inputs .formu .espacio input {
+    .formulario .inputs .formu .espacio input .completar{
         display: block;
         width: 95%;
         margin: 10px auto;
@@ -124,7 +124,7 @@ h2 {
         font-size: 18px;
     }
 
-    .formulario .inputs .formu .user input {
+    .formulario .inputs .formu .user input .completar {
         font-size: 20px;
         padding: 10px;
     }
@@ -188,7 +188,7 @@ h2 {
         font-size: 28px;
     }
 
-    .formulario .inputs .formu .espacio input {
+    .formulario .inputs .formu .espacio input .completar {
         display: block;
         width: 95%;
         margin: 10px auto;
@@ -208,7 +208,7 @@ h2 {
         font-size: 22px;
     }
 
-    .formulario .inputs .formu .user input {
+    /* .formulario .inputs .formu .user  */ input.completar {
         font-size: 20px;
         padding: 10px;
     }
