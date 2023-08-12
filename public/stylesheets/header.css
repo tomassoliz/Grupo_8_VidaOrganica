@@ -160,14 +160,16 @@
         visibility: hidden;
         opacity: 0;
         transition: opacity 2s;
+        font-size: 14px;
         z-index: 100; /*agregue esto para que se vea el submenu*/
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
     }
 
     ul.submenu li a {
         display: block;
         padding: 15px;
         color: grey;
-        font-weight: 800;
+        font-weight: 500;
     }
 
     .menu li:hover ul.submenu {
@@ -230,7 +232,7 @@
         display: block;
         padding: 15px;
         color: grey;
-        font-weight: 800;
+        font-weight: 500;
     }
 
     .menu li:hover ul.submenu {
