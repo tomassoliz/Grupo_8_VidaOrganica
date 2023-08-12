@@ -1,5 +1,5 @@
 .cabecera {
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 10px;
     text-align: center;
     background-color: rgb(195, 239, 195);
@@ -47,7 +47,7 @@
 
 .formu {
     background-color: rgb(195, 239, 195);
-    border-radius: 15px;
+    border-radius: 5px;
     padding: 20px 10px;
     width: 100%;
     font-size: 15px;
@@ -92,6 +92,28 @@
 .container-promociones input,
 .container-newsletter input {
     margin: 0px 10px;
+}
+
+.formulario-register  p{
+
+    width: 100%;
+    text-align: center;
+    font-size: 14px; 
+    line-height: 30px;
+    margin: 0;
+    color: black;
+}
+
+.formulario-register a{
+    color: black;
+    text-decoration: none;
+}
+.formulario-register a:hover{
+    color: black;
+    text-decoration: underline;
+}
+.link-register{
+    text-align: center;
 }
 
 .btn-submit {

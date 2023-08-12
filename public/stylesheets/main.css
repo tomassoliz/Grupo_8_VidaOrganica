@@ -335,8 +335,8 @@
 
   @media (min-width: 1440px) {
     .swiper-slide img {
-      height: 650px;
-      object-fit: fill;
+      height: 500px;
+      object-fit: cover;
     }
 
     .envios {
