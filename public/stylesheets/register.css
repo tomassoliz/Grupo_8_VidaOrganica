@@ -25,8 +25,6 @@
     display: none;
 }
 
-
-
 /* FORMULARIO COMPLETO */
 
 .formulario-register {
@@ -35,49 +33,53 @@
     flex-direction: column;
     margin-top: 10%;
     width: 90%;
-    margin: 100px auto ;
+    margin: 100px auto;
 }
 
 .formulario-register p {
-    padding-left: 3%;   
+    padding-left: 2%;
     font-size: 12px;
 }
 
-.inputs{
-    margin-top: 30px;
+.inputs {
+    margin-top: 20px;
 }
 
 .formu {
     background-color: rgb(195, 239, 195);
     border-radius: 15px;
-    padding: 30px;
+    padding: 20px 10px;
     width: 100%;
-    /* padding: 2%; */
     font-size: 15px;
-    flex-wrap: wrap;
 }
 
 .espacio {
-    padding-bottom: 15px;
+    padding: 10px 0px;
 }
 
+.espacio label {
+    font-size: 15px;
+    font-weight: 400;
+}
 .espacio p {
     display: inline;
     color: red;
     padding-left: 1%;
 }
-.espacio input{
+
+.espacio input {
     display: block;
-    width: 95%;
+    width: 100%;
     margin: auto;
     padding: 8px;
-    border-radius: 13px;
+    border-radius: 10px;
     border: 1px solid var(--colorVerdeClaro);
     outline: none;
 }
 
-.extras{
-    margin: 10px 0px ;
+.extras {
+    margin: 10px 0px;
+
 }
 
 .promociones {
@@ -87,13 +89,9 @@
     padding-left: 3%;
 }
 
-.container-promociones input, 
-.container-newsletter input{
+.container-promociones input,
+.container-newsletter input {
     margin: 0px 10px;
-}
-
-.formulario .newsletter {
-    display: none;
 }
 
 .btn-submit {
@@ -104,222 +102,36 @@
     padding: 15px 30px;
     margin: 50px auto 0px auto;
     font-weight: 600;
+    color: #2c2c2c;
+}
+
+.btn-submit:hover{
+    background-color: var(--colorVerdeClaro);
+    transition: .3s;
 }
 
 
 /* MEDIA QUERYS */
 
-
 /* TABLET */
 
 
 @media (min-width: 768px) {
-
-    .cabecera h2 {
-        text-align: center;
-        margin: 0;
-        font-size: 30px;
+    .formulario-register {
+        width: 70%;
     }
 
-    .cabecera p {
-        margin-top: 7%;
-        margin-bottom: 0;
-        font-size: 20px;
-    }
-
-
-    /* FORMULARIO COMPLETO */
-
-    /* .formulario {
-        display: flex;
-        flex-direction: column;
-        margin-top: 10%;
-    } */
-
-    .formulario p {
-        padding-left: 3%;
-        font-size: 18px;
-    }
-
-    .formu {
-        background-color: rgb(195, 239, 195);
-        width: 96%;
-        margin: 0 auto;
-        padding: 2%;
-        font-size: 22px;
-    }
-
-    .espacio {
-        padding-bottom: 15px;
-    }
-
-    .espacio p {
-        display: inline;
-        color: red;
-        padding-left: 1%;
-    }
-
-    /* input {
+    .cabecera .p-desktop {
         display: block;
-        width: 97%;
-        margin: 0 auto;
-        padding: 8px;
-        border-radius: 13px;
-        font-size: 22px;
-       
-        border-color: green;
-        outline-color: green;
-    } */
-
-    .extras label {
-        font-size: 18px;
     }
-
-    .formulario .extras input {
-        width: 10%;
-        margin: 0;
-    }
-
-    .formulario .promociones {
-        display: flex;
-        margin-top: 3%;
-        padding-left: 3%;
-        font-size: 15px;
-    }
-
-
-    .formulario .newsletter {
-        display: flex;
-        margin-top: 3%;
-        padding-left: 3%;
-        font-size: 15px;
-    }
-
-    .formulario .extras .newsletter input {
-        margin-left: 1.8%;
-    }
-
-    /* button {
-        background-color: rgb(38, 167, 38);
-        border-radius: 10px;
-        font-size: 22px;
-        width: 45%;
-        height: 44px;
-        margin: 10% auto;
-    } */
-
+    
 }
 
 /* DESKTOP */
 
 @media (min-width:1024px) {
 
-    .cabecera {
-        margin: 10% 3% 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    h2 {
-        background-color: rgba(195, 239, 195, 0.5);
-        text-align: center;
-        height: 80px;
-        margin: 3%;
-        padding: 2%;
-    }
-
-    .cabecera p {
-        font-size: 24px;
-    }
-
-    .cabecera .p-desktop {
-        display: block;
-        margin-top: 7%;
-        margin-bottom: 0;
-
-    }
-
-    /* FORMULARIO COMPLETO */
-
-    .formulario {
-        display: flex;
-        flex-direction: column;
-        margin-top: 7%;
-    }
-
-    .formulario p {
-        padding-left: 3%;
-        font-size: 22px;
-    }
-
-    .formu {
-        background-color: rgb(195, 239, 195);
-        width: 96%;
-        margin: 0 auto;
-        padding: 2%;
-        font-size: 24px;
-    }
-
-    .espacio {
-        padding-bottom: 15px;
-    }
-
-    .espacio p {
-        display: inline;
-        color: red;
-        padding-left: 1%;
-    }
-
-    input {
-        display: block;
-        width: 97%;
-        margin: 0 auto;
-        padding: 8px;
-        border-radius: 13px;
-        font-size: 22px;
-        font-family: monospace;
-        border-color: green;
-        outline-color: green;
-    }
-
-
-    /* EXTRAS */
-
-
-    .extras label {
-        font-size: 22px;
-    }
-
-    .formulario .promociones {
-        display: flex;
-        margin-top: 3%;
-        padding-left: 3%;
-    }
-
-
-    .formulario .newsletter {
-        display: flex;
-        margin-top: 3%;
-        padding-left: 3%;
-    }
-
-    .formulario .extras .newsletter input {
-        margin-left: 1.5%;
-
-    }
-
-    /* button {
-        background-color: rgb(38, 167, 38);
-        border-radius: 10px;
-        font-size: 25px;
+    .formulario-register {
         width: 40%;
-        height: 50px;
-        margin: 10% auto;
-        cursor: pointer;
-    } */
-/* 
-    button:hover {
-        background-color: rgb(195, 239, 195);
-    } */
-
+    }
 }

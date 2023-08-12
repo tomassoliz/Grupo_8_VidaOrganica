@@ -1,11 +1,10 @@
-h2 {
-    text-align: center;
-    height: 30px;
-    margin: 20% auto 5%;
-    padding: 2%;
+.title-login{
+    background-color: red;
+    margin: 20px;
+    color: red;
 }
 
-.formulario p {
+/* .forularion-login p {
     font-size: 12px;
 }
 
@@ -70,7 +69,7 @@ h2 {
     color: green;
     margin-top: 5%;
     font-size: 14px;
-}
+} */
 
 
 /* MEDIA QUERYS */
@@ -87,7 +86,7 @@ h2 {
 
 
 
-    h2 {
+    /* h2 {
         text-align: center;
         height: 30px;
         margin: 20% auto 5%;
@@ -145,7 +144,7 @@ h2 {
 
     /* EXTRA */
 
-    .formulario .extra .register p {
+    /* .formulario .extra .register p {
         margin-top: 7%;
         margin-right: 10px;
         color: black;
@@ -157,7 +156,7 @@ h2 {
         color: green;
         margin-top: 7%;
         font-size: 20px;
-    }
+    } */
 
 }
 
@@ -165,12 +164,7 @@ h2 {
 /* DESKTOP */
 
 @media (min-width:1024px) {
-
-    body {
-        margin: 10%;
-    }
-
-    h2 {
+    /* h2 {
         background-color: rgba(195, 239, 195, 0.5);
         text-align: center;
         height: 50px;
@@ -229,7 +223,7 @@ h2 {
 
     /* EXTRA */
 
-    .formulario .extra .register p {
+    /* .formulario .extra .register p {
         margin-top: 8%;
         margin-right: 10px;
         color: black;
@@ -241,6 +235,6 @@ h2 {
         color: green;
         margin-top: 8%;
         font-size: 23px;
-    }
+    } */ 
 
 }
