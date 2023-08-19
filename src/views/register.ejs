@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head') %>
+<%- include('partials/head', { title: 'Registro' }) %>
 
     <body>
 
@@ -24,11 +24,10 @@
 
                 <!-- FORMULARIO -->
 
-                <section class="formulario">
-                    <p>Los campos con (*) son obligatorios</p>
+                <section class="formulario-register">
                     <div class="inputs">
+                        <p>Los campos con (*) son obligatorios</p>
                         <form class="formu" method="">
-
                             <div class="espacio">
                                 <label for="nombre">Nombre/s y Apellido/s<p>*</p></label>
                                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Maria Perez">
@@ -52,16 +51,18 @@
                         </form>
                     </div>
                     <section class="extras">
-                        <div class="promociones">
+                        <div class="container-promociones">
                             <label for="promociones">Deseo recibir promociones</label>
                             <input type="checkbox" value="Suscripción">
                         </div>
-                        <div class="newsletter">
+                        <div class="container-newsletter">
                             <label for="newsletter">Suscribirme al newsletter </label>
                             <input type="checkbox" value="Suscripción">
                         </div>
                     </section>
-                    <button type="submit" class="btn-submit"><b>CREAR CUENTA</b></button>
+                    <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a></p>
+                    <p><a href="/users/login">¿Ya Tienes Cuenta?</a></p>
+                   <a href="/" class="link-register"><button type="submit" class="btn-submit">CREAR CUENTA</button></a> 
                 </section>
             </main>
 
