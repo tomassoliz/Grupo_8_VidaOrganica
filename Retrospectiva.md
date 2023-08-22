@@ -34,7 +34,7 @@
 
 **Hacer menos:** Procrastinación
 
-Seguir haciendo: Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
+**Seguir haciendo:** Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
 
  # Sprint 5 #
 
