@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('partials/head', {
+    title: 'Editar'
+}) %>
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+</head>
+
+    <body>
+
+        <%- include('partials/header') %>
+            <main>
+                <div class="container_form-edit">
+                    <h2 class="title_form-edit">Editar producto</h2>
+                    <form class="row g-3" method="post">
+                        <div class="col-md-6">
+                            <label for="inputProductName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="inputProductName">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputBrand" class="form-label">Marca</label>
+                            <input type="text" class="form-control" id="inputBrand">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputPrice" class="form-label">Precio</label>
+                            <input type="number" class="form-control" id="inputPrice" placeholder="$">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputDiscount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control" id="inputDiscount">
+                        </div>
+                        <div class="col-md-12">
+                            <label for="name" class="container_description-edit">Descripción</label>
+                            <textarea id="description" placeholder="Descripción a editar"></textarea>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="inputStock" class="form-label">Stock</label>
+                            <select id="inputStock" class="form-select">
+                                <option selected>SI</option>
+                                <option>NO</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-6">
+                            <label for="image" class="btn btn-success button_imagen">Agregar imagen</label>
+                            <input hidden class="form-control" type="file" id="image">
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="submit" class="btn btn-primary">Finalizar</button>
+                        </div>
+                        <div class="col-sm-3">
+                            <button type="reset" class="btn btn-secondary">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+
+            </main>
+            <!-- <main>
+            <div class="container_form-edit">
+                <h2 class="title_form-edit">Editar productos</h2>
+                <form class="form-add" action="">
+                    <div class="container_input-add">
+                        <div class="input-edit">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name">
+                        </div>
+                        <div class="input-edit">
+                            <label for="brand">Marca</label>
+                            <input type="text" id="brand">
+                        </div>
+                        <div class="input-edit">
+                            <label for="price">Precio</label>
+                            <input type="number" id="price">
+                        </div>
+                        <div class="input-edit">
+                            <label for="discount">Descuento</label>
+                            <input type="number" id="discount">
+                        </div>
+                    </div>
+                    <div class="container_input-edit">
+                        <div class="input-edit">
+                            <label for="name">Descripción</label>
+                            <textarea id="description" rows="3"
+                                placeholder="Breve descripción del producto"></textarea>
+                        </div>
+                    </div>
+                    <div class="container_button-form">
+                        <button class="button-form">Finalizar</button>
+                        <button class="button-form-delete">Eliminar</button>
+                    </div>
+                </form>
+        </main> -->
+            <%- include('partials/footer') %>
+    </body>
+
+</html>

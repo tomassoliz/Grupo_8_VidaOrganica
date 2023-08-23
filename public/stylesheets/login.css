@@ -1,246 +1,94 @@
-h2 {
+.title-login{
     text-align: center;
-    height: 30px;
-    margin: 20% auto 5%;
-    padding: 2%;
 }
 
-.formulario p {
+/* FORMULARIO COMPLETO */
+
+/* .formulario-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 10%;
+    width: 90%;
+    margin: 100px auto;
+}
+
+.formulario-register p {
+    padding-left: 2%;
     font-size: 12px;
 }
 
-.formulario .inputs .formu {
-    height: 20%;
-    margin-top: 5%;
+.inputs {
+    margin-top: 20px;
 }
 
-
-.formulario .inputs .formu .espacio {
-    padding-bottom: 17px;
+.formu {
+    background-color: rgb(195, 239, 195);
+    border-radius: 15px;
+    padding: 20px 10px;
+    width: 100%;
+    font-size: 15px;
 }
 
-.formulario .inputs .formu .espacio input {
-    display: block;
-    width: 95%;
-    margin: 2px auto;
-    padding: 8px;
-    border-radius: 13px;
+.espacio {
+    padding: 10px 0px;
 }
 
-.formulario .inputs .formu .espacio p {
+.espacio label {
+    font-size: 15px;
+    font-weight: 400;
+}
+.espacio p {
     display: inline;
     color: red;
     padding-left: 1%;
 }
 
-.formulario .inputs .formu a {
-    color: green;
-    padding-left: 9%;
-}
-
-.formulario .btn {
-    text-align: center;
-    height: 65px;
+.espacio input {
+    display: block;
     width: 100%;
-}
-
-.formulario .btn button {
-    background-color: rgb(38, 167, 38);
+    margin: auto;
+    padding: 8px;
     border-radius: 10px;
-    width: 60%;
-    height: 30px;
-    margin: 10% auto;
+    border: 1px solid var(--colorVerdeClaro);
+    outline: none;
 }
 
-.formulario .extra .register {
-    display: flex;
-    margin: 10px;
-    justify-content: center;
+
+.btn-submit {
+    background-color: rgb(195, 239, 195);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin: 50px auto 0px auto;
+    font-weight: 600;
+    color: #2c2c2c;
 }
 
-.formulario .extra .register p {
-    margin-top: 5%;
-    margin-right: 10px;
-    color: black;
-    font-size: 14px;
-    text-align: center;
-}
-
-.formulario .extra .register a {
-    color: green;
-    margin-top: 5%;
-    font-size: 14px;
+.btn-submit:hover{
+    background-color: var(--colorVerdeClaro);
+    transition: .3s;
 }
 
 
 /* MEDIA QUERYS */
 
-
-
 /* TABLET */
 
-@media (min-width:768px) {
-/* ver este body */
-    /* body {
-        margin: 4%;
-    } */
 
-
-
-    h2 {
-        text-align: center;
-        height: 30px;
-        margin: 20% auto 5%;
-        padding: 2%;
-        font-size: 40px;
+/* @media (min-width: 768px) {
+    .formulario-register {
+        width: 70%;
     }
-
-    .formulario p {
-        font-size: 17px;
-    }
-
-    .formulario .inputs .formu .espacio {
-        padding-bottom: 17px;
-        font-size: 25px;
-    }
-
-    .formulario .inputs .formu .espacio input {
-        display: block;
-        width: 95%;
-        margin: 10px auto;
-        height: 24px;
-        padding: 8px;
-        border-radius: 13px;
-        font-size: 20px;
-    }
-
-    .formulario .inputs .formu a {
-        color: green;
-        float: right;
-        margin-right: 2%;
-    }
-
-    .formulario .inputs .formu .user {
-        font-size: 18px;
-    }
-
-    .formulario .inputs .formu .user input {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .formulario .btn {
-        text-align: center;
-        height: 75px;
-        width: 100%;
-    }
-
-    .formulario .btn button {
-        background-color: rgb(38, 167, 38);
-        border-radius: 10px;
-        width: 50%;
-        height: 40px;
-        font-size: 18px;
-    }
-
-    /* EXTRA */
-
-    .formulario .extra .register p {
-        margin-top: 7%;
-        margin-right: 10px;
-        color: black;
-        font-size: 20px;
-        text-align: center;
-    }
-
-    .formulario .extra .register a {
-        color: green;
-        margin-top: 7%;
-        font-size: 20px;
-    }
-
+    
 }
-
 
 /* DESKTOP */
 
-@media (min-width:1024px) {
+/* @media (min-width:1024px) {
 
-    body {
-        margin: 10%;
+    .formulario-register {
+        width: 40%;
     }
-
-    h2 {
-        background-color: rgba(195, 239, 195, 0.5);
-        text-align: center;
-        height: 50px;
-        margin: 0 auto 5%;
-        padding: 2%;
-        font-size: 44px;
-    }
-
-    .formulario p {
-        font-size: 17px;
-    }
-
-    .formulario .inputs .formu .espacio {
-        padding-bottom: 17px;
-        font-size: 28px;
-    }
-
-    .formulario .inputs .formu .espacio input {
-        display: block;
-        width: 95%;
-        margin: 10px auto;
-        height: 24px;
-        padding: 8px;
-        border-radius: 13px;
-        font-size: 20px;
-    }
-
-    .formulario .inputs .formu a {
-        color: green;
-        float: right;
-        margin-right: 2%;
-    }
-
-    .formulario .inputs .formu .user {
-        font-size: 22px;
-    }
-
-    .formulario .inputs .formu .user input {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    .formulario .btn {
-        text-align: center;
-        height: 75px;
-        width: 100%;
-    }
-
-    .formulario .btn button {
-        background-color: rgb(38, 167, 38);
-        border-radius: 10px;
-        width: 50%;
-        height: 50px;
-        font-size: 20px;
-    }
-
-    /* EXTRA */
-
-    .formulario .extra .register p {
-        margin-top: 8%;
-        margin-right: 10px;
-        color: black;
-        font-size: 23px;
-        text-align: center;
-    }
-
-    .formulario .extra .register a {
-        color: green;
-        margin-top: 8%;
-        font-size: 23px;
-    }
-
-}
+}   */
