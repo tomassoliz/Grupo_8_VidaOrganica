@@ -1,11 +1,11 @@
 // const { v4: uuidv4 } = require("uuid");
 const { unlinkSync, existsSync } = require("fs");
-const { readJSON, writeJSON } = require("../controllers/data/index");
+const { readJSON, writeJSON } = require("../data");
 
 module.exports = {
-    products: (req, res) => {
-        return res.render('productsDetails')
-    },
+    // products: (req, res) => {
+    //     return res.render('productsDetails')
+    // },
     carrito: (req, res) => {
         return res.render('carrito')
     },

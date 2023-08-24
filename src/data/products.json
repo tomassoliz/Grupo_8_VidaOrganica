@@ -1,0 +1,83 @@
+[
+    {
+        "id": "64e24d9c-7ca6-4f74-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f70-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f71-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f72-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f73-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f20-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f61-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f62-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    },
+    {
+        "id": "64e24d9c-7ca6-4f63-94b0-b654530769f6",
+        "name": "Nueva Imagen",
+        "brand": "dietetix",
+        "description": "Lorem ipsum dolor amet sit",
+        "price": 350,
+        "discount": 10,
+        "image": "leche-almendra.jpeg"
+    }
+]
