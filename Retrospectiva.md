@@ -1,5 +1,4 @@
-* SPRINT 2 *
-
+#### SPRINT 2 ####
 
 Hacer más: Interacción, comunicación en general.
 
@@ -12,7 +11,7 @@ Hacer menos: Trabajo individual
 Seguir haciendo: Innovación; Proactividad.
 
 
-* SPRINT 3 *
+#### SPRINT 3 ####
 
 Hacer más: Comunicación.
 
@@ -21,5 +20,17 @@ Empezar a hacer: Actualizaciones en Trello, mantenerlo al día para reflejar nue
 Dejar de hacer: -
 
 Hacer menos: -
+
+Seguir haciendo: Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
+
+#### SPRINT 4 ####
+
+Hacer más: Comunicación.
+
+Empezar a hacer: Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
+
+Dejar de hacer: Posponer reuniones
+
+Hacer menos: Procrastinación
 
 Seguir haciendo: Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.

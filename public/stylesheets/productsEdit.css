@@ -1,23 +1,29 @@
+
+
 div.container_form-edit{
     margin: auto;
-    width: 80%;
+    width: 90%;
     margin-bottom: 150px;
     margin-top: 50px;
-    padding: 35px 50px;
+    padding: 30px 30px;
     border-radius: 10px;
     box-shadow: 20px 30px 25px 20px rgba(0, 0, 0, 0.15);
-};
+}
+
+.title_form-edit{
+    font-size: 30px;
+    text-align: center;
+    color: #1c1c1c;
+}
 
 .col-md-6{
     width: 100%;
     font-weight: 400;
     padding: 8px 10px;
     border-radius: 5px;
-    border: 1.2px solid #c4cae0;
     margin-top: 5px;
 }
 textarea{
-    border: 1.2px solid #c4cae0;
     border-radius: 5px;
 }
 
