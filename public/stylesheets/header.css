@@ -73,7 +73,7 @@
 
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
     .header__contenedor-cinco {
         display: none;
     }

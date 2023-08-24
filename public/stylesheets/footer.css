@@ -12,11 +12,10 @@
 }
 .input_footer{
     border: solid 1px rgb(111, 222, 75);
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
-    padding: 0px 0px 0px 8px;
-    width: 80%;
-    height: 50px;
+    padding: 10px 0px 10px 8px;
+    /* width: 80%; */
 }
 .subtitulo_footer{
     font-size: 20px;
@@ -110,6 +109,13 @@
     z-index: 100;
 
 }
+
+@media (min-width: 320px){
+    .input_footer{
+        width: 90%;
+    }
+}
+
 
 @media (min-width: 768px) { 
     .input_footer{

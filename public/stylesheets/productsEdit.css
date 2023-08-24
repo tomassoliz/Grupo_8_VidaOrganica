@@ -53,7 +53,7 @@ input#inputImg{
     height: 40px;
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
     .col-md-12 .container_description-edit{
         display: block;
         margin-bottom: 10px;

@@ -55,12 +55,12 @@ var swiper = new Swiper('.container-swiper-destacados', {
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 30,
     },
     1440: {
       slidesPerView: 5,
-      spaceBetween: 30,
+      spaceBetween: 0,
     },
   }
 });
@@ -82,12 +82,12 @@ var swiper = new Swiper('.container-swiper-novedades', {
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 30,
     },
     1440: {
       slidesPerView: 5,
-      spaceBetween: 30,
+      spaceBetween: 0,
     },
   }
 });

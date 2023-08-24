@@ -273,7 +273,7 @@
     color: var(--colorVerdeClaro);
 }
 
-@media (min-width: 375px) {
+@media (min-width: 320px) {
     .container-general {
         display: block;
         margin-bottom: 80px;
