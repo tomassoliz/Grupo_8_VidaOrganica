@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { products, carrito, add, edit,deleteProduct } = require('../controllers/productsController')
+const { products, carrito, add, edit,deleteProduct, productsDetails, } = require('../controllers/productsController')
 
 /* /products */
 

@@ -14,20 +14,10 @@
             <main>
                 <div class="swiper mySwiper container-swiper-main">
                     <div class="swiper-wrapper ">
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/alimentos-naturales.jpg"
-                                alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/despensa.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/cosmetica-natural.jpeg"
-                                alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/bebidas.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/images.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/alimentos-naturales.jpg"
-                                alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/despensa.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/cosmetica-natural.jpeg"
-                                alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/bebidas.jpg" alt=""></div>
-                        <div class="swiper-slide"><img class="imagen_carousel" src="/images/images.jpg" alt=""></div>
+                        <% carousell.forEach(product => { %>
+                            <div class="swiper-slide"><img class="imagen_carousel" src="/images/<%= product.image %>" alt=""></div>
+                        <% }) %>
+                       
                     </div>
                     <div class="swiper-pagination"></div>
                 </div>
@@ -124,126 +114,9 @@
                     <h2>destacados</h2>
                     <div class="swiper mySwiper container-swiper-destacados">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
+
+                            <%- include('partials/products') %>
+                            
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
@@ -253,126 +126,9 @@
                     <h2>novedades</h2>
                     <div class="swiper mySwiper container-swiper-novedades">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
-                            <div class="swiper-slide">
-                                <section class="container-articulo-section">
-                                    <img class="imagen_producto" src="/images/leche-almendra.jpeg"
-                                        alt="leche de almendras">
-                                    <div class="container-info-main">
-                                        <h4 class="description">Leche de almendras</h4>
-                                        <p class="precio-card">$5.000</p>
-                                        <button class="button-card"><a class="link_card"
-                                                href="/products/productsDetails">comprar</a></button>
-                                    </div>
-                                </section>
-                            </div>
+
+                            <%- include('partials/products') %>
+                            
                         </div>
                         <div class="swiper-button-next"></div>
                         <div class="swiper-button-prev"></div>
