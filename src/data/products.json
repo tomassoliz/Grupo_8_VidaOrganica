@@ -1,0 +1,21 @@
+[
+    {
+        "id" : 1,
+        "name" : "Café",
+        "brand" : "Bonafide",
+        "category" : "Bebidas e infusiones",
+        "price" : "400",
+        "discount" : "5",
+        "description" : "Café torrado intenso",
+        "image" : ""
+    },
+    {
+        "id" : 2,
+        "name" : "Café",
+        "brand" : "Bonafide",
+        "category" : "Bebidas e infusiones",
+        "price" : "410",
+        "discount" : "5",
+        "description" : "Café torrado suave"
+    }
+]

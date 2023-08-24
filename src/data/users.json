@@ -1,0 +1,92 @@
+[
+{
+    "id": "1",
+    "firstName": "Paula",
+    "lastName": "Rodríguez",
+    "email": "pau-rod@gmail.com",
+    "password": "amolosperritos",
+    "category": "comprador",
+    "image": "img-default.png"
+},
+{
+    "id": "2",
+    "firstName": "Clara",
+    "lastName": "Gonzalez",
+    "email": "gon_clara@gmail.com",
+    "password": "queen1",
+    "category": "comprador",
+    "image": "img-default.png"
+},
+{
+    "id": "3",
+    "firstName": "Miriam",
+    "lastName": "Gomez",
+    "email": "miriamG@gmail.com",
+    "password": "rickyteamo15",
+    "category": "comprador",
+    "image": "img-default.png"
+},
+{
+    "id": "4",
+    "firstName": "Pablo",
+    "lastName": "Lopez",
+    "email": "pablitolopez@gmail.com",
+    "password": "aguanteRiver",
+    "category": "comprador",
+    "image": "img-default.png"
+},
+{
+    "id": "5",
+    "firstName": "Eduardo",
+    "lastName": "Perez",
+    "email": "peduard@gmail.com",
+    "password": "harleydavidson00",
+    "category": "comprador",
+    "image": "img-default.png"
+},
+{
+    "id": "6",
+    "firstName": "Camila",
+    "lastName": "Coronel",
+    "email": "caminel@gmail.com",
+    "password": "fandelasmascotas",
+    "category": "vendedor",
+    "image": "img-default.png"
+},
+{
+    "id": "7",
+    "firstName": "Brisa",
+    "lastName": "Santos",
+    "email": "briSantos@gmail.com",
+    "password": "pachupeñateamo",
+    "category": "vendedor",
+    "image": "img-default.png"
+},
+{
+    "id": "8",
+    "firstName": "Natalia",
+    "lastName": "Gimenez",
+    "email": "nati_g@gmail.com",
+    "password": "todopormisgatos",
+    "category": "vendedor",
+    "image": "img-default.png"
+},
+{
+    "id": "9",
+    "firstName": "Marco",
+    "lastName": "Dominguez",
+    "email": "domi_m@gmail.com",
+    "password": "pizzahawaiana01",
+    "category": "vendedor",
+    "image": "img-default.png"
+},
+{
+    "id": "10",
+    "firstName": "Bruno",
+    "lastName": "Garcia",
+    "email": "brunogarcia@gmail.com",
+    "password": "vamoelmillo",
+    "category": "vendedor",
+    "image": "img-default.png"
+}
+]
