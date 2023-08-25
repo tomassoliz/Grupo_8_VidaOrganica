@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "name" : "Bebidas e Infusiones"  
+    },
+    {
+        "id": 2,
+        "name" : "Cosmetica"  
+    },
+    {
+        "id": 3,
+        "name" : "Alimentos Naturales"  
+    },
+    {
+        "id": 4,
+        "name" : "Despensa"  
+    },
+    {
+        "id": 5,
+        "name" : "Suplementos Naturales"  
+    }
+    
+]

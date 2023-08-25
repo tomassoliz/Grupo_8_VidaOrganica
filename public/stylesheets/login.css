@@ -1,16 +1,8 @@
 .title-login{
     text-align: center;
-}
-
-/* FORMULARIO COMPLETO */
-
-/* .formulario-register {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 10%;
-    width: 90%;
-    margin: 100px auto;
+    height: 30px;
+    margin: 20% auto 5%;
+    padding: 2%;
 }
 
 .formulario-register p {
