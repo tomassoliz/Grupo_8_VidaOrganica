@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { detail, add, edit, create, update, remove } = require('../controllers/productsController');
+const { detail, add, edit, create, update, remove, addImage, storeImage } = require('../controllers/productsController');
 
 
 /* /products */
@@ -13,8 +13,7 @@ router
     .put('/update/:id', update)
     .delete('/remove/:id', remove)
 
-    /* .post('/productsAdd', upload.single('image'), productAddValidator, create) */
-    
-
+    .get('/add', addImage)
+    .post('/add', storeImage)
 
 module.exports = router;
