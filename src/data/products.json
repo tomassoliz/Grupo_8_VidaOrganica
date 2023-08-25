@@ -1,63 +1,63 @@
 [
    {
       "id": "64e24d9c-7ca6-4f74-92b0-b653830769f6",
-      "name": "Leche de Almendra",
-      "brand": "Apple",
+      "name": "acetie de coco",
+      "brand": "Coconut",
       "description": "Lorem ipsum dolor amet sit",
-      "price": 200,
+      "price": 500,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "aceite-de-coco-goldml-fish-x-500-.jpg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
-      "name": "Leche de Almendra",
-      "brand": "Apple",
+      "name": "almidon",
+      "brand": "Cabrales",
       "description": "Lorem ipsum dolor amet sit",
-      "price": 200,
+      "price": 250,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "almidon.jpeg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-90b0-b653830769f6",
-      "name": "Leche de Almendra",
+      "name": "maíz",
       "brand": "Apple",
       "description": "Lorem ipsum dolor amet sit",
       "price": 200,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "granos-maiz.jpg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-89b0-b653830769f6",
-      "name": "Leche de Almendra",
-      "brand": "Apple",
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 200,
+      "name": "miel",
+      "brand": "Stevia Kony",
+      "description": "miel pura natural",
+      "price": 700,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "miel-pura.jpeg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-88b0-b653830769f6",
-      "name": "Leche de Almendra",
-      "brand": "Apple",
+      "name": "mix de semillas",
+      "brand": "Granix",
       "description": "Lorem ipsum dolor amet sit",
-      "price": 200,
+      "price": 270,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "mix-de-semillas-1.jpg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-87b0-b653830769f6",
-      "name": "Leche de Almendra",
-      "brand": "Apple",
+      "name": "salvado",
+      "brand": "Chia",
       "description": "Lorem ipsum dolor amet sit",
-      "price": 200,
+      "price": 300,
       "discount": 10,
-      "image": "leche-almendra.jpeg"
+      "image": "salvado-1.png"
    },
    {
       "id": "64e24d9c-7ca6-4f74-86b0-b653830769f6",
       "name": "Leche de Almendra",
-      "brand": "Apple",
-      "description": "Lorem ipsum dolor amet sit",
+      "brand": "Silk",
+      "description": "No es leche",
       "price": 200,
       "discount": 10,
       "image": "leche-almendra.jpeg"
