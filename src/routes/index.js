@@ -3,9 +3,12 @@ const router = express.Router();
 const { index, admin } = require('../controllers/indexController');
 
 /* / */
+/* ROUTER */
 
-router.get('/', index);
-router.get('/admin', admin)
-
+router
+    .get('/', index)
+    .get('/admin', admin )
+    
+  
 
 module.exports = router;
