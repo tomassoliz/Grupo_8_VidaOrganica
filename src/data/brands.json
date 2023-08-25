@@ -49,6 +49,13 @@
     },
     {
         "id": 9,
+        "name": "Silk",
+        "origin": "Estados Unidos",
+        "image":null
+
+    },
+    {
+        "id": 10,
         "name": "Activia",
         "origin": "Taiwan",
         "image": null

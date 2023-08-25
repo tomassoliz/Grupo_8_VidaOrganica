@@ -38,11 +38,11 @@
                         </div>
                         <div class="col-md-6">
                             <label for="inputDiscount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" name="discount" id="inputDiscount">
+                            <input type="number" class="form-control" name="discount" id="inputDiscount" value="<%= discount %>">
                         </div>
                         <div class="col-md-12">
                             <label for="name" class="container_description-edit">Descripción</label>
-                            <textarea id="description" placeholder="Descripción a editar"></textarea>
+                            <textarea id="description" placeholder="Descripción a editar" name="description" value="<%= description %>"><%= description %></textarea>
                         </div>
                         <div class="col-sm-6">
                             <label for="inputStock" class="form-label">Stock</label>
