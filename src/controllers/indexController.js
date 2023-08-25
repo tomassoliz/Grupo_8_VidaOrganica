@@ -17,8 +17,7 @@ module.exports = {
 
         return res.render('admin', {
             products,
-            carousell
-            
+            carousell 
         })
     }
 

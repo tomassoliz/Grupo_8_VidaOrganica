@@ -61,5 +61,14 @@
       "price": 200,
       "discount": 10,
       "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "a437e828-8c01-495d-a49b-52b94f1d5e95",
+      "name": "cafe",
+      "brand": "Granix",
+      "price": 1500,
+      "category": "Bebidas e Infusiones",
+      "discount": 15,
+      "description": "Cafe de grano grueso"
    }
 ]

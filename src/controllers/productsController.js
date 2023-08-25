@@ -1,4 +1,4 @@
-const products = require('../data/products.json')
+
 module.exports = {
     edit: require('./products/edit'),
     remove: require('./products/remove'),

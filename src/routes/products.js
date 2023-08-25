@@ -13,8 +13,4 @@ router
     .put('/update/:id', update)
     .delete('/remove/:id', remove)
 
-    /* .post('/productsAdd', upload.single('image'), productAddValidator, create) */
-    
-
-
 module.exports = router;

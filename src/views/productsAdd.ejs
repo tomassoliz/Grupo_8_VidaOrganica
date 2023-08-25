@@ -11,11 +11,11 @@
             <main>
                 <div class="container_form-add">
                     <h2 class="title_form-add">Añadir productos</h2>
-                    <form class="form-add" action="">
+                    <form class="form-add" method="POST" action="">
                         <div class="container_input-add">
                             <div class="input-add">
                                 <label for="name">Nombre</label>
-                                <input type="text" id="name">
+                                <input type="text" id="name" name="name">
                             </div>
                             <div class="input-add">
                                 <label for="brand">Marca</label>
@@ -35,18 +35,18 @@
                             </div>
                             <div class="input-add">
                                 <label for="price">Precio</label>
-                                <input type="number" id="price">
+                                <input type="number" id="price" name="price">
                             </div>
                             <div class="input-add">
                                 <label for="discount">Descuento</label>
-                                <input type="number" id="discount">
+                                <input type="number" id="discount" name="discount">
                             </div>
                         </div>
                         <div class="container_input-add">
                             <div class="input-add">
-                                <label for="name">Descripción</label>
+                                <label for="name" name="name">Descripción</label>
                                 <textarea id="description" rows="3"
-                                    placeholder="Breve descripción del producto"></textarea>
+                                    placeholder="Breve descripción del producto" name="description"></textarea>
                             </div>
                         </div>
                         <div class="container_button-form">
