@@ -19,12 +19,19 @@
                             </div>
                             <div class="input-add">
                                 <label for="brand">Marca</label>
-                                <input type="text" id="brand">
+                                <select type="text" name="brand" id="brand">
+                                    <% brands.forEach(brand => { %>
+                                        <option value="<%= brand.name %>"><%= brand.name %></option>
+                                    <% }) %>
+                                </select>
                             </div>
                             <div class="input-add">
                                 <label for="category">Categoría</label>
-                                <input type="text" id="category">
-                               
+                                <select type="text" name="category" id="category">
+                                    <% categories.forEach(category => { %>
+                                        <option value="<%= category.name %>"><%= category.name %></option>
+                                    <% }) %>
+                                </select>
                             </div>
                             <div class="input-add">
                                 <label for="price">Precio</label>

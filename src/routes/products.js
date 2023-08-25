@@ -1,14 +1,20 @@
 const express = require('express')
 const router = express.Router()
-const { products, carrito, add, edit,remove, productsDetails, } = require('../controllers/productsController')
+const { detail, add, edit, create, update, remove } = require('../controllers/productsController');
+
 
 /* /products */
 
-router.get('/productsDetails', productsDetails)
-router.get('/carrito', carrito)
-router.get('/productsAdd', add)
-router.get('/productsEdit', edit)
-router.delete('/remove/:id', remove)
+router
+    .get('/detail/:id', detail)
+    .get('/add', add)
+    .post('/add', create)
+    .get('/edit/:id', edit)
+    .put('/update/:id', update)
+    .delete('/remove/:id', remove)
+
+    /* .post('/productsAdd', upload.single('image'), productAddValidator, create) */
+    
 
 
 module.exports = router;

@@ -1,21 +1,9 @@
-
+const products = require('../data/products.json')
 module.exports = {
-    products: (req,res) => {
-    res.render('products')
-    },
-    productsDetails: (req, res) => {
-        return res.render('productsDetails')
-    },
-    carrito: (req, res) => {
-        return res.render('carrito')
-    },
-    add: (req, res) => {
-        return res.render('productsAdd')
-    },
-    edit: (req, res) =>{
-        return res.render('productsEdit')
-    },
-
-    remove: require('./products/remove')
-    
+    edit: require('./products/edit'),
+    remove: require('./products/remove'),
+    add: require('./products/add'),
+    create: require('./products/create'),
+    detail: require('./products/detail'),
+    update: require('./products/update')  
 }
