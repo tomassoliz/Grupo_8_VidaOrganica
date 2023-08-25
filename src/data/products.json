@@ -1,92 +1,74 @@
 [
-    {
-        "id": "64e24d9c-7ca6-4f74-94b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-93b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-92b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-90b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-89b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-88b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-87b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-86b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    },
-    {
-        "id": "64e24d9c-7ca6-4f74-85b0-b653830769f6",
-        "name": "Leche de Almendra",
-        "brand": "Apple",
-        "description": "Lorem ipsum dolor amet sit",
-        "price": 200,
-        "discount": 10,
-        "image": "leche-almendra.jpeg"
-    }
+   {
+      "id": "64e24d9c-7ca6-4f74-92b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-90b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-89b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-88b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-87b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-86b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-85b0-b653830769f6",
+      "name": "Leche de Almendra",
+      "brand": "Apple",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 200,
+      "discount": 10,
+      "image": "leche-almendra.jpeg"
+   }
 ]

@@ -16,6 +16,6 @@ module.exports = {
         return res.render('productsEdit')
     },
 
-    deleteProduct: require('./products/remove')
+    remove: require('./products/remove')
     
 }
