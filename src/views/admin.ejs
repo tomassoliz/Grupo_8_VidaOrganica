@@ -8,6 +8,7 @@
 
             <main class="container">
                 <div class="row mt-5">
+                    
                     <div class="col-12-col-md-12 col-lg-10 mx-auto">
                         <div class="card">
                             <div class="card-header">
@@ -29,11 +30,6 @@
                                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                             data-bs-target="#contact-tab-pane" type="button" role="tab"
                                             aria-controls="contact-tab-pane" aria-selected="false">Categorías</button>
-                                    </li>
-                                    <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="add-tab" data-bs-toggle="tab"
-                                            data-bs-target="#add-tab-pane" type="button" role="tab"
-                                            aria-controls="add-tab-pane" aria-selected="false">Agregar</button>
                                     </li>
                                 </ul>
                                 <div class="tab-content" id="myTabContent">
@@ -168,7 +164,8 @@
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <a class="btn btn-sm btn-warning" href="/products/stock">
+                                                                <a class="btn btn-sm btn-warning"
+                                                                    href="/products/stock">
                                                                     <i class="fas fa-greater-than-equal"></i>
                                                                 </a>
                                                             </div>
@@ -178,6 +175,8 @@
                                             </tbody>
                                         </table>
                                     </div>
+
+
                                     <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
                                         aria-labelledby="profile-tab" tabindex="0">
                                         <div>
@@ -190,6 +189,7 @@
                                             </form>
                                         </div>
                                     </div>
+
                                     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
                                         aria-labelledby="contact-tab" tabindex="0">
                                         <div>
@@ -202,15 +202,9 @@
                                             </form>
                                         </div>
                                     </div>
-                                    <div class="tab-pane fade" id="add-tab-pane" role="tabpanel"
-                                        aria-labelledby="add-tab" tabindex="0">
-                                        <div class="d-flex justify-content-between my-3">
-                                            <form action="" class="d-flex gap-2">
-                                                <a href="/productsAdd.ejs" class="btn btn-success"><i
-                                                        class="fa-solid fa-plus"></i> Agregar</a>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    <a href="/products/productsAdd" class="btn btn-success"><i
+                                                       class="fa-solid fa-plus"></i> Agregar</a>
+                                
                                 </div>
                             </div>
                         </div>
