@@ -3,36 +3,42 @@
         "id" : 1,
         "name" : "acetie de coco",
         "price" : 500,
+        "brand": null,
         "image" : null
     },
     {
         "id" : 2,
         "name" : "almidon",
         "price" : 350,
+        "brand": null,
         "image" : null
     },
     {
         "id" : 3,
         "name" : "maíz",
         "price" : 300,
+        "brand": null,
         "image" : null
     },
     {
         "id" : 4,
         "name" : "miel",
         "price" : 800,
+        "brand": null,
         "image" : null
     },
     {
         "id" : 5,
         "name" : "leche de almendras",
         "price" : 425,
+        "brand": null,
         "image" : null
     },
     {
         "id" : 6,
         "name" : "salvado",
         "price" : 325,
+        "brand": null,
         "image" : null
     }
 ]

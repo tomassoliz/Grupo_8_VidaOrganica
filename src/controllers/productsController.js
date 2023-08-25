@@ -13,7 +13,16 @@ module.exports = {
         return res.render('productsAdd')
     },
     edit: (req, res) =>{
-        return res.render('productsEdit')
+      const products = readJSON('products.json')  
+      
+      const id = req.params.id;
+      const product = products.find((product)=> product.id === req.params.id);
+
+      return res.render('productsEdit',{...product})
+    },
+
+    update: (req,res) =>{
+      return res.send(req.body)
     },
 
     deleteProduct:(req,res) =>{

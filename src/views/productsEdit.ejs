@@ -16,22 +16,29 @@
             <main>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
-                    <form class="row g-3" method="post">
+                    <form class="row g-3" method="POST" action="/products/update/<%= id %>?_method=PUT">
                         <div class="col-md-6">
                             <label for="inputProductName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" id="inputProductName">
+                            <input type="text" class="form-control" name="name" id="Name" value="<%= name %>">
                         </div>
                         <div class="col-md-6">
                             <label for="inputBrand" class="form-label">Marca</label>
-                            <input type="text" class="form-control" id="inputBrand">
+                            <!-- <input type="text" class="form-control" name="brand" id="inputBrand"> -->
+                            <select name="marca" id="marca">
+                                <% brands.forEach(item => { %>
+                                    <option <%= item.name === brand && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
+                                <% }) %>
+                                
+                                
+                            </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPrice" class="form-label">Precio</label>
-                            <input type="number" class="form-control" id="inputPrice" placeholder="$">
+                            <input type="number" class="form-control" name="price" value="<%= price %>" id="inputPrice" placeholder="$">
                         </div>
                         <div class="col-md-6">
                             <label for="inputDiscount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" id="inputDiscount">
+                            <input type="number" class="form-control" name="discount" id="inputDiscount">
                         </div>
                         <div class="col-md-12">
                             <label for="name" class="container_description-edit">Descripción</label>
