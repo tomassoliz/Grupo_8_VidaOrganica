@@ -5,12 +5,5 @@ module.exports = {
     add: require('./products/add'),
     create: require('./products/create'),
     detail: require('./products/detail'),
-    update: require('./products/update') ,
-    
-    addImage : (req, res) => {
-        return res.render('addImage')
-    },
-    storeImage : (req,res) => {
-        return res.send(req.body)
-    }
+    update: require('./products/update'),
 }
