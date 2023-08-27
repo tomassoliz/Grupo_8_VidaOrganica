@@ -82,23 +82,12 @@
       "createdAt": "2023-08-25T21:56:10.586Z"
    },
    {
-      "id": "d1e0924d-2fd1-4a2b-a457-b9c214d27954",
-      "name": "Té",
-      "brand": "Chia",
-      "price": 1540,
-      "discount": 20,
-      "description": "Té de lavanda en hebras",
-      "image": "default-img.png",
-      "createdAT": "2023-08-25T22:06:38.619Z"
-   },
-   {
-      "id": "1943ab1a-8188-43f5-994b-e4883b0fcc90",
-      "name": "Té",
-      "brand": "Chia",
+      "id": "0fe6e890-6cf9-4704-b5f3-b92234e0a589",
+      "name": "ger5yaq",
+      "brand": "Cabrales",
       "price": 1540,
       "discount": 10,
-      "description": "ewwGEWg",
-      "image": "default-img.png",
-      "createdAT": "2023-08-26T23:13:35.500Z"
+      "description": "reb45b",
+      "createdAT": "2023-08-26T23:59:21.918Z"
    }
 ]
