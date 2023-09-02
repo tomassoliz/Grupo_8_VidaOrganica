@@ -36,6 +36,13 @@
     font-weight: 300;
 
 }
+.container-price {
+    text-align: center;
+}
+.container-price span{
+    font-size: 50px;
+    font-weight: 400;
+}
 
 .container-details-product {
     padding: 30px 0px;

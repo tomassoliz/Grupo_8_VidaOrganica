@@ -1,36 +1,41 @@
-#### SPRINT 2 ####
-
-Hacer más: Interacción, comunicación en general.
-
-Empezar a hacer: Más reuniones.
-
-Dejar de hacer: Ausentarse
-
-Hacer menos: Trabajo individual
-
-Seguir haciendo: Innovación; Proactividad.
+# SPRINT 2 #
 
 
-#### SPRINT 3 ####
+**Hacer más:** Interacción, comunicación en general.
 
-Hacer más: Comunicación.
+**Empezar a hacer:** Más reuniones.
 
-Empezar a hacer: Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
+**Dejar de hacer:** Ausentarse
 
-Dejar de hacer: -
+**Hacer menos:** Trabajo individual
 
-Hacer menos: -
+**Seguir haciendo:** Innovación; Proactividad.
 
-Seguir haciendo: Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
 
-#### SPRINT 4 ####
+# SPRINT 3 #
 
-Hacer más: Comunicación.
+**Hacer más:** Comunicación.
 
-Empezar a hacer: Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
+**Empezar a hacer:** Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
 
-Dejar de hacer: Posponer reuniones
+**Dejar de hacer:** -
 
-Hacer menos: Procrastinación
+**Hacer menos:** -
 
-Seguir haciendo: Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
+**Seguir haciendo:** Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
+
+ # Sprint 4 #
+
+**Hacer más**: Comunicación.
+
+**Empezar a hacer**: Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
+
+**Dejar de hacer:** Posponer reuniones.
+
+**Hacer menos:** Procrastinación
+
+**Seguir haciendo:** Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
+
+ # Sprint 5 #
+
+

@@ -1,0 +1,85 @@
+[
+   {
+      "id": "64e24d9c-7ca6-4f74-92b0-b653830769f6",
+      "name": "acetie de coco",
+      "brand": "Coconut",
+      "category": "Bebidas e Infusiones",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 500,
+      "discount": 10,
+      "image": "aceite-de-coco-gold-fish-x-500-ml.jpg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
+      "name": "almidon",
+      "brand": "Cabrales",
+      "category": "Bebidas e Infusiones",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 250,
+      "discount": 10,
+      "image": "almidon.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-89b0-b653830769f6",
+      "name": "miel",
+      "brand": "Stevia Kony",
+      "category": "Bebidas e Infusiones",
+      "description": "miel pura natural",
+      "price": 700,
+      "discount": 10,
+      "image": "miel-pura.jpeg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-88b0-b653830769f6",
+      "name": "mix de semillas",
+      "brand": "Granix",
+      "category": "Bebidas e Infusiones",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 270,
+      "discount": 10,
+      "image": "mix-de-semillas-1.jpg"
+   },
+   {
+      "id": "64e24d9c-7ca6-4f74-87b0-b653830769f6",
+      "name": "salvado",
+      "brand": "Chia",
+      "category": "Bebidas e Infusiones",
+      "description": "Lorem ipsum dolor amet sit",
+      "price": 300,
+      "discount": 10,
+      "image": "salvado-1.png"
+   },
+   {
+      "id": "a437e828-8c01-495d-a49b-52b94f1d5e95",
+      "name": "cafe",
+      "price": 2000,
+      "brand": "Coconut",
+      "category": "Bebidas e Infusiones",
+      "discount": 15,
+      "description": "Cafe de grano grueso",
+      "image": "default-img.png",
+      "createdAt": "2023-08-25T21:07:03.651Z"
+   },
+   {
+      "id": "486caab8-b423-4d8b-9695-e37c42fe76f6",
+      "name": "Legumbres",
+      "price": 6000,
+      "brand": "Coconut",
+      "category": "Bebidas e Infusiones",
+      "discount": 12,
+      "description": "500gr de legumbres",
+      "image": "default-img.png",
+      "createdAT": "2023-08-25T21:11:30.179Z",
+      "createdAt": "2023-08-25T21:56:10.586Z"
+   },
+   {
+      "id": "f1e2a873-377d-44bc-934e-e30df3fddd91",
+      "name": "Té",
+      "brand": "FuzeTea",
+      "price": 1540,
+      "discount": 10,
+      "description": "erhfhbtbthdry",
+      "createdAT": "2023-08-27T00:10:43.734Z",
+      "image": "1693095043725_products_.jpg"
+   }
+]

@@ -1,0 +1,23 @@
+[
+    {
+        "id": "61e24d9c-7ca6-4f74-92b0-b653830769f6",
+        "name" : "Bebidas e Infusiones"  
+    },
+    {
+        "id": "62e24d9c-7ca6-4f74-92b0-b653830769f6",
+        "name" : "Cosmetica"  
+    },
+    {
+        "id": "63e24d9c-7ca6-4f74-92b0-b653830769f6",
+        "name" : "Alimentos Naturales"  
+    },
+    {
+        "id": "64e24d9c-7ca6-4f74-92b0-b653830769f3",
+        "name" : "Despensa"  
+    },
+    {
+        "id": "64e24d9c-7ca6-4f74-92b0-b6538307694r",
+        "name" : "Suplementos Naturales"  
+    }
+    
+]

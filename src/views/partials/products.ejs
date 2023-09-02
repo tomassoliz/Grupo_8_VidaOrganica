@@ -1,0 +1,14 @@
+<% products.forEach(product => { %>
+    <div class="swiper-slide">
+        <section class="container-articulo-section">
+            <img class="imagen_producto" src="/images/<%= product.image %>"
+                alt="leche de almendras">
+            <div class="container-info-main">
+                <h4 class="description"><%= product.name %></h4>
+                <p class="precio-card">$<%= product.price %></p>
+                <button class="button-card"><a class="link_card"
+                        href="/products/detail/<%= product.id%>">comprar</a></button>
+            </div>
+        </section>
+    </div>
+<% }) %>
