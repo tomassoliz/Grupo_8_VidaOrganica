@@ -7,6 +7,7 @@ module.exports = (req, res) => {
     let newProduct = new Product(req.body)
 
     products.push(newProduct);
+
     writeJSON(products, 'products.json');
     
     return res.redirect('/admin')

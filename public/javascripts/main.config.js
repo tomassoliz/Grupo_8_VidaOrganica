@@ -52,15 +52,15 @@ var swiper = new Swiper('.container-swiper-destacados', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
     1440: {
-      slidesPerView: 5,
-      spaceBetween: 30,
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
   }
 });
@@ -79,15 +79,15 @@ var swiper = new Swiper('.container-swiper-novedades', {
     },
     768: {
       slidesPerView: 2,
-      spaceBetween: 30,
+      spaceBetween: 20,
     },
     1024: {
-      slidesPerView: 4,
-      spaceBetween: 30,
+      slidesPerView: 3,
+      spaceBetween: 20,
     },
     1440: {
-      slidesPerView: 5,
-      spaceBetween: 30,
+      slidesPerView: 4,
+      spaceBetween: 20,
     },
   }
 });

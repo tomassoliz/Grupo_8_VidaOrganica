@@ -16,33 +16,30 @@
             <main>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
-                    <form class="row g-3" method="POST" action="/products/update/<%= id %>?_method=PUT">
+                    <form class="row g-3" action="/products/update/<%= id %>?_method=PUT"  method="POST">
                         <div class="col-md-6">
-                            <label for="inputProductName" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="name" id="Name" value="<%= name %>">
+                            <label for="name" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" name="name" id="name" value="<%= name %>">
                         </div>
                         <div class="col-md-6">
                             <label for="inputBrand" class="form-label">Marca</label>
-                            <!-- <input type="text" class="form-control" name="brand" id="inputBrand"> -->
-                            <select name="marca" id="marca">
+                            <select name="brand">
                                 <% brands.forEach(item => { %>
                                     <option <%= item.name === brand && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
                                 <% }) %>
-                                
-                                
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="inputPrice" class="form-label">Precio</label>
-                            <input type="number" class="form-control" name="price" value="<%= price %>" id="inputPrice" placeholder="$">
+                            <input type="number" class="form-control" name="price" id="inputPrice" placeholder="$" value="<%= price %>">
                         </div>
                         <div class="col-md-6">
                             <label for="inputDiscount" class="form-label">Descuento</label>
                             <input type="number" class="form-control" name="discount" id="inputDiscount" value="<%= discount %>">
                         </div>
                         <div class="col-md-12">
-                            <label for="name" class="container_description-edit">Descripción</label>
-                            <textarea id="description" placeholder="Descripción a editar" name="description" value="<%= description %>"><%= description %></textarea>
+                            <label for="description" class="container_description-edit">Descripción</label>
+                            <textarea id="description" placeholder="Descripción a editar" name="description"><%= description %></textarea>
                         </div>
                         <div class="col-sm-6">
                             <label for="inputStock" class="form-label">Stock</label>

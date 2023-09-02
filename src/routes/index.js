@@ -9,6 +9,5 @@ router
     .get('/', index)
     .get('/admin', admin )
     
-  
 
 module.exports = router;
