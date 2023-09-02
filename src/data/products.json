@@ -69,39 +69,17 @@
       "discount": 12,
       "description": "500gr de legumbres",
       "image": "default-img.png",
-      "createdAt": "2023-08-25T23:47:21.341Z"
+      "createdAT": "2023-08-25T21:11:30.179Z",
+      "createdAt": "2023-08-25T21:56:10.586Z"
    },
    {
-      "id": "6b0c11a4-fed6-43be-b68c-eba526ea2ddc",
-      "name": "asA",
-      "price": 15000,
-      "brand": "Coconut",
-      "category": "Bebidas e Infusiones",
-      "discount": 12,
-      "description": "HOLA COMO ESTAS?",
-      "image": "default-img.png",
-      "createdAt": "2023-08-25T23:43:28.417Z"
-   },
-   {
-      "id": "b58e550a-d30f-4940-afaf-0cc74ee5ba98",
-      "name": "Mani con pazas",
-      "brand": "Bonafide",
-      "price": 1500,
-      "category": "Bebidas e Infusiones",
-      "discount": 12,
-      "description": "Mani con pazas",
-      "image": "default-img.png",
-      "createdAt": "2023-08-25T23:18:59.557Z"
-   },
-   {
-      "id": "41e33997-d90b-4f6c-92be-e792f13bb02e",
-      "name": "Leche de almendras",
-      "brand": "Activia",
-      "price": 550,
-      "category": "Bebidas e Infusiones",
-      "discount": 12,
-      "description": "Leche de almendras",
-      "image": "default-img.png",
-      "createdAt": "2023-08-25T23:20:40.328Z"
+      "id": "f1e2a873-377d-44bc-934e-e30df3fddd91",
+      "name": "Té",
+      "brand": "FuzeTea",
+      "price": 1540,
+      "discount": 10,
+      "description": "erhfhbtbthdry",
+      "createdAT": "2023-08-27T00:10:43.734Z",
+      "image": "1693095043725_products_.jpg"
    }
 ]
