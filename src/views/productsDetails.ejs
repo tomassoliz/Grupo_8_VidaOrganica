@@ -8,7 +8,11 @@
     <body>
 
         <%- include('partials/header') %>
-
+        <div class="carrito_body-title">
+            <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
+                    href="#">detalle</a></p>
+            <h2 class="carrito_main_title">Detalle de producto</h2>
+        </div>
             <main class="container-general">
                 <div class="container-img">
                     <img src="/images/<%= product.image %>" alt="">
@@ -20,11 +24,29 @@
                     <div class="container-price">
                         <span>$<%= product.price %></span>
                     </div>
+                    <div class="container-description">
+                        <div class="title-decription">
+                            <h4>Descripción</h4>
+                        </div>
+                        <div class="text-description">
+                            <p><%= product.description %>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="container-reviews">
+                        <div class="title-reviews">
+                            <h4>Reseñas</h4>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </div>
+                        <div class="text-reviews">
+                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium cum culpa soluta corporis ipsa mollitia esse expedita eaque asperiores consequuntur consequatur impedit, molestiae voluptatum iusto unde laboriosam molestias obcaecati? </p>
+                        </div>
+                    </div>
                     <div class="container-details-product">
                         <div class="form-group">
-                            <label for="cantidad">Presentación</label>
                             <select name="cantidad" id="cantidad">
-                                <option disabled selected value="">Escoge una Opcion</option>
+                                <option disabled selected value="">Escoge una Opción</option>
                                 <option value="medida-uno">300gr</option>
                                 <option value="medida-dos">500gr</option>
                                 <option value="medida-tres">1kg</option>
@@ -32,6 +54,7 @@
                             </select>
                         </div>
                     </div>
+                    <span class="span_exist">Hay existencias</span>
                     <div class="container-add-cart">
                         <div class="container-quantity">
                             <input class="input-quantity" type="number" placeholder="1" value="1" min="1">
@@ -44,34 +67,6 @@
                             <i class="fa-solid fa-plus"></i>
                             Añadir al carrito
                         </button>
-                    </div>
-                    <div class="container-description">
-                        <div class="title-decription">
-                            <h4>Descripcion</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-description">
-                            <p><%= product.description %>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="container-additional-information">
-                        <div class="title-additional-information">
-                            <h4>Informacion adicional</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-additional-information">
-                            <p> ----------------- </p>
-                        </div>
-                    </div>
-                    <div class="container-reviews">
-                        <div class="title-reviews">
-                            <h4>Reseñas</h4>
-                            <i class="fa-solid fa-chevron-down"></i>
-                        </div>
-                        <div class="text-reviews">
-                            <p> ----------------- </p>
-                        </div>
                     </div>
                     <div class="container-social">
                         <span>Compartir</span>

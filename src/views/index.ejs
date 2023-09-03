@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', {
-    title: 'Home'
-}) %>
+<%- include('partials/head', { title: 'Home' }) %>
 
     <body>
 
@@ -13,7 +11,7 @@
                 <div class="swiper mySwiper container-swiper-main">
                     <div class="swiper-wrapper ">
                         <% carousell.forEach(product => { %>
-                            <div class="swiper-slide"><img class="imagen_carousel" src="/images/<%= product.image %>" alt=""></div>
+                            <div class="swiper-slide"><img class="imagen_carousel" src="/images/img-carousell/<%= product.image %>" alt=""></div>
                         <% }) %>
                        
                     </div>
@@ -94,16 +92,17 @@
 
                 <section class="container_section">
                         <div class="container_imagenes_main"><img class="imagen_main"
-                                src="/images/alimentos-naturales.jpg" alt="">
-                        </div>
-                        <div class="container_imagenes_main"><img class="imagen_main" src="/images/bebidas.jpg" alt="">
-                        </div>
-                    
+                                src="/images/img-carousell/bebida.jpg" alt="">
+                        </div>                                       
                         <div class="container_imagenes_main"><img class="imagen_main"
-                                src="/images/cosmetica-natural.jpeg" alt="">
+                                src="/images/img-carousell/legumbres.jpg" alt="">
                         </div>
-                        <div class="container_imagenes_main-none"><img class="imagen_main-none" src="/images/bebidas.jpg"
-                                alt=""></div>
+                        <div class="container_imagenes_main"><img class="imagen_main"
+                                src="/images/img-carousell/cereales-1.jpg" alt="">
+                        </div>
+                        <div class="container_imagenes_main-none"><img class="imagen_main-none"
+                                src="/images/img-carousell/especias.jpeg" alt="">
+                        </div>
                 </section>
                 
                 <div class="container-articulo">

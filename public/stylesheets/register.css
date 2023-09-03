@@ -2,8 +2,9 @@
     margin-top: 5%;
     padding: 10px;
     text-align: center;
-    background-color: rgb(195, 239, 195);
+    background-color: var(--colorVerdeClaro)
 }
+
 
 .cabecera h2 {
     text-align: center;
@@ -13,7 +14,7 @@
 }
 
 .cabecera i {
-    color: rgb(38, 167, 38);
+    color: var(--colorNaranja)
 }
 
 .cabecera p {
@@ -31,40 +32,38 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    margin-top: 10%;
     width: 90%;
-    margin: 100px auto;
+    margin: 10% auto;
 }
 
 .formulario-register p {
-    padding-left: 2%;
-    font-size: 12px;
-}
-
-.inputs {
-    margin-top: 20px;
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
 }
 
 .formu {
-    background-color: rgb(195, 239, 195);
+    border: 1px solid var(--colorVerdeClaro);
     border-radius: 5px;
-    padding: 20px 10px;
-    width: 100%;
-    font-size: 15px;
+    padding: 20px 15px;
+    font-size: 14px;
+    width: 97%;
+    margin: auto;
 }
 
 .espacio {
-    padding: 10px 0px;
+    padding: 5px 0px;
 }
 
 .espacio label {
-    font-size: 15px;
-    font-weight: 400;
+    display: flex;
+    align-items: center;
+    width: 100%;
 }
-.espacio p {
-    display: inline;
+
+.espacio label p {
     color: red;
-    padding-left: 1%;
+    width: 6%;
 }
 
 .espacio input {
@@ -78,59 +77,59 @@
 }
 
 .extras {
-    margin: 10px 0px;
-
+    margin: 20px auto;
 }
 
-.promociones {
-    display: flex;
-    font-size: 13px;
-    margin-top: 3%;
-    padding-left: 3%;
+.container-promociones label,
+.container-newsletter label {
+    font-size: 15px;
 }
+
 
 .container-promociones input,
 .container-newsletter input {
-    margin: 0px 10px;
+    margin: 0px 5px;
 }
 
-.formulario-register  p{
-
-    width: 100%;
-    text-align: center;
-    font-size: 14px; 
-    line-height: 30px;
-    margin: 0;
-    color: black;
-}
-
-.formulario-register a{
-    color: black;
+.formulario-register a {
     text-decoration: none;
 }
-.formulario-register a:hover{
-    color: black;
+
+.formulario-register p {
+    margin: 10px 0px;
+}
+
+.formulario-register a:hover {
     text-decoration: underline;
 }
-.link-register{
+
+.link-register {
     text-align: center;
 }
 
 .btn-submit {
-    background-color: rgb(195, 239, 195);
+    background-color: var(--colorVerdeClaro);
     border-radius: 10px;
     border: none;
     font-size: 18px;
-    padding: 15px 30px;
-    margin: 50px auto 0px auto;
-    font-weight: 600;
-    color: #2c2c2c;
+    padding: 12px 20px;
+    margin: 20px auto;
 }
 
-.btn-submit:hover{
-    background-color: var(--colorVerdeClaro);
+.btn-submit a {
+    color: white;
+    font-size: 500;
+}
+
+.btn-submit:hover {
+    background-color: rgb(77, 156, 51);
     transition: .3s;
 }
+
+.btn-submit a:hover {
+    text-decoration: none;
+}
+
 
 
 /* MEDIA QUERYS */
@@ -140,13 +139,12 @@
 
 @media (min-width: 768px) {
     .formulario-register {
-        width: 70%;
+        width: 50%;
     }
 
     .cabecera .p-desktop {
         display: block;
     }
-    
 }
 
 /* DESKTOP */
@@ -154,6 +152,6 @@
 @media (min-width:1024px) {
 
     .formulario-register {
-        width: 40%;
+        width: 50%;
     }
 }

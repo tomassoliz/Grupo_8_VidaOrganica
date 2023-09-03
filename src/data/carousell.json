@@ -1,23 +1,26 @@
 [
     {
-        "image" : "alimentos-naturales.jpg"
+        "image" : "bebida.jpg"
     },
     {
-        "image" : "bebidas.jpg"
+        "image" : "cereales-1.jpg"
     },
     {
-        "image" : "cosmetica-natural.jpeg"
+        "image" : "cereales-2.jpg"
     },
     {
-        "image" : "despensa.jpg"
+        "image" : "especias.jpeg"
     },
     {
-        "image" : "bebidas.jpg"
+        "image" : "fruto-seco.jpg"
     },
     {
-        "image" : "cosmetica-natural.jpeg"
+        "image" : "leche-almendra.jpg"
     },
     {
-        "image" : "despensa.jpg"
+        "image" : "legumbres.jpg"
+    },
+    {
+        "image" : "legumbres-2.jpg"
     }
 ]
