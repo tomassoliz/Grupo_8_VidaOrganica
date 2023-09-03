@@ -82,12 +82,13 @@
       "createdAt": "2023-08-25T21:56:10.586Z"
    },
    {
-      "id": "0fe6e890-6cf9-4704-b5f3-b92234e0a589",
-      "name": "ger5yaq",
-      "brand": "Cabrales",
-      "price": 1540,
+      "id": "c334cf0f-b3aa-4476-a44b-ecf86648268f",
+      "name": "Té",
+      "brand": "FuzeTea",
+      "price": 257,
       "discount": 10,
-      "description": "reb45b",
-      "createdAT": "2023-08-26T23:59:21.918Z"
+      "description": "Té de frutas",
+      "category": "Bebidas e Infusiones",
+      "createdAT": "2023-09-03T18:33:36.278Z"
    }
 ]
