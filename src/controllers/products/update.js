@@ -14,7 +14,7 @@ module.exports = (req, res) => {
             product.category = category;
             product.discount = +discount;
             product.createdAt = new Date();
-
+            product.image = req.file ? req.file.filename : product.image;
         }
         return product
     })

@@ -73,13 +73,24 @@
       "createdAt": "2023-08-25T21:56:10.586Z"
    },
    {
-      "id": "f1e2a873-377d-44bc-934e-e30df3fddd91",
+      "id": "c334cf0f-b3aa-4476-a44b-ecf86648268f",
       "name": "Té",
       "brand": "FuzeTea",
-      "price": 1540,
+      "price": 257,
       "discount": 10,
-      "description": "erhfhbtbthdry",
-      "createdAT": "2023-08-27T00:10:43.734Z",
-      "image": "1693095043725_products_.jpg"
+      "description": "Té de frutas",
+      "category": "Bebidas e Infusiones",
+      "createdAT": "2023-09-03T18:33:36.278Z"
+   },
+   {
+      "id": "e01fc757-e6d6-43dd-bce5-5a36cf0e235b",
+      "name": "Té",
+      "brand": "Coconut",
+      "price": 1540,
+      "discount": 40,
+      "description": "Te de frutas",
+      "category": "Bebidas e Infusiones",
+      "createdAT": "2023-09-03T19:19:36.999Z",
+      "image": "1693768776989_products_.webp"
    }
 ]
