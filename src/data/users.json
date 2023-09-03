@@ -1,0 +1,18 @@
+[
+    {
+        "id" : "",
+        "name" : "Juan",
+        "surname" : "Perez",
+        "email" : "j.perez@gmail.com",
+        "password":"",
+        "rol" : "admin"
+    },
+    {
+        "id" : "",
+        "name" : "Maria",
+        "surname" : "Rodriguez",
+        "email" : "marodriguez@gmail.com",
+        "password":"",
+        "rol" : "user"
+    }
+]

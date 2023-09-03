@@ -32,6 +32,14 @@
                                 
                             </select>
                         </div>
+                        <div class="input-add">
+                            <label for="category">Categoría</label>
+                            <select type="text" name="category" id="category">
+                                <% categories.forEach(category => { %>
+                                    <option value="<%= category.name %>"><%= category.name %></option>
+                                <% }) %>
+                            </select>
+                        </div>
                         <div class="col-md-6">
                             <label for="inputPrice" class="form-label">Precio</label>
                             <input type="number" class="form-control" name="price" value="<%= price %>" id="inputPrice" placeholder="$">
@@ -43,6 +51,10 @@
                         <div class="col-md-12">
                             <label for="name" class="container_description-edit">Descripción</label>
                             <textarea id="description" placeholder="Descripción a editar" name="description" value="<%= description %>"><%= description %></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for = "image" class="form-label">Agregar imagen</label>
+                            <input class="form-control" type="file" id="image" name="image">
                         </div>
                         <div class="col-sm-6">
                             <label for="inputStock" class="form-label">Stock</label>
