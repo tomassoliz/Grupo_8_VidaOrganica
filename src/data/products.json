@@ -1,15 +1,5 @@
 [
    {
-      "id": "64e24d9c-7ca6-4f74-92b0-b653830769f6",
-      "name": "acetie de coco",
-      "brand": "Coconut",
-      "category": "Bebidas e Infusiones",
-      "description": "Lorem ipsum dolor amet sit",
-      "price": 500,
-      "discount": 10,
-      "image": "aceite-de-coco-gold-fish-x-500-ml.jpg"
-   },
-   {
       "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
       "name": "almidon",
       "brand": "Cabrales",
@@ -73,16 +63,6 @@
       "createdAt": "2023-08-25T21:56:10.586Z"
    },
    {
-      "id": "c334cf0f-b3aa-4476-a44b-ecf86648268f",
-      "name": "Té",
-      "brand": "FuzeTea",
-      "price": 257,
-      "discount": 10,
-      "description": "Té de frutas",
-      "category": "Bebidas e Infusiones",
-      "createdAT": "2023-09-03T18:33:36.278Z"
-   },
-   {
       "id": "e01fc757-e6d6-43dd-bce5-5a36cf0e235b",
       "name": "Té",
       "brand": "Coconut",
@@ -92,5 +72,16 @@
       "category": "Bebidas e Infusiones",
       "createdAT": "2023-09-03T19:19:36.999Z",
       "image": "1693768776989_products_.webp"
+   },
+   {
+      "id": "da304a17-c4d6-40f3-a600-854c90e60768",
+      "name": "Agua saborizada",
+      "price": 5690,
+      "discount": 25,
+      "description": "Agua de frutas",
+      "category": "Alimentos Naturales",
+      "createdAT": "2023-09-03T20:12:01.988Z",
+      "image": "1693771921979_products_.jpg",
+      "createdAt": "2023-09-03T20:20:48.209Z"
    }
 ]
