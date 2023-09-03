@@ -14,18 +14,11 @@
 
 .input_footer {
     border: solid 1px rgb(111, 222, 75);
-<<<<<<< HEAD
-    border-radius: 5px;
-    outline: none;
-    padding: 10px 0px 10px 8px;
-    /* width: 80%; */
-=======
     outline: none;
     width: 80%;
     height: 50px;
     padding: 10px;
     border-radius: 5px;
->>>>>>> develop
 }
 
 .subtitulo_footer {
@@ -129,26 +122,9 @@
     z-index: 100;
 
 }
-<<<<<<< HEAD
-
-@media (min-width: 320px){
-    .input_footer{
-        width: 90%;
-    }
-}
-
-
-@media (min-width: 768px) { 
-    .input_footer{
-        width: 60%;   
-    }
-    .contenedor_informacion{
-        display: flex; 
-=======
 @media (min-width: 320px) {
     .copyright {
         font-size: 11px; 
->>>>>>> develop
     }
 }
 

@@ -4,17 +4,17 @@
       "name": "acetie de coco",
       "brand": "Coconut",
       "category": "Bebidas e Infusiones",
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit",
       "price": 500,
       "discount": 10,
       "image": "aceite-de-coco-gold-fish-x-500-ml.jpg"
    },
    {
       "id": "64e24d9c-7ca6-4f74-91b0-b653830769f6",
-      "name": "almidon",
+      "name": "Almidón",
       "brand": "Cabrales",
       "category": "Bebidas e Infusiones",
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit",
       "price": 250,
       "discount": 10,
       "image": "almidon.jpeg"
@@ -34,7 +34,7 @@
       "name": "mix de semillas",
       "brand": "Granix",
       "category": "Bebidas e Infusiones",
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit",
       "price": 270,
       "discount": 10,
       "image": "mix-de-semillas-1.jpg"
@@ -44,7 +44,7 @@
       "name": "salvado",
       "brand": "Chia",
       "category": "Bebidas e Infusiones",
-      "description": "Lorem ipsum dolor amet sit",
+      "description": "Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit, Lorem ipsum dolor amet sit",
       "price": 300,
       "discount": 10,
       "image": "salvado-1.png"
@@ -71,15 +71,5 @@
       "image": "default-img.png",
       "createdAT": "2023-08-25T21:11:30.179Z",
       "createdAt": "2023-08-25T21:56:10.586Z"
-   },
-   {
-      "id": "f1e2a873-377d-44bc-934e-e30df3fddd91",
-      "name": "Té",
-      "brand": "FuzeTea",
-      "price": 1540,
-      "discount": 10,
-      "description": "erhfhbtbthdry",
-      "createdAT": "2023-08-27T00:10:43.734Z",
-      "image": "1693095043725_products_.jpg"
    }
 ]

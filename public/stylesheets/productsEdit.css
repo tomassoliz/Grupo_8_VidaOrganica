@@ -1,6 +1,4 @@
-
-
-div.container_form-edit{
+div.container_form-edit {
     margin: auto;
     width: 90%;
     margin-bottom: 150px;
@@ -10,95 +8,116 @@ div.container_form-edit{
     box-shadow: 20px 30px 25px 20px rgba(0, 0, 0, 0.15);
 }
 
-.title_form-edit{
+.title_form-edit {
     font-size: 30px;
     text-align: center;
     color: #1c1c1c;
+    margin-bottom: 50px;
 }
 
-.col-md-6{
+.col-md-6 select {
     width: 100%;
     font-weight: 400;
     padding: 8px 10px;
     border-radius: 5px;
+    border: 1.2px solid #c4cae0;
     margin-top: 5px;
 }
-textarea{
+
+textarea {
     border-radius: 5px;
+    resize: none;
 }
 
-textarea:focus,input:focus{
+textarea:focus,
+input:focus {
     outline: none;
 }
 
-.container_button-form{
+.container_button-form {
     margin: 20px 0px;
 }
 
-.container_form-edit input{
-    /* width: 130px; */
-}
-.col-md-4 select{
-    /* width: 80px; */
+.col-md-4 select {
     font-size: small;
 }
-select#inputStock option{
+
+select#inputStock option {
     font-size: smaller;
 }
-input#inputImg{
+
+input#inputImg {
     width: 60px;
 }
-.col-md-4{
+
+.col-md-4 {
     font-size: small;
 }
-.col-md-2{
+
+.col-md-2 {
     width: 170px;
 }
-.col-md-2 input{
+
+.col-md-2 input {
     width: 50px;
     height: 40px;
 }
 
+.col-sm-3 {
+    text-align: center;
+}
+
+
 @media (min-width: 320px) {
-    .col-md-12 .container_description-edit{
+    .col-md-12 .container_description-edit {
         display: block;
         margin-bottom: 10px;
-    }   
-    .col-md-12 textarea{
+    }
+
+    .col-md-12 textarea {
         width: 100%;
         padding: 13px 10px;
     }
 }
 
-@media (min-width: 768px){
-    div.container_form-edit{
-        width: 80%;
+@media (min-width: 768px) {
+    div.container_form-edit {
+        width: 70%;
     }
-    textarea{
+
+    textarea {
         resize: none;
         width: 260px;
         height: 55px;
     }
-    .col-md-12 .container_description-edit{
+
+    .col-md-12 .container_description-edit {
         display: block;
         margin-bottom: 10px;
-    }   
-    .col-md-12 textarea{
+    }
+
+    .col-md-12 textarea {
         width: 100%;
         padding: 13px 10px;
     }
-    .button_imagen{
+
+    .button_imagen {
         margin-top: 30px;
         margin-left: 20px;
     }
-    
+    .col-sm-3 {
+        display: flex;
+        gap: 20px;
+    }
+
 }
 
-@media (min-width: 1024px){
-    div.container_form-edit{
-        width: 70%;
+@media (min-width: 1024px) {
+    div.container_form-edit {
+        width: 50%;
     }
-    .col-sm-3 button{
+
+    .col-sm-3 button {
         padding: 6px 20px;
     }
 }
