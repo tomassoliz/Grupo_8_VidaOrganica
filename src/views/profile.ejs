@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head',{ title : 'PROFILE' }) %>
+
+    <body class="register">
+        <%- include('partials/header') %>
+            <main class="container mt-5 mb-5">
+                <div class="row">
+                    <div class="col-12 col-md-10 col-lg-8 mx-auto">
+                        <div class="card shadow border border-success">
+                            <div class="card-body">
+                                <h3>MI PERFIL</h3>
+
+                                <!-- Imagen de perfil -->
+
+                                <!--  <div class="flex-shrink-0">
+                                    <img src="https://w7.pngwing.com/pngs/200/420/png-transparent-user-profile-computer-icons-overview-rectangle-black-data.png"
+                                      alt="profile image" class="img"
+                                      style="width: 150px; border-radius: 10px;">
+                                </div> -->
+
+                                <hr>
+
+                                <form class="row mb-5" action="/users/update-profile?_method=PUT" method="POST">
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="nombre">Nombre</label>
+                                        <input class="form-control" type="text" id="nombre" name="nombre">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="apellido">Apellido</label>
+                                        <input class="form-control" type="text" id="apellido" name="apellido">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="birthday">Cumpleaños</label>
+                                        <input class="form-control" type="date" id="birthday" name="birthday">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-check-label" for="about">
+                                            Acerca de mí
+                                        </label>
+                                        <textarea style="resize: none;" name="about" id="about" rows="5"
+                                            class="form-control"></textarea>
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="homeAdress">Dirección</label>
+                                        <input class="form-control" type="text" id="homeAdress" name="homeAdress">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="typePhone">Phone number input</label>
+                                        <input type="tel" id="typePhone" class="form-control" name="typePhone">
+                                    </div>
+                                    <div class="col-md-10 d-flex justify-content-end gap-5">
+                                        <label for="image" class="btn btn-outline-primary mt-5">Cambiar imagen de
+                                            perfil</label>
+                                        <input hidden class="form-control" type="file" id="image" name="imagen">
+                                        <button class="btn btn-outline-success mt-5" type="submit">Guardar
+                                            cambios</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+            <%- include('partials/footer') %>
+    </body>
+
+</html>

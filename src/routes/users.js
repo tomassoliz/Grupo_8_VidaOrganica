@@ -10,6 +10,6 @@ router
     .get('/login', login)
     .get('/carrito', carrito)
     .get('/profile', profile)
-    .put('/profile', updateProfile)
+    /* .put('/profile', updateProfile) */
 
     module.exports = router;
