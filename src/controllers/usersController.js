@@ -10,5 +10,8 @@ module.exports = {
     },
     profile: (req, res) => {
         return res.render('profile')
+    },
+    updateProfile:(req,res) => {
+        res.send(req.file)
     }
 }

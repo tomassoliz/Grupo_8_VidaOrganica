@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
 
-const { register, login, carrito, profile } = require('../controllers/usersController')
+const { register, login, carrito, profile, updateProfile } = require('../controllers/usersController');
+const uploadUser = require('../middlewares/uploadUser');
 
 /* /users */
 
@@ -10,6 +11,6 @@ router
     .get('/login', login)
     .get('/carrito', carrito)
     .get('/profile', profile)
-    /* .put('/profile', updateProfile) */
+    .put('/update-profile',uploadUser.single('imagen'), updateProfile) 
 
     module.exports = router;
