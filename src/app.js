@@ -23,15 +23,14 @@ app.use(session({
   resave : true,
   saveUninitialized : true
 }));
-app.use(cookieCheck)
-app.use(localsCheck)
-
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname,'..', 'public')));
 
+app.use(localsCheck)
+app.use(cookieCheck)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)

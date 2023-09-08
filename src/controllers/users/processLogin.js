@@ -4,7 +4,7 @@ const { readJSON } = require('../../data');
 module.exports = (req,res) => {
 
     const errors = validationResult(req); // examina lo que viene del request!
-
+   
     if(errors.isEmpty()){
         const users = readJSON('users.json');
         const {email, remember} = req.body
@@ -25,7 +25,8 @@ module.exports = (req,res) => {
 
     }else {
         return res.render('login',{
-            errors : errors.mapped()
+            errors : errors.mapped(),
+            old: req.body
         })
     }
     

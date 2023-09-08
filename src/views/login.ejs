@@ -22,24 +22,24 @@
                             <form class="formu" method="POST">
                                 <div class="espacio">
                                     <label for="email">E-mail<p>*</p></label>
-                                    <input class="form-control"type="email" id="email" name="email"  <%= locals.errors && (errors.email && 'is-invalid') %>/>
+                                    <input class="form-control"type="email" id="email" name="email" value="<%= locals.old?.email %>" <%= locals.errors && (errors.email && 'is-invalid') %>/>
                                     <small class="text-danger ms-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
 
                                 </div>
                                 <div class="espacio">
                                     <label for="password">Contraseña<p>*</p></label>
                                     <div class="input_login">
-                                        <input class="form-control"type="password" id="password" name="password"required>
+                                        <input class="form-control"type="password" id="password" name="password">
                                         <i class="fa-solid fa-eye"></i>
                                     </div>
                                 </div>
                                 <div class="col-12 mb-3">
-                                <small class="text-danger ms-2"><%= locals.errors && (errors.password && errors.password.msg) %></small>
+                                <small class="text-danger ms-2"><%= locals.errors?.password?.msg %></small>
                                  </div>
                                 <div class="d-flex justify-content-around">
                                     <div class="form-check">
                                         <input class="form-check-input" type="checkbox" value="" id="remember" name="remember">
-                                        <label class="form-check-label" for="remember">
+                                        <label class="form-check-label" for="remember"> 
                                             Recordarme
                                         </label>
                                     </div>
@@ -48,8 +48,8 @@
                             
                         </div>
                         <p><a href="/users/register" class="boton_formulario">¿Olvidaste tu contraseña?</a></p>
-                        <button type="submit" class="btn-submit"><a href="" class="link-register">INICIAR
-                                SESION</a></button></a>
+                        <button type="submit" class="btn-submit"><span class="link-register">INICIAR
+                                SESION</span></button>
                     </section>
                 </form>
                     <div class="formulario-register_register">

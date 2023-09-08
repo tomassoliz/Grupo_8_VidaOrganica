@@ -4,10 +4,10 @@ const {compareSync} = require('bcryptjs')
 module.exports =[
     body('email')
     .notEmpty().withMessage('El email es requerido').bail()
-    .isEmail().withMessage('El formato no es correcto!').bail(),
+    .isEmail().withMessage('El formato no es correcto!'),
     
     body('password')
-    .notEmpty().withMessage('La contraseña es requerida!')
+    .notEmpty().withMessage('La contraseña es requerida!').bail()
     .custom((value, {req})=>{
         const users = readJSON('users.json')
         const user = users.find(user => user.email === req.body.email) //primero validamos que sea el usuario para despues validar el pass
