@@ -1,5 +1,5 @@
 const { readJSON, writeJSON } = require('../../data');
-const Product = require('../../data/Product');
+const Product = require("../../data/product");
 
 
 module.exports = (req, res) => {

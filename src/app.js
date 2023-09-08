@@ -9,12 +9,22 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const app = express();
 const methodOverride = require('method-override');
+const session = require('express-session');
+const localsCheck = require('./middlewares/localsCheck');
+const cookieCheck = require('./middlewares/cookieCheck');
 
 app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(session({
+  secret : "vidaOrganica TheBest",
+  resave : true,
+  saveUninitialized : true
+}));
+app.use(cookieCheck)
+app.use(localsCheck)
 
 app.use(logger('dev'));
 app.use(express.json());

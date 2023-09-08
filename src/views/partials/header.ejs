@@ -16,11 +16,19 @@
             <div class="header__contenedor-cinco">
                 <a href="/users/register"><i class="fas fa-user fa-2xl header_icono"></i></a>
                 <div class="menu__lista--3">
-                    <a href="/admin">Admin</a>
-                    <a href="/users/profile">Perfil</a>
-                    <a href="/users/login">Iniciar Sesion</a>
-                    <a href="/users/register">Registrate</a>
-                    
+                    <% if (!locals.userLogin) { %>
+                        <a href="/admin">Admin</a>
+                        <a href="/users/profile">Perfil</a>
+                        <a href="/users/login">Iniciar Sesion</a>
+                        <a href="/users/register">Registrate</a>
+                    <% }else{ %>
+                        <% if (userLogin.rol === "admin") { %>
+                            <a href="/admin">admin</a>
+                        <% } %>
+                        
+                        <a href="/users/profile">Hola<%= userLogin.name %>!</a>
+                        <a href="/users/logout">Salir</a>
+                    <% } %>
 
                 </div>
             </div>

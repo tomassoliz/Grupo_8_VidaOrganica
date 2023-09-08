@@ -1,7 +1,9 @@
 module.exports = {
-    login:(req,res) =>{
-        return res.render('login')
-    },
+    login : require('./users/login'),
+    processLogin : require('./users/processLogin'),
+    logout: require('./users/logout'),
+
+
     register:(req,res) =>{
         return res.render('register')
     },
