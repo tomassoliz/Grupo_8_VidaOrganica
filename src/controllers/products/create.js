@@ -1,5 +1,6 @@
 const { readJSON, writeJSON } = require('../../data');
-const Product = require('../../data/product');
+const Product = require('../../data/Product')
+
 
 module.exports = (req, res) => {
     const products = readJSON('products.json')
@@ -8,7 +9,7 @@ module.exports = (req, res) => {
         ...req.body,
         image : req.file ? req.file.filename : null
     }
-    let newProduct = new Product(data)
+    let newProduct = new Product(data);
 
     products.push(newProduct);
 
