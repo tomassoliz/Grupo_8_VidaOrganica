@@ -59,7 +59,7 @@
 
 .input_login i{
     position: absolute;
-    top: 12px;
+    top: 13px;
     right: 10px;
 }
 
@@ -156,6 +156,10 @@
         width: 60%;
         margin: auto;
         gap: 80px;
+    }
+    .espacio label p {
+        color: red;
+        width: 2%;
     }
 }
   
