@@ -4,7 +4,7 @@
         "name" : "Juan",
         "surname" : "Perez",
         "email" : "j.perez@gmail.com",
-        "password":"",
+        "password":"hola",
         "rol" : "admin"
     },
     {
