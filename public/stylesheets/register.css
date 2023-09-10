@@ -61,11 +61,6 @@
     width: 100%;
 }
 
-.espacio label p {
-    color: red;
-    width: 6%;
-}
-
 .espacio input {
     display: block;
     width: 100%;
@@ -154,4 +149,5 @@
     .formulario-register {
         width: 50%;
     }
+
 }

@@ -4,8 +4,9 @@
         "name" : "Juan",
         "surname" : "Perez",
         "email" : "j.perez@gmail.com",
-        "password":"hola",
-        "rol" : "admin"
+        "password":"",
+        "rol" : "admin",
+        "avatar": null
     },
     {
         "id" : "",
@@ -13,6 +14,7 @@
         "surname" : "Rodriguez",
         "email" : "marodriguez@gmail.com",
         "password":"",
-        "rol" : "user"
+        "rol" : "user",
+        "avatar": "1693950849484_avatar_.jpg"
     }
 ]
