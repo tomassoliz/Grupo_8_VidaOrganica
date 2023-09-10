@@ -11,6 +11,6 @@ router
     .get('/login', login)
     .get('/carrito', carrito)
     .get('/profile', profile)
-    .put('/update-profile',uploadUser.single('imagen'), updateProfile) 
+    .put('/updateProfile',uploadUser.single('imagen'), updateProfile) 
 
     module.exports = router;
