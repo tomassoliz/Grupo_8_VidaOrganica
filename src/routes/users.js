@@ -1,16 +1,21 @@
 const express = require('express');
 const router = express.Router();
 
-const { register, login, carrito, profile, updateProfile } = require('../controllers/usersController');
-const uploadUser = require('../middlewares/uploadUser');
+const { register, login, carrito, profile, processLogin,logout } = require('../controllers/usersController');
+const loginValidator = require('../../validations/loginValidator');
+const checkUserLogin = require("../middlewares/checkUserLogin");
+const checkNotUserLogin = require('../middlewares/checkNotUserLogin')
+
 
 /* /users */
 
 router
     .get('/register', register)
-    .get('/login', login)
+    .get('/login',checkNotUserLogin, login)
+    .post('/login',loginValidator,processLogin)
     .get('/carrito', carrito)
-    .get('/profile', profile)
-    .put('/updateProfile',uploadUser.single('imagen'), updateProfile) 
+    .get('/profile',checkUserLogin, profile)
+    .get('/logout',logout)
+    /* .put('/profile', updateProfile) */
 
     module.exports = router;
