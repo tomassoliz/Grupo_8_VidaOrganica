@@ -6,4 +6,5 @@ module.exports = {
     create: require('./products/create'),
     detail: require('./products/detail'),
     update: require('./products/update'),
+    cart:require('./products/cart')
 }

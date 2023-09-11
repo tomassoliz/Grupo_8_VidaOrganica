@@ -1,6 +1,5 @@
-<<<<<<< HEAD
   /* Carousell */
-
+  
   .container-swiper {
     margin: 0;
     padding: 0;
@@ -11,14 +10,6 @@
     display: flex;
     width: 100%;
   }
-=======
-/* SWIPER CAROUSELL */
-
-.container-swiper {
-  margin: 0;
-  padding: 0;
-}
->>>>>>> develop
 
 .swiper {
   margin-left: auto;

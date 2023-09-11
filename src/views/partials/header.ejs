@@ -8,7 +8,7 @@
         </div>
         <div class="header__contenedor--iconos">
             <div class="header__contenedor-tres">
-                <a href="/users/carrito/"><i class="fa-solid fa-cart-shopping fa-2xl header_icono "></i></a>
+                <a href="/products/carrito"><i class="fa-solid fa-cart-shopping fa-2xl header_icono "></i></a>
             </div>
             <div class="header__contenedor-cuatro">
                 <a href=""><i class="far fa-question-circle fa-2xl header_icono"></i></a>
@@ -19,14 +19,14 @@
                     <% if (!locals.userLogin) { %>
                         <a href="/admin">Admin</a>
                         <a href="/users/profile">Perfil</a>
-                        <a href="/users/login">Iniciar Sesion</a>
+                        <a href="/users/login">Iniciar Sesión</a>
                         <a href="/users/register">Registrate</a>
                     <% }else{ %>
                         <% if (userLogin.rol === "admin") { %>
-                            <a href="/admin">admin</a>
+                            <a href="/admin">Admin</a>
                         <% } %>
                         
-                        <a href="/users/profile">Hola<%= userLogin.name %>!</a>
+                        <a href="/users/profile">Hola <%= userLogin.name %>!</a>
                         <a href="/users/logout">Salir</a>
                     <% } %>
 
