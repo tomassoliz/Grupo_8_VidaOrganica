@@ -125,6 +125,10 @@
     text-decoration: none;
 }
 
+.small_danger{
+    color: red;
+}
+
 
 
 /* MEDIA QUERYS */
