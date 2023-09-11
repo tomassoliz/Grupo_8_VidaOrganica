@@ -1,20 +1,29 @@
 [
-    {
-        "id" : "",
-        "name" : "Juan",
-        "surname" : "Perez",
-        "email" : "j.perez@gmail.com",
-        "password":"",
-        "rol" : "admin",
-        "avatar": null
-    },
-    {
-        "id" : "",
-        "name" : "Maria",
-        "surname" : "Rodriguez",
-        "email" : "marodriguez@gmail.com",
-        "password":"",
-        "rol" : "user",
-        "avatar": "1693950849484_avatar_.jpg"
-    }
+   {
+      "id": "",
+      "name": "Juan",
+      "surname": "Perez",
+      "email": "j.perez@gmail.com",
+      "password": "",
+      "rol": "admin",
+      "avatar": null
+   },
+   {
+      "id": "",
+      "name": "Maria",
+      "surname": "Rodriguez",
+      "email": "marodriguez@gmail.com",
+      "password": "",
+      "rol": "user",
+      "avatar": "1693950849484_avatar_.jpg"
+   },
+   {
+      "id": "301753b3-74f4-4fff-9a9f-a091a27803b7",
+      "name": "Tomas",
+      "surname": "Soliz",
+      "email": "tomassoliz@gmail.com",
+      "password": "$2a$10$Is4CXUAjHBPK5I4bHBYSX.W.zhid.DStygKGQIB5LhzNf6VEQiUAu",
+      "rol": "user",
+      "birthday": null
+   }
 ]
