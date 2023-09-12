@@ -33,7 +33,7 @@
 .contenedor_informacion-parte {
     width: 100%;
     text-align: center;
-    margin: 30px auto; 
+    margin: 30px auto;
 }
 
 .contenedor_informacion-parte ul li a {
@@ -53,6 +53,11 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
+}
+
+.contenedor_iconos i:hover {
+    background-color: rgb(77, 156, 51);
+    transition: .3s;
 }
 
 .footer_icono {
@@ -122,9 +127,16 @@
     z-index: 100;
 
 }
+
+.button_whatsapp:hover {
+    background-color: white;
+    color: #0df053;
+    transition: .5s;
+}
+
 @media (min-width: 320px) {
     .copyright {
-        font-size: 11px; 
+        font-size: 11px;
     }
 }
 
@@ -138,9 +150,11 @@
         flex-wrap: wrap;
         margin: 0px 50px;
     }
-    .contenedor_informacion-parte{
+
+    .contenedor_informacion-parte {
         width: 50%;
     }
+
     .copyright {
         font-size: 13px;
     }
@@ -149,8 +163,8 @@
 @media (min-width: 1028px) {
     .input_footer {
         width: 60%;
-    } 
-    
+    }
+
     .contenedor_informacion {
         display: flex;
         flex-wrap: nowrap;

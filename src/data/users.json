@@ -18,12 +18,49 @@
       "avatar": "1693950849484_avatar_.jpg"
    },
    {
-      "id": "301753b3-74f4-4fff-9a9f-a091a27803b7",
+      "id": "8655471f-9fd7-4da8-af7d-1af4a667eb75",
       "name": "Tomas",
       "surname": "Soliz",
       "email": "tomassoliz@gmail.com",
-      "password": "$2a$10$Is4CXUAjHBPK5I4bHBYSX.W.zhid.DStygKGQIB5LhzNf6VEQiUAu",
+      "password": "$2a$10$1ohMy4pwvcyDxYoFJ1EQfuCemMIzJAnNfVJYqI9KD/cO/3X2yOp7G",
       "rol": "user",
-      "birthday": null
+      "birthday": "1998-07-24",
+      "adress": "La quiaca 2728",
+      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
+      "call": 1141726540,
+      "image": null,
+      "avatar": null
+   },
+   {
+      "id": "bcbfc101-8a84-41a1-a515-d73106ec9475",
+      "name": "Tomas",
+      "surname": "Soliz",
+      "email": "tomassoliz@gmail.com",
+      "password": "$2a$10$fncvPNeYz9wkjiKIDjrQReWaAxjMrHOAjP/U0t5GHpzConFuz6b3a",
+      "rol": "user",
+      "birthday": "1998-07-24",
+      "addres": "La quiaca 2728",
+      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar, hola",
+      "image": null
+   },
+   {
+      "id": "2eecc2bb-ffae-4522-98cf-564dc3d1bd34",
+      "name": "Tomas",
+      "surname": "Soiliz",
+      "email": "tomassoliz07@gmail.com",
+      "password": "$2a$10$9lsr7OWVF37593qZ/IPp0OBl846jf23ltSW7Mbj2SyQ2EQomwoVeW",
+      "rol": "admin"
+   },
+   {
+      "id": "a2b0c05e-278d-4ff2-98ce-aaccd64d3149",
+      "name": "Tomas",
+      "surname": "Soliz",
+      "email": "tomassoliz@gmail.com",
+      "password": "$2a$10$LOfqJUdyKjX.ZfM0zsNujub/GXNTbT5rhUwhioJi9V/u6xp37MrVu",
+      "rol": "user",
+      "birthday": "1998-07-24",
+      "addres": "La quiaca 2728",
+      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
+      "image": null
    }
 ]
