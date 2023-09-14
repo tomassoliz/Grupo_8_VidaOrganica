@@ -1,20 +1,38 @@
 [
-    {
-        "id" : "",
-        "name" : "Juan",
-        "surname" : "Perez",
-        "email" : "j.perez@gmail.com",
-        "password":"",
-        "rol" : "admin",
-        "avatar": null
-    },
-    {
-        "id" : "",
-        "name" : "Maria",
-        "surname" : "Rodriguez",
-        "email" : "marodriguez@gmail.com",
-        "password":"",
-        "rol" : "user",
-        "avatar": "1693950849484_avatar_.jpg"
-    }
+   {
+      "id": "",
+      "name": "Juan",
+      "surname": "Perez",
+      "email": "j.perez@gmail.com",
+      "password": "123123",
+      "rol": "admin",
+      "avatar": null
+   },
+   {
+      "id": "",
+      "name": "Maria",
+      "surname": "Rodriguez",
+      "email": "marodriguez@gmail.com",
+      "password": "",
+      "rol": "user",
+      "avatar": "1693950849484_avatar_.jpg"
+   },
+   {
+      "id": "dfdac5f2-9351-4b30-8523-f96f315a26ac",
+      "name": "Adrian",
+      "surname": "Maidana",
+      "email": "ezemaidana44@gmail.com",
+      "password": "$2a$10$OwP7Rac8m2Dx5S577haEzurpSFTxCwZSCMF0/a2..Ri2itebILPIa",
+      "rol": "admin",
+      "birthday": null
+   },
+   {
+      "id": "70eafd22-66b8-4a3e-90ad-304a1a62ab01",
+      "name": "pepe",
+      "surname": "argento",
+      "email": "racing123@gmail.com",
+      "password": "$2a$10$U5Bj8gcPOjyf15o8VfVFbuhIRZ3W5TU2VYGMC31nFZANOYknm1IlW",
+      "rol": "user",
+      "birthday": null
+   }
 ]
