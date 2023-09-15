@@ -5,7 +5,7 @@
                 alt="leche de almendras">
             <div class="container-info-main">
                 <h4 class="description"><%= product.name %></h4>
-                <p class="precio-card">$<%= product.price %></p>
+                <p class="precio-card">$<%= product.price - (product.discount * product.price / 100) %></p>
                 <button class="button-card"><a class="link_card"
                         href="/products/detail/<%= product.id%>">comprar</a></button>
             </div>

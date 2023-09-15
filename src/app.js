@@ -16,11 +16,12 @@ const localsCheck = require('./middlewares/localsCheck');
 
 const app = express();
 
-app.use(methodOverride('_method'));
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+
+app.use(methodOverride('_method'));
 app.use(session({
   secret : "vidaOrganica TheBest",
   resave : true,
