@@ -18,7 +18,7 @@ router
     .get('/login', checkNotUserLogin, login)
     .post('/login', loginValidator, processLogin)
     .get('/profile', checkUserLogin, profile)
-    //.put('/profile',uploadUser.single('image'), updateProfile, profile) 
+    //.put('/profile/:id',uploadUser.single('image'), updateProfile, profile) Eze:No le necontre la vuelta para que guarde los datos editados
     .get('/editProfile/:id', editProfile)
     .put('/updateProfile/:id', upload.single('image'), updateProfile)
     .get('/logout', logout)

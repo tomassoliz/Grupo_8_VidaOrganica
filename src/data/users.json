@@ -34,5 +34,13 @@
       "password": "$2a$10$U5Bj8gcPOjyf15o8VfVFbuhIRZ3W5TU2VYGMC31nFZANOYknm1IlW",
       "rol": "user",
       "birthday": null
+   },
+   {
+      "id": "9e5d80ab-1298-4d0c-bbd3-bc5698a2e795",
+      "name": "Marta",
+      "surname": "Perez",
+      "email": "marta@gmail.com",
+      "password": "$2a$10$Se9YaipU84u0eZjF.tbcm.WOzXq6RPv9LRMshlL.pxA6cFiPS584e",
+      "rol": "user"
    }
 ]
