@@ -1,9 +1,17 @@
-const { readJSON } = require("../../data")
+const { readJSON, writeJSON } = require("../../data")
+const User = require('../../data/User')
 
 module.exports = (req, res) => {
     const users = readJSON('users.json');
     const user = users.find(user => user.id === req.session.userLogin.id)
-    return res.render('profile',{
-        ...user
-    })
+    let newUser = new User(req.body)
+    users.push(newUser)
+
+    writeJSON(users, 'users.json');
+    return res.redirect('/')
+
 }
+
+// return res.render('profile',{
+//     ...user
+// })

@@ -46,7 +46,7 @@
    {
       "id": "2eecc2bb-ffae-4522-98cf-564dc3d1bd34",
       "name": "Tomas",
-      "surname": "Soiliz",
+      "surname": "Soliz",
       "email": "tomassoliz07@gmail.com",
       "password": "$2a$10$9lsr7OWVF37593qZ/IPp0OBl846jf23ltSW7Mbj2SyQ2EQomwoVeW",
       "rol": "admin"
@@ -62,5 +62,13 @@
       "addres": "La quiaca 2728",
       "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
       "image": null
+   },
+   {
+      "id": "abc59c72-f9ed-4a0e-b40e-940dcf3ba39d",
+      "name": "dana",
+      "surname": "soliz",
+      "email": "danasoliz@gmail.com",
+      "password": "$2a$10$sORB9HbkVMuhZLvTDlkIo.cmu6RyRe6.un8LOHP/OcxsTwNgIOskS",
+      "rol": "user"
    }
 ]

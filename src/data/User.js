@@ -1,7 +1,7 @@
 const { hashSync } = require('bcryptjs');
 const { v4: uuidv4 } = require('uuid');
 
-const User = function ({ name, surname, email, password, rol, birthday, adress, call, about, image }) {
+const User = function ({ name, surname, email, password, rol, birthday, address, call, about, image }) {
     this.id = uuidv4();
     this.name = name.trim();
     this.surname = surname.trim();
@@ -9,7 +9,7 @@ const User = function ({ name, surname, email, password, rol, birthday, adress, 
     this.password = hashSync(password.trim(), 10);
     this.rol = "user";
     this.birthday = birthday;
-    this.addres = adress;
+    this.address = address;
     this.call = call;
     this.about = about;
     this.image = image;
