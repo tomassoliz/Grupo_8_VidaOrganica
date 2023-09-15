@@ -1,5 +1,3 @@
-/* const adminMenu = require('./users/adminMenu'); */
-
 module.exports = {
     login : require('./users/login'),
     processLogin : require('./users/processLogin'),
@@ -8,5 +6,6 @@ module.exports = {
     profile: require('./users/profile'),
     updateProfile: require('./users/updateProfile'),
     logout: require('./users/logout'),
-    adminMenu: require('./users/adminMenu')
+    adminMenu: require('./users/adminMenu'),
+    editProfile: require('./users/editProfile')
 }

@@ -22,7 +22,7 @@
                         <span><%= product.name %></span>
                     </div>
                     <div class="container-price">
-                        <span>$<%= product.price %></span>
+                        <span>$<%= product.price - (product.discount * product.price / 100) %></span>
                     </div>
                     <div class="container-description">
                         <div class="title-decription">
