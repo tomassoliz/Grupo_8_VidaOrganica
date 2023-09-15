@@ -4,7 +4,7 @@
       "name": "Juan",
       "surname": "Perez",
       "email": "j.perez@gmail.com",
-      "password": "",
+      "password": "123123",
       "rol": "admin",
       "avatar": null
    },
@@ -18,30 +18,22 @@
       "avatar": "1693950849484_avatar_.jpg"
    },
    {
-      "id": "8655471f-9fd7-4da8-af7d-1af4a667eb75",
-      "name": "Tomas",
-      "surname": "Soliz",
-      "email": "tomassoliz@gmail.com",
-      "password": "$2a$10$1ohMy4pwvcyDxYoFJ1EQfuCemMIzJAnNfVJYqI9KD/cO/3X2yOp7G",
-      "rol": "user",
-      "birthday": "1998-07-24",
-      "adress": "La quiaca 2728",
-      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
-      "call": 1141726540,
-      "image": null,
-      "avatar": null
+      "id": "dfdac5f2-9351-4b30-8523-f96f315a26ac",
+      "name": "Adrian",
+      "surname": "Maidana",
+      "email": "ezemaidana44@gmail.com",
+      "password": "$2a$10$OwP7Rac8m2Dx5S577haEzurpSFTxCwZSCMF0/a2..Ri2itebILPIa",
+      "rol": "admin",
+      "birthday": null
    },
    {
-      "id": "bcbfc101-8a84-41a1-a515-d73106ec9475",
-      "name": "Tomas",
-      "surname": "Soliz",
-      "email": "tomassoliz@gmail.com",
-      "password": "$2a$10$fncvPNeYz9wkjiKIDjrQReWaAxjMrHOAjP/U0t5GHpzConFuz6b3a",
+      "id": "70eafd22-66b8-4a3e-90ad-304a1a62ab01",
+      "name": "pepe",
+      "surname": "argento",
+      "email": "racing123@gmail.com",
+      "password": "$2a$10$U5Bj8gcPOjyf15o8VfVFbuhIRZ3W5TU2VYGMC31nFZANOYknm1IlW",
       "rol": "user",
-      "birthday": "1998-07-24",
-      "addres": "La quiaca 2728",
-      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar, hola",
-      "image": null
+      "birthday": null
    },
    {
       "id": "2eecc2bb-ffae-4522-98cf-564dc3d1bd34",
@@ -69,6 +61,14 @@
       "surname": "soliz",
       "email": "danasoliz@gmail.com",
       "password": "$2a$10$sORB9HbkVMuhZLvTDlkIo.cmu6RyRe6.un8LOHP/OcxsTwNgIOskS",
+      "rol": "user"
+   },
+   {
+      "id": "79e85333-0b33-446e-a611-c12e4857ab08",
+      "name": "tomas",
+      "surname": "soliz",
+      "email": "miajhaqueline2016@gmail.com",
+      "password": "$2a$10$1Co35mjz1ErODSiT75YHIOKhv5XKGXNpzgLSraVjbbTuDIiDX/m7W",
       "rol": "user"
    }
 ]

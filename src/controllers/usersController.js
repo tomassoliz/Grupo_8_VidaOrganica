@@ -5,6 +5,7 @@ module.exports = {
     processRegister: require('./users/processRegister'),
     profile: require('./users/profile'),
     updateProfile: require('./users/updateProfile'),
-    editProfile: require('./users/editProfile'),
-    logout: require('./users/logout')
+    logout: require('./users/logout'),
+    adminMenu: require('./users/adminMenu'),
+    editProfile: require('./users/editProfile')
 }

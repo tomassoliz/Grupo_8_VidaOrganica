@@ -8,11 +8,11 @@ const User = function ({ name, surname, email, password, rol, birthday, address,
     this.email = email.trim();
     this.password = hashSync(password.trim(), 10);
     this.rol = "user";
-    this.birthday = birthday;
-    this.address = address;
-    this.call = call;
-    this.about = about;
-    this.image = image;
+    // this.birthday = birthday;
+    // this.adress = adress;
+    // this.call = call;
+    // this.about = about;
+    // this.image = image;
 }
 
 module.exports = User
