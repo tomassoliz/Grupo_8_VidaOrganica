@@ -37,5 +37,14 @@
 **Seguir haciendo:** Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
 
  # Sprint 5 #
+ **Hacer más**: Comunicación.
+
+**Empezar a hacer**: Actualizaciones en Trello, mantenerlo al día para reflejar nuestras actividades.
+
+**Dejar de hacer:** Posponer reuniones.
+
+**Hacer menos:** Procrastinación
+
+**Seguir haciendo:** Innovación, proactividad, trabajo en equipo, compañerismo, reuniones.
 
 
