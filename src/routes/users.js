@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 
-const { register, processRegister, login, profile, processLogin, logout, updateProfile, editProfile } = require('../controllers/usersController');
+const { register, processRegister, login, profile, processLogin, logout, updateProfile, editProfile, adminMenu} = require('../controllers/usersController');
 const checkUserLogin = require("../middlewares/checkUserLogin");
 const checkNotUserLogin = require('../middlewares/checkNotUserLogin');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
+const checkAdmin = require('../middlewares/checkAdmin');
 const upload = require('../middlewares/upload');
 
 /* /users */
@@ -19,5 +20,5 @@ router
     .get('/editProfile/:id', editProfile)
     .put('/updateProfile/:id', upload.single('image'), updateProfile)
     .get('/logout', logout)
-
+    .get('/admin', loginValidator, checkAdmin, processLogin, adminMenu )
 module.exports = router;

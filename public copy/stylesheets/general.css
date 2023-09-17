@@ -1,0 +1,21 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: var(--tipografiaGeneral);
+}
+
+a {
+    text-decoration: none;
+    color: grey;
+}
+
+li {
+    list-style: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+

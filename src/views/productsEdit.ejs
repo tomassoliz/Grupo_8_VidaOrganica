@@ -16,44 +16,47 @@
             <main>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
-                    <form class="row g-3" action="/products/update/<%= id %>?_method=PUT"  method="POST">
-                        <div class="col-md-6">
+                    <form class="row g-3" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <div class="col-12 images_edit">
+                            <img src="/images/<%= image %>" alt="" class="img-fluid">
+                        </div>
+                        <div class="col-md-12">
                             <label for="name" class="form-label">Nombre</label>
                             <input type="text" class="form-control" name="name" id="name" value="<%= name %>">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputBrand" class="form-label">Marca</label>
+                            <label for="brand" class="form-label">Marca</label>
                             <select name="brand">
                                 <% brands.forEach(item => { %>
                                     <option <%= item.name === brand && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>
-                        <div class="input-add">
-                            <label for="category">Categoría</label>
+                        <div class="col-md-6">
+                            <label for="category" class="form-label">Categoría</label>
                             <select type="text" name="category" id="category">
-                                <% categories.forEach(category => { %>
-                                    <option value="<%= category.name %>"><%= category.name %></option>
+                                <% categories.forEach(item => { %>
+                                    <option <%= item.name === category && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <label for="inputPrice" class="form-label">Precio</label>
-                            <input type="number" class="form-control" name="price" id="inputPrice" placeholder="$" value="<%= price %>">
+                            <label for="price" class="form-label">Precio</label>
+                            <input type="number" class="form-control" name="price" id="price" placeholder="$" value="<%= price %>">
                         </div>
                         <div class="col-md-6">
-                            <label for="inputDiscount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" name="discount" id="inputDiscount" value="<%= discount %>">
+                            <label for="discount" class="form-label">Descuento</label>
+                            <input type="number" class="form-control" name="discount" id="discount" value="<%= discount %>">
                         </div>
                         <div class="col-md-12">
                             <label for="description" class="container_description-edit">Descripción</label>
                             <textarea id="description" placeholder="Descripción a editar" name="description"><%= description %></textarea>
                         </div>
-                        <div class="mb-3">
+                        <div class="col-md-8">
                             <label for = "image" class="form-label">Agregar imagen</label>
                             <input class="form-control" type="file" id="image" name="image">
                         </div>
-                        <div class="col-sm-6">
+                        <div class="col-md-4">
                             <label for="inputStock" class="form-label">Stock</label>
                             <select id="inputStock" class="form-select">
                                 <option selected>SI</option>
@@ -61,7 +64,7 @@
                             </select>
                         </div>
                         <div class="col-12 mt-5 d-flex justify-content-start gap-3">
-                            <button type="submit" class="btn btn-success">Finalizar</button>
+                            <button type="submit" class="btn btn-success">Guardar</button>
                             <button type="reset" class="btn btn-danger">Cancelar</button>
                         </div>
                     </form>
