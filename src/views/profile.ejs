@@ -14,7 +14,7 @@
                                 <!-- Imagen de perfil -->
 
                                  <div class="flex-shrink-0">
-                                    <img src="<%= locals?.userLogin?.avatar ? `/images/avatar/${userLogin.avatar}`: 'https://w7.pngwing.com/pngs/200/420/png-transparent-user-profile-computer-icons-overview-rectangle-black-data.png' %>"
+                                    <img src="/images/<%= image %>"
                                       alt="profile image" class="img"
                                       style="width: 150px; border-radius: 10px;">
                                 </div>
@@ -24,38 +24,38 @@
                                 <form class="row mb-5" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
                                     enctype="multipart/form-data">
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-label" for="nombre">Nombre</label>
-                                        <input class="form-control" type="text" id="nombre" name="nombre" value="<%= name %>">
+                                        <label class="form-label" for="name">Nombre</label>
+                                        <input class="form-control" type="text" id="name" name="name" value="<%= name %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="surname">Apellido</label>
                                         <input class="form-control" type="text" id="surname" name="surname" value="<%= surname %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-label" for="email">Email</label>
+                                        <input class="form-control" type="text" id="email" name="email" value="<%= email %>">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="birthday">Cumpleaños</label>
-                                        <input class="form-control" type="date" id="birthday" name="birthday" value="">
-
-                                    </div>
-                                    
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-label" for="homeAdress">Dirección</label>
-                                        <input class="form-control" type="text" id="homeAdress" name="homeAdress">
+                                        <input class="form-control" type="date" id="birthday" name="birthday" value="<%= birthday %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-check-label" for="about">
-                                            Acerca de mí
-                                        </label>
+                                        <label class="form-label" for="address">Dirección</label>
+                                        <input class="form-control" type="text" id="address" name="address" value="<%= address %>">
+                                    </div>
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <label class="form-check-label" for="about">Acerca de mí</label>
                                         <textarea style="resize: none;" name="about" id="about" rows="5"
-                                            class="form-control"></textarea>
+                                            class="form-control"><%= about %></textarea>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-label" for="typePhone">Telefono</label>
-                                        <input type="tel" id="typePhone" class="form-control" name="typePhone">
+                                        <label class="form-label" for="call">Telefono</label>
+                                        <input type="tel" id="call" class="form-control" name="call"  value="<%= call %>">
                                     </div>
                                     <div class="col-md-10 d-flex justify-content-end gap-5">
                                         <label for="image" class="btn btn-outline-primary mt-5">Cambiar imagen de
                                             perfil</label>
-                                        <input hidden class="form-control" type="file" id="image" name="imagen">
+                                        <input hidden class="form-control" type="file" id="image" name="image">
                                         <button class="btn btn-outline-success mt-5" type="submit">Guardar
                                             cambios</button>
                                     </div>

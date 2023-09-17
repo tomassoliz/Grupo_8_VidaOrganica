@@ -1,0 +1,157 @@
+.cabecera {
+    margin-top: 5%;
+    padding: 10px;
+    text-align: center;
+    background-color: var(--colorVerdeClaro)
+}
+
+
+.cabecera h2 {
+    text-align: center;
+    font-size: 25px;
+    height: 50px;
+
+}
+
+.cabecera i {
+    color: var(--colorNaranja)
+}
+
+.cabecera p {
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.cabecera .p-desktop {
+    display: none;
+}
+
+/* FORMULARIO COMPLETO */
+
+.formulario-register {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 90%;
+    margin: 10% auto;
+}
+
+.formulario-register p {
+    margin: 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+.formu {
+    border: 1px solid var(--colorVerdeClaro);
+    border-radius: 5px;
+    padding: 20px 15px;
+    font-size: 14px;
+    width: 97%;
+    margin: auto;
+}
+
+.espacio {
+    padding: 5px 0px;
+}
+
+.espacio label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.espacio input {
+    display: block;
+    width: 100%;
+    margin: auto;
+    padding: 8px;
+    border-radius: 10px;
+    border: 1px solid var(--colorVerdeClaro);
+    outline: none;
+}
+
+.extras {
+    margin: 20px auto;
+}
+
+.container-promociones label,
+.container-newsletter label {
+    font-size: 15px;
+}
+
+
+.container-promociones input,
+.container-newsletter input {
+    margin: 0px 5px;
+}
+
+.formulario-register a {
+    text-decoration: none;
+}
+
+.formulario-register p {
+    margin: 10px 0px;
+}
+
+.formulario-register a:hover {
+    text-decoration: underline;
+}
+
+.link-register {
+    text-align: center;
+}
+
+.btn-submit {
+    background-color: var(--colorVerdeClaro);
+    border-radius: 10px;
+    border: none;
+    font-size: 18px;
+    padding: 12px 20px;
+    margin: 20px auto;
+}
+
+.btn-submit a {
+    color: white;
+    font-size: 500;
+}
+
+.btn-submit:hover {
+    background-color: rgb(77, 156, 51);
+    transition: .3s;
+}
+
+.btn-submit a:hover {
+    text-decoration: none;
+}
+
+.small_danger{
+    color: red;
+}
+
+
+
+/* MEDIA QUERYS */
+
+/* TABLET */
+
+
+@media (min-width: 768px) {
+    .formulario-register {
+        width: 50%;
+    }
+
+    .cabecera .p-desktop {
+        display: block;
+    }
+}
+
+/* DESKTOP */
+
+@media (min-width:1024px) {
+
+    .formulario-register {
+        width: 50%;
+    }
+
+}

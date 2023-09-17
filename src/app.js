@@ -36,6 +36,7 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 app.use(cookieCheck)
 app.use(localsCheck)
 
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)

@@ -6,69 +6,45 @@
       "email": "j.perez@gmail.com",
       "password": "123123",
       "rol": "admin",
-      "avatar": null
-   },
-   {
-      "id": "",
-      "name": "Maria",
-      "surname": "Rodriguez",
-      "email": "marodriguez@gmail.com",
-      "password": "",
-      "rol": "user",
       "avatar": "1693950849484_avatar_.jpg"
    },
    {
-      "id": "dfdac5f2-9351-4b30-8523-f96f315a26ac",
-      "name": "Adrian",
-      "surname": "Maidana",
-      "email": "ezemaidana44@gmail.com",
-      "password": "$2a$10$OwP7Rac8m2Dx5S577haEzurpSFTxCwZSCMF0/a2..Ri2itebILPIa",
-      "rol": "admin",
-      "birthday": null
-   },
-   {
-      "id": "70eafd22-66b8-4a3e-90ad-304a1a62ab01",
-      "name": "pepe",
-      "surname": "argento",
-      "email": "racing123@gmail.com",
-      "password": "$2a$10$U5Bj8gcPOjyf15o8VfVFbuhIRZ3W5TU2VYGMC31nFZANOYknm1IlW",
-      "rol": "user",
-      "birthday": null
-   },
-   {
-      "id": "2eecc2bb-ffae-4522-98cf-564dc3d1bd34",
+      "id": "91268e4d-e9f8-480e-bec5-1b49b1ffbccf",
       "name": "Tomas",
       "surname": "Soliz",
       "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$9lsr7OWVF37593qZ/IPp0OBl846jf23ltSW7Mbj2SyQ2EQomwoVeW",
-      "rol": "admin"
+      "password": "$2a$10$12NhPTYzb9OUYcmsRAt3veJ2/z.CDr0KKYXk9bezlpmrDBRBDEuSC",
+      "rol": "admin",
+      "birthday": "2023-09-19",
+      "address": "la quiaca 2728",
+      "call": "1141716540",
+      "about": "acerca de mi",
+      "image": "1694929378720_products_.png"
    },
    {
-      "id": "a2b0c05e-278d-4ff2-98ce-aaccd64d3149",
+      "id": "19ea787a-a918-421a-a686-b62f99d2aa93",
       "name": "Tomas",
       "surname": "Soliz",
-      "email": "tomassoliz@gmail.com",
-      "password": "$2a$10$LOfqJUdyKjX.ZfM0zsNujub/GXNTbT5rhUwhioJi9V/u6xp37MrVu",
+      "email": "tomassoliz07@gmail.com",
+      "password": "$2a$10$hhNg8huLSpYgGymZ2CiYruF7i6cSNDE3B1YfXLQzwo4gDwDO4MfeO",
       "rol": "user",
-      "birthday": "1998-07-24",
-      "addres": "La quiaca 2728",
-      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
-      "image": null
+      "birthday": "2023-09-19",
+      "address": "la quiaca 2728",
+      "call": "1141716540",
+      "about": "acerca de mi",
+      "image": "1694929378720_products_.png"
    },
    {
-      "id": "abc59c72-f9ed-4a0e-b40e-940dcf3ba39d",
-      "name": "dana",
-      "surname": "soliz",
-      "email": "danasoliz@gmail.com",
-      "password": "$2a$10$sORB9HbkVMuhZLvTDlkIo.cmu6RyRe6.un8LOHP/OcxsTwNgIOskS",
-      "rol": "user"
-   },
-   {
-      "id": "79e85333-0b33-446e-a611-c12e4857ab08",
-      "name": "tomas",
-      "surname": "soliz",
-      "email": "miajhaqueline2016@gmail.com",
-      "password": "$2a$10$1Co35mjz1ErODSiT75YHIOKhv5XKGXNpzgLSraVjbbTuDIiDX/m7W",
-      "rol": "user"
+      "id": "216df960-525c-4b37-8c1d-7af91ff54385",
+      "name": "luis",
+      "surname": "osorio",
+      "email": "luisosorio@gmail.com",
+      "password": "$2a$10$qtwm4oJ/7XbpnpNgIqWE6uhjU5j95hBHXIQMrXG5O4yU8tlGIXlFC",
+      "rol": "user",
+      "birthday": "",
+      "address": "la quiaca 2728",
+      "call": "1141716540",
+      "about": "toajotats",
+      "image": "1694929583116_products_.jpg"
    }
 ]
