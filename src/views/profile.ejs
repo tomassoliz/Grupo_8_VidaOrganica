@@ -10,19 +10,18 @@
                         <div class="formu">
                             <div class="card-body">
                                 <h3>MI PERFIL</h3>
-
-                                <!-- Imagen de perfil -->
-
-                                 <div class="flex-shrink-0">
-                                    <img src="/images/<%= image %>"
-                                      alt="profile image" class="img"
-                                      style="width: 150px; border-radius: 10px;">
-                                </div>
-
-                                <hr>
                                 
                                 <form class="row mb-5" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
                                     enctype="multipart/form-data">
+
+                                    <!-- Imagen de perfil -->
+                                    <div class="flex-shrink-0">
+                                        <img src="/images/<%= image %>"
+                                          alt="profile image" class="img"
+                                          style="width: 150px; border-radius: 10px;">
+                                    </div>
+    
+                                    <hr>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="name">Nombre</label>
                                         <input class="form-control" type="text" id="name" name="name" value="<%= name %>">

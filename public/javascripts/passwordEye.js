@@ -1,3 +1,4 @@
+
 const pass = document.getElementById("password"),
 icon = document.querySelector(".fa-eye")
 

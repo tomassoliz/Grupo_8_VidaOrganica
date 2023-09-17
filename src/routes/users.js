@@ -21,4 +21,5 @@ router
     .put('/updateProfile/:id', upload.single('image'), updateProfile)
     .get('/logout', logout)
     .get('/admin', loginValidator, checkAdmin, processLogin, adminMenu )
+    
 module.exports = router;

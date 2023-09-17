@@ -4,7 +4,6 @@ const { index, admin } = require('../controllers/indexController');
 const checkAdmin = require('../middlewares/checkAdmin');
 
 /* / */
-/* ROUTER */
 
 router
     .get('/', index)

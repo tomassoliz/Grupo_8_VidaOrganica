@@ -52,20 +52,18 @@
       "discount": 12,
       "description": "500gr de legumbres",
       "image": "default-img.png",
-      "createdAT": "2023-08-25T21:11:30.179Z",
       "createdAt": "2023-09-12T00:57:07.508Z"
    },
    {
       "id": "086aab6a-8b58-45d8-8fc6-d9890ba94f78",
-      "name": "Leche de soja",
-      "brand": "Activia",
-      "price": 1500,
-      "discount": 5,
-      "description": "La marca de la leche es de Ades",
-      "category": "Alimentos Naturales",
-      "createdAT": "2023-09-12T00:06:57.534Z",
+      "name": "Ades",
+      "brand": "FuzeTea",
+      "price": 600,
+      "discount": 10,
+      "description": "La marca es de Ades",
+      "category": "Bebidas e Infusiones",
       "image": "1694477217530_products_.jpg",
-      "createdAt": "2023-09-12T00:45:46.994Z"
+      "createdAt": "2023-09-17T23:27:09.753Z"
    },
    {
       "id": "23fdc3f7-bd85-4f61-a454-9fc92ff547d9",
@@ -75,7 +73,6 @@
       "discount": 0,
       "description": "Leche de almendras Ades",
       "category": "Bebidas e Infusiones",
-      "createdAT": "2023-09-12T00:58:31.335Z",
       "image": "1694480311331_products_.jpg",
       "createdAt": "2023-09-12T00:59:14.504Z"
    },
@@ -87,7 +84,6 @@
       "discount": 3,
       "description": "polenta nomas",
       "category": "Alimentos Naturales",
-      "createdAT": "2023-09-15T01:01:25.178Z",
       "image": "1694739685079_products_.jpg",
       "createdAt": "2023-09-17T06:21:10.877Z"
    },
@@ -99,7 +95,6 @@
       "discount": 15,
       "description": "ades rico en proteinas y mas soja",
       "category": "Alimentos Naturales",
-      "createdAT": "2023-09-15T21:49:49.408Z",
       "image": "1694932068494_products_.png",
       "createdAt": "2023-09-17T06:27:48.500Z"
    }

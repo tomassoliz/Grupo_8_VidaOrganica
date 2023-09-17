@@ -1,50 +1,15 @@
 [
    {
-      "id": "",
-      "name": "Juan",
-      "surname": "Perez",
-      "email": "j.perez@gmail.com",
-      "password": "123123",
-      "rol": "admin",
-      "avatar": "1693950849484_avatar_.jpg"
-   },
-   {
-      "id": "91268e4d-e9f8-480e-bec5-1b49b1ffbccf",
+      "id": "f433cbdf-14d1-4770-a265-e490e97bb268",
       "name": "Tomas",
       "surname": "Soliz",
       "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$12NhPTYzb9OUYcmsRAt3veJ2/z.CDr0KKYXk9bezlpmrDBRBDEuSC",
+      "password": "$2a$10$PQX.4NN338dmWvG6nv3mgeX8RZZHQqWU.S89sxC9TYLqqBA6xuah2",
       "rol": "admin",
-      "birthday": "1998-07-24",
-      "address": "La Quiaca 2728",
-      "call": "1141716540",
-      "about": "tengo 25 años ",
-      "image": "1694932898036_products_.ico"
-   },
-   {
-      "id": "19ea787a-a918-421a-a686-b62f99d2aa93",
-      "name": "Tomas",
-      "surname": "Soliz",
-      "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$hhNg8huLSpYgGymZ2CiYruF7i6cSNDE3B1YfXLQzwo4gDwDO4MfeO",
-      "rol": "user",
-      "birthday": "1998-07-24",
-      "address": "La Quiaca 2728",
-      "call": "1141716540",
-      "about": "tengo 25 años ",
-      "image": "1694932898036_products_.ico"
-   },
-   {
-      "id": "216df960-525c-4b37-8c1d-7af91ff54385",
-      "name": "luis",
-      "surname": "osorio",
-      "email": "luisosorio@gmail.com",
-      "password": "$2a$10$qtwm4oJ/7XbpnpNgIqWE6uhjU5j95hBHXIQMrXG5O4yU8tlGIXlFC",
-      "rol": "user",
       "birthday": "",
-      "address": "la quiaca 2728",
-      "call": "1141716540",
-      "about": "toajotats",
-      "image": "1694929583116_products_.jpg"
+      "address": "",
+      "call": "",
+      "about": "",
+      "image": "1694992957660_products_.jpg"
    }
 ]
