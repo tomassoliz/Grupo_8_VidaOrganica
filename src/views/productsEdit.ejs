@@ -16,9 +16,9 @@
             <main>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
-                    <form class="row g-3" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="row mb-4" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="col-12 images_edit">
-                            <img src="/images/<%= image %>" alt="" class="img-fluid">
+                            <img src="/images/img-products/<%= image %>" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-12">
                             <label for="name" class="form-label">Nombre</label>
@@ -63,7 +63,7 @@
                                 <option>NO</option>
                             </select>
                         </div>
-                        <div class="col-12 mt-5 d-flex justify-content-start gap-3">
+                        <div class="col-12 mt-4 d-flex justify-content-start gap-3">
                             <button type="submit" class="btn btn-success">Guardar</button>
                             <button type="reset" class="btn btn-danger">Cancelar</button>
                         </div>
@@ -71,41 +71,7 @@
                 </div>
 
             </main>
-            <!-- <main>
-            <div class="container_form-edit">
-                <h2 class="title_form-edit">Editar productos</h2>
-                <form class="form-add" action="">
-                    <div class="container_input-add">
-                        <div class="input-edit">
-                            <label for="name">Nombre</label>
-                            <input type="text" id="name">
-                        </div>
-                        <div class="input-edit">
-                            <label for="brand">Marca</label>
-                            <input type="text" id="brand">
-                        </div>
-                        <div class="input-edit">
-                            <label for="price">Precio</label>
-                            <input type="number" id="price">
-                        </div>
-                        <div class="input-edit">
-                            <label for="discount">Descuento</label>
-                            <input type="number" id="discount">
-                        </div>
-                    </div>
-                    <div class="container_input-edit">
-                        <div class="input-edit">
-                            <label for="name">Descripción</label>
-                            <textarea id="description" rows="3"
-                                placeholder="Breve descripción del producto"></textarea>
-                        </div>
-                    </div>
-                    <div class="container_button-form">
-                        <button class="button-form">Finalizar</button>
-                        <button class="button-form-delete">Eliminar</button>
-                    </div>
-                </form>
-        </main> -->
+
             <%- include('partials/footer') %>
     </body>
 

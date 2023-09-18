@@ -10,8 +10,8 @@ module.exports = (req, res) => {
         if (user.email === email) {
 
             req.file &&
-                existsSync(`./public/images/users/${user.image}`) && 
-                unlinkSync(`./public/images/users/${user.image}`)
+                existsSync(`./public/images/avatar/${user.image}`) && 
+                unlinkSync(`./public/images/avatar/${user.image}`)
 
             user.name = name.trim();
             user.surname = surname;

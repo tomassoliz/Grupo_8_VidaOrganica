@@ -1,15 +1,28 @@
 [
    {
-      "id": "f433cbdf-14d1-4770-a265-e490e97bb268",
+      "id": "74c6d8b8-3056-484a-9dab-ff5e72b9eb80",
       "name": "Tomas",
       "surname": "Soliz",
       "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$PQX.4NN338dmWvG6nv3mgeX8RZZHQqWU.S89sxC9TYLqqBA6xuah2",
+      "password": "$2a$10$RcxF0s8rns7CSKuJ8As6yukoliGdFoUHI8EmhSDbHeXScZxt6Fh5q",
       "rol": "admin",
-      "birthday": "",
-      "address": "",
-      "call": "",
-      "about": "",
-      "image": "1694992957660_products_.jpg"
+      "birthday": "1998-07-24",
+      "address": "La Quiaca 2728",
+      "call": "1141716540",
+      "about": "Soy el admin",
+      "image": "1695012495837_avatar_.jpg"
+   },
+   {
+      "id": "9c8d80b4-3944-4bcb-9b05-51b79d633b1c",
+      "name": "Dana",
+      "surname": "Soliz",
+      "email": "danasoliz@gmail.com",
+      "password": "$2a$10$1LNa8fPFRyQNPeDWk.OPMuFXi3SBo5Uyy1/rwEbO..l3RThwwZTqy",
+      "rol": "user",
+      "birthday": "2020-07-24",
+      "address": "La Quiaca 2728",
+      "call": "1141716540",
+      "about": "Soy la hija ",
+      "image": "1695012681508_avatar_.png"
    }
 ]

@@ -78,6 +78,7 @@
 
 .link-register {
     text-align: center;
+    color: white;
 }
 
 .btn-submit {
@@ -87,6 +88,7 @@
     font-size: 18px;
     padding: 12px 20px;
     margin: 20px auto;
+    color: white;
 }
 
 .btn-submit a {

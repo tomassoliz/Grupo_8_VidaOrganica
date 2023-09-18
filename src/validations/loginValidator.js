@@ -18,5 +18,4 @@ module.exports = [
 
             return true
         }).withMessage('Credenciales invalidas!')
-
 ]

@@ -15,7 +15,7 @@ const User = function ({ name, surname, email, password, rol, birthday, address,
     this.address = address ? address : ""
     this.call = call ? call : ""
     this.about = about ? about : ""
-    this.image = "img-default.png"
+    this.image = "img-default.jpg"
 }
 
 module.exports = User

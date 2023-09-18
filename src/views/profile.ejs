@@ -11,14 +11,14 @@
                             <div class="card-body">
                                 <h3>MI PERFIL</h3>
                                 
-                                <form class="row mb-5" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
+                                <form class="row mb-3" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
                                     enctype="multipart/form-data">
 
                                     <!-- Imagen de perfil -->
-                                    <div class="flex-shrink-0">
-                                        <img src="/images/<%= image %>"
+                                    <div class="flex-shrink-0 mb-3">
+                                        <img src="/images/avatar/<%= image %>"
                                           alt="profile image" class="img"
-                                          style="width: 150px; border-radius: 10px;">
+                                          style="width: 150px; border-radius: 10px; border: solid 1px black;">
                                     </div>
     
                                     <hr>
@@ -43,19 +43,17 @@
                                         <input class="form-control" type="text" id="address" name="address" value="<%= address %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-check-label" for="about">Acerca de mí</label>
-                                        <textarea style="resize: none;" name="about" id="about" rows="5"
-                                            class="form-control"><%= about %></textarea>
+                                        <label class="form-label" for="about">Acerca de mí</label>
+                                        <textarea class="form-control" style="resize: none;" name="about" id="about"><%= about %></textarea>
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-label" for="call">Telefono</label>
-                                        <input type="tel" id="call" class="form-control" name="call"  value="<%= call %>">
+                                        <label class="form-label" for="call">Teléfono</label>
+                                        <input type="tel" id="call" class="form-control" name="call" value="<%= call %>">
                                     </div>
-                                    <div class="col-md-10 d-flex justify-content-end gap-5">
-                                        <label for="image" class="btn btn-outline-primary mt-5">Cambiar imagen de
-                                            perfil</label>
+                                    <div class="col-md-10 d-flex justify-content-start gap-3">
+                                        <label for="image" class="btn btn-primary mt-3">Cambiar imagen</label>
                                         <input hidden class="form-control" type="file" id="image" name="image">
-                                        <button class="btn btn-outline-success mt-5" type="submit">Guardar
+                                        <button class="btn btn-success mt-3" type="submit">Guardar
                                             cambios</button>
                                     </div>
                                 </form>

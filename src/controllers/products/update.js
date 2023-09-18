@@ -10,8 +10,8 @@ module.exports = (req, res) => {
         if (product.id === id) {
 
             req.file &&
-                existsSync(`./public/images/${product.image}`) && 
-                unlinkSync(`./public/images/${product.image}`)
+                existsSync(`./public/images/img-products${product.image}`) && 
+                unlinkSync(`./public/images/img-products${product.image}`)
 
             product.name = name.trim();
             product.brand = brand;
