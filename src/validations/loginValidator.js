@@ -1,22 +1,21 @@
-const { body } = require('express-validator');
-const { compareSync } = require('bcryptjs');
+const {body} =require('express-validator');
+const {compareSync} =require('bcryptjs');
 
-const { readJSON } = require('../data');
+const {readJSON} =require('../datas');
 module.exports = [
     body('email')
-        .notEmpty().withMessage('El email es requerido').bail()
-        .isEmail().withMessage('El formato no es correcto!'),
+    .notEmpty().withMessage('El email es requreido').bail()
+    .isEmail().withMessage('El Fomrato no es correcto!'),
 
     body('password')
-        .notEmpty().withMessage('La contraseña es requerida!').bail()
-        .custom((value, { req }) => {
+        .notEmpty('').withMessage('La contraseña es requreida!!').bail()
+        .custom((value,{req})=>{
             const users = readJSON('users.json')
-            const user = users.find(user => user.email === req.body.email) //primero validamos que sea el usuario para despues validar el pass
-            if (!user || !compareSync(value, user.password)) { // verificamos si existe el usuario!
+            const user= users.find(user => user.email === req.body.email)// primero validamos que sea el usuario para despues validar el pass
+            if(!user|| !comparesSync(value,user.password)){ // verificamos si existe el usuario!
                 return false
+
             }
-
             return true
-        }).withMessage('Credenciales invalidas!')
-
-]
+        }).withMessage('Credenciales Invalidas!')
+]a
