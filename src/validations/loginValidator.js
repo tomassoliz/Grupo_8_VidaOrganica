@@ -1,7 +1,7 @@
 const {body} =require('express-validator');
 const {compareSync} =require('bcryptjs');
 
-const {readJSON} =require('../datas');
+const {readJSON} =require('../data');
 module.exports = [
     body('email')
     .notEmpty().withMessage('El email es requreido').bail()
