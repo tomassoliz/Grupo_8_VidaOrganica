@@ -24,5 +24,18 @@
       "call": "1141716540",
       "about": "Soy la hija ",
       "image": "1695012681508_avatar_.png"
+   },
+   {
+      "id": "165f7675-15eb-4d04-9718-c52c29d3677f",
+      "name": "Maria",
+      "surname": "Soliz",
+      "email": "mariasoliz@gmail.com",
+      "password": "$2a$10$wCrNBOLKlaerTULlKbxuwOLzdhOMimCVuuyV6oyRR5VFsn0plQIqO",
+      "rol": "user",
+      "birthday": "",
+      "address": "",
+      "call": "",
+      "about": "",
+      "image": "img-default.jpg"
    }
 ]
