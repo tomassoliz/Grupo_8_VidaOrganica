@@ -5,15 +5,9 @@
     padding: 0;
   }
 
-  .swiper-slide {
-    text-align: center;
-    display: flex;
-    width: 100%;
-  }
-
   .swiper {
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto; 
   }
 
   .swiper-slide {
@@ -124,6 +118,7 @@
     top: 20px;
     right: 20px;
     font-size: 20px;
+    color: var(--colorVerdeClaro);
   }
 
   .container-articulo-section i:hover {
@@ -157,13 +152,37 @@
     background-color: var(--colorVerde);
     text-transform: uppercase;
     font-size: 14px;
-    padding: 10px 25px;
+    padding: 8px 12px;
   }
 
   .button-card:hover {
     background-color: var(--colorVerdeClaro);
     transition: .3s;
     cursor: pointer;
+  }
+
+  .button-card_carrito {
+    margin-top: 10px;
+    border: 1px solid var(--colorVerdeClaro);
+    border-radius: 20px;
+    background-color: transparent;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  .button-card_carrito:hover {
+    background-color: var(--colorVerdeClaro);
+    transition: .3s;
+    cursor: pointer;
+  }
+  .button-card_carrito a:hover {
+    color: white;
+    transition: .3s;
+  }
+
+  .link_card_carrito {
+    color: var(--colorVerdeClaro);
   }
 
   .precio-card {

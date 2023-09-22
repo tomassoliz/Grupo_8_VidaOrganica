@@ -14,6 +14,8 @@
 
         <%- include('partials/header') %>
             <main>
+                <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
+                    href="#">editar</a></p>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
                     <form class="row mb-4" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">

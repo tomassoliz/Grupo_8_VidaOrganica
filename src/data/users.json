@@ -37,5 +37,31 @@
       "call": "",
       "about": "",
       "image": "img-default.jpg"
+   },
+   {
+      "id": "7dca524c-e535-477a-b746-3de88a0d5169",
+      "name": "Gaston",
+      "surname": "Cane",
+      "email": "gastoncane@gmail.com",
+      "password": "$2a$10$NKA2vjYjqzeXRC58hKtcR.kKByuRDMiMrv2A5hvrN8LecivnvO4XC",
+      "rol": "user",
+      "birthday": "",
+      "address": "",
+      "call": "",
+      "about": "",
+      "image": "img-default.jpg"
+   },
+   {
+      "id": "2dc9acb1-ea49-44ce-bac2-bfbf929c2d86",
+      "name": "Ezequiel",
+      "surname": "Paredes",
+      "email": "ezeparedes@gmail.com",
+      "password": "$2a$10$1km/o3LUXZCglDsOeP5u..8uJTlv47wiRu9ZhLonvqnBCCruuC8Ba",
+      "rol": "user",
+      "birthday": "2000-07-10",
+      "address": "siempre viva 123",
+      "call": "1141783584",
+      "about": "soy ezequiel paredes, me gusta hacer dieta",
+      "image": "img-default.jpg"
    }
 ]

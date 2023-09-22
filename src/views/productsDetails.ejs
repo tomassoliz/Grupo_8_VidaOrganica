@@ -10,7 +10,7 @@
         <%- include('partials/header') %>
         <div class="carrito_body-title">
             <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
-                    href="#">detalle</a></p>
+                    href="#"><%= product.name %></a></p>
             <h2 class="carrito_main_title">Detalle de producto</h2>
         </div>
             <main class="container-general">
@@ -63,9 +63,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
-                        <button class="btn-add-to-cart">
-                            <i class="fa-solid fa-plus"></i>
-                            Añadir al carrito
+                        <button class="btn-add-to-cart"><a href="/products/carrito"><i class="fa-solid fa-plus"></i>
+                            Añadir al carrito</a>
                         </button>
                     </div>
                     <div class="container-social">

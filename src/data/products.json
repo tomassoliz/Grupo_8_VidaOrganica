@@ -1,14 +1,15 @@
 [
    {
       "id": "7a067741-1280-44f2-a46f-b3ea26512923",
-      "name": "Afajor",
+      "name": "Alfajor bienva",
       "brand": "Bienva",
       "price": 450,
       "discount": 0,
       "description": "Alfajor blanco",
       "category": "Alimentos Naturales",
       "createdAT": "2023-09-19T00:02:59.854Z",
-      "image": "1695081779851_products_.jpg"
+      "image": "1695081779851_products_.jpg",
+      "createdAt": "2023-09-22T23:50:48.728Z"
    },
    {
       "id": "c86e4f48-f4b1-47d2-ad6f-6d90a9562ef5",
@@ -163,5 +164,27 @@
       "category": "Bebidas e Infusiones",
       "createdAT": "2023-09-19T00:11:34.919Z",
       "image": "1695082294915_products_.jpg"
+   },
+   {
+      "id": "e8f0cd2b-0678-43e3-9c31-a0068a95b211",
+      "name": "Pasas",
+      "brand": "Bonafide",
+      "price": 1500,
+      "discount": 0,
+      "description": "Pasas de uva por kilo",
+      "category": "Alimentos Naturales",
+      "createdAT": "2023-09-22T22:24:13.309Z",
+      "image": "1695421453305_products_.jpg"
+   },
+   {
+      "id": "3dc65bd1-8775-45bc-8c53-945e501faa8a",
+      "name": "Miel pura",
+      "brand": "Ceral",
+      "price": 2500,
+      "discount": 15,
+      "description": "Miel pura de abeja",
+      "category": "Suplementos Naturales",
+      "createdAT": "2023-09-22T23:34:31.356Z",
+      "image": "1695425671352_products_.jpg"
    }
 ]

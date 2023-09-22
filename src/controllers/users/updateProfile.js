@@ -5,7 +5,6 @@ module.exports = (req, res) => {
     const users = readJSON('users.json');
     const { name, surname, email, birthday, address, call, about } = req.body
 
-    console.log("update");
     const profileEdit = users.map(user => {
         if (user.email === email) {
 
