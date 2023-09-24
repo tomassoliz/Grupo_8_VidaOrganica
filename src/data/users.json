@@ -62,5 +62,13 @@
       "addres": "La quiaca 2728",
       "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
       "image": null
+   },
+   {
+      "id": "f9860fc0-f4cd-4889-8b8e-b854e3830cbe",
+      "name": "Ludmila",
+      "surname": "Miceli",
+      "email": "ludmilamiceli@hotmail.com",
+      "password": "$2a$10$JV6LA9ICrNGyfsPujOaCN.K.y2st8onTBMK2FZaGJQaXxB6X2stxm",
+      "rol": "user"
    }
 ]

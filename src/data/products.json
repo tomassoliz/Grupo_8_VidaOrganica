@@ -86,5 +86,17 @@
       "createdAT": "2023-09-12T00:58:31.335Z",
       "image": "1694480311331_products_.jpg",
       "createdAt": "2023-09-12T00:59:14.504Z"
+   },
+   {
+      "id": "d31be65a-1088-45cc-9119-a51bbde3f6b4",
+      "name": "Té",
+      "brand": "Bonafide",
+      "price": 1540,
+      "discount": 40,
+      "description": "Te de hierbas",
+      "category": "Alimentos Naturales",
+      "createdAT": "2023-09-12T23:43:56.345Z",
+      "image": "1694562236322_products_.jpg",
+      "createdAt": "2023-09-12T23:44:28.585Z"
    }
 ]
