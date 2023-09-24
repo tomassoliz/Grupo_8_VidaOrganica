@@ -6,13 +6,14 @@
     <body class="home">
         <%- include('partials/header') %>
 
+        <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
+            href="#">admin</a></p>
             <main class="container">
-                <div class="row mt-5">
-
+                <div class="row mt-5 mb-5">
                     <div class="col-12-col-md-12 col-lg-10 mx-auto">
                         <div class="card">
                             <div class="card-header">
-                                <h4 class="card-title">Almacén</h4>
+                                <h4 class="card-title text-center mt-2 mb-2">Vida Orgánica - Admin</h4>
                             </div>
                             <div class="card-body">
                                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -22,9 +23,9 @@
                                             aria-controls="home-tab-pane" aria-selected="true">Productos</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="profile-tab" data-bs-toggle="tab"
-                                            data-bs-target="#profile-tab-pane" type="button" role="tab"
-                                            aria-controls="profile-tab-pane" aria-selected="false">Marcas</button>
+                                        <button class="nav-link" id="users-tab" data-bs-toggle="tab"
+                                            data-bs-target="#users-tab-pane" type="button" role="tab"
+                                            aria-controls="users-tab-pane" aria-selected="false">Usuarios</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
@@ -111,7 +112,7 @@
                                                                             <div class="modal-body">
                                                                                 <div class="row">
                                                                                     <div class="col-12 col-md-4">
-                                                                                        <img src="/images/<%= image %>"
+                                                                                        <img src="/images/img-products/<%= image %>"
                                                                                             class="img-fluid" alt="">
                                                                                     </div>
                                                                                     <div class="col-12 col-md-8">
@@ -179,25 +180,95 @@
                                         </table>
                                     </div>
 
+                                    <div class="tab-pane fade" id="users-tab-pane" role="tabpanel"
+                                        aria-labelledby="users-tab" tabindex="0">
 
-                                    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel"
-                                        aria-labelledby="profile-tab" tabindex="0">
                                         <div>
-                                            <form action="/products/search" method="GET" class="d-flex gap-2 my-3">
-                                                <input type="text" class="form-control" placeholder="Buscar categoría"
-                                                    name="keywords">
-                                                <button type="submit" class="btn btn-outline-success">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </form>
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">#</th>
+                                                        <th scope="col">Nombre</th>
+                                                        <th scope="col">Apellido</th>
+                                                        <th scope="col">Email</th>
+                                                        <th scope="col">Rol</th>
+                                                        <th scope="col">Acciones</th>
+                                                    </tr>
+                                                </thead>
+
+                                                <tbody>
+                                                    <% adminUser.forEach(({id, name, surname, email, rol, image},
+                                                        index)=> { %>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <%= index + 1 %>
+                                                            </th>
+                                                            <td>
+                                                                <%= name %>
+                                                            </td>
+                                                            <td>
+                                                                <%= surname %>
+                                                            </td>
+                                                            <td>
+                                                                <%= email %>
+                                                            </td>
+                                                            <td>
+                                                                <%= rol %>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+
+                                                                    <button type="button" class="btn btn-sm btn-primary"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modalDetail<%= id %>">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+                                                                    <div class="modal fade" id="modalDetail<%= id %>"
+                                                                        tabindex="-1" aria-labelledby="modalDetailLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-12 col-md-4">
+                                                                                            <img src="/images/avatar/<%= image %>"
+                                                                                                class="img-fluid"
+                                                                                                alt="">
+                                                                                        </div>
+                                                                                        <div
+                                                                                            class="col-12 col-md-8 text-center mt-5">
+                                                                                            <h4>
+                                                                                                <%= name %> <%= surname %>
+                                                                                            </h4>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <button type="button" class="btn btn-sm btn-danger">
+                                                                        <i class="fa-solid fa-lock" onclick="lock(this)"></i>
+                                                                    </button>
+                                                            </td>
+                                                        </tr>
+                                                        <%}) %>
+                                                </tbody>
+                                            </table>
                                         </div>
+
                                     </div>
 
                                     <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel"
                                         aria-labelledby="contact-tab" tabindex="0">
                                         <div>
-                                            <form action="/products/search" method="GET" class="d-flex gap-2 my-3">
-                                                <input type="text" class="form-control" placeholder="Buscar marca"
+                                            <form action="#" method="GET" class="d-flex gap-2 my-3">
+                                                <input type="text" class="form-control" placeholder="Intentar hacer lo mismo que productos"
                                                     name="keywords">
                                                 <button type="submit" class="btn btn-outline-success">
                                                     <i class="fas fa-search"></i>
@@ -217,7 +288,7 @@
                 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
                     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                     crossorigin="anonymous">
-                    </script>
+                </script>
     </body>
 
 </html>

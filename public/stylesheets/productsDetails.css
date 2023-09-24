@@ -149,6 +149,9 @@
 .btn-add-to-cart:hover {
     background-color: rgb(77, 156, 51);
 }
+.btn-add-to-cart a{
+    color: #eee;
+}
 
 .hidden {
     display: none;
