@@ -20,19 +20,20 @@ module.exports = {
     admin: (req, res) => {
         const products = readJSON('products.json');
         const carousell = readJSON('carousell.json');
-        const adminUser = readJSON('users.json')
+        const adminUser = readJSON('users.json');
+        const categories = readJSON('categories.json')
 
         return res.render('admin', {
             products,
             carousell,
-            adminUser
+            adminUser,
+            categories
         })
     },
     search: (req, res) => {
         const products = readJSON('products.json');
 
         const keywords = req.query.keywords
-        console.log(keywords);
         const results = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()))
 
         return res.render('results', {
