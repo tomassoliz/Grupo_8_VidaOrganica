@@ -1,50 +1,35 @@
 [
    {
-      "id": "",
-      "name": "Juan",
-      "surname": "Perez",
-      "email": "j.perez@gmail.com",
-      "password": "123123",
-      "rol": "admin",
-      "avatar": "1693950849484_avatar_.jpg"
-   },
-   {
-      "id": "91268e4d-e9f8-480e-bec5-1b49b1ffbccf",
+      "id": "74c6d8b8-3056-484a-9dab-ff5e72b9eb80",
       "name": "Tomas",
       "surname": "Soliz",
       "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$12NhPTYzb9OUYcmsRAt3veJ2/z.CDr0KKYXk9bezlpmrDBRBDEuSC",
+      "password": "$2a$10$RcxF0s8rns7CSKuJ8As6yukoliGdFoUHI8EmhSDbHeXScZxt6Fh5q",
       "rol": "admin",
-      "birthday": "2023-09-19",
-      "address": "la quiaca 2728",
+      "birthday": "1998-07-24",
+      "address": "La Quiaca 2728",
       "call": "1141716540",
-      "about": "acerca de mi",
-      "image": "1694929378720_products_.png"
+      "about": "Soy el admin, si",
+      "image": "1695012495837_avatar_.jpg"
    },
    {
-      "id": "19ea787a-a918-421a-a686-b62f99d2aa93",
-      "name": "Tomas",
+      "id": "9c8d80b4-3944-4bcb-9b05-51b79d633b1c",
+      "name": "Dana",
       "surname": "Soliz",
-      "email": "tomassoliz07@gmail.com",
-      "password": "$2a$10$hhNg8huLSpYgGymZ2CiYruF7i6cSNDE3B1YfXLQzwo4gDwDO4MfeO",
+      "email": "danasoliz@gmail.com",
+      "password": "$2a$10$1LNa8fPFRyQNPeDWk.OPMuFXi3SBo5Uyy1/rwEbO..l3RThwwZTqy",
       "rol": "user",
-      "birthday": "2023-09-19",
-      "address": "la quiaca 2728",
-      "call": "1141716540",
-      "about": "acerca de mi",
-      "image": "1694929378720_products_.png"
+      "birthday": "1998-07-24",
+      "addres": "La quiaca 2728",
+      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
+      "image": null
    },
    {
-      "id": "216df960-525c-4b37-8c1d-7af91ff54385",
-      "name": "luis",
-      "surname": "osorio",
-      "email": "luisosorio@gmail.com",
-      "password": "$2a$10$qtwm4oJ/7XbpnpNgIqWE6uhjU5j95hBHXIQMrXG5O4yU8tlGIXlFC",
-      "rol": "user",
-      "birthday": "",
-      "address": "la quiaca 2728",
-      "call": "1141716540",
-      "about": "toajotats",
-      "image": "1694929583116_products_.jpg"
+      "id": "f9860fc0-f4cd-4889-8b8e-b854e3830cbe",
+      "name": "Ludmila",
+      "surname": "Miceli",
+      "email": "ludmilamiceli@hotmail.com",
+      "password": "$2a$10$JV6LA9ICrNGyfsPujOaCN.K.y2st8onTBMK2FZaGJQaXxB6X2stxm",
+      "rol": "user"
    }
 ]

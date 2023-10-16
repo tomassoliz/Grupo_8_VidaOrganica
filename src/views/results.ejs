@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head', {title: keywords }) %>
+
+	<body>
+
+		<%- include('partials/header') %>
+			<div class="container-result">
+				<p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
+						href="#"><%= keywords %></a></p>
+				<h2>Resultados de la búsqueda: "<%= keywords %>"</h2>
+
+				<div class="container-result_products">
+					<% if (results.length) { %>
+						<div class="swiper mySwiper container-swiper-destacados">
+							<div class="swiper-wrapper">
+
+								<%- include('partials/products',{ products: results, activeSlider: false }) %>
+
+							</div>
+							<div class="swiper-button-next"></div>
+							<div class="swiper-button-prev"></div>
+						</div>
+						<% } else { %>
+							<div class="products-title_search">
+								<h2 >No hay productos que
+									coincidan con esa búsqueda</h2>
+							</div>
+							<% } %>
+				</div>
+			</div>
+			
+			<%- include('partials/footer') %>
+	</body>
+
+</html>

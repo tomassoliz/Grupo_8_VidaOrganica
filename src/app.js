@@ -11,6 +11,8 @@ const session = require('express-session');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
+const categoriesRouter = require('./routes/categories');
+// const brandsRouter = require('./routes/brands');
 const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require('./middlewares/localsCheck');
 
@@ -40,6 +42,8 @@ app.use(localsCheck)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)
+app.use('/categories',categoriesRouter)
+// app.use('/brands', brandsRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
