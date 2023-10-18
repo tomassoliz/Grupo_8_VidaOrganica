@@ -9,7 +9,6 @@ module.exports = {
           name: 'visitas',
           createdAt: new Date(),
           updatedAt: new Date(),
-
         },
         {
           name: 'ofertas',

@@ -1,4 +1,5 @@
 'use strict';
+
 const categoriesJSON = require('../../data/categories.json')
 const categories = categoriesJSON.map(({name}) => {
   return {
