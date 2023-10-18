@@ -1,8 +1,7 @@
-const { readJSON, writeJSON } = require('../../data');
 const { unlinkSync, existsSync } = require('fs');
+const db = require('../../database/models') //Falta crear
 
 module.exports = (req, res) => {
-    const products = readJSON('products.json');
     const id = req.params.id;
     const { name, brand, description, price, discount, category } = req.body
 

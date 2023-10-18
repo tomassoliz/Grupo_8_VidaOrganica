@@ -6,11 +6,11 @@ module.exports = (req, res) => {
 
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-        const users = readJSON('users.json')
-        let newUser = new User(req.body)
-        users.push(newUser)
+        // const users = readJSON('users.json')
+        // let newUser = new User(req.body)
+        // users.push(newUser)
 
-        writeJSON(users, 'users.json');
+        // writeJSON(users, 'users.json');
         return res.redirect('/')
         
     } else {
