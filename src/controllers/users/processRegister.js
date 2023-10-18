@@ -14,6 +14,11 @@ module.exports = (req, res) => {
         return res.redirect('/')
         
     } else {
+        if (req.file) {
+            existsSync('./public/images/' + req.file.filename) && 
+            unlinkSync('./public/images/' + req.file.filename)
+        }
+        
         return res.render('register', {
             old: req.body,
             errors: errors.mapped()

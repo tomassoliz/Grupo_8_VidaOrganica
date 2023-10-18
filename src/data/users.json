@@ -1,20 +1,35 @@
 [
-    {
-        "id" : "",
-        "name" : "Juan",
-        "surname" : "Perez",
-        "email" : "j.perez@gmail.com",
-        "password":"",
-        "rol" : "admin",
-        "avatar": null
-    },
-    {
-        "id" : "",
-        "name" : "Maria",
-        "surname" : "Rodriguez",
-        "email" : "marodriguez@gmail.com",
-        "password":"",
-        "rol" : "user",
-        "avatar": "1693950849484_avatar_.jpg"
-    }
+   {
+      "id": "74c6d8b8-3056-484a-9dab-ff5e72b9eb80",
+      "name": "Tomas",
+      "surname": "Soliz",
+      "email": "tomassoliz07@gmail.com",
+      "password": "$2a$10$RcxF0s8rns7CSKuJ8As6yukoliGdFoUHI8EmhSDbHeXScZxt6Fh5q",
+      "rol": "admin",
+      "birthday": "1998-07-24",
+      "address": "La Quiaca 2728",
+      "call": "1141716540",
+      "about": "Soy el admin, si",
+      "image": "1695012495837_avatar_.jpg"
+   },
+   {
+      "id": "9c8d80b4-3944-4bcb-9b05-51b79d633b1c",
+      "name": "Dana",
+      "surname": "Soliz",
+      "email": "danasoliz@gmail.com",
+      "password": "$2a$10$1LNa8fPFRyQNPeDWk.OPMuFXi3SBo5Uyy1/rwEbO..l3RThwwZTqy",
+      "rol": "user",
+      "birthday": "1998-07-24",
+      "addres": "La quiaca 2728",
+      "about": "Cualquier cosa tengo que poner aca pero buenoe es para probar",
+      "image": null
+   },
+   {
+      "id": "f9860fc0-f4cd-4889-8b8e-b854e3830cbe",
+      "name": "Ludmila",
+      "surname": "Miceli",
+      "email": "ludmilamiceli@hotmail.com",
+      "password": "$2a$10$JV6LA9ICrNGyfsPujOaCN.K.y2st8onTBMK2FZaGJQaXxB6X2stxm",
+      "rol": "user"
+   }
 ]

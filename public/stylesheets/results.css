@@ -1,0 +1,20 @@
+.container-result h2 {
+    font-size: 20px;
+    padding-left: 20px;
+    margin: 20px 0px;
+
+}
+
+.container-result_products {
+    gap: 20px;
+    margin: auto;
+    width: 70%;
+    height: 100%;
+}
+
+.products-title_search{ 
+    color: tomato;
+    margin: 100px 0px;
+    text-align: center;
+}
+

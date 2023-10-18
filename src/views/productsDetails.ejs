@@ -10,19 +10,19 @@
         <%- include('partials/header') %>
         <div class="carrito_body-title">
             <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
-                    href="#">detalle</a></p>
+                    href="#"><%= product.name %></a></p>
             <h2 class="carrito_main_title">Detalle de producto</h2>
         </div>
             <main class="container-general">
                 <div class="container-img">
-                    <img src="/images/<%= product.image %>" alt="">
+                    <img src="/images/img-products/<%= product.image %>" alt="">
                 </div>
                 <div class="container-info-product">
                     <div class="container-name">
                         <span><%= product.name %></span>
                     </div>
                     <div class="container-price">
-                        <span>$<%= product.price %></span>
+                        <span>$<%= product.price - (product.discount * product.price / 100) %></span>
                     </div>
                     <div class="container-description">
                         <div class="title-decription">
@@ -63,9 +63,8 @@
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
-                        <button class="btn-add-to-cart">
-                            <i class="fa-solid fa-plus"></i>
-                            Añadir al carrito
+                        <button class="btn-add-to-cart"><a href="/products/carrito"><i class="fa-solid fa-plus"></i>
+                            Añadir al carrito</a>
                         </button>
                     </div>
                     <div class="container-social">

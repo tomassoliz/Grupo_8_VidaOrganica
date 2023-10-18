@@ -15,10 +15,10 @@
             </div>
             <div class="header__contenedor-cinco">
                 <a href="/users/register"><i class="fas fa-user fa-2xl header_icono"></i></a>
-                <div class="menu__lista--3">
+                <div class="menu__lista--3"><!--Eze:solo muestra admin en el menu una vez logeado -->
                     <% if (!locals.userLogin) { %>
-                        <a href="/admin">Admin</a>
-                        <a href="/users/profile">Perfil</a>
+                        <!-- <a href="/admin">Admin</a> -->
+                        <!-- <a href="/users/profile">Perfil</a> -->
                         <a href="/users/login">Iniciar Sesión</a>
                         <a href="/users/register">Registrate</a>
                     <% }else{ %>
@@ -34,12 +34,15 @@
             </div>
         </div>
         <div class="header__contenedor-seis">
-            <input type="text" class="input__buscador" placeholder="Buscar productos" />
-            <i class="fa-solid fa-magnifying-glass icono_buscador"></i>
+            <form action="/search" method="GET">
+            <input type="text" name="keywords" class="input__buscador" placeholder="Buscar productos"/>
+            <button type="sumbit"><i class="fa-solid fa-magnifying-glass icono_buscador"></i></button>
+            </form>
         </div>
     </nav>
 
     <nav class="header__nav--2">
+    
         <ul class="menu">
             <li><a href="#">Alimentos Naturales <i class="fas fa-angle-down fa-sm"
                         style="color: rgb(111, 222, 75);"></i></a>
