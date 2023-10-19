@@ -18,5 +18,5 @@ const db = require('../../database/models')
         console.log('Producto eliminado =>',response)
         return res.redirect('/productsEdit')
       })
-    }
+    }.catch(error => console.log(error))
    }
