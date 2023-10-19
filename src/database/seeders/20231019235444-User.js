@@ -27,7 +27,7 @@ module.exports = {
         birthday:"",
         about:"",
         avatar: "img-default.jpg",
-        rolId: 1,
+        rolId: 2,
         addressId: 2,
         createdAt: new Date(),
         updatedAt: new Date(),

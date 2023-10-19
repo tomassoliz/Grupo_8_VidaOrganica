@@ -1,5 +1,5 @@
 const { unlinkSync, existsSync } = require('fs');
-const db = require('../../database/models') //Falta crear
+const db = require('../../database/models')
 
 module.exports = (req, res) => {
     const id = req.params.id;
