@@ -16,7 +16,7 @@ const db = require('../../database/models')
         }
       }).then((response) =>{
         console.log('Pelicula eliminada =>',response)
-        return res.redirect('/productEdit')
+        return res.redirect('/productsEdit')
       })
     }
    }
