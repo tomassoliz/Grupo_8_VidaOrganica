@@ -1,8 +1,22 @@
-const { readJSON, writeJSON } = require("../../data");
-module.exports = (req,res)=>{
-  const products = readJSON('products.json')
-  const id = req.params.id
-  const productModify = products.filter(product => product.id !== id)
-  writeJSON(productModify,'products.json')
-  return res.redirect('/admin')
-}
+const { response } = require('express')
+const db = require('../../database/models')
+   module.exports = {
+    delete: function(req,res) {
+      db.Product.findByPk(req.params.id)
+        .then(product => {
+          return res.render('productsEdit',{
+            Product : product
+          })
+        }).catch(error => console.log(error))
+    },
+    destroy: function(req,res){
+      db.Product.destroy({
+        where : {
+          id : req.params.id
+        }
+      }).then((response) =>{
+        console.log('Producto eliminado =>',response)
+        return res.redirect('/productsEdit')
+      }).catch(error => console.log(error))
+    }
+   }
