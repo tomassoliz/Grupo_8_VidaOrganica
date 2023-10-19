@@ -12,7 +12,7 @@ module.exports = (req, res) => {
         order : ['name']
       });
   
-      const categories = db.Section.findAll({
+      const categories = db.Category.findAll({
         order : ['name']
       });
   
