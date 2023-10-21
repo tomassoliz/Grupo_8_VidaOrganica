@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const upload = require('../middlewares/upload');
 const { detail, add, edit, create, update, remove, cart} = require('../controllers/productsController');
+const { destroy } = require('../controllers/products/remove');
 
 /* /products */
 
@@ -12,8 +13,8 @@ router
     .get('/edit/:id', edit)
     .get('/carrito', cart)
     .put('/update/:id', upload.single('image'), update)
-    // .delete('/remove/:id', remove)
+    .delete('/delete/:id', destroy)
     // .get('/delete/:id', delete)
-    // .post('/delete/:id', destroy)
+     //.post('/delete/:id', destroy)
 
 module.exports = router;

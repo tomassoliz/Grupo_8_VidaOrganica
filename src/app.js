@@ -38,7 +38,17 @@ app.use(express.static(path.join(__dirname,'..', 'public')));
 app.use(cookieCheck)
 app.use(localsCheck)
 
+app.post('/remove', (req, res) => {
+  // Asegúrate de que req.body.id sea un número entero
+  const id = parseInt(req.body.id, 10); // El segundo argumento (base) es 10 para interpretar el valor como decimal.
 
+  // Ahora 'id' es un número entero que puedes utilizar en tus consultas a la base de datos.
+  // Realiza las operaciones necesarias con 'id' en su formato de entero.
+
+  // ...
+  
+  res.send(`ID recibido: ${id}`);
+});
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products',productsRouter)
