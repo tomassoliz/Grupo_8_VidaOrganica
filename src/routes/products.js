@@ -12,6 +12,8 @@ router
     .get('/edit/:id', edit)
     .get('/carrito', cart)
     .put('/update/:id', upload.single('image'), update)
-    .delete('/remove/:id', remove)
+    // .delete('/remove/:id', remove)
+    // .get('/delete/:id', delete)
+    // .post('/delete/:id', destroy)
 
 module.exports = router;

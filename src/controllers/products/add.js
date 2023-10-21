@@ -1,5 +1,6 @@
-//const {readJSON} = require('../../data')
 const db = require('../../database/models')
+
+
 module.exports = (req, res) => {
     const brands = db.Brand.findAll({
         order : ['name']

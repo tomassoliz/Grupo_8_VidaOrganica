@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Product.belongsTo(models.Brand);
       Product.belongsTo(models.Category);
       Product.belongsTo(models.Section);
-      Product.belongsTo(models.Image);
+
     }
   }
   Product.init({
@@ -46,15 +46,6 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       references: {
         model: "sections",
-        key: "id"
-      }
-    },
-    // imageId: DataTypes.INTEGER
-    imageId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "images", 
         key: "id"
       }
     },
