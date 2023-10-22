@@ -13,7 +13,7 @@ router
     .get('/edit/:id', edit)
     .get('/carrito', cart)
     .put('/update/:id', upload.single('image'), update)
-    .delete('/delete/:id', destroy)
+    .delete('/remove/:id', destroy)
     // .get('/delete/:id', delete)
      //.post('/delete/:id', destroy)
 

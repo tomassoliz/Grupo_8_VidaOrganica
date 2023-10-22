@@ -1,65 +1,61 @@
-const { existsSync, unlinkSync } = require('fs')
+const {existsSync, unlinkSync} = require('fs')
 const { validationResult } = require('express-validator');
 const db = require('../../database/models');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
-  const errors = validationResult(req);
-  if (errors.isEmpty()) {
+    try {
+        const errors = validationResult(req);
 
-    const { name, price, discount, description, brand, section, category, image} = req.body
-    
-    db.Product.create({
-      name: name.trim(),
-      price,
-      discount: discount || 0,
-      description: description.trim(),
-      brandId: brand,
-      sectionId: section,
-      categoryId: category,
-      imageId: 1
-    })
-      .then(image => {
-        if (req.files.images) {
-          const images = req.files.images.map((file) => {
-            return {
-              file: file.filename,
-              main: false,
-            }
+        if(errors.isEmpty()){
+        
+          const {name, price, discount, description, brand, section, category} = req.body
+
+          const product = await db.Product.create({
+            name : name.trim(),
+            price,
+            discount : discount || 0,
+            description : description.trim(),
+            brandId : brand,
+            sectionId : section || 1,
+            categoryId : category,
           })
 
-          
+          await db.Image.create({
+              file: req.file.filename,
+              productId: product.id
+          })
+          return res.status(200).redirect('/admin');
         } else {
-          return res.redirect('/admin');
+
+          if(req.files.length){
+            req.files.forEach(file => {
+              existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
+            });
+          }
+
+          const brands = db.Brand.findAll({
+            order : ['name']
+          });
+
+          const categories = db.Category.findAll({
+            order : ['name']
+          });
+
+          Promise.all([brands, categories])
+            .then(([brands, categories]) => {
+              return res.render("productAdd", {
+                brands,
+                categories,
+                errors : errors.mapped(),
+                old : req.body
+              });
+            })
+            .catch(error => console.log(error))
         }
-      })
-      .catch(error => console.log(error))
 
-  } else {
-    if (req.files.length) {
-      req.files.forEach(file => {
-        existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
-      });
     }
-    
-    const brands = db.Brand.findAll({
-      order: ['name']
-    });
-
-    const categories = db.Category.findAll({
-      order: ['name']
-    });
-
-    Promise.all([brands, categories])
-      .then(([brands, categories]) => {
-        return res.render("productAdd", {
-          brands,
-          categories,
-          errors: errors.mapped(),
-          old: req.body
-        });
-      })
-      .catch(error => console.log(error))
+    catch (err) {
+        console.log("Error Product create route: ", err);
+    }
   }
-}
-
