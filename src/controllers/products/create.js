@@ -3,7 +3,7 @@ const { validationResult } = require('express-validator');
 const db = require('../../database/models');
 
 module.exports = async (req, res) => {
-
+  
     try {
         const errors = validationResult(req);
 
@@ -34,13 +34,14 @@ module.exports = async (req, res) => {
             });
           }
 
-          const brands = db.Brand.findAll({
+           const brands = await db.Brand.findAll({
             order : ['name']
           });
 
-          const categories = db.Category.findAll({
+          const categories = await db.Category.findAll({
             order : ['name']
           });
+        
 
           Promise.all([brands, categories])
             .then(([brands, categories]) => {
@@ -58,4 +59,6 @@ module.exports = async (req, res) => {
     catch (err) {
         console.log("Error Product create route: ", err);
     }
+  
+
   }
