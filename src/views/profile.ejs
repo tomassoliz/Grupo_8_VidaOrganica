@@ -18,7 +18,7 @@
 
                                     <!-- Imagen de perfil -->
                                     <div class="flex-shrink-0 mb-3">
-                                        <img src="/images/avatar/<%= image %>"
+                                        <img src="/images/avatar/<%= avatar %>"
                                           alt="profile image" class="img"
                                           style="width: 150px; border-radius: 10px; border: solid 1px black;">
                                     </div>
@@ -38,11 +38,11 @@
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="birthday">Cumpleaños</label>
-                                        <input class="form-control" type="date" id="birthday" name="birthday" value="<%= birthday %>">
+                                        <input class="form-control" type="date" id="birthday" name="birthday" value="<%= moment(birthday).format('YYYY-MM-DD') %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="address">Dirección</label>
-                                        <input class="form-control" type="text" id="address" name="address" value="<%= address %>">
+                                        <input class="form-control" type="text" id="address" name="address" value="<%= Address.city %>">
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="about">Acerca de mí</label>

@@ -1,27 +1,40 @@
+const db = require('../../database/models')
 const { validationResult } = require('express-validator');
-const { readJSON } = require('../../data');
 
 module.exports = (req, res) => {
 
     const errors = validationResult(req); // examina lo que viene del request!
 
     if (errors.isEmpty()) {
-        const users = readJSON('users.json');
+
         const { email, remember } = req.body
-        const user = users.find(user => user.email === email);
-        const { id, name, rol } = user;
 
-        req.session.userLogin = {
-            id,
-            name,
-            rol
-        }
+        db.User.findOne({
+            where: {
+                email
+            },
 
-        remember !== undefined && res.cookie('vidaOrganicaTheBest', req.session.userLogin, {
-            maxAge: 1000 * 60
+            include: [
+                { 
+                    model: db.Role 
+                }
+            ]
+
         })
+            .then(user => {
+                req.session.userLogin = {
+                    id: user.id,
+                    name: user.name,
+                    rol: user.Role.name
+                }
+                
+                remember !== undefined && res.cookie('vidaOrganicaTheBest', req.session.userLogin, {
+                    maxAge: 1000 * 60
+                })
 
-        return res.redirect('/')
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
 
     } else {
         return res.render('login', {

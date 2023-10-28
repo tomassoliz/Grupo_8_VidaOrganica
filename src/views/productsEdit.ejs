@@ -20,7 +20,7 @@
                     <h2 class="title_form-edit">Editar producto</h2>
                     <form class="row mb-4" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="col-12 images_edit">
-                            <img src="/images/img-products/<%= image %>" alt="" class="img-fluid">
+                            <img src="/images/img-products/<%= images.id %>" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-12">
                             <label for="name" class="form-label">Nombre</label>
@@ -30,7 +30,7 @@
                             <label for="brand" class="form-label">Marca</label>
                             <select name="brand">
                                 <% brands.forEach(item => { %>
-                                    <option <%= item.name === brand && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
+                                    <option <%= item.name === brands && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>
@@ -38,7 +38,7 @@
                             <label for="category" class="form-label">Categoría</label>
                             <select type="text" name="category" id="category">
                                 <% categories.forEach(item => { %>
-                                    <option <%= item.name === category && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
+                                    <option <%= item.name === categories && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>

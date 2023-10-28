@@ -6,7 +6,6 @@ module.exports = async (req, res) => {
 
     try {
         const errors = validationResult(req);
-
         if(errors.isEmpty()){
         
           const {name, price, discount, description, brand, section, category} = req.body
@@ -18,6 +17,7 @@ module.exports = async (req, res) => {
             description : description.trim(),
             brandId : brand,
             sectionId : section || 1,
+            // ver porque necesita el id si tengo en add, creo que es porque en el front no tiene el input de section y te lo toma como vacio por ende null?
             categoryId : category,
           })
 
@@ -26,6 +26,7 @@ module.exports = async (req, res) => {
               productId: product.id
           })
           return res.status(200).redirect('/admin');
+
         } else {
 
           if(req.files.length){
@@ -34,28 +35,13 @@ module.exports = async (req, res) => {
             });
           }
 
-          const brands = db.Brand.findAll({
-            order : ['name']
-          });
-
-          const categories = db.Category.findAll({
-            order : ['name']
-          });
-
-          Promise.all([brands, categories])
-            .then(([brands, categories]) => {
-              return res.render("productAdd", {
-                brands,
-                categories,
-                errors : errors.mapped(),
-                old : req.body
-              });
-            })
-            .catch(error => console.log(error))
+          return res.render('productsAdd',{
+            errors : errors.mapped(),
+            old : req.body
+          })
         }
-
     }
-    catch (err) {
-        console.log("Error Product create route: ", err);
+    catch (error) {
+        console.log("Error Product create route: ", error);
     }
   }

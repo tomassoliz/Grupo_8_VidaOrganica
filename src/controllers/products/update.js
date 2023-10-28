@@ -1,30 +1,63 @@
 const { unlinkSync, existsSync } = require('fs');
-const db = require('../../database/models')
+const db = require('../../database/models');
 
 module.exports = (req, res) => {
+
     const id = req.params.id;
-    const { name, brand, description, price, discount, category } = req.body
+    const { name, brand, description, price, discount, category, section } = req.body
 
-    const productsEdited = products.map(product => {
-        if (product.id === id) {
+    db.Product.findByPk(id)
 
-            req.file &&
-                existsSync(`./public/images/img-products${product.image}`) && 
+        .then((product) => {
+            req.file.image &&
+                existsSync(`./public/images/img-products${product.image}`) &&
                 unlinkSync(`./public/images/img-products${product.image}`)
 
-            product.name = name.trim();
-            product.brand = brand;
-            product.description = description.trim();
-            product.price = +price;
-            product.category = category;
-            product.discount = +discount;
-            product.createdAt = new Date();
-            product.image = req.file ? req.file.filename : product.image;
-        }
-        return product;
-    })
+            db.Product.update({
+                name: name.trim(),
+                price,
+                discount,
+                brandId: brand,
+                sectionId: section,
+                categoryId: category,
+                description: description.trim(),
+                image: req.files.image ? req.files.image[0].filename : product.image
 
-    writeJSON(productsEdited, 'products.json')
-
-    return res.redirect('/admin');
+            },
+                {
+                    where: {
+                        id : req.params.id
+                    }
+                })
+                .then(() => {
+                    if (req.files.images) {
+                        product.images.forEach((image) => {
+                            existsSync(`./public/images/${image.file}`) &&
+                            unlinkSync(`./public/images/${image.file}`);
+                        });
+                        db.Image.destroy({
+                            where: {
+                                productId: id
+                            }
+                        })
+                            .then(() => {
+                                const images = req.files.images.map((file) => {
+                                    return {
+                                        file:file.filename,
+                                        productId: product.id
+                                    }
+                                })
+                            db.Image.bulkCreate(images, {
+                                validate: true
+                            })
+                            .then((response) => {
+                                return res.redirect('/admin')
+                            })
+                        })
+                    } else {
+                        return res.redirect('/admin')
+                    }
+                })
+        })
+        .catch(error => console.log(error))
 }

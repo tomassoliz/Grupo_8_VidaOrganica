@@ -1,27 +1,32 @@
 const { validationResult } = require('express-validator')
-const User = require('../../data/User')
-const { readJSON, writeJSON } = require('../../data')
+const db = require('../../database/models');
+const { hashSync } = require('bcryptjs');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
     let errors = validationResult(req);
     if (errors.isEmpty()) {
-        // const users = readJSON('users.json')
-        // let newUser = new User(req.body)
-        // users.push(newUser)
+        const { name, surname, email, password } = req.body
 
-        // writeJSON(users, 'users.json');
-        return res.redirect('/')
-        
+       await db.User.create({
+            name: name.trim(),
+            surname: surname.trim(),
+            email: email.trim(),
+            password: hashSync(password, 10),
+            roleId: 2
+        })
+            .then(user => {
+                db.Address.create({
+                    userId: user.id
+                })
+                    .then(() => res.redirect('/'))
+            })
+            .catch(error => console.log(error))
     } else {
-        if (req.file) {
-            existsSync('./public/images/' + req.file.filename) && 
-            unlinkSync('./public/images/' + req.file.filename)
-        }
-        
         return res.render('register', {
             old: req.body,
             errors: errors.mapped()
         })
     }
 }
+// ValidationError [SequelizeValidationError]: notNull Violation: User.addressId cannot be null

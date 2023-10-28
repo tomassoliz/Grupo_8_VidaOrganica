@@ -11,24 +11,19 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Image.belongsTo(models.Product);
-      Image.hasMany(models.Product, {
-        onDelete: 'CASCADE',
-        hooks: true,
-      });
     }
   }
   Image.init({
     file: DataTypes.STRING,
-    main: DataTypes.STRING,
     // imageId: DataTypes.INTEGER
     productId: {
       allowNull: false,
       type: DataTypes.INTEGER,
       references: {
-        model: "Products", 
+        model: "products", 
         key: "id"
       }
-    },
+    }
   }, {
     sequelize,
     modelName: 'Image',

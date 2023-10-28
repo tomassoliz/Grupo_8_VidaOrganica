@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       birthday: {
-        type: Sequelize.STRING
+        type: Sequelize.DATE
       },
       about: {
         type: Sequelize.TEXT
@@ -41,7 +41,7 @@ module.exports = {
           }
         }
       },
-      rolId: {
+      roleId: {
         type: Sequelize.INTEGER,
         references : {
           model : {

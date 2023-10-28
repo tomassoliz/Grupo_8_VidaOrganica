@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.belongsTo(models.Role);
-      User.belongsTo(models.Section);
-      User.belongsTo(models.Order);
+      User.belongsTo(models.Address);
+      User.hasMany(models.Order)
     }
   }
   User.init({
@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     surname: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    birthday: DataTypes.STRING,
+    birthday: DataTypes.DATE,
     about: DataTypes.TEXT,
     call: DataTypes.INTEGER,
     avatar: DataTypes.STRING,

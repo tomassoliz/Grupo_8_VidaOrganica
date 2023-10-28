@@ -1,11 +1,17 @@
-const { readJSON} = require('../../data')
+const db = require('../../database/models')
 
-module.exports = (req,res) => {
-    const products = readJSON('products.json')
-
-    const id = req.params.id;
-    const product = products.find(product => product.id === id)
-
+module.exports = async (req, res) => {
+    
+    const product = await db.Image.findOne({
+        where: {
+            productId: req.params.id
+        },
+        include : [
+            {
+                model: db.Product
+            }
+        ]
+    })
     return res.render('productsDetails', {
         product
     })
