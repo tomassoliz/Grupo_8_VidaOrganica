@@ -1,11 +1,27 @@
-const { readJSON } = require("../../data")
+const db = require('../../database/models')
 
-module.exports = (req, res) => {
-    const users = readJSON('users.json');
-    const user = users.find(user => user.id === req.session.userLogin.id)
-    
-    return res.render('profile', {
-        ...user
-    })
+const moment = require('moment')
 
+module.exports = async (req, res) => {
+
+    try {
+        const user = await db.User.findByPk(req.session.userLogin.id, {
+            include: [
+                {
+                    model: db.Address
+                },
+                {
+                    model: db.Role
+                }
+            ]
+        }) //TRAES EL USUARIO QUE TIENE EL MISMO ID         
+
+        // return res.send(user)
+        return res.render('profile', {
+            ...user.dataValues,
+            moment
+        })
+    } catch (error) {
+        console.log(error);
+    }
 }

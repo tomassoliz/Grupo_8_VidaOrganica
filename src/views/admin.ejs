@@ -63,7 +63,7 @@
                                             <!-- PRODUCTOS DEL JSON -->
 
                                             <tbody>
-                                                <% products.forEach(({id, name, brand, description, category, price,
+                                                <% products.forEach(({id, name, Brand, description, Category, price,
                                                     discount, image}, index)=> { %>
                                                     <tr>
                                                         <th scope="row">
@@ -73,13 +73,13 @@
                                                             <%= name %>
                                                         </td>
                                                         <td>
-                                                            <%= brand ? brand : "-" %>
+                                                            <%= Brand.name ? Brand.name : "-" %>
                                                         </td>
                                                         <td>
                                                             <%= description %>
                                                         </td>
                                                         <td>
-                                                            <%= category %>
+                                                            <%= Category.name %>
                                                         </td>
                                                         <td>
                                                             <%= price %>

@@ -1,24 +1,26 @@
-const { readJSON } = require("../../data");
 const db = require('../../database/models')
 
-module.exports = (req, res) => {
-  const product = db.Product.findByPk(req.params.id/* ,{
-    include : ['images']
-  } */);
-  const brands = db.Brand.findAll({
-    order: ["name"],
-  });
-  const categories = db.Category.findAll({
-    order : ['name']
-  });
+module.exports = async (req, res) => {
+  try {
 
-  Promise.all([product, brands, categories])
-    .then(([product, brands, categories]) => {
-        return res.render("productsEdit", {
-    ...product.dataValues,
-    brands,
-    categories
+    const images = await db.Image.findAll()
+    const products = await db.Product.findByPk(req.params.id);
+    const brands = await db.Brand.findAll({
+      order: ["name"],
+    });
+    const categories = await db.Category.findAll({
+      order: ['name']
+    });
+    return res.render("productsEdit", {
+      ...products.dataValues,
+      brands,
+      categories,
+      images
     })
-  })
-  .catch(error => console.log(error))
-};
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// como hago para mostrar las categorias y marcas y no me guarda

@@ -18,7 +18,7 @@ router
     .post('/login', loginValidator, processLogin)
     .get('/profile', checkUserLogin, profile)
     .get('/editProfile/:id', editProfile)
-    .put('/updateProfile/:id', uploadUser.single('image'), updateProfile)
+    .put('/updateProfile/:id', uploadUser.single('image'), updateProfile) //no parametrizar
     .get('/logout', logout)
     .get('/admin', loginValidator, checkAdmin, processLogin, adminMenu )
     

@@ -1,29 +1,44 @@
-const { readJSON, writeJSON } = require('../../data');
-const { unlinkSync, existsSync } = require('fs');
+const db = require('../../database/models')
+const { validationResult } = require('express-validator')
 
-module.exports = (req, res) => {
-    const users = readJSON('users.json');
-    const { name, surname, email, birthday, address, call, about } = req.body
+module.exports = async (req, res) => {
+    const errors = validationResult(req)
 
-    const profileEdit = users.map(user => {
-        if (user.email === email) {
+    if (errors.isEmpty()) {
+        const { name, surname, email, birthday, address, call, about } = req.body
 
-            req.file &&
-                existsSync(`./public/images/avatar/${user.image}`) && 
-                unlinkSync(`./public/images/avatar/${user.image}`)
-
-            user.name = name.trim();
-            user.surname = surname;
-            user.birthday = birthday.trim();
-            user.address = address;
-            user.call = call;
-            user.about = about;
-            user.image = req.file ? req.file.filename : user.image;
-        }
-        return user;
-    })
-
-    writeJSON(profileEdit, 'users.json')
-
-    return res.redirect('/users/profile');
+        const user = await db.User.findByPk(req.session.userLogin.id)
+        
+        db.User.update(
+            {
+                name: name.trim(),
+                surname: surname.trim(),
+                email: email.trim(),
+                birthday,
+                address,
+                call,
+                about: about.trim(),
+                avatar: req.file?.filename || user.avatar //si existe accede --> con el signo ?
+            },
+            {
+                where: {
+                    id: req.session.userLogin.id
+                }
+            })
+            .then(() => {
+                return res.redirect('/')
+            })
+            .catch(error => console.log(error))
+    } else {
+        db.User.findByPk(req.session.userLogin.id)
+            .then(user => {
+                return res.render('profile', {
+                    ...user.dataValues,
+                    errors: errors.mapped()
+                })
+            })
+            .catch(error => console.log(error))
+    }
 }
+
+// no me edita nada

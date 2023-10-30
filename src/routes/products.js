@@ -14,7 +14,5 @@ router
     .get('/carrito', cart)
     .put('/update/:id', upload.single('image'), update)
     .delete('/remove/:id', destroy)
-    // .get('/delete/:id', delete)
-     //.post('/delete/:id', destroy)
 
 module.exports = router;
