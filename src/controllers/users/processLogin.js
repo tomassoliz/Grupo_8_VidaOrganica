@@ -9,7 +9,7 @@ module.exports = (req, res) => {
 
         const { email, remember } = req.body
 
-        db.User.findOne({
+       db.User.findOne({
             where: {
                 email
             },
@@ -19,7 +19,6 @@ module.exports = (req, res) => {
                     model: db.Role 
                 }
             ]
-
         })
             .then(user => {
                 req.session.userLogin = {
@@ -31,7 +30,6 @@ module.exports = (req, res) => {
                 remember !== undefined && res.cookie('vidaOrganicaTheBest', req.session.userLogin, {
                     maxAge: 1000 * 60
                 })
-
                 return res.redirect('/')
             })
             .catch(error => console.log(error))

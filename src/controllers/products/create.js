@@ -17,7 +17,8 @@ module.exports = async (req, res) => {
             description : description.trim(),
             brandId : brand,
             sectionId : section || 1,
-            // ver porque necesita el id si tengo en add, creo que es porque en el front no tiene el input de section y te lo toma como vacio por ende null?
+            // ver porque necesita el id si tengo en add, 
+            // creo que es porque en el front no tiene el input de section y te lo toma como vacio por ende null?
             categoryId : category,
           })
 
@@ -31,7 +32,8 @@ module.exports = async (req, res) => {
 
           if(req.files.length){
             req.files.forEach(file => {
-              existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
+              existsSync('./public/images/' + file.filename) && 
+              unlinkSync('./public/images/' + file.filename)
             });
           }
 

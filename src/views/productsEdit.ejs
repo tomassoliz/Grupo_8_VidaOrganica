@@ -18,19 +18,19 @@
                     href="#">editar</a></p>
                 <div class="container_form-edit">
                     <h2 class="title_form-edit">Editar producto</h2>
-                    <form class="row mb-4" action="/products/update/<%= id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="row mb-4" action="/products/update/<%= images.Product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <div class="col-12 images_edit">
-                            <img src="/images/img-products/<%= images.id %>" alt="" class="img-fluid">
+                            <img src="/images/img-products/<%= images.file %>" name="image" id="image" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-12">
                             <label for="name" class="form-label">Nombre</label>
-                            <input type="text" class="form-control" name="name" id="name" value="<%= name %>">
+                            <input type="text" class="form-control" name="name" id="name" value="<%= images.Product.name %>">
                         </div>
                         <div class="col-md-6">
                             <label for="brand" class="form-label">Marca</label>
                             <select name="brand">
                                 <% brands.forEach(item => { %>
-                                    <option <%= item.name === brands && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
+                                    <option <%= item.name === brands && 'selected' %> value="<%= item.id %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>
@@ -38,21 +38,21 @@
                             <label for="category" class="form-label">Categoría</label>
                             <select type="text" name="category" id="category">
                                 <% categories.forEach(item => { %>
-                                    <option <%= item.name === categories && 'selected' %> value="<%= item.name %>"><%= item.name %></option>
+                                    <option <%= item.name === categories && 'selected' %> value="<%= item.id %>"><%= item.name %></option>
                                 <% }) %>
                             </select>
                         </div>
                         <div class="col-md-6">
                             <label for="price" class="form-label">Precio</label>
-                            <input type="number" class="form-control" name="price" id="price" placeholder="$" value="<%= price %>">
+                            <input type="number" class="form-control" name="price" id="price" placeholder="$" value="<%= images.Product.price %>">
                         </div>
                         <div class="col-md-6">
                             <label for="discount" class="form-label">Descuento</label>
-                            <input type="number" class="form-control" name="discount" id="discount" value="<%= discount %>">
+                            <input type="number" class="form-control" name="discount" id="discount" value="<%= images.Product.discount %>">
                         </div>
                         <div class="col-md-12">
                             <label for="description" class="container_description-edit">Descripción</label>
-                            <textarea id="description" placeholder="Descripción a editar" name="description"><%= description %></textarea>
+                            <textarea id="description" placeholder="Descripción a editar" name="description"><%= images.Product.description %></textarea>
                         </div>
                         <div class="col-md-8">
                             <label for = "image" class="form-label">Agregar imagen</label>
