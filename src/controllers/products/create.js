@@ -35,32 +35,10 @@ module.exports = async (req, res) => {
             });
           }
 
-<<<<<<< HEAD
-           const brands = await db.Brand.findAll({
-            order : ['name']
-          });
-
-          const categories = await db.Category.findAll({
-            order : ['name']
-          });
-        
-
-          Promise.all([brands, categories])
-            .then(([brands, categories]) => {
-              return res.render("productAdd", {
-                brands,
-                categories,
-                errors : errors.mapped(),
-                old : req.body
-              });
-            })
-            .catch(error => console.log(error))
-=======
           return res.render('productsAdd',{
             errors : errors.mapped(),
             old : req.body
           })
->>>>>>> develop
         }
     }
     catch (error) {
