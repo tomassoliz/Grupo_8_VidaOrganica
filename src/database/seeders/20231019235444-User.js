@@ -13,9 +13,9 @@ module.exports = {
         birthday: new Date(),
         about:"",
         avatar: "img-default.jpg",
-        call: 0,
+        call: 1141716540,
         roleId: 1,
-        addressId: 1,
+        address: "",
         createdAt: new Date(),
         updatedAt: new Date(),
 
@@ -30,7 +30,7 @@ module.exports = {
         call: 0,
         avatar: "img-default.jpg",
         roleId: 2,
-        addressId: 2,
+        address: "",
         createdAt: new Date(),
         updatedAt: new Date(),
       }

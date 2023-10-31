@@ -1,12 +1,13 @@
 const { readJSON } = require("../../data");
 
-module.exports = (req, res) => {
-    const users = readJSON('users.json');
+module.exports = async (req, res) => {
+    try {
+        const user = await db.User.findAll()
+        return res.render('profile', {
+            user
+        })
 
-    const id = req.params.id;
-    const user = users.find(user => user.id === id);
-
-    return res.render('profile', {
-        ...user
-    })
+    } catch (error) {
+        console.log(error);
+    }
 }

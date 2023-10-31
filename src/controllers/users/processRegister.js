@@ -4,29 +4,29 @@ const { hashSync } = require('bcryptjs');
 
 module.exports = async (req, res) => {
 
-    let errors = validationResult(req);
-    if (errors.isEmpty()) {
-        const { name, surname, email, password } = req.body
-
-       await db.User.create({
-            name: name.trim(),
-            surname: surname.trim(),
-            email: email.trim(),
-            password: hashSync(password, 10),
-            roleId: 2
-        })
-            .then(user => {
-                db.Address.create({
-                    userId: user.id
-                })
-                    .then(() => res.redirect('/'))
+    try {
+        let errors = validationResult(req);
+    
+        if (errors.isEmpty()) {
+            const { name, surname, email, password } = req.body
+            
+           await db.User.create({
+                name: name.trim(),
+                surname: surname.trim(),
+                email: email.trim(),
+                password: hashSync(password, 10),
+                roleId: 2
             })
-            .catch(error => console.log(error))
-    } else {
-        return res.render('register', {
-            old: req.body,
-            errors: errors.mapped()
-        })
+            return res.redirect('/users/login')
+
+        } else {
+            return res.render('register', {
+                old: req.body,
+                errors: errors.mapped()
+            })
+        }
+        
+    } catch (error) {
+        console.log(error);
     }
 }
-// ValidationError [SequelizeValidationError]: notNull Violation: User.addressId cannot be null

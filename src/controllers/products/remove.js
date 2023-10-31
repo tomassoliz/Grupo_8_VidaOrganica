@@ -3,7 +3,7 @@ const db = require('../../database/models')
 module.exports = {
 
   destroy: async (req, res) => {
-
+    
     console.log('ID del producto a eliminar:', req.params.id)
     try {
       await db.Image.destroy({

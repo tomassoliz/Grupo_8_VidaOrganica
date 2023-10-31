@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       User.belongsTo(models.Role);
-      User.belongsTo(models.Address);
+      // User.belongsTo(models.Address);
       User.hasMany(models.Order)
     }
   }
@@ -24,15 +24,16 @@ module.exports = (sequelize, DataTypes) => {
     about: DataTypes.TEXT,
     call: DataTypes.INTEGER,
     avatar: DataTypes.STRING,
-    // addressId: DataTypes.INTEGER,
-    addressId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "addresses", 
-        key: "id"
-      }
-    },
+    address: DataTypes.STRING,
+    // addressId: DataTypes.INTEGER, correccion a string
+    // addressId: {
+    //   allowNull: false,
+    //   type: DataTypes.INTEGER,
+    //   references: {
+    //     model: "addresses", 
+    //     key: "id"
+    //   }
+    // },
     // roleId: DataTypes.INTEGER
     roleId: {
       allowNull: false,

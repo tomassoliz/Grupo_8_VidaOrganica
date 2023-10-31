@@ -3,8 +3,18 @@ const db = require('../../database/models')
 module.exports = async (req, res) => {
   try {
 
-    const images = await db.Image.findAll()
-    const products = await db.Product.findByPk(req.params.id);
+    const images = await db.Image.findOne({ //trae una sola fiola
+      where: {
+        productId: req.params.id
+      },
+      include: [
+        {
+          model: db.Product
+        }
+      ]
+    })
+
+    // const products = await db.Product.findByPk(req.params.id);
     const brands = await db.Brand.findAll({
       order: ["name"],
     });
@@ -12,10 +22,10 @@ module.exports = async (req, res) => {
       order: ['name']
     });
     return res.render("productsEdit", {
-      ...products.dataValues,
+      // ...products.dataValues, ya no lo necesito
+      images,
       brands,
-      categories,
-      images
+      categories
     })
 
   } catch (error) {
@@ -23,4 +33,3 @@ module.exports = async (req, res) => {
   }
 }
 
-// como hago para mostrar las categorias y marcas y no me guarda
