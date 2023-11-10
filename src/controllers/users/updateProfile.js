@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
                 birthday,
                 address,
                 call,
-                about: about.trim(),
+                about
                 // avatar: req.file?.filename || user.avatar ------> si existe accede = con el signo ?
             }
             // si trae el archivo poneme el nombre

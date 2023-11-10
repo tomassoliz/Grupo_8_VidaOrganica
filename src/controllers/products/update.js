@@ -13,7 +13,7 @@ module.exports = async (req, res) => {
 
             await db.Image.update(
                 {
-                    file: req.file.filename // en caso de no existir crea la imagen
+                    file: req.file.filename // en caso de no existir crea la imagen y traeme el archivo con su nombre
                 },
                 {
                     where: {
