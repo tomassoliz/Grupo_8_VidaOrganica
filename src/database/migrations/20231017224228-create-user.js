@@ -33,14 +33,18 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
-      addressId: {
-        type: Sequelize.INTEGER,
-        references : {
-          model : {
-            tableName : 'Addresses'
-          }
-        }
+      address: {
+        type: Sequelize.STRING
       },
+      // correcion de address a string
+      // addressId: {
+      //   type: Sequelize.INTEGER,
+      //   references : {
+      //     model : {
+      //       tableName : 'Addresses'
+      //     }
+      //   }
+      // },
       roleId: {
         type: Sequelize.INTEGER,
         references : {

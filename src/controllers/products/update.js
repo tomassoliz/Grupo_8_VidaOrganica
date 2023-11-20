@@ -1,63 +1,48 @@
 const { unlinkSync, existsSync } = require('fs');
 const db = require('../../database/models');
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
 
-    const id = req.params.id;
-    const { name, brand, description, price, discount, category, section } = req.body
+    try {
+        const id = req.params.id;
+        const { name, brand, description, price, discount, category, section, image } = req.body // traigo la imagen
 
-    db.Product.findByPk(id)
+        if (req.file) {
+            existsSync(`./public/images/${image}`) &&
+            unlinkSync(`./public/images/${image}`) // ve si esxiste o no y recibo el nombre del front 
 
-        .then((product) => {
-            req.file.image &&
-                existsSync(`./public/images/img-products${product.image}`) &&
-                unlinkSync(`./public/images/img-products${product.image}`)
+            await db.Image.update(
+                {
+                    file: req.file.filename // en caso de no existir crea la imagen y traeme el archivo con su nombre
+                },
+                {
+                    where: {
+                        productId: id
+                    }
+                })
+        } // esto para la imagen
 
-            db.Product.update({
+        // para el producto
+        await db.Product.update(
+            {
                 name: name.trim(),
                 price,
                 discount,
                 brandId: brand,
                 sectionId: section,
                 categoryId: category,
-                description: description.trim(),
-                image: req.files.image ? req.files.image[0].filename : product.image
-
+                description: description.trim()
+                // si no la imagen lo deja como esta 
             },
-                {
-                    where: {
-                        id : req.params.id
-                    }
-                })
-                .then(() => {
-                    if (req.files.images) {
-                        product.images.forEach((image) => {
-                            existsSync(`./public/images/${image.file}`) &&
-                            unlinkSync(`./public/images/${image.file}`);
-                        });
-                        db.Image.destroy({
-                            where: {
-                                productId: id
-                            }
-                        })
-                            .then(() => {
-                                const images = req.files.images.map((file) => {
-                                    return {
-                                        file:file.filename,
-                                        productId: product.id
-                                    }
-                                })
-                            db.Image.bulkCreate(images, {
-                                validate: true
-                            })
-                            .then((response) => {
-                                return res.redirect('/admin')
-                            })
-                        })
-                    } else {
-                        return res.redirect('/admin')
-                    }
-                })
-        })
-        .catch(error => console.log(error))
+            {
+                where: {
+                    id: req.params.id
+                }
+            }
+        )
+        return res.redirect('/admin')
+    } catch (error) {
+        console.log(error);
+    }
 }
+

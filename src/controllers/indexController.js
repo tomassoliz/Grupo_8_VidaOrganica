@@ -34,27 +34,25 @@ module.exports = {
 
         try {
             const carousell = readJSON('carousell.json');
-
-            const images = await db.Image.findAll()
-            const products = await db.Product.findAll({
-                // include: ['brand', 'section', 'category']
-
+            const products = await db.Image.findAll({ //uso primero el modelo de images dso hago los incluide tmb utiliando lo que tiene produt como asocion
                 include: [
                     {
-                        model: db.Brand, 
-                        // attributes : ['id', 'name'] para pasar solamente lo que necesite el front
-                    },
-                    {
-                        model: db.Section
-                    },
-                    {
-                        model: db.Category
-                    },
-                    {
-                        model: db.Image
+                      model: db.Product,
+                      include : [ 
+                        {
+                            model: db.Brand, 
+                            // attributes : ['id', 'name'] para pasar solamente lo que necesite el front
+                        },
+                        {
+                            model: db.Section
+                        },
+                        {
+                            model: db.Category
+                        }
+                      ]
                     }
-                ]
-            });
+                  ]
+            }) 
             const brands = await db.Brand.findAll({
                 order: ['name']
             })
@@ -64,20 +62,15 @@ module.exports = {
             const sections = await db.Section.findAll({
                 order: ['name']
             })
-            const adminUser = await db.User.findAll()
-            // Promise.all([carousell, products, brands, categories, sections, adminUser])
-            //     .then(([carousell, products, brands, categories, sections, adminUser]) => {
-                    
+            const adminUser = await db.User.findAll()                    
                     return res.render('admin', {
                         carousell,
                         products,
                         brands,
                         sections,
                         categories,
-                        adminUser,
-                        images
+                        adminUser
                     })
-                // })
 
         } catch (err) {
             console.log("Error Product create route: ", err);
