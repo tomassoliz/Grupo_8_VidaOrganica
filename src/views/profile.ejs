@@ -13,7 +13,7 @@
                             <div class="card-body">
                                 <h3>MI PERFIL</h3>
                                 
-                                <form class="row mb-3" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
+                                <form id="form-Profile" class="row mb-3" action="/users/updateProfile/<%= id %>?_method=PUT" method="POST"
                                     enctype="multipart/form-data">
 
                                     <!-- Imagen de perfil -->
@@ -27,22 +27,33 @@
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="name">Nombre</label>
                                         <input class="form-control" type="text" id="name" name="name" value="<%= name %>">
+                                        <small class="ms-2 text-danger" id="msgError-name"><%= locals.errors && (errors.name && errors.name.msg) %></small>
+
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="surname">Apellido</label>
                                         <input class="form-control" type="text" id="surname" name="surname" value="<%= surname %>">
+                                        <small class="ms-2 text-danger" id="msgError-surname"><%= locals.errors && (errors.surname && errors.surname.msg) %></small>
+
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="email">Email</label>
                                         <input class="form-control" type="text" id="email" name="email" value="<%= email %>">
+                                        <small class="ms-2 text-danger" id="msgError-email"><%= locals.errors && (errors.email && errors.email.msg) %></small>
+
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="birthday">Cumpleaños</label>
                                         <input class="form-control" type="date" id="birthday" name="birthday" value="<%= moment(birthday).format('YYYY-MM-DD') %>">
+                                        <small class="ms-2 text-danger" id="msgError-birthday"><%= locals.errors && (errors.birthday && errors.birthday.msg) %></small>
+
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="address">Dirección</label>
                                         <input class="form-control" type="text" id="address" name="address" value="<%= address %>">
+                                        <small class="ms-2 text-danger" id="msgError-address"><%= locals.errors && (errors.address && errors.address.msg) %></small>
+
+
                                     </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="about">Acerca de mí</label>
@@ -65,6 +76,8 @@
                 </div>
             </main>
             <%- include('partials/footer') %>
+            <script src="/javascripts/profileValidator.js"></script>
+
     </body>
 
 </html>

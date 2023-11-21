@@ -21,11 +21,11 @@
                     <section class="formulario-register">
                         <div class="inputs">
                             <p>Los campos con (*) son obligatorios</p>
-                            <form class="formu" method="POST">
+                            <form class="formu" id ="formuAdd"method="POST">
                                 <div class="espacio">
                                     <label for="email">E-mail<p>*</p></label>
                                     <input class="form-control"type="email" id="email" name="email" value="<%= locals.old?.email %>" <%= locals.errors && (errors.email && 'is-invalid') %>/>
-                                    <small class="text-danger ms-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
+                                    <small id="msgError-Email"class="text-danger ms-2"><%= locals.errors && (errors.email && errors.email.msg) %></small>
 
                                 </div>
                                 <div class="espacio">
@@ -36,7 +36,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12 mb-3">
-                                <small class="text-danger ms-2"><%= locals.errors?.password?.msg %></small>
+                                <small id="msgError-Pass"class="text-danger ms-2"><%= locals.errors?.password?.msg %></small>
                                  </div>
                                 <div class="d-flex justify-content-around">
                                     <div class="form-check">
@@ -68,6 +68,8 @@
             </main>
 
             <%- include('partials/footer') %>
+           <script src="/javascripts/loginValidation.js"></script>
+           
 
     </body>
 
