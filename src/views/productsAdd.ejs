@@ -14,11 +14,14 @@
                     href="#">añadir producto</a></p>
                 <div class="container_form-add">
                     <h2 class="title_form-add">Añadir productos</h2>
-                    <form class="form-add" method="POST" action="" enctype="multipart/form-data">
+                    <div class="errors">
+                        <ul></ul>
+                    </div>
+                    <form class="form-add" id="productAdd" method="POST" action="" enctype="multipart/form-data">
                         <div class="container_input-add">
                             <div class="input-add">
                                 <label for="name">Nombre</label>
-                                <input type="text" id="name" name="name">
+                                <input type="text" id="name" name="name" class="name">
                             </div>
                             <div class="input-add">
                                 <label for="brand">Marca</label>
@@ -38,7 +41,7 @@
                             </div>
                             <div class="input-add">
                                 <label for="price">Precio</label>
-                                <input type="number" id="price" name="price">
+                                <input type="number" id="price" name="price" class="price">
                             </div>
                             <div class="input-add">
                                 <label for="discount">Descuento</label>
@@ -48,7 +51,7 @@
                         <div class="container_input-add">
                             <div class="input-add">
                                 <label for="name">Descripción</label>
-                                <textarea id="description" placeholder="Breve descripción del producto" name="description"></textarea>
+                                <textarea id="description" placeholder="Breve descripción del producto" name="description" class="description"></textarea>
                             </div>
                         </div>
                         <div class="mb-3">
@@ -64,7 +67,7 @@
             </main>
 
             <%- include('partials/footer') %>
-
+            <script src="javascripts/addProductValidation.js"></script>
     </body>
 
 </html>
