@@ -42,5 +42,3 @@ Llama la atención el gran contraste y a predominancia del color negro, resalta 
 Las categorias estan señalizadas con un icono correspondiente para representar. Tiene un hover.
 El detalle de producto hacerlo completo (descripcion, precio, cantidad, agregar carrito), se toma el ejemplo de esta pagina para señalar lo que NO queremos hacer con nuestro sitio.
 Solo tomamos la presentacion de las imagenes a la izquierda.
-
-<%= locals?.userLogin?.avatar ? `/images/avatar/${userLogin.avatar}`: 'https://w7.pngwing.com/pngs/200/420/png-transparent-user-profile-computer-icons-overview-rectangle-black-data.png' %>"

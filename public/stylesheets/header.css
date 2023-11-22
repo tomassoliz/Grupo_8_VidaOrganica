@@ -154,7 +154,7 @@
         background-color: #ffffffff;
         border-top: 0.5px solid rgb(111, 222, 75);
         margin-top: 20px;
-        margin-bottom: 8px;
+        /* margin-bottom: 8px; */
         border-bottom: 0.5px solid rgb(111, 222, 75);
     }
 
