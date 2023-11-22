@@ -10,11 +10,12 @@ module.exports = async (req, res) => {
 
             const { name, surname, email, birthday, address, call, about } = req.body
             // creo una constante con la data del usuario
+
             const data = {
                 name: name.trim(),
                 surname: surname.trim(),
                 email: email.trim(),
-                birthday,
+                birthday: birthday || null,
                 address,
                 call,
                 about
