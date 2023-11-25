@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', {
-    title: 'Añadir'
-}) %>
+<%- include('partials/head', { title: 'Añadir' }) %>
 
     <body>
 
         <%- include('partials/header') %>
-        
-            <main>
-                <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
-                    href="#">añadir producto</a></p>
-                <!-- <div class="container_form-add"> -->
-                    <h2 class="title_form-add">Añadir productos</h2>
-                    <form class="form-add" id="productAdd" method="POST" action="" enctype="multipart/form-data">
-                        <div class="container_input-add">
-                                <div class="input-add" id="grupo__name">
-                                    <label for="name" class="formulario__label">Nombre</label>
-                                    <div class="formulario__grupo-input">
-                                        <input type="text" id="name" name="name" class=formulario__input>
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                    </div>
-                                </div>
-                                <p class="formulario__input-error">El nombre debe tener almenos 5 caracteres</p>
-                            
-                            <div class="input-add">
-                                <label for="brand">Marca</label>
-                                <select type="text" name="brand" id="brand">
-                                    <% brands.forEach(brand => { %>
-                                        <option value="<%= brand.id %>"><%= brand.name %></option>
-                                    <% }) %>
-                                </select>
-                            </div>
-                            <div class="input-add">
-                                <label for="category">Categoría</label>
-                                <select type="text" name="category" id="category">
-                                    <% categories.forEach(category => { %>
-                                        <option value="<%= category.id %>"><%= category.name %></option>
-                                    <% }) %>
-                                </select>
-                            </div>
-                            <div class="input-add" id="grupo__price">
-                                <label for="price">Precio</label>
-                                <input type="number" id="price" name="price" class="price">
-                            </div>
-                            <div class="input-add" id="grupo__discount">
-                                <label for="discount">Descuento</label>
-                                <input type="number" id="discount" name="discount">
-                            </div>
+
+            <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a href="#">añadir
+                    producto</a></p>
+            <!-- <div class="container_form-add"> -->
+
+            <main class="container_main-edit">
+                <h2 class="title_form-add">Añadir productos</h2>
+
+                <form class="formulario" id="productAdd" method="POST" action="" enctype="multipart/form-data">
+                    <!-- <div class="container_input-add"> -->
+
+
+                    <div class="formulario__grupo" id="grupo__name">
+                        <label for="name" class="formulario__label">Nombre</label>
+                        <div class="formulario__grupo-input">
+                            <input type="text" id="name" name="name" class=formulario__input>
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
                         </div>
-                        <div class="container_input-add">
-                            <div class="input-add" id="grupo__description">
-                                <label for="name">Descripción</label>
-                                <textarea id="description" placeholder="Breve descripción del producto" name="description" class="description"></textarea>
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for = "image" class="form-label">Agregar imagen</label>
-                            <input class="form-control" type="file" id="image" name="image">
+                        <p class="formulario__input-error">El nombre debe tener almenos 5 caracteres</p>
+                    </div>
+
+                    <div class="formulario__grupo" id="grupo__marca">
+                        <label class="formulario__label" for="brand">Marca</label>
+                        <select type="text" name="brand" id="brand">
+                            <% brands.forEach(brand=> { %>
+                                <option value="<%= brand.id %>">
+                                    <%= brand.name %>
+                                </option>
+                                <% }) %>
+                        </select>
+                    </div>
+
+                    <div class="formulario__grupo" id="grupo__categoria">
+                        <label class="formulario__label" for="category">Categoría</label>
+                        <select type="text" name="category" id="category">
+                            <% categories.forEach(category=> { %>
+                                <option value="<%= category.id %>">
+                                    <%= category.name %>
+                                </option>
+                                <% }) %>
+                        </select>
+                    </div>
+
+                    <div class="formulario__grupo" id="grupo__precio">
+                        <label class="formulario__label" for="price">Precio</label>
+                        <div class="formulario__grupo-input">
+                            <input  class="formulario__input" type="number" id="price" name="price" class="price">
+                            <i class="formulario__validacion-estado fas fa-times-circle"></i>
 
                         </div>
-                        <div class="container_button-form">
-                            <button type="submit" class="button-form">Agregar</button>
-                            <button type="reset" class="button-form-delete">Cancelar</button>
+                        <p class="formulario__input-error">Tiene que tener un precio</p>
+                    </div>
+
+                    <div class="formulario__grupo" id="grupo__descuento">
+                        <label class="formulario__label" for="discount">Descuento</label>
+                        <div class="formulario__grupo-input">
+                            <input  class="formulario__input" type="number" id="discount" name="discount">
+
                         </div>
-                    </form>
+                    </div>
+
+                    <!-- </div> -->
+                    <!-- <div class="container_input-add"> -->
+                        <div class="formulario__grupo" id="grupo__descripcion">
+                            <label class="formulario__label" for="name">Descripción</label>
+                            <div class="formulario__grupo-input">
+                                <textarea  class="formulario__input" id="description" placeholder="Breve descripción del producto" name="description"
+                                class="description"></textarea>
+                                <i class="formulario__validacion-estado fas fa-times-circle"></i>
+
+                            </div>
+                            <p class="formulario__input-error">La descripcion tiene que ser de 2 a 500 dígitos</p>
+                        </div>
+                    <!-- </div> -->
+
+                    <div class="formulario__grupo" id="grupo__imagen">
+                        <label class="formulario__label" for="image">Agregar imagen</label>
+                        <div class="formulario__grupo-input">
+                            <input class="" type="file" id="image" name="image">
+
+                        </div>
+                    </div>
+
+                    <div class="container_button-form">
+                        <button type="submit" class="button-form">Agregar</button>
+                        <button type="reset" class="button-form-delete">Cancelar</button>
+                    </div>
+                </form>
             </main>
 
             <%- include('partials/footer') %>
-            <script src="/javascripts/addAdmin.js"></script>
-            <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+                <script src="/javascripts/addAdmin.js"></script>
+                <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
     </body>
 
 </html>
