@@ -13,7 +13,8 @@ const expresiones = {
 const campos = {
 	name: false,
 	price: false,
-	description: false
+	description: false,
+    image: false
 }
 
 const validarForm = (e) => {
@@ -49,6 +50,28 @@ const validarCampo = (expresion, input, campo) => {
     }
 }
 
+const allowExtensionImg = (idinputfile) =>{
+    
+    var fileInput = document.getElementById('image');
+    
+    fileInput.addEventListener('change', function () {
+        
+            var filePath = this.value;
+            var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+            if(!allowedExtensions.exec(filePath)){
+                document.getElementById(`grupo__${campo}`).classList.add('form__grupo-incorrecto')
+                fileInput.value = '';
+                return false;
+            }else{
+                document.getElementById(`grupo__${campo}`).classList.remove('form__grupo-correcto')
+                return true;
+            }
+        
+    });
+    
+}
+
+
 inputs.forEach((input) =>{
     input.addEventListener('keyup', validarForm);
     input.addEventListener('blur', validarForm);
@@ -75,4 +98,4 @@ inputs.forEach((input) =>{
 		document.getElementById('form__mensaje').classList.add('form__mensaje-activo');
 	}
     
-}); */
+}); */z

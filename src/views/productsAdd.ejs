@@ -102,8 +102,9 @@
             <div class=" formulario__grupo" id="grupo__imagen">
                 <label for ="image" class="formulario__label">Agregar imagen</label>
                 <div class="formulario__grupo-input">
-                    <input class="" type="file" id="image" name="image">
+                    <input class="" type="file" id="image" name="image" onchange="return validarExtension()">
                 </div>
+                <p class="form__input-error">La extenciones permitidas son .jpeg / .jpg / .png /.gif</p>
             </div>
             <!-- -------------------------------------------------------------- -->
             <div class="form__mensaje" id="form__mensaje">
