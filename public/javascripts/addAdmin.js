@@ -58,11 +58,11 @@ inputs.forEach((input) =>{
     input.addEventListener('blur', validarForm);
 })
 
-const defaultFile = 'public\images\DefaultProductImages.jpg';
+/* const defaultFile = '\images\DefaultProductImages.jpg';
 const img = document.getElementById('img');
 fileLoader.addEventListener('change', e=> {
     if (e.target.files[0]) {
-        const reader = new FileReader( );
+        const reader = new FileReader();
         reader.onload = function (e) {
             img.src = e.target.result;
         }
@@ -70,7 +70,7 @@ fileLoader.addEventListener('change', e=> {
     }else{
         img.src = defaultFile;
     }
-})
+}) */
 
 function validarExt() {
     var imgInput = document.getElementById('image');

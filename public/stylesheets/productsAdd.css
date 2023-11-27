@@ -200,4 +200,22 @@ label.formulario__label{
         margin-top: 100px;
         margin-bottom: 150px;
     }
+    
+    .form__validacion-estado {
+        position: absolute;
+        right: 175px;
+        bottom: 15px;
+        z-index: 16px;
+        opacity: 0;
+    }
+}
+
+@media(max-width: 430px){
+    .form__validacion-estado {
+        position: absolute;
+        right: 115px;
+        bottom: 15px;
+        z-index: 16px;
+        opacity: 0;
+    }
 }
