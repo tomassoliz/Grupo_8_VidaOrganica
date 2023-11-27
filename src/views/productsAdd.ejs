@@ -32,7 +32,7 @@
                     <i class="form__validacion-estado fas fa-times-circle"></i>
                 </div>
                 <p class="form__input-error">Debe tener almenos 5 caracteres, no se aceptan símbolos o caracteres especiales</p>
-
+                
             </div>
 
 
@@ -43,7 +43,7 @@
                     <input type="text" id="price" name="price" class="form__input" placeholder="$">
                     <i class="form__validacion-estado fas fa-times-circle"></i>
                 </div>
-                <p class="form__input-error">Debe tener almenos 2 digitos</p>
+                <p class="form__input-error">Solo numeros. Debe tener almenos 2 digitos</p>
 
             </div>
             <!-- grupo: BRAND -->
@@ -102,9 +102,12 @@
             <div class=" formulario__grupo" id="grupo__imagen">
                 <label for ="image" class="formulario__label">Agregar imagen</label>
                 <div class="formulario__grupo-input">
-                    <input class="" type="file" id="image" name="image" onchange="return validarExtension()">
+                    <img src="\images\DefaultProductImages.jpg" alt="img-default" id="img">
+                    <input class="form__input" type="file" id="image" name="image"  onchange="return validarExt()">
                 </div>
-                <p class="form__input-error">La extenciones permitidas son .jpeg / .jpg / .png /.gif</p>
+                <div id="visorArchivo">
+                    <!-- img preview -->
+                </div>
             </div>
             <!-- -------------------------------------------------------------- -->
             <div class="form__mensaje" id="form__mensaje">

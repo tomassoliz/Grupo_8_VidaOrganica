@@ -144,6 +144,27 @@
     border: 3px solid #bb2929;
 }
 
+#image {
+    display: none;
+}
+
+#img {
+    width: 200px;
+    height: 200px;
+}
+label.formulario__label{
+    /* height: 45px; */
+    /* line-height: 45px; */
+    width: 30%;
+    background: #000;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .1s ease all;
+    margin-left: 35%;
+}
 
 /* MEDIA */
 
