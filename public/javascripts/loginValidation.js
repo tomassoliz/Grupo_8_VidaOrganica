@@ -55,7 +55,7 @@ $('password').addEventListener('blur', function(e){
 
     switch (true) {
         case !this.value.trim():
-            $('msgError-Pass').innerHTML = "La contraseña es obligatoriaaaaaaaa MILEI PRESIDENTE!!!"
+            $('msgError-Pass').innerHTML = "La contraseña es obligatoria"
             this.classList.add('is-invalid')
             break;
         case !/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{6,12}$/.test(this.value.trim()):
