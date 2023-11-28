@@ -249,7 +249,8 @@
 
     /* CAROUSELL */
     .swiper-slide img {
-      height: 230px;
+      height: 220px;
+      object-fit: cover;
     }
 
     /* SWIPER ENVIOS */
@@ -327,8 +328,8 @@
     /* CAROUSELL */
 
     .swiper-slide img {
-      height: 500px;
-      object-fit: fill;
+      height: 600px;
+      object-fit: cover;
     }
 
     /* ENVIOS */
@@ -340,7 +341,7 @@
       display: flex;
       justify-content: center;
       background-color: var(--colorNaranja);
-      height: 200px;
+      height: 150px;
     }
 
     .envios-secundario {
@@ -390,7 +391,7 @@
 
   @media (min-width: 1440px) {
     .swiper-slide img {
-      height: 500px;
+      height: 600px;
       object-fit: cover;
     }
 
@@ -402,7 +403,7 @@
     .container-envios-secundario {
       display: flex;
       background-color: var(--colorNaranja);
-      height: 200px;
+      height: 150px;
       gap: 50px;
       justify-content: center;
     }

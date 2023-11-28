@@ -7,6 +7,7 @@ const productsFile = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
 const db = require('../database/models');
+const {Op} = require('sequelize')
 
 module.exports = {
     index: async (req, res) => {
@@ -78,16 +79,39 @@ module.exports = {
 
     },
     search: (req, res) => {
-        const products = readJSON('products.json');
+        /* const products = readJSON('products.json'); */
 
         const keywords = req.query.keywords
-        const results = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()))
+        /* const results = products.filter(product => product.name.toLowerCase().includes(keywords.toLowerCase()))
 
         return res.render('results', {
             products,
             keywords,
             results
+        }) */
+        db.Product.findAll({
+            where: {
+                [Op.or] : [
+                    {
+                        name: {
+                            [Op.substring] : keywords
+                        }
+                    },
+                    {
+                        description: {
+                            [Op.substring] : keywords
+                        }
+                    }
+                ]
+                
+            }
         })
+            .then(results => {
+                return res.render('results',{
+                    results,
+                    keywords
+            })
+        }).catch(error => console.log(error))
     }
 
 }

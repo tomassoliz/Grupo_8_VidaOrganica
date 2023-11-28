@@ -1,26 +1,30 @@
 [
-    {
-        "image" : "bebida.jpg"
+    {  
+        "id": 1,
+        "image" : "aceites.jpg"
     },
-    {
-        "image" : "cereales-1.jpg"
+    {  
+        "id": 2,
+        "image" : "cereales-1.jpeg"
     },
-    {
-        "image" : "cereales-2.jpg"
+    {  
+        "id": 3,
+        "image" : "condimentos.jpg"
     },
-    {
-        "image" : "especias.jpeg"
+    {  
+        "id": 4,
+        "image" : "infusiones.jpg"
     },
-    {
-        "image" : "fruto-seco.jpg"
+    {  
+        "id": 5,
+        "image" : "leches3.jpg"
     },
-    {
-        "image" : "leche-almendra.jpg"
-    },
-    {
-        "image" : "legumbres.jpg"
-    },
-    {
+    {  
+        "id": 6,
         "image" : "legumbres-2.jpg"
+    },
+    {  
+        "id": 7,
+        "image" : "legumbres.jpg"
     }
 ]
