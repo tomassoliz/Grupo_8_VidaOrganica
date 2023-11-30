@@ -12,11 +12,11 @@
 				<h2>Resultados de la búsqueda: "<%= keywords %>"</h2>
 
 				<div class="container-result_products">
-					<% if (results.length) { %>
+					<% if (products.length) { %>
 						<div class="swiper mySwiper container-swiper-destacados">
 							<div class="swiper-wrapper">
 
-								<%- include('partials/products',{ products: results, activeSlider: false }) %>
+								<%- include('partials/products',{ products, activeSlider: false }) %>
 
 							</div>
 							<div class="swiper-button-next"></div>
