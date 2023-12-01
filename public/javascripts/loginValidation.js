@@ -47,20 +47,4 @@ $("password").addEventListener("focus", function (e) {
     }
   });
 
-  $('viewPassword').addEventListener('click', function(e) {
-        
-    $('msgError-Pass').innerHTML = null
-    $('password').classList.remove('is-invalid');
-    $('password').classList.remove('is-valid');
-
-    $('password').type = $('password').type === "text" ? "password" : "text"
-
-    this.classList.toggle("fa");
-    this.classList.toggle("fa-eye");
-
-    this.classList.toggle("fa-solid");
-    this.classList.toggle("fa-eye-slash");
-
-});
-
 }

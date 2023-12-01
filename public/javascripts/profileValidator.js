@@ -97,6 +97,7 @@ window.onload = async function(e){
     
 
     $('birthday').addEventListener('blur', function(e){
+        
         const birthday = moment(this.value);
         const minDate = moment().subtract(100,'years');
         const currentDate = moment();
@@ -104,11 +105,11 @@ window.onload = async function(e){
         switch (true) {
 
             case birthday.isBefore(minDate):
-                $('msgError-birthday').innerHTML = " Al cementerio..";
+                $('msgError-birthday').innerHTML = "Ingresa una fecha valida";
                 this.classList.add('is-invalid')
                 break
             case birthday.isAfter(currentDate):
-                $('msgError-birthday').innerHTML = "ummm??";
+                $('msgError-birthday').innerHTML = "Ingresa una fecha valida";
                 this.classList.add('is-invalid')
                 break
             default:
@@ -118,7 +119,7 @@ window.onload = async function(e){
                 break;
         }
     });
-
+    
 
   
 
