@@ -79,7 +79,7 @@ window.onload = async function(e){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-email').innerHTML = "El email es obligatoriooooooo MILEI PRESIDENTE!!!"
+                $('msgError-email').innerHTML = "El email es obligatorio"
                 this.classList.add('is-invalid')
                 break;
             case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
@@ -95,32 +95,38 @@ window.onload = async function(e){
     });
 
     
-
-    $('birthday').addEventListener('blur', function(e){
-        
-        const birthday = moment(this.value);
-        const minDate = moment().subtract(100,'years');
-        const currentDate = moment();
-
+    $("birthday").addEventListener("blur", function (e) {
         switch (true) {
-
-            case birthday.isBefore(minDate):
-                $('msgError-birthday').innerHTML = "Ingresa una fecha valida";
-                this.classList.add('is-invalid')
-                break
-            case birthday.isAfter(currentDate):
-                $('msgError-birthday').innerHTML = "Ingresa una fecha valida";
-                this.classList.add('is-invalid')
-                break
-            default:
-                $('msgError-birthday').innerHTML = null;
-                this.classList.add('is-valid')
-                this.classList.remove('is-invalid')
-                break;
-        }
-    });
+          case !this.value.trim():
+            $("msgError-birthday").innerHTML = "La fecha de nacimiento es obligatoria";
+            this.classList.add("is-invalid");
+            break;
     
+          default:
+            $("msgError-birthday").innerHTML = null;
+            this.classList.add("is-valid");
+            this.classList.remove("is-invalid");
+            break;
+        }
+      });
+    
+    $('form-Profile').addEventListener('submit', function(event) {
+        event.preventDefault();
 
+        const elementsForm = this.elements;
+        let error = false;
+
+        for (let i = 0; i < 3; i++) {
+            
+            if(!elementsForm[i].value.trim()){
+                error = true;
+                $('msgError-empty').innerHTML = "El formulario tiene errores"
+            }
+
+        }
+
+        !error && this.submit()
+    })
   
 
 }
