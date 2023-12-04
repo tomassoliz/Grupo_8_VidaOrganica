@@ -1,6 +1,5 @@
 const $ = id => document.getElementById(id);
 
-
 window.onload = async function (e) {
 
     $('name').addEventListener('blur', function (e) {
