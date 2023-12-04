@@ -63,7 +63,7 @@
                                             <!-- PRODUCTOS DEL JSON -->
 
                                             <tbody>
-                                                <% products.forEach(({id, Brand, description, Category, file, Product},
+                                                <% products.forEach(({id, Brand, Category, file, Product},
                                                     index)=> { %>
                                                     <tr>
                                                         <th scope="row">
@@ -85,8 +85,7 @@
                                                             <%= Product.price %>
                                                         </td>
                                                         <td>
-                                                            <%= Product.price - (Product.discount * Product.price / 100)
-                                                                %>
+                                                            <%= Product.price - (Product.discount * Product.price / 100) %>
                                                         </td>
                                                         <td>
                                                             <div class="d-flex gap-2">
@@ -202,7 +201,7 @@
                                                 </thead>
 
                                                 <tbody>
-                                                    <% adminUser.forEach(({id, name, surname, email, rol, image},
+                                                    <% adminUser.forEach(({id, name, surname, email, rol, avatar, Role},
                                                         index)=> { %>
                                                         <tr>
                                                             <th scope="row">
@@ -218,46 +217,44 @@
                                                                 <%= email %>
                                                             </td>
                                                             <td>
-                                                                <%= rol %>
+                                                                <%= Role.name %>
                                                             </td>
                                                             <td>
                                                                 <div class="d-flex gap-2">
 
                                                                     <button type="button" class="btn btn-sm btn-primary"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#modalDetail<%= id %>">
-                                                                        <i class="fas fa-eye"></i>
-                                                                    </button>
-                                                                    <div class="modal fade" id="modalDetail<%= id %>"
-                                                                        tabindex="-1" aria-labelledby="modalDetailLabel"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div class="row">
-                                                                                        <div class="col-12 col-md-4">
-                                                                                            <img src="/images/avatar/<%= image %>"
-                                                                                                class="img-fluid"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="col-12 col-md-8 text-center mt-5">
-                                                                                            <h4>
-                                                                                                <%= name %>
-                                                                                                    <%= surname %>
-                                                                                            </h4>
-                                                                                        </div>
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#modalDetailUser<%= Role.id %>">
+                                                                    <i class="fas fa-eye"></i>
+                                                                </button>
+                                                                <div class="modal fade"
+                                                                    id="modalDetailUser<%= Role.id %>" tabindex="-1"
+                                                                    aria-labelledby="modalDetailUserLabel"
+                                                                    aria-hidden="true">
+                                                                    <div class="modal-dialog modal-dialog-centered">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="btn-close"
+                                                                                    data-bs-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <div class="row">
+                                                                                    <div class="col-12 col-md-4">
+                                                                                        <img src="/images/avatar/<%= avatar %>"
+                                                                                            class="img-fluid" alt="">
+                                                                                    </div>
+                                                                                    <div class="col-12 col-md-8 text-center m-auto">
+                                                                                        <h3><%= name %> <%= surname %></h3>                                                                                        
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                </div>
+
+
                                                                     <button type="button" class="btn btn-sm btn-danger">
                                                                         <i class="fa-solid fa-lock"
                                                                             onclick="lock(this)"></i>

@@ -120,6 +120,4 @@ window.onload = async function(e){
     });
 
 
-  
-
 }

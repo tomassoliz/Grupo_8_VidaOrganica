@@ -1,17 +1,8 @@
 const { readJSON } = require("../data");
-
-const fs = require('fs');
-const path = require('path');
-
-const productsFile = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
-
 const db = require('../database/models');
-const { Op } = require('sequelize')
 
 module.exports = {
     index: async (req, res) => {
-
         try {
             const carousell = readJSON('carousell.json');
             const products = await db.Image.findAll({
@@ -32,7 +23,6 @@ module.exports = {
     },
 
     admin: async (req, res) => {
-
         try {
             const carousell = readJSON('carousell.json');
             const products = await db.Image.findAll({ //uso primero el modelo de images dso hago los incluide tmb utiliando lo que tiene produt como asocion
@@ -63,7 +53,14 @@ module.exports = {
             const sections = await db.Section.findAll({
                 order: ['name']
             })
-            const adminUser = await db.User.findAll()
+            const adminUser = await db.User.findAll({
+                include: [
+                    {
+                        model: db.Role
+                    }
+                ]
+
+            })
             return res.render('admin', {
                 carousell,
                 products,
@@ -79,7 +76,6 @@ module.exports = {
 
     },
     search: async (req, res) => {
-
         try {
             const keywords = req.query.keywords
             const products = await db.Image.findAll({
@@ -100,18 +96,13 @@ module.exports = {
                                 }
                             ]
                 
-                        } 
+                        }
                     }
                     
                 ]
-            })  
-            // const product = await db.Product.findAll({
-                
-            // })
-
+            })
             return res.render('results', {
-                products,
-                // product,
+                products,               
                 keywords   
             })
         } catch (error) {
