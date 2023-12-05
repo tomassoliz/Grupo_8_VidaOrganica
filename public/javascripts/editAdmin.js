@@ -51,7 +51,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);
 });
 
-formulario.addEventListener('submit', (e) => {
+formulario.addEventListener('submit', () => {
 	// e.preventDefault()
 
 	if (campos.nombre && campos.precio && campos.descripcion) {

@@ -1,20 +1,16 @@
 const formulario = document.getElementById('formulario'); /* captura el formulario con id = productAdd */
 const inputs = document.querySelectorAll('#formulario input');
-const selects = document.querySelectorAll('#formulario select'); /* accede a los inputs del form con id = productAdd */
 
 const expresiones = {
     nombre: /^[a-zA-ZÀ-ÿ\s]{5,40}$/, // Letras y espacios, pueden llevar acentos.
     precio: /^\d{2,15}$/, // 2 a 5 numeros.
-    descripcion: /^[a-zA-ZÀ-ÿ\s\d]{20,500}$/ // Descripcion,
+    descripcion: /^[a-zA-ZÀ-ÿ\s\d]{20,500}$/, // Descripcion,
 }
 
 const campos = {
     name: false,
     price: false,
-    brand: false,
-    category: false,
     description: false,
-    image: false
 }
 
 const validarForm = (e) => {
@@ -25,12 +21,8 @@ const validarForm = (e) => {
         case 'price':
             validarCampo(expresiones.precio, e.target, 'precio');
             break;
-
         case 'description':
             validarCampo(expresiones.descripcion, e.target, 'descripcion');
-            break;
-        case 'image':
-            validarCampo(expresiones.image, e.target, 'imagen');
             break;
     }
 }
@@ -57,10 +49,6 @@ inputs.forEach((input) => {
     input.addEventListener('keyup', validarForm);
     input.addEventListener('blur', validarForm);
 })
-selects.forEach((input) => {
-    input.addEventListener('keyup', validarForm);
-    input.addEventListener('blur', validarForm);
-})
 
 function validarExt() {
     const imgInput = document.getElementById('image');
@@ -70,9 +58,9 @@ function validarExt() {
     if (!extPermitidas.exec(archivoRuta)) {
         alert('Formato no permitido');
         imgInput.value = '';
-        return false;
-    }
-    else {
+        campos.image = false;
+        return false
+    } else {
         if (imgInput.files && imgInput.files[0]) {
             const visor = new FileReader();
             visor.onload = function (e) {
@@ -81,32 +69,28 @@ function validarExt() {
             };
             visor.readAsDataURL(imgInput.files[0]);
         }
+        campos.image = true
+        return true
     }
 }
-// const $ = id => document.getElementById(id);
-
-// $('formulario').addEventListener('submit', (e) => {
-//     if (!campos.name || !campos.price || !campos.description || !campos.image) {
-//         e.preventDefault();
-//         document.getElementById('form__mensaje').classList.add('form__mensaje-activo');
-//     } else {
-//         return true
-//     }
-// });
 
 formulario.addEventListener('submit', (e) => {
-	e.preventDefault()
+    e.preventDefault()
 
-	if (campos.name && campos.price && campos.description && campos.image) {   
-		document.getElementById('form__mensaje-exito').classList.add('form__mensaje-exito-activo');
-		setTimeout(() => {
-			document.getElementById('form__mensaje-exito').classList.remove('form__mensaje-exito-activo');
-		}, 5000);
+    const imagenValida = validarExt();
+    console.log(validarExt);
 
-		document.querySelectorAll('.form__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('form__grupo-correcto');
-		});
-	} else {
-		document.getElementById('form__mensaje').classList.add('form__mensaje-activo');
-	}
+    if (campos.name && campos.price && campos.description && imagenValida) {
+        document.getElementById('form__mensaje-exito').classList.add('form__mensaje-exito-activo');
+        setTimeout(() => {
+            document.getElementById('form__mensaje-exito').classList.remove('form__mensaje-exito-activo');
+        }, 5000);
+        
+        document.querySelectorAll('.form__grupo-correcto').forEach((icono) => {
+            icono.classList.remove('form__grupo-correcto');
+        });
+        
+    } else {     
+        document.getElementById('form__mensaje').classList.add('form__mensaje-activo');
+    }
 });

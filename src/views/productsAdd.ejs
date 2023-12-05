@@ -89,21 +89,20 @@
                     <div class=" form__grupo" id="grupo__imagen">
                         <label for="image" class="form__label-image">Agregar imagen</label>
                         <div class="form__grupo-input">
-                            <!-- <img src="\images\DefaultProductImages.jpg" alt="img-default" id="img"/> -->
-                            <input class="form__input" type="file" id="image" name="image"
-                                onchange="return validarExt()">
+                            <!-- <img src="\images\DefaultProductImages.jpg" alt="img-default" id="img"/> -->                           
+                            <input class="form__input" type="file" id="image" name="image" onchange="return validarExt()">                               
                         </div>
-                    </div>
-
-                    <div class="form__mensaje" id="form__mensaje">
-                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
-                            correctamente.</p>
                     </div>
 
                     <div class="form__grupo form__grupo-btn-agregar">
                         <button type="submit" class="form__btn">Agregar</button>
                         <button type="reset" class="form__btn">Cancelar</button>
                         <p class="form__mensaje-exito" id="form__mensaje-exito">Formulario enviado exitosamente!</p>
+                    </div>
+
+                    <div class="form__mensaje" id="form__mensaje">
+                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                            correctamente.</p>
                     </div>
 
                 </form>
