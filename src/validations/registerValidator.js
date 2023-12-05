@@ -9,14 +9,14 @@ module.exports = [
         .withMessage("Deberá colocar como minimo 2 letras")
         .bail()
         .isAlpha('es-ES')
-        .withMessage("Solo se permite caracteres alfabéticos"),
+        .withMessage("Solo se permiten caracteres alfabéticos"),
     check("surname")
         .isLength({
             min: 2
         })
         .withMessage("Deberá colocar como minimo 2 letras")
         .bail()
-        .withMessage("Solo se permite caracteres alfabéticos"),
+        .withMessage("Solo se permiten caracteres alfabéticos"),
     check("email")
         .notEmpty()
         .withMessage("El email es obligatorio")
