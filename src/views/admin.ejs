@@ -200,72 +200,45 @@
                                                         <th scope="col">Acciones</th>
                                                     </tr>
                                                 </thead>
-
                                                 <tbody>
-                                                    <% adminUser.forEach(({id, name, surname, email, rol, image},
-                                                        index)=> { %>
+                                                    <% adminUser.forEach(({ id, name, surname, email, rol, image, Role }, index) => { %>
                                                         <tr>
-                                                            <th scope="row">
-                                                                <%= index + 1 %>
-                                                            </th>
-                                                            <td>
-                                                                <%= name %>
-                                                            </td>
-                                                            <td>
-                                                                <%= surname %>
-                                                            </td>
-                                                            <td>
-                                                                <%= email %>
-                                                            </td>
-                                                            <td>
-                                                                <%= rol %>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-2">
-
-                                                                    <button type="button" class="btn btn-sm btn-primary"
-                                                                        data-bs-toggle="modal"
-                                                                        data-bs-target="#modalDetail<%= id %>">
-                                                                        <i class="fas fa-eye"></i>
-                                                                    </button>
-                                                                    <div class="modal fade" id="modalDetail<%= id %>"
-                                                                        tabindex="-1" aria-labelledby="modalDetailLabel"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <div class="row">
-                                                                                        <div class="col-12 col-md-4">
-                                                                                            <img src="/images/avatar/<%= image %>"
-                                                                                                class="img-fluid"
-                                                                                                alt="">
-                                                                                        </div>
-                                                                                        <div
-                                                                                            class="col-12 col-md-8 text-center mt-5">
-                                                                                            <h4>
-                                                                                                <%= name %>
-                                                                                                    <%= surname %>
-                                                                                            </h4>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <button type="button" class="btn btn-sm btn-danger">
-                                                                        <i class="fa-solid fa-lock"
-                                                                            onclick="lock(this)"></i>
-                                                                    </button>
-                                                            </td>
-                                                        </tr>
-                                                        <%}) %>
+                                                        <th scope="row">
+                                                            <%= index + 1 %>
+                                                        </th>
+                                                        <td>
+                                                            <%= name %>
+                                                        </td>
+                                                        <td>
+                                                            <%= surname %>
+                                                        </td>
+                                                        <td>
+                                                            <%= email %>
+                                                        </td>
+                                                        <td>
+                                                            <%= rol %>
+                                                        </td>
+                                                        <td>
+                                                            <div class="d-flex gap-2">
+                                                           
+                                                            <div class="modal fade" id="modalDetail<%= id %>" tabindex="-1" aria-labelledby="modalDetailLabel" aria-hidden="true">
+                                                                <!-- ... Modal content ... -->
+                                                            </div>
+                                                            <form method="POST" action="/admin/change-role/<%= id %>">
+                                                                <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
+                                                                    <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
+                                                                    <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
+                                                                </select>
+                                                            <button type="submit" class="btn btn-sm btn-success">Cambiar Rol</button>
+                                                            </form>
+                                                           
+                                                         </div>
+                                                      </td>
+                                                    </tr>
+                                                   <% }) %>
                                                 </tbody>
+                                                
+                                                
                                             </table>
                                         </div>
 

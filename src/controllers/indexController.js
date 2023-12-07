@@ -1,3 +1,5 @@
+// index.js
+
 const { readJSON } = require("../data");
 
 const fs = require('fs');
@@ -7,11 +9,10 @@ const productsFile = path.join(__dirname, '../data/products.json');
 const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
 
 const db = require('../database/models');
-const { Op } = require('sequelize')
+const { Op } = require('sequelize');
 
 module.exports = {
     index: async (req, res) => {
-
         try {
             const carousell = readJSON('carousell.json');
             const products = await db.Image.findAll({
@@ -20,22 +21,21 @@ module.exports = {
                         model: db.Product
                     }
                 ]
-            })
+            });
 
             return res.render('index', {
                 products,
                 carousell
-            })
+            });
         } catch (error) {
             console.log(error);
         }
     },
 
     admin: async (req, res) => {
-
         try {
             const carousell = readJSON('carousell.json');
-            const products = await db.Image.findAll({ //uso primero el modelo de images dso hago los incluide tmb utiliando lo que tiene produt como asocion
+            const products = await db.Image.findAll({
                 include: [
                     {
                         model: db.Product,
@@ -53,17 +53,17 @@ module.exports = {
                         ]
                     }
                 ]
-            })
+            });
             const brands = await db.Brand.findAll({
                 order: ['name']
-            })
+            });
             const categories = await db.Category.findAll({
                 order: ['name']
-            })
+            });
             const sections = await db.Section.findAll({
                 order: ['name']
-            })
-            const adminUser = await db.User.findAll()
+            });
+            const adminUser = await db.User.findAll();
             return res.render('admin', {
                 carousell,
                 products,
@@ -71,17 +71,36 @@ module.exports = {
                 sections,
                 categories,
                 adminUser
-            })
-
+            });
         } catch (err) {
             console.log("Error Product create route: ", err);
         }
-
     },
-    search: async (req, res) => {
+
+    //  función para cambiar el rol del usuario
+    changeUserRole: async (req, res) => {
+        const { userId } = req.params;
+        const { newRole } = req.body;
 
         try {
-            const keywords = req.query.keywords
+            const user = await db.User.findByPk(userId);
+            if (!user) {
+                return res.status(404).send('Usuario no encontrado');
+            }
+
+            user.role = newRole;
+            await user.save();
+
+            res.redirect('/admin'); // Redirecciona a la página de administrador
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+
+    search: async (req, res) => {
+        try {
+            const keywords = req.query.keywords;
             const products = await db.Image.findAll({
                 include: [
                     {
@@ -99,23 +118,17 @@ module.exports = {
                                     }
                                 }
                             ]
-                
-                        } 
+                        }
                     }
-                    
                 ]
-            })  
-            // const product = await db.Product.findAll({
-                
-            // })
+            });
 
             return res.render('results', {
                 products,
-                // product,
-                keywords   
-            })
+                keywords
+            });
         } catch (error) {
             console.log(error);
         }
     }
-}
+};
