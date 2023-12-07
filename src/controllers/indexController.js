@@ -80,7 +80,7 @@ module.exports = {
     //  función para cambiar el rol del usuario
     changeUserRole: async (req, res) => {
         const { userId } = req.params;
-        const { newRole } = req.body;
+       const { newRole } = req.body;
 
         try {
             const user = await db.User.findByPk(userId);
@@ -91,7 +91,7 @@ module.exports = {
             user.role = newRole;
             await user.save();
 
-            res.redirect('/admin'); // Redirecciona a la página de administrador
+            res.redirect('admin'); // Redirecciona a la página de administrador
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');

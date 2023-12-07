@@ -1,13 +1,14 @@
 const express = require('express');
 const router = express.Router();
 
-const { register, processRegister, login, profile, processLogin, logout, updateProfile, editProfile, adminMenu, changeUserRole} = require('../controllers/usersController');
+const { register, processRegister, login, profile, processLogin, logout, updateProfile, editProfile, adminMenu} = require('../controllers/usersController');
 const checkUserLogin = require("../middlewares/checkUserLogin");
 const checkNotUserLogin = require('../middlewares/checkNotUserLogin');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
 const checkAdmin = require('../middlewares/checkAdmin');
-const uploadUser = require('../middlewares/uploadUser')
+const uploadUser = require('../middlewares/uploadUser');
+const { changeUserRole } = require('../controllers/indexController');
 
 /* /users */
 

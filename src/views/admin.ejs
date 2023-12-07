@@ -224,7 +224,7 @@
                                                             <div class="modal fade" id="modalDetail<%= id %>" tabindex="-1" aria-labelledby="modalDetailLabel" aria-hidden="true">
                                                                 <!-- ... Modal content ... -->
                                                             </div>
-                                                            <form method="POST" action="/admin/change-role/<%= id %>">
+                                                            <form method="POST" action="/admin/<%= id %>">
                                                                 <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
                                                                     <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
                                                                     <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
