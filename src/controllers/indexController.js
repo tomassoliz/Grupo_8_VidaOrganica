@@ -63,7 +63,15 @@ module.exports = {
             const sections = await db.Section.findAll({
                 order: ['name']
             });
-            const adminUser = await db.User.findAll();
+            const adminUser = await db.User.findAll(
+                {
+                    include: [
+                        {
+                            model: db.Role
+                        }
+                    ]
+                }
+            );
             return res.render('admin', {
                 carousell,
                 products,
