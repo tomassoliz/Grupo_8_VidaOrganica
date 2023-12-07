@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', {
-    title: 'Editar'
-}) %>
+<%- include('partials/head', { title: 'Editar' }) %>
 
-<!-- <head>
+    <!-- <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
 </head> -->
@@ -13,46 +11,57 @@
     <body>
 
         <%- include('partials/header') %>
-        <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
-            href="#">editar</a></p>
+            <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a href="#">editar</a>
+            </p>
             <main class="container_main-edit">
-                    <h2 class="title_form-edit">Editar producto</h2> 
+                <h2 class="title_form-edit">Editar producto</h2>
 
-                    <form action="/products/update/<%= images.Product.id %>?_method=PUT" method="POST" class="formulario" id="formulario" enctype="multipart/form-data">
-                        <div class="images_edit">
-                            <img src="/images/img-products/<%= images.file %>" name="image" id="image" alt="">
-                        </div>
+
+                <form action="/products/update/<%= images.Product.id %>?_method=PUT" method="POST" class="formulario"
+                    id="formulario" enctype="multipart/form-data">
+                    <div class="images_edit">
+                        <img src="/images/img-products/<%= images.file %>" name="image" id="imagen" alt="">
+                    </div>
+
+                    <div class="container_main-form">
                         <div class="formulario__grupo" id="grupo__nombre">
                             <label for="nombre" class="formulario__label">Nombre</label>
                             <div class="formulario__grupo-input">
-                                <input type="text" class="formulario__input" name="name" id="nombre" value="<%= images.Product.name %>">
+                                <input type="text" class="formulario__input" name="name" id="nombre"
+                                    value="<%= images.Product.name %>">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
-                            <p class="formulario__input-error">El nombre tiene que ser de 2 a 40 dígitos y solo puede contener letras y espacios</p>
+                            <p class="formulario__input-error">El nombre tiene que ser de 2 a 40 dígitos y solo puede
+                                contener letras y espacios</p>
                         </div>
 
                         <div class=" formulario__grupo" id="grupo__marca">
                             <label for="brand" class="formulario__label">Marca</label>
                             <select type="text" name="brand" id="brand">
-                                <% brands.forEach(item => { %>
-                                    <option <%= item.name === brands && 'selected' %> value="<%= item.id %>"><%= item.name %></option>
-                                <% }) %>
+                                <% brands.forEach(item=> { %>
+                                    <option <%=item.name===brands && 'selected' %> value="<%= item.id %>"><%= item.name
+                                                %>
+                                    </option>
+                                    <% }) %>
                             </select>
                         </div>
 
                         <div class=" formulario__grupo" id="grupo__categoria">
                             <label for="category" class="formulario__label">Categoría</label>
                             <select type="text" name="category" id="category">
-                                <% categories.forEach(item => { %>
-                                    <option <%= item.name === categories && 'selected' %> value="<%= item.id %>"><%= item.name %></option>
-                                <% }) %>
+                                <% categories.forEach(item=> { %>
+                                    <option <%=item.name===categories && 'selected' %> value="<%= item.id %>"><%=
+                                                item.name %>
+                                    </option>
+                                    <% }) %>
                             </select>
                         </div>
 
                         <div class=" formulario__grupo" id="grupo__precio">
                             <label for="price" class="formulario__label">Precio</label>
                             <div class="formulario__grupo-input">
-                                <input type="number" class="formulario__input" name="price" id="precio" placeholder="$" value="<%= images.Product.price %>">
+                                <input type="number" class="formulario__input" name="price" id="precio" placeholder="$"
+                                    value="<%= images.Product.price %>">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">Tiene que tener un precio</p>
@@ -61,21 +70,23 @@
                         <div class=" formulario__grupo" id="grupo__descuento">
                             <label for="discount" class="formulario__label">Descuento</label>
                             <div class="formulario__grupo-input">
-                                <input type="number" class="formulario__input" name="discount" id="descuento" value="<%= images.Product.discount %>">
+                                <input type="number" class="formulario__input" name="discount" id="descuento"
+                                    value="<%= images.Product.discount %>">
                             </div>
                         </div>
 
                         <div class=" formulario__grupo" id="grupo__descripcion">
                             <label for="description" class="formulario__label">Descripción</label>
                             <div class="formulario__grupo-input">
-                                <input type="text" class="formulario__input" name="description" id="descripcion" placeholder="Descripción a editar" value= "<%= images.Product.description %>">
+                                <input type="text" class="formulario__input" name="description" id="descripcion"
+                                    placeholder="Descripción a editar" value="<%= images.Product.description %>">
                                 <i class="formulario__validacion-estado fas fa-times-circle"></i>
                             </div>
                             <p class="formulario__input-error">La descripcion tiene que ser de 2 a 500 dígitos</p>
                         </div>
 
                         <div class=" formulario__grupo" id="grupo__imagen">
-                            <label for ="image" class="formulario__label">Agregar imagen</label>
+                            <label for="image" class="formulario__label">Agregar imagen</label>
                             <div class="formulario__grupo-input">
                                 <input class="" type="file" id="image" name="image">
                             </div>
@@ -90,20 +101,22 @@
                         </div> -->
 
                         <div class="formulario__mensaje" id="formulario__mensaje">
-                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
+                            <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                                correctamente. </p>
                         </div>
-                        
+
                         <div class="formulario__grupo formulario__grupo-btn-enviar">
                             <button type="submit" class="formulario__btn">Guardar</button>
                         </div>
-                        
-                    </form>
+                    </div>
+
+                </form>
 
 
             </main>
 
             <%- include('partials/footer') %>
-            <script src="/javascripts/editAdmin.js"></script>
+                <script src="/javascripts/editAdmin.js"></script>
     </body>
 
 </html>
