@@ -218,17 +218,15 @@
                                                                 <%= email %>
                                                             </td>
                                                             <td>
-                                                                <%= rol %>
+                                                                <%= Role.name %>
                                                             </td>
                                                             <td>
-                                                                <div class="d-flex gap-2">
-                                                                    
+                                                                <div class="d-flex gap-2">                                                                  
                                                                     <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
                                                                         <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
                                                                         <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
                                                                     </select>
-                                                                    <button type="submit" class="btn btn-sm btn-success">Cambiar Rol</button>
-                                                                   
+                                                                    <button type="submit" class="btn btn-success btn-sm">Cambiar Rol</button>                                                                  
                                                                 </div>
                                                             </td>
                                                         </tr>
