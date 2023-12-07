@@ -1,3 +1,5 @@
+// index.js
+
 const { readJSON } = require("../data");
 const db = require('../database/models');
 const { Op } = require('sequelize');
@@ -12,12 +14,12 @@ module.exports = {
                         model: db.Product
                     }
                 ]
-            })
+            });
 
             return res.render('index', {
                 products,
                 carousell
-            })
+            });
         } catch (error) {
             console.log(error);
         }
@@ -26,7 +28,7 @@ module.exports = {
     admin: async (req, res) => {
         try {
             const carousell = readJSON('carousell.json');
-            const products = await db.Image.findAll({ //uso primero el modelo de images dso hago los incluide tmb utiliando lo que tiene produt como asocion
+            const products = await db.Image.findAll({
                 include: [
                     {
                         model: db.Product,
@@ -44,24 +46,25 @@ module.exports = {
                         ]
                     }
                 ]
-            })
+            });
             const brands = await db.Brand.findAll({
                 order: ['name']
-            })
+            });
             const categories = await db.Category.findAll({
                 order: ['name']
-            })
+            });
             const sections = await db.Section.findAll({
                 order: ['name']
-            })
-            const adminUser = await db.User.findAll({
-                include: [
-                    {
-                        model: db.Role
-                    }
-                ]
-
-            })
+            });
+            const adminUser = await db.User.findAll(
+                {
+                    include: [
+                        {
+                            model: db.Role
+                        }
+                    ]
+                }
+            );
             return res.render('admin', {
                 carousell,
                 products,
@@ -69,16 +72,51 @@ module.exports = {
                 sections,
                 categories,
                 adminUser
-            })
-
+            });
         } catch (err) {
             console.log("Error Product create route: ", err);
         }
-
     },
+
+    //  función para cambiar el rol del usuario
+    changeUserRole: async (req, res) => {
+        const { userId } = req.params;
+        const { newRole } = req.body;
+    
+        try {
+            const user = await db.User.findByPk(userId);
+            if (!user) {
+                console.log('Usuario no encontrado');
+                return res.status(404).send('Usuario no encontrado');
+            }
+    
+            console.log('Usuario antes del cambio de rol:', user.toJSON());
+    
+            // Obtener el id del nuevo rol
+            const role = await db.Role.findOne({ where: { name: newRole } });
+            if (!role) {
+                console.log('Rol no encontrado');
+                return res.status(404).send('Rol no encontrado');
+            }
+    
+            console.log('Rol encontrado:', role.toJSON());
+    
+            user.RoleId = role.id;
+            await user.save();
+    
+            console.log('Usuario después del cambio de rol:', user.toJSON());
+    
+            return res.render('/admin'); 
+        } catch (error) {
+            console.error(error);
+            res.status(500).send('Error interno del servidor');
+        }
+    },
+    
+
     search: async (req, res) => {
         try {
-            const keywords = req.query.keywords
+            const keywords = req.query.keywords;
             const products = await db.Image.findAll({
                 include: [
                     {
@@ -96,18 +134,17 @@ module.exports = {
                                     }
                                 }
                             ]
-                
                         }
                     }
-                    
                 ]
-            })
+            });
+
             return res.render('results', {
-                products,               
-                keywords   
-            })
+                products,
+                keywords
+            });
         } catch (error) {
             console.log(error);
         }
     }
-}
+};

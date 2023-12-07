@@ -7,7 +7,8 @@ const checkNotUserLogin = require('../middlewares/checkNotUserLogin');
 const loginValidator = require('../validations/loginValidator');
 const registerValidator = require('../validations/registerValidator');
 const checkAdmin = require('../middlewares/checkAdmin');
-const uploadUser = require('../middlewares/uploadUser')
+const uploadUser = require('../middlewares/uploadUser');
+const { changeUserRole } = require('../controllers/indexController');
 
 /* /users */
 
@@ -20,6 +21,6 @@ router
     .get('/editProfile/:id', editProfile)
     .put('/updateProfile/:id', uploadUser.single('image'), updateProfile) //no parametrizar
     .get('/logout', logout)
-    .get('/admin', loginValidator, checkAdmin, processLogin, adminMenu )
-    
+    .get('/admin/:userId', loginValidator, checkAdmin, processLogin, adminMenu )
+    .post('/admin/change-role/:userId', checkAdmin, changeUserRole);
 module.exports = router;
