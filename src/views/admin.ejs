@@ -200,45 +200,42 @@
                                                         <th scope="col">Acciones</th>
                                                     </tr>
                                                 </thead>
+                                               
                                                 <tbody>
-                                                    <% adminUser.forEach(({ id, name, surname, email, rol, image, Role }, index) => { %>
+                                                <% adminUser.forEach(({ id, name, surname, email, rol, image, Role }, index) => { %>
+                                                    <form method="POST" action="/admin/change-role/<%= id %>">
                                                         <tr>
-                                                        <th scope="row">
-                                                            <%= index + 1 %>
-                                                        </th>
-                                                        <td>
-                                                            <%= name %>
-                                                        </td>
-                                                        <td>
-                                                            <%= surname %>
-                                                        </td>
-                                                        <td>
-                                                            <%= email %>
-                                                        </td>
-                                                        <td>
-                                                            <%= rol %>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex gap-2">
-                                                           
-                                                            <div class="modal fade" id="modalDetail<%= id %>" tabindex="-1" aria-labelledby="modalDetailLabel" aria-hidden="true">
-                                                                <!-- ... Modal content ... -->
-                                                            </div>
-                                                            <form method="POST" action="/admin/<%= id %>">
-                                                                <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
-                                                                    <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
-                                                                    <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
-                                                                </select>
-                                                            <button type="submit" class="btn btn-sm btn-success">Cambiar Rol</button>
-                                                            </form>
-                                                           
-                                                         </div>
-                                                      </td>
-                                                    </tr>
-                                                   <% }) %>
-                                                </tbody>
-                                                
-                                                
+                                                            <th scope="row">
+                                                                <%= index + 1 %>
+                                                            </th>
+                                                            <td>
+                                                                <%= name %>
+                                                            </td>
+                                                            <td>
+                                                                <%= surname %>
+                                                            </td>
+                                                            <td>
+                                                                <%= email %>
+                                                            </td>
+                                                            <td>
+                                                                <%= rol %>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
+                                                                    
+                                                                    <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
+                                                                        <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
+                                                                        <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
+                                                                    </select>
+                                                                    <button type="submit" class="btn btn-sm btn-success">Cambiar Rol</button>
+                                                                   
+                                                                </div>
+                                                            </td>
+                                                        </tr>
+                                                    </form>
+                                                <% }) %>
+                                            </tbody>
+   
                                             </table>
                                         </div>
 

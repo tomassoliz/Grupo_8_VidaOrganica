@@ -7,7 +7,7 @@ const checkAdmin = require('../middlewares/checkAdmin');
 
 router
     .get('/', index)
-    .get('/admin',checkAdmin, admin )
+    .get('/admin',checkAdmin,admin)
     .get('/search', search)
     .post('/admin/change-role/:userId', checkAdmin, changeUserRole)
 

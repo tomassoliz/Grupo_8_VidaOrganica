@@ -80,23 +80,38 @@ module.exports = {
     //  función para cambiar el rol del usuario
     changeUserRole: async (req, res) => {
         const { userId } = req.params;
-       const { newRole } = req.body;
-
+        const { newRole } = req.body;
+    
         try {
             const user = await db.User.findByPk(userId);
             if (!user) {
+                console.log('Usuario no encontrado');
                 return res.status(404).send('Usuario no encontrado');
             }
-
-            user.role = newRole;
+    
+            console.log('Usuario antes del cambio de rol:', user.toJSON());
+    
+            // Obtener el id del nuevo rol
+            const role = await db.Role.findOne({ where: { name: newRole } });
+            if (!role) {
+                console.log('Rol no encontrado');
+                return res.status(404).send('Rol no encontrado');
+            }
+    
+            console.log('Rol encontrado:', role.toJSON());
+    
+            user.RoleId = role.id;
             await user.save();
-
-            res.redirect('admin'); // Redirecciona a la página de administrador
+    
+            console.log('Usuario después del cambio de rol:', user.toJSON());
+    
+            res.redirect('/admin'); 
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');
         }
     },
+    
 
     search: async (req, res) => {
         try {
