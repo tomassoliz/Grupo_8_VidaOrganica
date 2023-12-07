@@ -105,7 +105,10 @@ module.exports = {
     
             console.log('Usuario después del cambio de rol:', user.toJSON());
     
-            res.redirect('/admin'); 
+            return res.render('/admin',{
+                user,
+                role
+            }); 
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');
