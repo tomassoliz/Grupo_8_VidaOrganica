@@ -8,8 +8,8 @@ const { categoriesCreate, categoriesAdd, categoriesEdit, categoriesUpdate, categ
 router
     .get('/categoriesAdd', categoriesAdd)
     .post('/categoriesAdd', categoriesCreate)
-    // .get('/edit/:id', categoriesEdit)
-    // .put('/update/:id', categoriesUpdate)
+    .get('/edit/:id', categoriesEdit)
+    .put('/update/:id', categoriesUpdate)
     .delete('/categoriesRemove/:id', categoriesRemove)
 
 module.exports = router;

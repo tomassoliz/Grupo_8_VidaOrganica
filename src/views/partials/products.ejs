@@ -1,11 +1,15 @@
-<% products.forEach(Product => { %>
+<% products.forEach(({Product, file}) => { %> 
     <div class="swiper-slide">
         <section class="container-articulo-section">
-            <img class="imagen_producto" src="/images/img-products/<%= Product.file %>"
+            <img class="imagen_producto" src="/images/img-products/<%= file %>"
             alt="leche de almendras">
             <div class="container-info-main">
                 <h4 class="description"><%= Product.name %></h4>
-                <p class="precio-card">$<%= Product.price - (Product.discount * Product.price / 100) %></p>
+                <% if (Product.discount === 0 || !Product.discount) { %>
+                    <p class="precio-card">$<%= Product.price %></p>
+                  <% } else { %>
+                    <p class="precio-card">$<%= Product.price - (Product.discount * Product.price / 100) %></p>
+                  <% } %>
                 <button class="button-card_carrito"><a class="link_card_carrito" href="/products/carrito">Agregar</a></button>
                 <button class="button-card"><a class="link_card" href="/products/detail/<%= Product.id%>">Ver más</a></button>
             </div>

@@ -3,10 +3,9 @@ const { validationResult } = require('express-validator');
 
 module.exports = (req, res) => {
 
-    const errors = validationResult(req); // examina lo que viene del request!
+    const errors = validationResult(req);
 
     if (errors.isEmpty()) {
-
         const { email, remember } = req.body
 
        db.User.findOne({
@@ -16,7 +15,7 @@ module.exports = (req, res) => {
 
             include: [
                 { 
-                    model: db.Role 
+                    model: db.Role
                 }
             ]
         })

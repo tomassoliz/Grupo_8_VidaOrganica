@@ -1,13 +1,6 @@
 // index.js
 
 const { readJSON } = require("../data");
-
-const fs = require('fs');
-const path = require('path');
-
-const productsFile = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFile, 'utf-8'));
-
 const db = require('../database/models');
 const { Op } = require('sequelize');
 
@@ -63,15 +56,13 @@ module.exports = {
             const sections = await db.Section.findAll({
                 order: ['name']
             });
-            const adminUser = await db.User.findAll(
-                {
-                    include: [
-                        {
-                            model: db.Role
-                        }
-                    ]
-                }
-            );
+            const adminUser = await db.User.findAll({
+                include : [
+                    {
+                        model: db.Role
+                    }
+                ]
+            });
             return res.render('admin', {
                 carousell,
                 products,
@@ -113,7 +104,7 @@ module.exports = {
     
             console.log('Usuario después del cambio de rol:', user.toJSON());
     
-            res.redirect('/admin'); 
+            return res.redirect('/admin'); 
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');

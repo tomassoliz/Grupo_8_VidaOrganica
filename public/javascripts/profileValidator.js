@@ -64,7 +64,7 @@ window.onload = async function(e){
                 this.classList.add('is-invalid')
                 break;
             case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
-                $('msgError-email').innerHTML = "El formato es inválidoooooooo";
+                $('msgError-email').innerHTML = "El formato es inválido";
                 this.classList.add('is-invalid')
                 break
             default:
@@ -75,24 +75,7 @@ window.onload = async function(e){
         }
     });
     
-    $('email').addEventListener('blur', function(e){
-
-        switch (true) {
-            case !this.value.trim():
-                $('msgError-email').innerHTML = "El email es obligatorio"
-                this.classList.add('is-invalid')
-                break;
-            case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
-                $('msgError-email').innerHTML = "El formato es inválidoooooooo";
-                this.classList.add('is-invalid')
-                break
-            default:
-                $('msgError-email').innerHTML = null;
-                this.classList.add('is-valid')
-                this.classList.remove('is-invalid')
-                break;
-        }
-    });
+    
 
     
     $("birthday").addEventListener("blur", function (e) {
