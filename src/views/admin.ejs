@@ -42,146 +42,154 @@
                                                     class="fa-solid fa-plus"></i>Agregar</a>
                                         </div>
 
-                                        <table class="table table-hover">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover">
+                                                <!-- TABLA -->
+                                                <!-- PRODUCTOS SEGÚN : -->
+                                                <thead>
+                                                    <tr class="thList">
+                                                        <th scope class="col-#">#</th>
+                                                        <th scope class="col-name">Nombre</th>
+                                                        <th scope class="col-brand">Marca</th>
+                                                        <th scope class="col-description">Descripción</th>
+                                                        <th scope class="col-category">Categoría</th>
+                                                        <th scope class="col-price">Precio</th>
+                                                        <th scope class="col-priceFinal">P. Final</th>
+                                                        <th scope class="col-actions">Acciones</th>
+                                                    </tr>
+                                                </thead>
 
-                                            <!-- TABLA -->
+                                                <!-- PRODUCTOS DEL JSON -->
 
-                                            <!-- PRODUCTOS SEGÚN : -->
-                                            <thead>
-                                                <tr>
-                                                    <th scope="col">#</th>
-                                                    <th scope="col">Nombre</th>
-                                                    <th scope="col">Marca</th>
-                                                    <th scope="col">Descripción</th>
-                                                    <th scope="col">Categoría</th>
-                                                    <th scope="col">Precio</th>
-                                                    <th scope="col">P. Final</th>
-                                                    <th scope="col">Acciones</th>
-                                                </tr>
-                                            </thead>
+                                                <tbody>
+                                                    <% products.forEach(({id, Brand, Category, file, Product}, index)=>
+                                                        { %>
+                                                        <tr>
+                                                            <th scope="row">
+                                                                <%= index + 1 %>
+                                                            </th>
+                                                            <td class="td-name">
+                                                                <%= Product.name %>
+                                                            </td>
+                                                            <td class="td-brand">
+                                                                <%= Product.Brand.name ? Product.Brand.name : "-" %>
+                                                            </td>
+                                                            <td class="td-description">
+                                                                <%= Product.description %>
+                                                            </td>
+                                                            <td class="td-category">
+                                                                <%= Product.Category.name %>
+                                                            </td>
+                                                            <td class="td-price">
+                                                                <%= Product.price %>
+                                                            </td>
+                                                            <td class="td-finalPrice">
+                                                                <%= Product.price - (Product.discount * Product.price /
+                                                                    100) %>
+                                                            </td>
+                                                            <td>
+                                                                <div class="d-flex gap-2">
 
-                                            <!-- PRODUCTOS DEL JSON -->
-
-                                            <tbody>
-                                                <% products.forEach(({id, Brand, Category, file, Product},
-                                                    index)=> { %>
-                                                    <tr>
-                                                        <th scope="row">
-                                                            <%= index + 1 %>
-                                                        </th>
-                                                        <td>
-                                                            <%= Product.name %>
-                                                        </td>
-                                                        <td>
-                                                            <%= Product.Brand.name ? Product.Brand.name : "-" %>
-                                                        </td>
-                                                        <td>
-                                                            <%= Product.description %>
-                                                        </td>
-                                                        <td>
-                                                            <%= Product.Category.name %>
-                                                        </td>
-                                                        <td>
-                                                            <%= Product.price %>
-                                                        </td>
-                                                        <td>
-                                                            <%= Product.price - (Product.discount * Product.price / 100) %>
-                                                        </td>
-                                                        <td>
-                                                            <div class="d-flex gap-2">
-
-                                                                <button type="button" class="btn btn-sm btn-primary"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#modalDetail<%= Product.id %>">
-                                                                    <i class="fas fa-eye"></i>
-                                                                </button>
-                                                                <div class="modal fade"
-                                                                    id="modalDetail<%= Product.id %>" tabindex="-1"
-                                                                    aria-labelledby="modalDetailLabel"
-                                                                    aria-hidden="true">
-                                                                    <div class="modal-dialog modal-dialog-centered">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <h1 class="modal-title fs-2"
-                                                                                    id="modalDetailLabel">
-                                                                                    <%= Product.name %>
-                                                                                </h1>
-                                                                                <button type="button" class="btn-close"
-                                                                                    data-bs-dismiss="modal"
-                                                                                    aria-label="Close"></button>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                                <div class="row">
-                                                                                    <div class="col-12 col-md-4">
-                                                                                        <img src="/images/img-products/<%= file %>"
-                                                                                            class="img-fluid" alt="">
-                                                                                    </div>
-                                                                                    <div class="col-12 col-md-8">
-                                                                                        <h2>$ <%= Product.price -
-                                                                                                (Product.discount *
-                                                                                                Product.price / 100) %>
-                                                                                        </h2>
-                                                                                        <p>
-                                                                                            <%= Product.description %>
-                                                                                        </p>
-                                                                                        <button type="button"
-                                                                                            class="btn btn-dark disabled">Comprar</button>
+                                                                    <button type="button" class="btn btn-sm btn-primary"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modalDetail<%= Product.id %>">
+                                                                        <i class="fas fa-eye"></i>
+                                                                    </button>
+                                                                    <div class="modal fade"
+                                                                        id="modalDetail<%= Product.id %>" tabindex="-1"
+                                                                        aria-labelledby="modalDetailLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h1 class="modal-title fs-2"
+                                                                                        id="modalDetailLabel">
+                                                                                        <%= Product.name %>
+                                                                                    </h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <div class="row">
+                                                                                        <div class="col-12 col-md-4">
+                                                                                            <img src="/images/img-products/<%= file %>"
+                                                                                                class="img-fluid"
+                                                                                                alt="">
+                                                                                        </div>
+                                                                                        <div class="col-12 col-md-8">
+                                                                                            <h2>$ <%= Product.price -
+                                                                                                    (Product.discount *
+                                                                                                    Product.price / 100)
+                                                                                                    %>
+                                                                                            </h2>
+                                                                                            <p>
+                                                                                                <%= Product.description
+                                                                                                    %>
+                                                                                            </p>
+                                                                                            <button type="button"
+                                                                                                class="btn btn-dark disabled">Comprar</button>
+                                                                                        </div>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
-                                                                </div>
 
-                                                                <a href="/products/edit/<%= Product.id %>"
-                                                                    class="btn btn-sm btn-success">
-                                                                    <i class="fa-regular fa-pen-to-square"></i>
-                                                                </a>
+                                                                    <a href="/products/edit/<%= Product.id %>"
+                                                                        class="btn btn-sm btn-success">
+                                                                        <i class="fa-regular fa-pen-to-square"></i>
+                                                                    </a>
 
-                                                                <button type="button" class="btn btn-sm btn-danger"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#modalDelete<%= Product.id %>">
-                                                                    <i class="fa-solid fa-trash"></i>
-                                                                </button>
-                                                                <div class="modal fade"
-                                                                    id="modalDelete<%= Product.id %>" tabindex="-1"
-                                                                    aria-labelledby="modalDeleteLabel"
-                                                                    aria-hidden="true">
-                                                                    <div class="modal-dialog modal-dialog-centered">
-                                                                        <div class="modal-content">
-                                                                            <div class="modal-header">
-                                                                                <h1 class="modal-title fs-5"
-                                                                                    id="modalDeleteLabel">Advertencia
-                                                                                </h1>
-                                                                                <button type="button" class="btn-close"
-                                                                                    data-bs-dismiss="modal"
-                                                                                    aria-label="Close"></button>
-                                                                            </div>
-                                                                            <div class="modal-body">
-                                                                                <p>¿Estás seguro que querés eliminar el
-                                                                                    producto <b>"<%= Product.name %>
-                                                                                            "</b> ?</p>
-                                                                            </div>
-                                                                            <div class="modal-footer">
-                                                                                <button type="button"
-                                                                                    class="btn btn-secondary"
-                                                                                    data-bs-dismiss="modal">Cancelar</button>
-                                                                                <form
-                                                                                    action="/products/remove/<%= Product.id %>?_method=DELETE"
-                                                                                    method="POST">
-                                                                                    <button type="submit"
-                                                                                        class="btn btn-danger">Eliminalo!!!</button>
-                                                                                </form>
+                                                                    <button type="button" class="btn btn-sm btn-danger"
+                                                                        data-bs-toggle="modal"
+                                                                        data-bs-target="#modalDelete<%= Product.id %>">
+                                                                        <i class="fa-solid fa-trash"></i>
+                                                                    </button>
+                                                                    <div class="modal fade"
+                                                                        id="modalDelete<%= Product.id %>" tabindex="-1"
+                                                                        aria-labelledby="modalDeleteLabel"
+                                                                        aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h1 class="modal-title fs-5"
+                                                                                        id="modalDeleteLabel">
+                                                                                        Advertencia
+                                                                                    </h1>
+                                                                                    <button type="button"
+                                                                                        class="btn-close"
+                                                                                        data-bs-dismiss="modal"
+                                                                                        aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <p>¿Estás seguro que querés eliminar
+                                                                                        el
+                                                                                        producto <b>"<%= Product.name %>
+                                                                                                "</b> ?</p>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    <button type="button"
+                                                                                        class="btn btn-secondary"
+                                                                                        data-bs-dismiss="modal">Cancelar</button>
+                                                                                    <form
+                                                                                        action="/products/remove/<%= Product.id %>?_method=DELETE"
+                                                                                        method="POST">
+                                                                                        <button type="submit"
+                                                                                            class="btn btn-danger">Eliminalo!!!</button>
+                                                                                    </form>
+                                                                                </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                            </div>
-                                                        </td>
-                                                    </tr>
-                                                    <%}) %>
-                                            </tbody>
-                                        </table>
+                                                            </td>
+                                                        </tr>
+                                                        <%}) %>
+                                                </tbody>
+                                            </table>
+                                        </div>
                                     </div>
 
                                     <div class="tab-pane fade" id="users-tab-pane" role="tabpanel"
@@ -199,42 +207,50 @@
                                                         <th scope="col">Acciones</th>
                                                     </tr>
                                                 </thead>
-                                               
+
                                                 <tbody>
-                                                <% adminUser.forEach(({ id, name, surname, email, rol, image, Role }, index) => { %>
-                                                    <form method="POST" action="/admin/change-role/<%= id %>">
-                                                        <tr>
-                                                            <th scope="row">
-                                                                <%= index + 1 %>
-                                                            </th>
-                                                            <td>
-                                                                <%= name %>
-                                                            </td>
-                                                            <td>
-                                                                <%= surname %>
-                                                            </td>
-                                                            <td>
-                                                                <%= email %>
-                                                            </td>
-                                                            <td>
-                                                                <%= Role.name %>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-2">
-                                                                    
-                                                                    <select name="newRole" class="form-select form-select-sm" aria-label="Cambiar Rol">
-                                                                        <option value="user" <%= rol === 'user' ? 'selected' : '' %>>Usuario</option>
-                                                                        <option value="admin" <%= rol === 'admin' ? 'selected' : '' %>>Administrador</option>
-                                                                    </select>
-                                                                    <button type="submit" class="btn btn-sm btn-success">Cambiar Rol</button>
-                                                                   
-                                                                </div>
-                                                            </td>
-                                                        </tr>
-                                                    </form>
-                                                <% }) %>
-                                            </tbody>
-   
+                                                    <% adminUser.forEach(({ id, name, surname, email, rol, image, Role
+                                                        }, index)=> { %>
+                                                        <form method="POST" action="/admin/change-role/<%= id %>">
+                                                            <tr>
+                                                                <th scope="row">
+                                                                    <%= index + 1 %>
+                                                                </th>
+                                                                <td>
+                                                                    <%= name %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= surname %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= email %>
+                                                                </td>
+                                                                <td>
+                                                                    <%= Role.name %>
+                                                                </td>
+                                                                <td>
+                                                                    <div class="d-flex gap-2">
+
+                                                                        <select name="newRole"
+                                                                            class="form-select form-select-sm"
+                                                                            aria-label="Cambiar Rol">
+                                                                            <option value="user" <%=rol==='user'
+                                                                                ? 'selected' : '' %>>Usuario</option>
+                                                                            <option value="admin" <%=rol==='admin'
+                                                                                ? 'selected' : '' %>>Administrador
+                                                                            </option>
+                                                                        </select>
+                                                                        <button type="submit"
+                                                                            class="btn btn-sm btn-success">Cambiar
+                                                                            Rol</button>
+
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </form>
+                                                        <% }) %>
+                                                </tbody>
+
                                             </table>
                                         </div>
 
@@ -383,7 +399,7 @@
                     integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
                     crossorigin="anonymous">
                     </script>
-                    
+
     </body>
 
 </html>

@@ -1,0 +1,49 @@
+@media (min-width: 320px) {
+    .nav-tabs {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: space-between;
+    }
+
+    .table-hover {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .col-description,
+    .col-category,
+    .col-price,
+    .col-priceFinal,
+    .col-actions {
+        display: none;
+    }
+
+    /*
+    TD
+    */
+
+    .td-description,
+    .td-category,
+    .td-price,
+    .td-finalPrice {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-description,
+    .col-category,
+    .col-price,
+    .col-priceFinal,
+    .col-actions {
+        display: block;
+    }
+.td-description,
+    .td-category,
+    .td-price,
+    .td-finalPrice {
+        display: block;
+    }
+}
