@@ -64,7 +64,7 @@
                                                 <tbody>
                                                     <% products.forEach(({id, Brand, Category, file, Product}, index)=>
                                                         { %>
-                                                        <tr>
+                                                        <tr class="container-tr">
                                                             <th scope="row">
                                                                 <%= index + 1 %>
                                                             </th>
@@ -88,7 +88,7 @@
                                                                     100) %>
                                                             </td>
                                                             <td>
-                                                                <div class="d-flex gap-2">
+                                                                <div class="d-flex gap-2 col-actions">
 
                                                                     <button type="button" class="btn btn-sm btn-primary"
                                                                         data-bs-toggle="modal"

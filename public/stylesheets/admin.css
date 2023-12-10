@@ -9,7 +9,6 @@
     .table-hover {
         display: flex;
         flex-direction: column;
-        align-items: self-start;
     }
 
     .col-description,
@@ -33,17 +32,35 @@
 }
 
 @media (min-width: 768px) {
+    .thList {
+        display: flex;
+        justify-content: space-between
+    }
+    .container-tr {
+        display: flex;
+    }
+    
+    
+    .col-name,
+    .col-brand,
     .col-description,
     .col-category,
     .col-price,
     .col-priceFinal,
     .col-actions {
-        display: block;
+        display: flex;
     }
-.td-description,
+    
+    .td-name,
+    .td-brand,
+    .td-description,
     .td-category,
     .td-price,
-    .td-finalPrice {
-        display: block;
+    .td-finalPrice,
+    .td-actions {
+        display: flex;
     }
+    
+    
+
 }
