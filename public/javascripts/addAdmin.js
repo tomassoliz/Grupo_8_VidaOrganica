@@ -2,9 +2,9 @@ const formulario = document.getElementById('formulario'); /* captura el formular
 const inputs = document.querySelectorAll('#formulario input');
 
 const expresiones = {
-    nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
+    nombre: /^[a-zA-ZÁ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
     precio: /^\d{2,15}$/, // 2 a 5 numeros.
-    descripcion: /^[a-zA-ZÀ-ÿ\s\d]{20,500}$/, // Descripcion,
+    descripcion: /^[a-zA-ZÁ-ÿ\s\d]{20,500}$/, // Descripcion
 }
 
 const campos = {
@@ -75,7 +75,7 @@ function validarExt() {
 }
 
 formulario.addEventListener('submit', (e) => {
-    e.preventDefault()
+   // e.preventDefault()
 
     const imagenValida = validarExt();
     console.log(validarExt);
