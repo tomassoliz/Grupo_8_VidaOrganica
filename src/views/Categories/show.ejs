@@ -1,4 +1,10 @@
 <%- include('partials/head', { title: 'Show' }) %>
 
+<body>
+    <h1>Detalles de Categoría</h1>
+    <p>ID: <%= category.id %></p>
+    <p>Nombre: <%= category.name %></p>
+    <a href="/categories/<%= category.id %>/edit">Editar Categoría</a>
+  </body>
 
 <%- include('partials/footer') %>

@@ -316,6 +316,47 @@
                                                                         data-bs-target="#modalDelete<%= id %>">
                                                                         <i class="fa-solid fa-trash"></i>
                                                                     </button>
+                                                                    <button type="button" class="btn btn-sm btn-warning" 
+                                                                        onclick="editCategory(<%= id %>)">
+                                                                        <i class="fa-solid fa-pencil"></i> Actualizar
+                                                                    </button>
+                                                                    <button type="button" class="btn btn-sm btn-info" 
+                                                                        onclick="editCategory(<%= id %>)">
+                                                                        <i class="fa-solid fa-pencil"></i> Editar
+                                                                    </button>
+
+                                                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" 
+                                                                        data-bs-target="#modalProducts<%= categories.id %>">
+                                                                        <i class="fas fa-eye"></i> Ver Productos
+                                                                    </button>
+                                                                    
+                                                                    <!-- Modal para mostrar productos -->
+                                                                    <div class="modal fade" id="modalProducts<%= categories.id %>" tabindex="-1" aria-labelledby="modalProductsLabel" aria-hidden="true">
+                                                                        <div class="modal-dialog modal-dialog-centered">
+                                                                            <div class="modal-content">
+                                                                                <div class="modal-header">
+                                                                                    <h1 class="modal-title fs-2" id="modalProductsLabel">
+                                                                                        Productos de <%= categories.name %>
+                                                                                    </h1>
+                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                                                                </div>
+                                                                                <div class="modal-body">
+                                                                                    <!-- Aquí puedes mostrar la lista de productos de la categoría -->
+                                                                                    <!-- Puedes usar un bucle para recorrer los productos y mostrar la información -->
+                                                                                    <% categories.products.forEach(product => { %>
+                                                                                        <p><%= product.name %></p>
+                                                                                        <!-- Agrega más detalles según sea necesario -->
+                                                                                    <% }) %>
+                                                                                </div>
+                                                                                <div class="modal-footer">
+                                                                                    
+                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
                                                                     <div class="modal fade" id="modalDelete<%= id %>"
                                                                         tabindex="-1" aria-labelledby="modalDeleteLabel"
                                                                         aria-hidden="true">

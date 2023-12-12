@@ -78,7 +78,7 @@ module.exports = {
                 brands,
                 sections,
                 categories,
-                adminUser
+                adminUser,
             });
         } catch (err) {
             console.log("Error Product create route: ", err);
