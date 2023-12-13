@@ -1,9 +1,16 @@
-const {readJSON} = require('../../data')
+const db = require('../../database/models')
 
-module.exports = (req, res) => {
-    const categories = readJSON('categories.json')
+module.exports = async (req, res) => {
+  try {
+    const categories = await db.Category.findAll({
+      include: Product,
+    });
 
-    return res.render('/admin', {
-       ...categories
-    })
-}
+    return res.render('admin', {
+      categories,
+    });
+  } catch (error) {
+    console.error('error al cerrar la categoria:', error);
+    return res.status(500).send('Internal Server Error');
+  }
+};

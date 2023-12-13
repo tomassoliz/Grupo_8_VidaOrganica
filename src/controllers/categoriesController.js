@@ -1,13 +1,13 @@
 
-/*module.exports = {  
+module.exports = {  
     categoriesCreate: require('./categories/categoriesCreate'),
     categoriesAdd: require('./categories/categoriesAdd'),
     categoriesEdit: require('./categories/categoriesEdit'),
     categoriesRemove: require('./categories/categoriesRemove'),
     categoriesUpdate: require('./categories/categoriesUpdate'),
-}*/
+}
 
-const db = require('../database/models');
+/*const db = require('../database/models');
 const { Op } = require('sequelize');
 
 module.exports = {
@@ -136,4 +136,4 @@ module.exports = {
         }
       },
 
-}
+}*/

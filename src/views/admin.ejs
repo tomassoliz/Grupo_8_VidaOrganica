@@ -317,7 +317,7 @@
                                                                         <i class="fa-solid fa-trash"></i>
                                                                     </button>
                                                                     <button type="button" class="btn btn-sm btn-warning" 
-                                                                        onclick="editCategory(<%= id %>)">
+                                                                        onclick="editCategory(<%= categories.id %>)">
                                                                         <i class="fa-solid fa-pencil"></i> Actualizar
                                                                     </button>
                                                                     <button type="button" class="btn btn-sm btn-info" 
@@ -343,13 +343,13 @@
                                                                                 <div class="modal-body">
                                                                                     <!-- Aquí puedes mostrar la lista de productos de la categoría -->
                                                                                     <!-- Puedes usar un bucle para recorrer los productos y mostrar la información -->
-                                                                                    <% categories.products.forEach(product => { %>
+                                                                                    <% categories.forEach(product => { %>
                                                                                         <p><%= product.name %></p>
                                                                                         <!-- Agrega más detalles según sea necesario -->
                                                                                     <% }) %>
                                                                                 </div>
                                                                                 <div class="modal-footer">
-                                                                                    
+
                                                                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
                                                                                 </div>
                                                                             </div>
