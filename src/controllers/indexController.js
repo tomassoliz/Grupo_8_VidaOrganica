@@ -58,7 +58,8 @@ module.exports = {
                 order: ['name']
             });
             const categories = await db.Category.findAll({
-                order: ['name']
+                order: ['name'],
+                include: ['products']
             });
             const sections = await db.Section.findAll({
                 order: ['name']

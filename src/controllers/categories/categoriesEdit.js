@@ -5,12 +5,15 @@ module.exports =
         const { categoryId } = req.params;
     
         try {
-          const categories = await db.Category.findByPk(categoryId);
+          const categories = await db.Category.findByPk(categoryId,{
+            include:['products']
+          });
+          console.log(categories)
           if (!categories) {
             return res.status(404).send('Categoría no encontrada');
           }
     
-          res.render('admin/edit', {
+          res.render('admin', {
              categories 
             });
         } catch (error) {

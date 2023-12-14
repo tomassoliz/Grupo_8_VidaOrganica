@@ -9,7 +9,7 @@ const { categoriesCreate, categoriesAdd, categoriesEdit, categoriesUpdate, categ
 router
     .get('/categoriesAdd', categoriesAdd)
     .post('/categoriesAdd', categoriesCreate)
-    .get('/edit/:id', categoriesEdit)
+    .put('/categories/edit/:id', categoriesEdit)
     .put('/update/:id', categoriesUpdate)
     .delete('/categoriesRemove/:id', categoriesRemove)
     
@@ -20,7 +20,6 @@ router
     .post('/update/:categoryId/edit', categoriesController.update)
     .delete('/delete/:categoryId/delete', categoriesController.delete)
     .post('/delete/:categoryId/delete', categoriesController.confirmDelete)*/
-
 
 
 
