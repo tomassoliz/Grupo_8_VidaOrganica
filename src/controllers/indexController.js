@@ -51,7 +51,8 @@ module.exports = {
                 order: ['name']
             });
             const categories = await db.Category.findAll({
-                order: ['name']
+                order: ['name'],
+                include: ['products']
             });
             const sections = await db.Section.findAll({
                 order: ['name']
@@ -69,7 +70,7 @@ module.exports = {
                 brands,
                 sections,
                 categories,
-                adminUser
+                adminUser,
             });
         } catch (err) {
             console.log("Error Product create route: ", err);
@@ -104,7 +105,8 @@ module.exports = {
     
             console.log('Usuario después del cambio de rol:', user.toJSON());
     
-            return res.redirect('/admin'); 
+            return res.redirect('/admin')
+            
         } catch (error) {
             console.error(error);
             res.status(500).send('Error interno del servidor');

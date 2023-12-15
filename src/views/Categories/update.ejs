@@ -1,5 +1,13 @@
 <%- include('partials/head', { title: 'Update' }) %>
 
-
+<body>
+    <h1>Actualizar Categoría</h1>
+    <form action="/categories/<%= category.id %>/update" method="post">
+      <label for="name">Nuevo Nombre:</label>
+      <input type="text" id="name" name="name" value="<%= category.name %>" required>
+      <button type="submit">Actualizar Categoría</button>
+    </form>
+    <a href="/categories">Volver al Listado</a>
+  </body>
 
 <%- include('partials/footer') %>

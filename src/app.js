@@ -19,7 +19,10 @@ const app = express();
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', [
+  path.join(__dirname, 'views'), // Directorio principal de vistas
+  path.join(__dirname, 'views', 'categories') // Directorio específico de vistas de categorías
+]);
 app.set('view engine', 'ejs');
 
 app.use(methodOverride('_method'));

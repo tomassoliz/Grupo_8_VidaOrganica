@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<%- include('partials/head', { title: 'Home' }) %>
+
+<body>
+  <%- include('partials/header') %>
+    <div class="container mt-5">
+        <h1>Listado de Categorías</h1>
+        <ul class="list-group">
+            <% categories.forEach(category => { %>
+            <li class="list-group-item">
+                <a href="/categories/<%= category.id %>"><%= category.name %></a>
+            </li>
+            <% }) %>
+        </ul>
+        <a href="/categories/create" class="btn btn-primary mt-2">Crear Nueva Categoría</a>
+        <a href="/categories/edit" class="btn btn-primary mt-2">Editar una Categoría</a>
+        <a href="/categories/delete" class="btn btn-primary mt-2">Borrar una Categoría</a>
+        <a href="/categories/update" class="btn btn-primary mt-2">Actualizar una Categoría</a>
+
+    </div>
+  </body>
+
+<%- include('partials/footer') %>
+
+</html>|

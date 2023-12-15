@@ -1,5 +1,10 @@
-<%- include('partials/head', { title: 'Home' }) %>
+<%- include('partials/head', { title: 'Create' }) %>
 
-
+<h1>Crear Nueva Categoría</h1>
+    <form action="/categories/create" method="POST">
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">Crear Categoría</button>
+    </form>
 
 <%- include('partials/footer') %>

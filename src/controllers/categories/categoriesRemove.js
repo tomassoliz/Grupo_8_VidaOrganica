@@ -1,10 +1,29 @@
-const { readJSON, writeJSON } = require("../../data");
-module.exports = (req,res)=>{
-  console.log("estoy mandando este id")
-  const categories = readJSON('categories.json')
- // const id = req.params.id
-  const productModify = categories.filter(category => category.id !== id)
-  writeJSON(productModify,'categories.json')
-  return res.redirect('/admin')
-}
+
+const db = require('../../database/models')
+
+
+
+module.exports = 
+
+  async (req, res) => {
+    
+    console.log('ID del producto a eliminar:', req.params.id)
+    try {
+      
+      await db.Category.destroy({
+        where: {
+          id: req.params.id
+        }
+      })
+      console.log('Categoria eliminada => ')
+      return res.redirect('/admin')
+
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+
+
+
 
