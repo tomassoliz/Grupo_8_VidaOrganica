@@ -30,17 +30,42 @@ module.exports = async (req, res) => {
 
         } else {
 
-          if(req.files.length){
+          /* ???Length indefinido - server queda pensando y no elmina la imagen */
+          if(req.files/* .length */){/* con length comentado no creaa el producto pero guarda la imagen */
             req.files.forEach(file => {
-              existsSync('./public/images/' + file.filename) && 
-              unlinkSync('./public/images/' + file.filename)
+              existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
             });
           }
 
-          return res.render('productsAdd',{
+          ////////////////////////////////////////////////////
+
+          const brands = db.Brand.findAll({
+            order : ['name']
+          });
+
+          const categories = db.Category.findAll({
+            order : ['name']
+          });
+      
+          const sections = db.Section.findAll({
+            order : ['name']
+          });
+      
+          Promise.all([brands, sections, categories])
+            .then(([brands, sections, categories]) => {
+              return res.render("productsAdd", {
+                brands,
+                sections,
+                categories,
+                errors : errors.mapped(),
+                old : req.body
+              });
+            })
+////////////////////////////////////////////////////////////////
+          /* return res.render('productsAdd',{
             errors : errors.mapped(),
             old : req.body
-          })
+          }) */
         }
     }
     catch (error) {
