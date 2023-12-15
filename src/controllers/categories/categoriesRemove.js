@@ -15,7 +15,7 @@ module.exports =
           id: req.params.id
         }
       })
-      console.log('Producto eliminado => ')
+      console.log('Categoria eliminada => ')
       return res.redirect('/admin')
 
     } catch (error) {
@@ -26,24 +26,4 @@ module.exports =
 
 
 
-
-
-/*module.exports = (req, res) => {
-    async (req, res) => {
-        const { id } = req.params;
-    
-        try {
-          const category = await db.Category.distroy.findByPk(id);
-          if (!category) {
-            return res.status(404).send('Categoría no encontrada');
-          }
-    
-         return res.redirect('/admin')
-        } catch (error) {
-          console.error(error);
-          res.status(500).send('Error interno del servidor');
-        }
-      }
-    }
-*/
 
