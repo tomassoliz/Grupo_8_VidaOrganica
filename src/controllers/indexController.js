@@ -28,23 +28,12 @@ module.exports = {
     admin: async (req, res) => {
         try {
             const carousell = readJSON('carousell.json');
-            const products = await db.Image.findAll({
+            const products = await db.Product.findAll({
                 include: [
-                    {
-                        model: db.Product,
-                        include: [
-                            {
-                                model: db.Brand,
-                                // attributes : ['id', 'name'] para pasar solamente lo que necesite el front
-                            },
-                            {
-                                model: db.Section
-                            },
-                            {
-                                model: db.Category
-                            }
-                        ]
-                    }
+                    "brand",
+                    "section",
+                    "category",
+                    "images"
                 ]
             });
             const brands = await db.Brand.findAll({
@@ -64,6 +53,7 @@ module.exports = {
                     }
                 ]
             });
+            
             return res.render('admin', {
                 carousell,
                 products,
