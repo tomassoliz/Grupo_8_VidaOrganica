@@ -60,7 +60,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     // setionId: DataTypes.INTEGER,
     sectionId: {
-      allowNull: true,
+      allowNull: true,/*False: Lo cambie, ya que no tenemos section en ninguna vista e inpide la creación de producto */
       type: DataTypes.INTEGER,
       references: {
         model: "sections",

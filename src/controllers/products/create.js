@@ -4,11 +4,11 @@ const db = require('../../database/models');
 
 module.exports = async (req, res) => {
     
-try {    const errors = validationResult(req);
+/* try { */    const errors = validationResult(req);
 
     if(errors.isEmpty()){
       
-      const {name, price, discount, description, brand/* , section */, category} = req.body
+      const {name, price, discount, description, brand, section, category} = req.body
 
       db.Product.create({
         name : name.trim(),
@@ -16,7 +16,7 @@ try {    const errors = validationResult(req);
         discount : discount || 0,
         description : description.trim(),
         brandId : brand,
-        /* sectionId : section, */
+        sectionId : section,
         categoryId: category,
         image : req.files.image ? req.files.image[0].filename : null
       })
@@ -45,13 +45,13 @@ try {    const errors = validationResult(req);
      
 
     }else {
-
+/////////////////////////////////////////////////////
       if(req.files.length){/* No Funciona // No se crea el producto PEROSigue Guardando las Imagenes */
         req.files.forEach(file => {
           existsSync('./public/images/img-products' + file.filename) && unlinkSync('./public/images/img-products' + file.filename)
         });
       }
-
+//////////////////////////////////////////////////////////
       const brands = db.Brand.findAll({
         order : ['name']
       });
@@ -65,20 +65,20 @@ try {    const errors = validationResult(req);
       });
   
       Promise.all([brands, categories, sections])
-        .then(([brands, /* sections */, categories]) => {
+        .then(([brands, sections, categories]) => {
           return res.render("productsAdd", {
             brands,
+            sections,
             categories,
-           /*  sections, */
             errors : errors.mapped(),
             old : req.body
           });
         })
         .catch(error => console.log(error))
     }
-  }catch (error) {
+  /* }catch (error) {
     console.log("Error Product create route: ", error);
-}
+} */
 
 
   
