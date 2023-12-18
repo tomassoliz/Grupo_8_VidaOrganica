@@ -1,76 +1,85 @@
+const {validationResult} = require('express-validator');
 const {existsSync, unlinkSync} = require('fs')
-const { validationResult } = require('express-validator');
 const db = require('../../database/models');
 
 module.exports = async (req, res) => {
-  
-    try {
-        const errors = validationResult(req);
-        if(errors.isEmpty()){
-        
-          const {name, price, discount, description, brand, section, category} = req.body
+    
+try {    const errors = validationResult(req);
 
-          const product = await db.Product.create({
-            name : name.trim(),
-            price,
-            discount : discount || 0,
-            description : description.trim(),
-            brandId : brand,
-            sectionId : section || 1,
-            // ver porque necesita el id si tengo en add, 
-            // creo que es porque en el front no tiene el input de section y te lo toma como vacio por ende null?
-            categoryId : category,
-          })
-
-          await db.Image.create({
-              file: req.file.filename,
-              productId: product.id
-          })
-          return res.status(200).redirect('/admin');
-
-        } else {
-
-          /* ???Length indefinido - server queda pensando y no elmina la imagen */
-          if(req.files/* .length */){/* con length comentado no creaa el producto pero guarda la imagen */
-            req.files.forEach(file => {
-              existsSync('./public/images/' + file.filename) && unlinkSync('./public/images/' + file.filename)
-            });
-          }
-
-          ////////////////////////////////////////////////////
-
-          const brands = db.Brand.findAll({
-            order : ['name']
-          });
-
-          const categories = db.Category.findAll({
-            order : ['name']
-          });
+    if(errors.isEmpty()){
       
-          const sections = db.Section.findAll({
-            order : ['name']
-          });
-      
-          Promise.all([brands, sections, categories])
-            .then(([brands, sections, categories]) => {
-              return res.render("productsAdd", {
-                brands,
-                sections,
-                categories,
-                errors : errors.mapped(),
-                old : req.body
-              });
+      const {name, price, discount, description, brand/* , section */, category} = req.body
+
+      db.Product.create({
+        name : name.trim(),
+        price,
+        discount : discount || 0,
+        description : description.trim(),
+        brandId : brand,
+        /* sectionId : section, */
+        categoryId: category,
+        image : req.files.image ? req.files.image[0].filename : null
+      })
+        .then(product => {
+
+          if(req.files.images){
+            const images = req.files.images.map((file) => {
+                return {
+                  file : file.filename,
+                  main : false,
+                  productId : product.id,
+                }
             })
-////////////////////////////////////////////////////////////////
-          /* return res.render('productsAdd',{
+
+            db.Image.bulkCreate(images, {
+              validate : true
+            }).then(response => {
+              return res.redirect('/admin');
+            })
+          }else{
+            return res.redirect('/admin');
+
+          }
+        })
+        .catch(error => console.log(error))
+     
+
+    }else {
+
+      if(req.files.length){/* No Funciona // No se crea el producto PEROSigue Guardando las Imagenes */
+        req.files.forEach(file => {
+          existsSync('./public/images/img-products' + file.filename) && unlinkSync('./public/images/img-products' + file.filename)
+        });
+      }
+
+      const brands = db.Brand.findAll({
+        order : ['name']
+      });
+  
+      const categories = db.Category.findAll({
+        order: ['name']
+      })
+  
+      const sections = db.Section.findAll({
+        order : ['name']
+      });
+  
+      Promise.all([brands, categories, sections])
+        .then(([brands, /* sections */, categories]) => {
+          return res.render("productsAdd", {
+            brands,
+            categories,
+           /*  sections, */
             errors : errors.mapped(),
             old : req.body
-          }) */
-        }
+          });
+        })
+        .catch(error => console.log(error))
     }
-    catch (error) {
-        console.log("Error Product create route: ", error);
-    }
-  
+  }catch (error) {
+    console.log("Error Product create route: ", error);
+}
 
+
+  
   }

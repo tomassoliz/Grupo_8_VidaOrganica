@@ -11,7 +11,11 @@ const productValidator = require('../validations/productValidator');
 router
     .get('/detail/:id', detail)
     .get('/add', add)
-    .post('/add', upload.single('image'),  productValidator, create)
+    .post('/add', upload.fields([
+        {
+          name: "image",
+        },
+      ]),  productValidator, create)
     .get('/edit/:id', edit)
     .get('/carrito', cart)
     .put('/update/:id', upload.single('image'), update)

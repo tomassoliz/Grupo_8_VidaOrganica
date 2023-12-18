@@ -60,13 +60,22 @@ module.exports = (sequelize, DataTypes) => {
     },
     // setionId: DataTypes.INTEGER,
     sectionId: {
-      allowNull: false,
+      allowNull: true,
       type: DataTypes.INTEGER,
       references: {
         model: "sections",
         key: "id"
       }
     },
+    // imageId: DataTypes.STRING,
+    /* imageId: {
+      allowNull: true,
+      type: DataTypes.STRING,
+      references: {
+        model: "images",
+        key: "id"
+      }
+    }, */
   }, {
     sequelize,
     modelName: 'Product',

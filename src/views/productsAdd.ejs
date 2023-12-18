@@ -60,8 +60,8 @@
                         <label for="category" class="form__label">Categoria</label>
                         <div class="form__grupo-input">
                             <select type="text" id="category" name="category" class="form__input">
+                                <option selected hidden value="">Seleccione una categoria</option>
                                 <% categories.forEach(category=> { %>
-                                    <option selected hidden value="">Seleccione una categoria</option>
                                     <option value="<%= category.id %>">
                                         <%= category.name %>
                                     </option>
@@ -95,7 +95,7 @@
                         <label for="image" class="form__label-image">Agregar imagen</label>
                         <div class="form__grupo-input">
                             <!-- <img src="\images\DefaultProductImages.jpg" alt="img-default" id="img"/> -->                           
-                            <input class="form__input" type="file" id="image" name="image" onchange="return validarExt()">                               
+                            <input class="form__input" type="file" id="image" name="image" multiple onchange="return validarExt()">                               
                         </div>
                         <small class="text-danger"><%= locals.errors && (errors.image && errors.image.msg) %></small>
                     </div>

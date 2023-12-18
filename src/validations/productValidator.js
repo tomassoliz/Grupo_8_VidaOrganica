@@ -20,11 +20,11 @@ module.exports = [
             min : 20,
             max : 500
         }).withMessage('La descripción debe tener entre 20 y 500 caracteres'),
-    /* body('images')
+    body('image')
         .custom((value, {req}) => {
            if(req.files.image){
                 return true
            }
            return false
-        }).withMessage('No has subido ninguna imagen') */
+        }).withMessage('No has subido ninguna imagen')
 ]
