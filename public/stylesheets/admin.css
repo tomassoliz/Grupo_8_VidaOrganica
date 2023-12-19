@@ -1,6 +1,19 @@
-/*
+
+
+.container-tr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 
 @media (min-width: 320px) {
+    .container-tr {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
     .nav-tabs {
         display: flex;
         flex-wrap: nowrap;
@@ -25,7 +38,6 @@
     TD
     */
 
-    /*
     .td-description,
     .td-category,
     .td-price,
@@ -34,20 +46,14 @@
     }
 }
 
+
 @media (min-width: 768px) {
+
+
 
     .thList {
         display: flex;
         justify-content: space-between
-    }
-
-    td {
-        width: 100%,
-    }
-
-    .container-tr {
-        display: flex;
-        align-items: center;
     }
 
     .col-name,
@@ -71,20 +77,3 @@
     }
 
 }
-
-@media (min-width: 1280px) {
-
-    .tab-content {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-    /*.container-tr {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }
-*/
-/*
-}
-*/

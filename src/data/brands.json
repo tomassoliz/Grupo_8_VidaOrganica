@@ -305,6 +305,31 @@
     {
         "id": "483e24d9c-7ca6-4f96-92b0-b653830769f6",
         "name": "Oasis",
+        "origin": "Argentina"
+    },
+    {
+        "id": "493e24d9c-7ca6-4f96-92b0-b653830769f6",
+        "name": "Capilatis",
         "origin": " "
+    },
+    {
+        "id": "503e24d9c-7ca6-4f96-92b0-b653830769f6",
+        "name": "Biferdil",
+        "origin": ""
+    },
+    {
+        "id": "513e24d9c-7ca6-4f96-92b0-b653830769f6",
+        "name": "NaturalMente",
+        "origin": ""
+    },
+    {
+        "id": "523e24d9c-7ca6-4f96-92b0-b653830769f6",
+        "name": "Organica",
+        "origin": ""
+    },
+    {
+        "id": "533e24d9c-7ca6-4f96-92b0-b653830769f6",
+        "name": "Natier",
+        "origin": "Argentina"
     }
 ]

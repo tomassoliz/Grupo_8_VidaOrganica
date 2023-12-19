@@ -64,6 +64,7 @@ module.exports = {
                     }
                 ]
             });
+            
             return res.render('admin', {
                 carousell,
                 products,

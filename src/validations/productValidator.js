@@ -13,7 +13,7 @@ module.exports = [
         check('brand')
         .notEmpty().withMessage('La marca es requerida'),
         check('category')
-        .notEmpty().withMessage('no has escogido la categoría'),
+        .notEmpty().withMessage('No has escogido la categoría'),
     check('description')
         .notEmpty().withMessage('La descripción es requerida').bail()
         .isLength({
