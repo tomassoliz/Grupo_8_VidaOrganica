@@ -8,7 +8,7 @@ try {    const errors = validationResult(req);
 
     if(errors.isEmpty()){
       
-      const {name, price, discount, description, brand/* , section */, category} = req.body
+      const {name, price, discount, description, brand, category/* , section */} = req.body
 
       db.Product.create({
         name : name.trim(),
@@ -65,7 +65,7 @@ try {    const errors = validationResult(req);
       });
   
       Promise.all([brands, categories, sections])
-        .then(([brands, /* sections */, categories]) => {
+        .then(([brands, categories/*, sections */]) => {
           return res.render("productsAdd", {
             brands,
             categories,

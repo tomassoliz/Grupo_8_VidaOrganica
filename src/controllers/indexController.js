@@ -31,8 +31,8 @@ module.exports = {
             const products = await db.Product.findAll({
                 include: [
                     "brand",
-                    "section",
                     "category",
+                    "section",
                     "images"
                 ]
             });
