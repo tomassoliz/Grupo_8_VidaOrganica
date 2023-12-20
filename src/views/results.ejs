@@ -12,11 +12,18 @@
 				<h2>Resultados de la búsqueda: "<%= keywords %>"</h2>
 
 				<div class="container-result_products">
-					<% if (products.length) { %>
+					<% if (results.length) { %>
 						<div class="swiper mySwiper container-swiper-destacados">
 							<div class="swiper-wrapper">
 
-								<%- include('partials/products',{ products, activeSlider: false }) %>
+								<% results.forEach(product => { %>
+									
+										<%- include('partials/products',{
+											...product.dataValues,
+											toThousand
+										}) %>
+									
+								<% }) %>
 
 							</div>
 							<div class="swiper-button-next"></div>

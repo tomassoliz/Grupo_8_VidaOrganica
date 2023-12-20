@@ -28,7 +28,7 @@
                 <section class="formulario-register">
                     <div class="inputs">
                         <p>Los campos con (*) son obligatorios</p>
-                        <form class="formu" id="formuVal" method="POST">
+                        <form class="formu" id="form-register" method="POST">
                             <div class="espacio">
                                 <label for="name">Nombre<p>*</p></label>
                                 <input type="text" id="name" name="name" placeholder="Ej: Maria Perez" value="<%= locals.old && (old.name && old.name) %>"
@@ -83,9 +83,7 @@
             </main>
 
             <%- include('partials/footer') %>
-            <script src="/javascripts/registerValidation.js">
-
-            </script>
+            <script src="/javascripts/registerValidation.js"></script>
 
     </body>
 

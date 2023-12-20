@@ -51,6 +51,7 @@
                                                         <th scope class="col-#">#</th>
                                                         <th scope class="col-name">Nombre</th>
                                                         <th scope class="col-brand">Marca</th>
+                                                        <th scope class="col-section">Sección</th>
                                                         <th scope class="col-description">Descripción</th>
                                                         <th scope class="col-category">Categoría</th>
                                                         <th scope class="col-price">Precio</th>
@@ -62,7 +63,7 @@
                                                 <!-- PRODUCTOS DEL JSON -->
 
                                                 <tbody>
-                                                    <% products.forEach(({id, brand, category, file, name, description, price, discount}, index)=>
+                                                    <% products.forEach(({id, name, brand, category, section, price, discount, description, images, image}, index)=>
                                                         { %>
                                                         <tr class="container-tr">
                                                             <th scope="row">
@@ -74,6 +75,9 @@
                                                             <td class="td-brand">
                                                                 <%= brand.name ? brand.name : "-" %>
                                                             </td>
+                                                            <td class="td-section">
+                                                                <%= section.name %>
+                                                            </td>
                                                             <td class="td-description">
                                                                 <%= description %>
                                                             </td>
@@ -84,8 +88,7 @@
                                                                 <%= price %>
                                                             </td>
                                                             <td class="td-finalPrice">
-                                                                <%= price - (discount * price /
-                                                                    100) %>
+                                                                <%= price - (discount * price / 100) %>
                                                             </td>
                                                             <td>
                                                                 <div class="d-flex gap-2 col-actions">
@@ -114,7 +117,7 @@
                                                                                 <div class="modal-body">
                                                                                     <div class="row">
                                                                                         <div class="col-12 col-md-4">
-                                                                                            <img src="/images/img-products/<%= file %>"
+                                                                                            <img src="/images/img-products/<%= image %>"
                                                                                                 class="img-fluid"
                                                                                                 alt="">
                                                                                         </div>
@@ -192,285 +195,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="tab-pane fade" id="users-tab-pane" role="tabpanel"
-                                        aria-labelledby="users-tab" tabindex="0">
-
-                                        <div>
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col">Nombre</th>
-                                                        <th scope="col">Apellido</th>
-                                                        <th scope="col">Email</th>
-                                                        <th scope="col">Rol</th>
-                                                        <th scope="col">Acciones</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <% adminUser.forEach(({ id, name, surname, email, rol, image, Role
-                                                        }, index)=> { %>
-                                                        <form method="POST" action="/admin/change-role/<%= id %>">
-                                                            <tr>
-                                                                <th scope="row">
-                                                                    <%= index + 1 %>
-                                                                </th>
-                                                                <td>
-                                                                    <%= name %>
-                                                                </td>
-                                                                <td>
-                                                                    <%= surname %>
-                                                                </td>
-                                                                <td>
-                                                                    <%= email %>
-                                                                </td>
-                                                                <td>
-                                                                    <%= Role.name %>
-                                                                </td>
-                                                                <td>
-                                                                    <div class="d-flex gap-2">
-
-                                                                        <select name="newRole"
-                                                                            class="form-select form-select-sm"
-                                                                            aria-label="Cambiar Rol">
-                                                                            <option value="user" <%=rol==='user'
-                                                                                ? 'selected' : '' %>>Usuario</option>
-                                                                            <option value="admin" <%=rol==='admin'
-                                                                                ? 'selected' : '' %>>Administrador
-                                                                            </option>
-                                                                        </select>
-                                                                        <button type="submit"
-                                                                            class="btn btn-sm btn-success">Cambiar
-                                                                            Rol</button>
-
-                                                                    </div>
-                                                                </td>
-                                                            </tr>
-                                                        </form>
-                                                        <% }) %>
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-
-                                    </div>
-
-                                    <div class="tab-pane fade" id="category-tab-pane" role="tabpanel"
-                                        aria-labelledby="category-tab" tabindex="0">
-
-
-                                        <div>
-                                            <table class="table table-hover">
-                                                <div
-                                                    class="d-flex flex-column gap-2 flex-md-row justify-content-between my-3">
-                                                    <!-- Button trigger modal -->
-                                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                                                        data-bs-target="#exampleModal">
-                                                        <i class="fa-solid fa-plus"></i> Agregar
-                                                    </button>
-
-                                                    <!-- Modal -->
-                                                    <form action="/categories/categoriesAdd" method="POST">
-                                                        <div class="modal fade" id="exampleModal" tabindex="-1"
-                                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered">
-                                                                <div class="modal-content">
-
-                                                                    <div class="modal-header">
-                                                                        <h1 class="modal-title fs-5"
-                                                                            id="exampleModalLabel">
-                                                                            Agrega una nueva categoria</h1>
-                                                                        <button type="button" class="btn-close"
-                                                                            data-bs-dismiss="modal"
-                                                                            aria-label="Close"></button>
-                                                                    </div>
-                                                                    <div class="modal-body">
-                                                                        <div class="container_input-add">
-                                                                            <div class="input-add">
-                                                                                <label for="category">Categoría</label>
-                                                                                <input type="text" id="category"
-                                                                                    name="name"></input>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-
-                                                                    <div class="modal-footer">
-
-                                                                        <button type="reset"
-                                                                            class="btn btn-danger">Cancelar</button>
-
-
-                                                                        <button type="submit"
-                                                                            class="btn btn-primary">Guardar</button>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col">Nombre de la categoría</th>
-                                                        <th scope="col">Acciones</th>
-                                                    </tr>
-                                                </thead>
-
-                                                <tbody>
-                                                    <% categories.forEach(({id, name, products}, index)=> { %>
-                                                        <tr>
-                                                            <th scope="row">
-                                                                <%= index + 1 %>
-                                                            </th>
-                                                            <td>
-                                                                <%= name %>
-                                                            </td>
-                                                            <td>
-                                                                <div class="d-flex gap-2">
-                                                                    <button type="button" class="btn btn-sm btn-danger" data-bs-toggle="modal" 
-                                                                        data-bs-target="#deleteCategory<%= id %>">
-                                                                         <i class="fa-solid fa-trash"></i>
-                                                                    </button
-                                                                    
-                                                                    <!-- Modal para eliminar categorias -->
-                                                                    <div class="modal fade" id="deleteCategory<%= id %>" tabindex="-1" role="dialog" aria-labelledby="modalDeleteLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog" role="document">
-                                                                        <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title" id="modalDeleteLabel">Confirmar Eliminación</h5>
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <p>¿Estás seguro de que deseas eliminar este elemento?</p>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <form action="/categories/categoriesRemove/<%= id %>?_method=DELETE" method="POST" >
-                                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                                                                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                                                                            </form>
-                                                                        </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </div>
-
-                                                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" 
-                                                                        data-bs-target="#modalProducts<%= id %>">
-                                                                        <i class="fas fa-eye"></i> Ver Productos
-                                                                    </button>
-                                                                    
-                                                                    <!-- Modal para mostrar productos -->
-                                                                    <div class="modal fade" id="modalProducts<%= id %>" tabindex="-1" aria-labelledby="modalProductsLabel" aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h1 class="modal-title fs-2" id="modalProductsLabel">
-                                                                                        Productos de <%= categories.name %>
-                                                                                    </h1>
-                                                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <!-- Aquí puedes mostrar la lista de productos de la categoría -->
-                                                                                    <!-- Puedes usar un bucle para recorrer los productos y mostrar la información -->
-                                                                                    <% products.forEach(product => { %>
-                                                                                        <p><%= name %></p>
-                                                                                    <% }) %>
-                                                                                </div>
-                                                                                
-                                                                                <div class="modal-footer">
-
-                                                                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    
-                                                                    <!-- Botón de editar en la tabla -->
-
-                                                                    <button type="button" class="btn btn-sm btn-primary" data-bs-toggle="modal" 
-                                                                        data-bs-target="#editCategory<%= id %>">
-                                                                        <i class="fa-solid fa-pencil"></i> Editar
-                                                                    </button>
-
-                                                                    <!-- Modal de edición -->
-                                                                    <div class="modal fade" id="editCategory<%= id %>" tabindex="-1" role="dialog" aria-labelledby="editCategoryModalLabel" aria-hidden="true">
-                                                                    <div class="modal-dialog" role="document">
-                                                                        <div class="modal-content">
-                                                                        <div class="modal-header">
-                                                                            <h5 class="modal-title" id="editCategoryModalLabel">Editar Categoría</h5>
-                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                                            <span aria-hidden="true">&times;</span>
-                                                                            </button>
-                                                                        </div>
-                                                                        <div class="modal-body">
-                                                                            <form action="/categories/update/<%= id %>?_method=PUT" method="POST" id="editCategoryForm">
-                                                                            <div class="form-group">
-                                                                                <label for="editCategoryName">Nuevo Nombre:</label>
-                                                                                <input type="text" class="form-control" id="editCategoryName" name="name" value="<%= categories.name %>" required>
-                                                                            </div>
-                                                                            <button type="submit" class="btn btn-primary">Guardar cambios</button>
-                                                                            </form>
-                                                                        </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    </div>
-
-
-
-                                                                    <div class="modal fade" id="modalDelete<%= id %>"
-                                                                        tabindex="-1" aria-labelledby="modalDeleteLabel"
-                                                                        aria-hidden="true">
-                                                                        <div class="modal-dialog modal-dialog-centered">
-                                                                            <div class="modal-content">
-                                                                                <div class="modal-header">
-                                                                                    <h1 class="modal-title fs-5"
-                                                                                        id="modalDeleteLabel">
-                                                                                        Advertencia
-                                                                                    </h1>
-                                                                                    <button type="button"
-                                                                                        class="btn-close"
-                                                                                        data-bs-dismiss="modal"
-                                                                                        aria-label="Close"></button>
-                                                                                </div>
-                                                                                <div class="modal-body">
-                                                                                    <p>¿Estás seguro que querés eliminar
-                                                                                        el producto <b>"<%= name %>
-                                                                                                "</b> ?</p>
-                                                                                </div>
-                                                                                <div class="modal-footer">
-                                                                                    <button type="reset"
-                                                                                        class="btn btn-secondary"
-                                                                                        data-bs-dismiss="modal">Cancelar</button>
-                                                                                    <form
-                                                                                        action="/products/remove/<%= id %>?_method=DELETE"
-                                                                                        method="POST">
-                                                                                        <button type="submit"
-                                                                                            class="btn btn-danger">Eliminar</button>
-                                                                                    </form>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                            </td>
-                                                        </tr>
-                                                        <%}) %>
-                                                </tbody>
-                                            </table>
-
-                                        </div>
-
-                                        <div>
-                                            <form action="#" method="GET" class="d-flex gap-2 my-3">
-                                                <input type="text" class="form-control"
-                                                    placeholder="Intentar hacer lo mismo que productos" name="keywords">
-                                                <button type="submit" class="btn btn-outline-success">
-                                                    <i class="fas fa-search"></i>
-                                                </button>
-                                            </form>
-                                        </div>
-                                    </div>
+                                    
 
                                 </div>
                             </div>

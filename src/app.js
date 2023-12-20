@@ -12,6 +12,8 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const categoriesRouter = require('./routes/categories');
 // const brandsRouter = require('./routes/brands');
+const cartRouter = require('./routes/cart')
+
 const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require('./middlewares/localsCheck');
 
@@ -56,6 +58,7 @@ app.use('/users', usersRouter);
 app.use('/products',productsRouter)
 app.use('/categories',categoriesRouter)
 // app.use('/brands', brandsRouter)
+app.use('/cart', cartRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,7 +4,7 @@ module.exports = {
 
   destroy: async (req, res) => {
     
-    console.log('ID del producto a eliminar:', req.params.id)
+    // console.log('ID del producto a eliminar:', req.params.id)
     try {
       await db.Image.destroy({
         where: {
@@ -16,7 +16,7 @@ module.exports = {
           id: req.params.id
         }
       })
-      console.log('Producto eliminado => ')
+
       return res.redirect('/admin')
 
     } catch (error) {

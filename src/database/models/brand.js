@@ -11,8 +11,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Brand.hasMany(models.Product, {
-        onDelete: 'CASCADE',
-        hooks: true,
+        as : 'products',
+        foreignKey : 'brandId'
       });
     }
   }

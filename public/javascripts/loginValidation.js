@@ -26,7 +26,6 @@ window.onload = function () {
   });
 
 
-
 $("password").addEventListener("focus", function (e) {
     $("msgError-Pass").innerHTML = null;
     this.classList.remove("is-invalid");

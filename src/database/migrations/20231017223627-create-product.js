@@ -21,9 +21,6 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
-      stock: {
-        type: Sequelize.INTEGER
-      },
       brandId: {
         type: Sequelize.INTEGER,
         references : {

@@ -10,20 +10,12 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Image.belongsTo(models.Product);
+      
     }
   }
   Image.init({
     file: DataTypes.STRING,
-    // imageId: DataTypes.INTEGER
-    productId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "products", 
-        key: "id"
-      }
-    }
+    productId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Image',

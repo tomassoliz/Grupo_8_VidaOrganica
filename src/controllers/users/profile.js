@@ -1,23 +1,15 @@
-const db = require('../../database/models')
-const moment = require('moment')
+const db = require('../../database/models');
 
-module.exports = async (req, res) => {
-
-    try {
-        //TRAES EL USUARIO QUE TIENE EL MISMO ID
-        const user = await db.User.findByPk(req.session.userLogin.id, {
-            include: [
-                {
-                    model: db.Role
-                }
-                // saque el modelo de Address
-            ]
-        })          
-        return res.render('profile', {
-            ...user.dataValues,
-            moment
+module.exports = (req,res) => {
+    // findByPk busca el id
+    
+    db.User.findByPk(req.session.userLogin.id)
+        .then(user => {
+            const birthday = user.birthday ? new Date(user.birthday).toISOString() : null;  
+            return res.render('profile', {
+                ...user.dataValues,
+                birthday : birthday ? birthday.split('T')[0] : null
+            })
         })
-    } catch (error) {
-        console.log(error);
-    }
+        .catch(error => console.log(error))
 }

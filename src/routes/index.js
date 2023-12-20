@@ -9,6 +9,6 @@ router
     .get('/', index)
     .get('/admin',checkAdmin,admin)
     .get('/search', search)
-    .post('/admin/change-role/:userId', checkAdmin, changeUserRole)
+    // .post('/admin/change-role/:userId', checkAdmin, changeUserRole)
 
 module.exports = router;

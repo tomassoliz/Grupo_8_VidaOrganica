@@ -2,13 +2,13 @@ const {validationResult} = require('express-validator');
 const {existsSync, unlinkSync} = require('fs')
 const db = require('../../database/models');
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
     
-try {    const errors = validationResult(req);
+ const errors = validationResult(req);
 
     if(errors.isEmpty()){
       
-      const {name, price, discount, description, brand, category/* , section */} = req.body
+      const {name, price, discount, description, brand, category, section } = req.body
 
       db.Product.create({
         name : name.trim(),
@@ -16,7 +16,7 @@ try {    const errors = validationResult(req);
         discount : discount || 0,
         description : description.trim(),
         brandId : brand,
-        /* sectionId : section, */
+        sectionId : section,
         categoryId: category,
         image : req.files.image ? req.files.image[0].filename : null
       })
@@ -26,7 +26,6 @@ try {    const errors = validationResult(req);
             const images = req.files.images.map((file) => {
                 return {
                   file : file.filename,
-                  main : false,
                   productId : product.id,
                 }
             })
@@ -43,10 +42,9 @@ try {    const errors = validationResult(req);
         })
         .catch(error => console.log(error))
      
-
     }else {
 
-      if(req.files.length){/* No Funciona // No se crea el producto PEROSigue Guardando las Imagenes */
+      if(req.files.length){
         req.files.forEach(file => {
           existsSync('./public/images/img-products' + file.filename) && unlinkSync('./public/images/img-products' + file.filename)
         });
@@ -65,21 +63,15 @@ try {    const errors = validationResult(req);
       });
   
       Promise.all([brands, categories, sections])
-        .then(([brands, categories/*, sections */]) => {
+        .then(([brands, categories, sections ]) => {
           return res.render("productsAdd", {
             brands,
             categories,
-           /*  sections, */
+            sections, 
             errors : errors.mapped(),
             old : req.body
           });
         })
         .catch(error => console.log(error))
     }
-  }catch (error) {
-    console.log("Error Product create route: ", error);
 }
-
-
-  
-  }

@@ -6,23 +6,21 @@ module.exports = [
     body('email')
         .notEmpty().withMessage('El email es requerido').bail()
         .isEmail().withMessage('El formato no es correcto!'),
-    body('password')
-        .notEmpty().withMessage('La contraseña es requerida!!').bail()
-        .custom(async (value, { req }) => {
-            try {
-                const user = await db.User.findOne({
-                    where: {
-                        email: req.body.email
-                    }
-                });
+        body('password')
+        .notEmpty().withMessage('La contraseña es requerida!!')
+        .custom((value, {req}) => {
 
-                if (!user || !compareSync(value, user.password)) {
-                    return Promise.reject('Credenciales inválidas!');
+            return db.User.findOne({ //porque no tengo el id pero tengo el email
+                where : {
+                    email : req.body.email
                 }
-
-                return true;
-            } catch (error) {
-                console.error(error);
-            }
+            })
+                .then(user => {
+                    if(!user || !compareSync(value,user.password)){
+                        return Promise.reject() //rechaza la promesa pero en express generator como un false
+                    }
+                })
+                .catch(() => Promise.reject('Credenciales inválidas'))
+  
         })
 ]

@@ -1,24 +1,26 @@
 const db = require('../../database/models')
 
-module.exports = async (req, res) => {
-  try {
-    const brands = await db.Brand.findAll({
-      order: ['name']
-    });
+module.exports = (req, res) => {
 
-    const categories = await db.Category.findAll({
-      order: ['name']
-    })
+  const brands = db.Brand.findAll({
+    order: ['name']
+  });
+  const categories = db.Category.findAll({
+    order: ['name']
+  })
 
-    const sections = await db.Section.findAll({
-      order: ['name']
+  const sections = db.Section.findAll({
+    order: ['name']
+  });
+
+  Promise.all([brands, categories, sections])
+    .then(([brands, categories, sections]) => {
+      return res.render("productsAdd", {
+        brands,
+        categories,
+        sections
+      });
     })
-    return res.render('productsAdd', {
-      brands,
-      categories,
-      sections
-    })
-  } catch (error) {
-    console.log(error)
-  }
+    .catch(error => console.log(error))
+
 }

@@ -106,29 +106,28 @@
                 </section>
                 
                 <div class="container-articulo">
-                    <h2>destacados</h2>
-                    <div class="swiper mySwiper container-swiper-destacados">
-                        <div class="swiper-wrapper">
+                    <% sections.forEach(section => { %>
+                        <h3 class="mt-5"><%= section.name.toUpperCase() %></h3>
+                        <hr>
 
-                            <%- include('partials/products') %>
-                            
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                </div>
-                <div class="container-articulo">
-                    <h2>novedades</h2>
-                    <div class="swiper mySwiper container-swiper-novedades">
+                        <!-- <div class="swiper mySwiper container-swiper-destacados"> -->
+                            <!-- <div class="swiper-wrapper"> -->
+                                
+                                <section class="row">
+                                <% section.products.forEach((product) => { %>
+                                      <%- include('./partials/products', {
+                                        product,
+                                        toThousand
+                                      }) %>
+                                   
+                                <% }) %>
+                                </section>   
+                            <!-- </div> -->
 
-                        <div class="swiper-wrapper">
-
-                            <%- include('partials/products') %>
-                                                          
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+                            <!-- <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div> -->
+                        <!-- </div> -->
+                    <% }) %>
                 </div>
 
                 <div class="container_div_pie">
@@ -142,6 +141,7 @@
                 </div>
             </main>
 
+            <%- include('partials/scripts') %>
             <%- include('partials/footer') %>
 
     </body>

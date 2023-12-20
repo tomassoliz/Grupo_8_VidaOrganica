@@ -12,14 +12,19 @@ module.exports = {
       total: {
         type: Sequelize.INTEGER
       },
-      date: {
-        type: Sequelize.DATE
-      },
       userId: {
         type: Sequelize.INTEGER,
         references : {
           model : {
             tableName : 'Users'
+          }
+        }
+      },
+      statusId: {
+        type: Sequelize.INTEGER,
+        references : {
+          model : {
+            tableName : 'Statuses'
           }
         }
       },

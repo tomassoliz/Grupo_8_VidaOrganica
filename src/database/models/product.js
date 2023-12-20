@@ -24,14 +24,8 @@ module.exports = (sequelize, DataTypes) => {
        });
        Product.hasMany(models.Image, {
              as : 'images',
-             foreignKey: 'productId',
-             onDelete: 'CASCADE',
-             hooks: true,
+             foreignKey: 'productId'
            })
-      /* Product.belongsTo(models.Brand)
-      Product.belongsTo(models.Category)
-      Product.belongsTo(models.Section)
-      Product.hasMany(models.Image) */
     }
   }
   Product.init({
@@ -39,43 +33,10 @@ module.exports = (sequelize, DataTypes) => {
     price: DataTypes.INTEGER,
     discount: DataTypes.INTEGER,
     description: DataTypes.TEXT,
-    stock: DataTypes.INTEGER,
-    // brandId: DataTypes.INTEGER,
-    brandId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "brands", //referencia a la tabla 
-        key: "id" //foreignKey de la tabla
-      }
-    },
-    // categoryId: DataTypes.INTEGER,
-    categoryId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "categories",
-        key: "id"
-      }
-    },
-    // setionId: DataTypes.INTEGER,
-    sectionId: {
-      allowNull: true,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "sections",
-        key: "id"
-      }
-    },
-    // imageId: DataTypes.STRING,
-    /* imageId: {
-      allowNull: true,
-      type: DataTypes.STRING,
-      references: {
-        model: "images",
-        key: "id"
-      }
-    }, */
+    brandId: DataTypes.INTEGER,   
+    categoryId: DataTypes.INTEGER,  
+    sectionId: DataTypes.INTEGER,  
+    image : DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Product',

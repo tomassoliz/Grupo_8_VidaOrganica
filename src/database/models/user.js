@@ -10,9 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.belongsTo(models.Role);
-      // User.belongsTo(models.Address);
-      User.hasMany(models.Order)
     }
   }
   User.init({
@@ -21,28 +18,11 @@ module.exports = (sequelize, DataTypes) => {
     email: DataTypes.STRING,
     password: DataTypes.STRING,
     birthday: DataTypes.DATE,
+    address: DataTypes.STRING,
     about: DataTypes.TEXT,
     call: DataTypes.INTEGER,
     avatar: DataTypes.STRING,
-    address: DataTypes.STRING,
-    // addressId: DataTypes.INTEGER, correccion a string
-    // addressId: {
-    //   allowNull: false,
-    //   type: DataTypes.INTEGER,
-    //   references: {
-    //     model: "addresses", 
-    //     key: "id"
-    //   }
-    // },
-    // roleId: DataTypes.INTEGER
-    roleId: {
-      allowNull: false,
-      type: DataTypes.INTEGER,
-      references: {
-        model: "roles", 
-        key: "id"
-      }
-    },
+    roleId: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'User',

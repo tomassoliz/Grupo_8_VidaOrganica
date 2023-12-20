@@ -24,6 +24,9 @@ module.exports = {
       birthday: {
         type: Sequelize.DATE
       },
+      address : {
+        type : Sequelize.STRING
+      },
       about: {
         type: Sequelize.TEXT
       },
@@ -33,18 +36,6 @@ module.exports = {
       avatar: {
         type: Sequelize.STRING
       },
-      address: {
-        type: Sequelize.STRING
-      },
-      // correcion de address a string
-      // addressId: {
-      //   type: Sequelize.INTEGER,
-      //   references : {
-      //     model : {
-      //       tableName : 'Addresses'
-      //     }
-      //   }
-      // },
       roleId: {
         type: Sequelize.INTEGER,
         references : {

@@ -1,19 +1,31 @@
-<% products.forEach(({Product, file}) => { %> 
-    <div class="swiper-slide">
-        <section class="container-articulo-section">
-            <img class="imagen_producto" src="/images/img-products/<%= file %>"
-            alt="leche de almendras">
-            <div class="container-info-main">
-                <h4 class="description"><%= Product.name %></h4>
-                <% if (Product.discount === 0 || !Product.discount) { %>
-                    <p class="precio-card">$<%= Product.price %></p>
-                  <% } else { %>
-                    <p class="precio-card">$<%= Product.price - (Product.discount * Product.price / 100) %></p>
-                  <% } %>
-                <button class="button-card_carrito"><a class="link_card_carrito" href="/products/carrito">Agregar</a></button>
-                <button class="button-card"><a class="link_card" href="/products/detail/<%= Product.id%>">Ver más</a></button>
+<section class="container-articulo-section">
+    <img class="imagen_producto" src="/images/img-products/<%= product.image %>" alt="leche de almendras">
+    <div class="container-info-main">
+        <h4 class="description">
+            <%= product.name %>
+        </h4>
+        <% if (product.discount) { %>
+            <div class="container_price">
+                <h3 class="precio-card">$<span><%= toThousand(product.price - product.price * product.discount / 100)%></span></h3>
+                <p class="precio-card-linea">$<span class="text-decoration-line-through"><%= product.price %></span></p>
             </div>
-            <i class="fa-regular fa-heart" onclick="changeHeart(this)"></i>
-        </section>  
+            
+        <% }else{ %>
+            <h3 class="precio-card">$<span><%= toThousand(product.price) %></span></h3>
+        <% } %>
+        <hr>
+            <div class="description-cart">
+                <a class="button-card" href="/products/detail/<%= product.id %>">Ver mas</a>
+                <button class="button-cart" onclick="addItemToCart(1,'<%=product.id%>')"> <i class="fa-solid fa-cart-plus cart"></i> </button>
+            </div>
     </div>
-<% }) %>
+    <% if (product.discount) { %>
+        <h4 class="discount_view">
+        <span class="badge rounded-pill bg-danger">
+            <%= product.discount %>% OFF
+            </span>
+        </h4>
+        
+    <% } %>
+    <i class="fa-regular fa-heart" onclick="changeHeart(this)"></i>
+</section> 

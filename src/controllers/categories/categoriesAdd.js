@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
       categories,
     });
   } catch (error) {
-    console.error('error al cerrar la categoria:', error);
+
     return res.status(500).send('Internal Server Error');
   }
 };

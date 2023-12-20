@@ -18,7 +18,8 @@ module.exports = {
           model : {
             tableName : 'Products'
           }
-        }
+        },
+        onDelete : 'cascade'
       },
       createdAt: {
         allowNull: false,

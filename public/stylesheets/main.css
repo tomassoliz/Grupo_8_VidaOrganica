@@ -116,7 +116,7 @@
   .container-articulo-section i {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     font-size: 20px;
     color: var(--colorVerdeClaro);
   }
@@ -139,13 +139,21 @@
   }
 
   .description {
+    text-align: center;
     margin-top: 15px;
     font-size: 16px;
     color: black;
   }
 
+  .description-cart{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+  }
+
   .button-card {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: none;
     border-radius: 20px;
     color: white;
@@ -162,7 +170,7 @@
   }
 
   .button-card_carrito {
-    margin-top: 10px;
+    /* margin-top: 10px; */
     border: 1px solid var(--colorVerdeClaro);
     border-radius: 20px;
     background-color: transparent;
@@ -181,17 +189,46 @@
     transition: .3s;
   }
 
+  .button-cart{
+    background-color: transparent;
+    border: none;
+  }
+
+  .button-cart .cart{
+    position: static;
+    border: none;
+    color: var(--colorVerde);
+    font-size: 30px;
+    text-align: center;
+  }
+
   .link_card_carrito {
     color: var(--colorVerdeClaro);
   }
 
+  .container_price{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
   .precio-card {
     margin-top: 10px;
+    font-size: 30px;
+  }
+  .precio-card-linea {
+    margin-top: 0px;
     font-size: 20px;
   }
 
   .link_card {
     color: white;
+  }
+
+  .discount_view{
+    position: absolute;
+    top: 10px;
+    right: 10px;
   }
 
   /* SEGUINOS */

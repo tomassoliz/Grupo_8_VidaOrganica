@@ -11,9 +11,9 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Section.hasMany(models.Product, {
-        onDelete: 'CASCADE',
-        hooks: true,
-      });
+        as : 'products',
+        foreignKey : 'sectionId'
+      })
     }
   }
   Section.init({

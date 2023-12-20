@@ -9,6 +9,7 @@ const registerValidator = require('../validations/registerValidator');
 const checkAdmin = require('../middlewares/checkAdmin');
 const uploadUser = require('../middlewares/uploadUser');
 const { changeUserRole } = require('../controllers/indexController');
+const profileValidator = require('../validations/profileValidator');
 
 /* /users */
 
@@ -19,8 +20,8 @@ router
     .post('/login', loginValidator, processLogin)
     .get('/profile', checkUserLogin, profile)
     .get('/editProfile/:id', editProfile)
-    .put('/updateProfile/:id', uploadUser.single('image'), updateProfile) //no parametrizar
+    .put('/updateProfile/:id', uploadUser.single('image'), profileValidator, updateProfile)
     .get('/logout', logout)
     .get('/admin/:userId', loginValidator, checkAdmin, processLogin, adminMenu )
-    .post('/admin/change-role/:userId', checkAdmin, changeUserRole);
+    // .post('/admin/change-role/:userId', checkAdmin, changeUserRole);
 module.exports = router;

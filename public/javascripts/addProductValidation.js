@@ -1,77 +1,121 @@
-const form = document.getElementById('formulario');/* captura el formulario con id = productAdd */
-const inputs = document.querySelectorAll('#formulario input'); /* accede a los inputs del form con id = productAdd */
+const $ = id => document.getElementById(id);
 
+window.onload = function () {
 
-const expresiones = {
-	nombre: /^[a-zA-ZÀ-ÿ\s]{4,40}$/, // Letras y espacios, pueden llevar acentos.
-	precio: /^\d{2,15}$/, // 2 a 5 numeros.
-	descripcion: /^[a-zA-ZÀ-ÿ\s\d]{20,500}$/ // Descripcion,
+    $('name').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-name').innerHTML = "El nombre es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            case this.value.trim().length < 5:
+                $('msgError-name').innerHTML = "Mínimo cinco letras";
+                this.classList.add('is-invalid')
+                break
+            case !/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/.test(this.value.trim()):
+                $('msgError-name').innerHTML = "Solo se permiten letras";
+                this.classList.add('is-invalid')
+                break
+            default:
+                $('msgError-name').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+
+    $('price').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-price').innerHTML = "El precio es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            case this.value.trim().length < 2:
+                $('msgError-price').innerHTML = "Mínimo dos numeros";
+                this.classList.add('is-invalid')
+                break
+            case !/^[0-9]+$/.test(this.value.trim()):
+                $('msgError-price').innerHTML = "Solo se permiten numeros";
+                this.classList.add('is-invalid')
+                break
+            default:
+                $('msgError-price').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+    $('brand').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-brand').innerHTML = "La marca es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            default:
+                $('msgError-brand').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+
+    $('category').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-category').innerHTML = "La marca es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            default:
+                $('msgError-category').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+
+    $('section').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-section').innerHTML = "La marca es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            default:
+                $('msgError-section').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+
+    $('description').addEventListener('blur', function (e) {
+
+        switch (true) {
+            case !this.value.trim():
+                $('msgError-description').innerHTML = "El nombre es obligatorio"
+                this.classList.add('is-invalid')
+                break;
+            case this.value.trim().length < 2:
+                $('msgError-description').innerHTML = "Mínimo dos letras";
+                this.classList.add('is-invalid')
+                break
+            case !/^[A-Za-z\s\d!]+$/.test(this.value.trim()):
+                $('msgError-description').innerHTML = "Solo se permiten letras";
+                this.classList.add('is-invalid')
+                break
+            default:
+                $('msgError-description').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
+        }
+    });
+
 }
-
-const campos = {
-	name: false,
-	price: false,
-	description: false
-}
-
-const validarForm = (e) => {
-   switch (e.target.name) {
-    case 'name':
-        validarCampo(expresiones.nombre, e.target, 'name');
-    break;
-    case 'price':
-        validarCampo(expresiones.precio, e.target, 'price');
-    break;
-
-    case 'description':
-        validarCampo(expresiones.descripcion, e.target, 'description');
-    break;
-   }
-}
-
-const validarCampo = (expresion, input, campo) => {
-	if (expresion.test(input.value)) {
-		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-check-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-times-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.remove('formulario__input-error-activo');
-		campos[campo] = true;
-	} else {
-		document.getElementById(`grupo__${campo}`).classList.add('formulario__grupo-incorrecto');
-		document.getElementById(`grupo__${campo}`).classList.remove('formulario__grupo-correcto');
-		document.querySelector(`#grupo__${campo} i`).classList.add('fa-times-circle');
-		document.querySelector(`#grupo__${campo} i`).classList.remove('fa-check-circle');
-		document.querySelector(`#grupo__${campo} .formulario__input-error`).classList.add('formulario__input-error-activo');
-		campos[campo] = false;
-	}
-}
-
-inputs.forEach((input) =>{
-    input.addEventListener('keyup', validarForm);
-    input.addEventListener('blur', validarForm);
-})
-
-
-form.addEventListener('submit', () =>{
-    // e.preventDefault();
-
-    if (campos.name && campos.price && campos.description) {
-        // form.reset();
-
-        document.getElementById('form_mensaje-exito').classList.add('form_mensaje-exito-activo');
-        setTimeout(() => {
-			document.getElementById('form_mensaje-exito').classList.remove('form_mensaje-exito-activo');
-		}, 5000);
-
-		document.querySelectorAll('.form__grupo-correcto').forEach((icono) => {
-			icono.classList.remove('form__grupo-correcto');
-		});
-	} else {
-		document.getElementById('form_mensaje').classList.add('form_mensaje-activo');
-	}
-    
-}); 
 
 
 

@@ -15,100 +15,94 @@
 
                 <form action="" method="POST" class="container_form" id="formulario" enctype="multipart/form-data">
                     
-                    <div class="" id="visorArchivo">
-                        
-                    </div>
 
                     <div class="form__grupo " id="grupo__nombre">
                         <label for="name" class="form__label">Nombre</label>
                         <div class="form__grupo-input">
-                            <input type="text" id="name" name="name" class="form__input">
-                            <i class="form__validacion-estado fas fa-times-circle"></i>
+                            <input type="text" class="form-control <%= locals.errors && (errors.name && 'is-invalid') %>" id="name" placeholder="Nombre del producto" name="name" value="<%= locals.old && (old.name && old.name) %>">
                         </div>
-                        <p class="form__input-error">Debe tener almenos 4 caracteres, no se aceptan símbolos o
-                            caracteres especiales</p>
-                            <small class="text-danger"><%= locals.errors && (errors.name && errors.name.msg) %></small>
+                        <small class="ms-2 text-danger" id="msgError-name"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                     </div>
 
                     <div class="form__grupo" id="grupo__precio">
                         <label for="price" class="form__label">Precio</label>
                         <div class="form__grupo-input">
-                            <input type="text" id="price" name="price" class="form__input">
-                            <i class="form__validacion-estado fas fa-times-circle"></i>
+                            <input type="number" class="form-control <%= locals.errors && (errors.price && 'is-invalid') %>" id="price" name="price"  value="<%= locals.old && (old.price && old.price) %>">
                         </div>
-                        <p class="form__input-error">Solo numeros. Debe tener almenos 2 digitos</p>
-                        <small class="text-danger"><%= locals.errors && (errors.price && errors.price.msg) %></small>
+                        <small class="ms-2 text-danger" id="msgError-price"><%= locals.errors && (errors.price && errors.price.msg) %></small>
                     </div>
 
                     <div class="form__grupo" id="grupo__marca">
                         <label for="brand" class="form__label">Marca</label>
                         <div class="form__grupo-input">
-                            <select type="text" id="brand" name="brand" class="form__input">
-                                <option selected hidden value="">Seleccione una marca</option>
+                            <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>" aria-label="Default select example" name="brand" id="brand">
+                                <option selected hidden value="">Seleccione...</option>
                                 <% brands.forEach(brand=> { %>
-                                    <option value="<%= brand.id %>">
-                                        <%= brand.name %>
-                                    </option>
-                                    <% }) %>
-                            </select>
-                            <p class="form__input-error">Debe Seleccionar una marca</p>
-                            <small class="text-danger"><%= locals.errors && (errors.brand && errors.brand.msg) %></small>
+                                  <option value="<%= brand.id %>" <%= locals.old && (old.brand === brand.id && 'selected' )%> >
+                                    <%= brand.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+                            <small class="text-danger" id="msgError-brand"><%= locals.errors && (errors.brand && errors.brand.msg) %></small>
                         </div>
                     </div>
 
                     <div class="form__grupo" id="grupo__categoria">
                         <label for="category" class="form__label">Categoria</label>
                         <div class="form__grupo-input">
-                            <select type="text" id="category" name="category" class="form__input">
-                                <option selected hidden value="">Seleccione una categoria</option>
+                            <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category">
+                                <option selected hidden value="">Seleccione...</option>
                                 <% categories.forEach(category=> { %>
-                                    <option value="<%= category.id %>">
-                                        <%= category.name %>
-                                    </option>
-                                    <% }) %>
-                            </select>
-                            <p class="form__input-error">Debe Seleccionar una categoría</p>
-                            <small class="text-danger"><%= locals.errors && (errors.category && errors.category.msg) %></small>
+                                  <option value="<%= category.id %>" <%= locals.old && (old.category === category.id && 'selected' )%> >
+                                    <%= category.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+                            <small class="text-danger" id="msgError-category"><%= locals.errors && (errors.category && errors.category.msg) %></small>
+                        </div>
+                    </div>
+
+                    <div class="form__grupo" id="grupo__categoria">
+                        <label for="category" class="form__label">Seccion</label>
+                        <div class="form__grupo-input">
+                            <select class="form-select <%= locals.errors && (errors.section && 'is-invalid') %>" aria-label="Default select example" name="section" id="section">
+                                <option selected hidden value="">Seleccione...</option>
+                                <% sections.forEach(section=> { %>
+                                  <option value="<%= section.id %>" <%= locals.old && (old.section === section.id && 'selected' )%> >
+                                    <%= section.name %>
+                                  </option>
+                                  <% }) %>
+                              </select>
+                              <small class="ms-2 text-danger" id="msgError-section"><%= locals.errors && (errors.section && errors.section.msg) %></small>
                         </div>
                     </div>
 
                     <div class="form__grupo" id="grupo__descripcion">
                         <label for="description" class="form__label">Descripción</label>
-                        <div class="form__grupo-input">
-                            <input type="text" id="description" name="description" class="form__input"
-                                placeholder="Breve descripción del producto">
-                            <i class="form__validacion-estado fas fa-times-circle"></i>
-                        </div>
-                        <p class="form__input-error">debe tener almenos 20 caracteres</p>
-                        <small class="text-danger"><%= locals.errors && (errors.description && errors.description.msg) %></small>
+                        <textarea class="form-control <%= locals.errors && (errors.description && 'is-invalid') %>" style="resize: none;" name="description" id="description"><%= locals.old && (old.description && old.description) %></textarea>
+                        <small class="ms-2 text-danger" id="msgError-description"></small><%= locals.errors && (errors.description && errors.description.msg) %></small>
                     </div>
 
                     <div class="form__grupo" id="grupo__descuento">
                         <label for="discount" class="form__label">Descuento</label>
                         <div class="form__grupo-input">
                             <input type="number" id="discount" name="discount" class="form__input">
-                            <i class="form__validacion-estado fas fa-times-circle"></i>
                         </div>
                     </div>
 
-                    <div class=" form__grupo" id="grupo__imagen">
-                        <label for="image" class="form__label-image">Agregar imagen</label>
-                        <div class="form__grupo-input">
-                            <!-- <img src="\images\DefaultProductImages.jpg" alt="img-default" id="img"/> -->                           
-                            <input class="form__input" type="file" id="image" name="image" multiple onchange="return validarExt()">                               
-                        </div>
-                        <small class="text-danger"><%= locals.errors && (errors.image && errors.image.msg) %></small>
-                    </div>
+                    <div class="form_grupo">
 
-                    <div class="form__grupo form__grupo-btn-agregar">
-                        <button type="submit" class="form__btn">Agregar</button>
-                        <button type="reset" class="form__btn">Cancelar</button>
-                        <p class="form__mensaje-exito" id="form__mensaje-exito">Formulario enviado exitosamente!</p>
-                    </div>
+                        <div class="col-12 d-flex justify-content-end align-items-center gap-2 mb-3">
+                            <small class="ms-2 text-danger" id="msgError-images"><%= locals.errors && (errors.images && errors.images.msg) %></small>
+                            <label for="image" class="btn btn-secondary">Imagen principal</label>
+                            <input hidden class="form-control" type="file" id="image" name="image" >
+                            <label for="images" class="btn btn-secondary">Agregar imágenes</label>
+                            <input hidden class="form-control" type="file" id="images" name="images" multiple>
 
-                    <div class="form__mensaje" id="form__mensaje">
-                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
-                            correctamente.</p>
+                            <small  id="msgError-empty"  class="ms-2 text-danger"></small>
+                            <button class="btn btn-dark" type="submit">Guardar cambios</button>
+                            <button type="reset" class="form__btn">Cancelar</button>
+                          </div>
                     </div>
 
                 </form>
@@ -116,6 +110,6 @@
             </main>
 
             <%- include('partials/footer') %>
-            <script src="/javascripts/addAdmin.js"></script>
+            <script src="/javascripts/addProductValidation.js"></script>
     </body>
 </html>

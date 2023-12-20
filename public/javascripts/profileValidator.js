@@ -1,4 +1,6 @@
 const $ = id => document.getElementById(id);
+const baseURL = "https://apis.datos.gob.ar/georef/api"
+
 
 window.onload = async function(e){
 
@@ -6,7 +8,7 @@ window.onload = async function(e){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-name').innerHTML = "El nombre es obligatorio"
+                $('msgError-name').innerHTML = "El nombre es obligatorio!!!"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -31,7 +33,7 @@ window.onload = async function(e){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-surname').innerHTML = "El apellido es obligatorio"
+                $('msgError-surname').innerHTML = "El apellido es obligatorio!!!"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -73,25 +75,74 @@ window.onload = async function(e){
                 this.classList.remove('is-invalid')
                 break;
         }
-    });
+    })
     
     
+    
+    $('birthday').addEventListener('blur', function (e) {
+        const birthday = moment(this.value);
+        const minDate = moment().subtract(100, 'years');
+        const currentDate = moment();
 
-    
-    $("birthday").addEventListener("blur", function (e) {
         switch (true) {
-          case !this.value.trim():
-            $("msgError-birthday").innerHTML = "La fecha de nacimiento es obligatoria";
-            this.classList.add("is-invalid");
-            break;
-    
-          default:
-            $("msgError-birthday").innerHTML = null;
-            this.classList.add("is-valid");
-            this.classList.remove("is-invalid");
-            break;
+
+            case birthday.isBefore(minDate):
+                $('msgError-birthday').innerHTML = "Llego a una fecha maxima";
+                this.classList.add('is-invalid')
+                break
+            case birthday.isAfter(currentDate):
+                $('msgError-birthday').innerHTML = "Tiene que poner una fecha antes de la actual";
+                this.classList.add('is-invalid')
+                break
+            default:
+                $('msgError-birthday').innerHTML = null;
+                this.classList.add('is-valid')
+                this.classList.remove('is-invalid')
+                break;
         }
-      });
+    })
+
+      try {
+        // respuesta pedido por fetch, que recibe una url, ya agregamos las provincias
+        const response = await fetch(`${baseURL}/provincias`);
+        // tiene una espera para parsearlo
+        const result = await response.json();
+        // sort ordena ante de recorrerla
+        result.provincias.sort((a, b) => a.nombre > b.nombre ? 1 : a.nombre < b.nombre ? - 1 : 0).forEach(({ nombre }) => {
+            // tomamos el option y le agregamos lo lo que recorre
+            $('province').innerHTML += `<option value="${nombre}">${nombre}</option>`
+        });
+
+
+    } catch (error) {
+        console.error(error);
+    }
+    // cuando cambie "province" usamos change
+    $('province').addEventListener('change', async function (e) {
+        $('city').disabled = true
+
+        try {
+            // el value es del select de arriba por eso tiene el nombre
+            const response = await fetch(`${baseURL}/localidades?provincia=${this.value}&max=1000`);
+            const result = await response.json();
+
+            // cuando me responda
+            if (result) {
+                $('city').disabled = false
+                $('city').innerHTML = `<option value="">Seleccione...</option>`
+
+                result.localidades.sort((a, b) => a.nombre.localeCompare(b.nombre)).forEach(({ nombre }) => {
+                    $('city').innerHTML += `<option value="${nombre}">${nombre}</option>`
+                })
+            }
+
+        } catch (error) {
+            console.error(error);
+
+        }
+    });
+
+
     
     $('form-Profile').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -103,7 +154,7 @@ window.onload = async function(e){
             
             if(!elementsForm[i].value.trim()){
                 error = true;
-                $('msgError-empty').innerHTML = "El formulario tiene errores"
+                $('msgError-empty').innerHTML = "El formulario tiene errores, vuelva a intentarlo"
             }
 
         }

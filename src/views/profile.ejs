@@ -36,25 +36,22 @@
                                         <small class="ms-2 text-danger" id="msgError-surname"><%= locals.errors && (errors.surname && errors.surname.msg) %></small>
 
                                     </div>
+
+                        
+
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="email">Email</label>
                                         <input class="form-control" type="text" id="email" name="email" value="<%= email %>">
                                         <small class="ms-2 text-danger" id="msgError-email"><%= locals.errors && (errors.email && errors.email.msg) %></small>
 
                                     </div>
+
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="birthday">Cumpleaños</label>
-                                        <input class="form-control" type="date" id="birthday" name="birthday" value="<%= moment(birthday).format('YYYY-MM-DD') %>">
+                                        <input class="form-control" type="date" id="birthday" name="birthday" value="<%= birthday %>">
                                         <small class="ms-2 text-danger" id="msgError-birthday"><%= locals.errors && (errors.birthday && errors.birthday.msg) %></small>
-
                                     </div>
-                                    <div class="col-12 col-md-6 mb-3">
-                                        <label class="form-label" for="address">Dirección</label>
-                                        <input class="form-control" type="text" id="address" name="address" value="<%= address %>">
-                                        <small class="ms-2 text-danger" id="msgError-address"><%= locals.errors && (errors.address && errors.address.msg) %></small>
 
-
-                                    </div>
                                     <div class="col-12 col-md-6 mb-3">
                                         <label class="form-label" for="about">Acerca de mí</label>
                                         <textarea class="form-control" style="resize: none;" name="about" id="about"><%= about %></textarea>
@@ -63,12 +60,33 @@
                                         <label class="form-label" for="call">Teléfono</label>
                                         <input type="tel" id="call" class="form-control" name="call" value="<%= call %>">
                                     </div>
+
+                                    <div class="col-12 col-md-6 mb-3">
+                                        <div class="row">
+                                            <div class="col-12 mb-3">
+                                                <label for="address">Domicilio</label>
+                                                <input type="text" class="form-control" name="address" value="<%= address %>">
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                              <label for="province">Provincia</label>
+                                                <select id="province" class="form-control" name="province" >
+                                                  <option selected hidden>Elija la provincia...</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 mb-3">
+                                              <label for="city">Localidad</label>
+                                                <select id="city" class="form-control" name="city" disabled>
+                                                  <option selected hidden>Elija la localidad...</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="col-md-10 d-flex justify-content-start gap-3">
                                         <label for="image" class="btn btn-primary mt-3">Cambiar imagen</label>
                                         <input hidden class="form-control" type="file" id="image" name="image">
-                                        <button class="btn btn-success mt-3" type="submit">Guardar
-                                            cambios</button>
-                                        <small  id="msgError-empty"  class="ms-2 text-danger"></small>
+                                        <button class="btn btn-success mt-3" type="submit">Guardar cambios</button>
+                                        <small  id="msgError-empty" class="ms-2 text-danger"></small>
                                     </div>
                                 </form>
                             </div>
@@ -77,6 +95,8 @@
                 </div>
             </main>
             <%- include('partials/footer') %>
+
+            <script src="/javascripts/moment.js"></script>
             <script src="/javascripts/profileValidator.js"></script>
 
     </body>
