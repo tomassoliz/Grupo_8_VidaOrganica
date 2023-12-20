@@ -1,62 +1,68 @@
-import { Link, useLocation } from "react-router-dom"
-import PropTypes from 'prop-types';
+import { Link, useLocation } from 'react-router-dom'
 
-export const SideBar = ({show, setShow}) => {
-
-const location = useLocation()
+export const Sidebar = () => {
+  const location = useLocation()
 
   return (
-    <ul
-    className="navbar-nav bg-gradient-secondary sidebar sidebar-dark p-3"
-    id="accordionSidebar"
-    style={{position:"absolute","zIndex":1000, height:"100%", width:"250px", "left":show,}}
-  >
-    <div className="d-flex justify-content-end">
-    <button onClick={() => setShow(-250)} className="btn btn-outline-light border-0" style={{"width":"40px"}}><i className="fas fa-times"></i></button>
-    </div>
-    
-      <div className="p-4">
-        <img
-          className="w-100"
-        //   imagen de nuestro logo
-          src="/images/logo.png"
-          alt="Logo vida organica"
-        />
-      </div>
+    <ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-    <hr className="sidebar-divider my-0" />
-
-    <li className="nav-item">
-      <a className="nav-link" href="/">
-        <i className="fas fa-fw fa-tachometer-alt"></i>
-        <span>Dashboard - Vida Orgánica</span>
+      <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
+        <div className="sidebar-brand-icon">
+          <img
+            className="w-50"
+            src="/images/logo.png"
+            alt="logo vida organica" />
+        </div>
       </a>
-    </li>
 
-    <hr className="sidebar-divider" />
+      <hr className="sidebar-divider my-0" />
 
-    <div className="sidebar-heading">Actions</div>
+      <li className="nav-item active">
+        <a className="nav-link" href="/">
+          <i className="fas fa-fw fa-tachometer-alt"></i>
+          <span>Vida Orgánica</span></a>
+      </li>
 
-    <li className={`nav-item ${location.pathname === '/' && 'active'}`} >
-      <Link className="nav-link collapsed d-flex align-items-center" to="/"  onClick={() => setShow(-250)}>
-      <i className="fas fa-fw fa-home fa-lg"></i>
-        <span style={{fontSize:"1.2rem"}} className="ml-2"> Inicio</span>
-      </Link>
-    </li>
+      <hr className="sidebar-divider" />
 
-    <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
-      <Link className="nav-link  d-flex align-items-center" to="/products"  onClick={() => setShow(-250)}>
-        <i className="fas fa-fw fa-film fa-lg"></i>
-        <span style={{fontSize:"1.2rem"}} className="ml-2">Productos</span>
-      </Link>
-    </li>
+      <div className="sidebar-heading">Actions</div>
 
-    <hr className="sidebar-divider d-none d-md-block" />
-  </ul>
+      <li className={`nav-item ${location.pathname === '/' && 'active'}`}>
+        <Link className="nav-link collapsed" to="/">
+          <i className="fas fa-fw fa-home"></i>
+          <span>Inicio</span>
+        </Link>
+      </li>
+
+      <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
+        <Link className="nav-link" to="/products">
+          <i className="fas fa-fw fa-film"></i>
+          <span>Productos</span>
+        </Link>
+      </li>
+
+      <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
+        <Link className="nav-link" to="/products">
+          <i className="fas fa-fw fa-mobile"></i>
+          <span>Sin Azucar</span>
+        </Link>
+      </li>
+
+      <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
+        <Link className="nav-link" to="/products">
+          <i className="fas fa-fw fa-headphones"></i>
+          <span>Bebidas Dieteticas</span>
+        </Link>
+      </li>
+
+      <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
+        <Link className="nav-link" to="/products">
+          <i className="fas fa-fw fa-piggy-bank"></i>
+          <span>Ofertas</span>
+        </Link>
+      </li>
+
+      <hr className="sidebar-divider d-none d-md-block" />
+    </ul>
   )
-}
-
-SideBar.propTypes = {
-  setShow : PropTypes.func,
-  show : PropTypes.number
 }

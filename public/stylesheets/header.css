@@ -66,6 +66,9 @@
 .icono_buscador:hover {
     color: rgb(74, 158, 46);
 }
+.carrito_index{
+    color: var(--colorVerdeClaro);
+}
 
 /* SUBMENU */
 

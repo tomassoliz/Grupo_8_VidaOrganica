@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     about: DataTypes.TEXT,
     call: DataTypes.INTEGER,
     avatar: DataTypes.STRING,
-    roleId: DataTypes.INTEGER
+    roleId: DataTypes.INTEGER,
   }, {
     sequelize,
     modelName: 'User',

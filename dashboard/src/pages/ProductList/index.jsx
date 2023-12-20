@@ -16,7 +16,6 @@ export const ProductsListPage = () => {
     discount: "",
     brandId: "",
     sectionId: "",
-    categoriesId:"",
     description: "",
     image : ""
   });
@@ -31,7 +30,6 @@ export const ProductsListPage = () => {
       discount,
       brandId,
       sectionId,
-      categoriesId:"",
       description,
       image
     });

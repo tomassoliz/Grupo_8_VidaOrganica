@@ -36,7 +36,7 @@ export const getBrands = async() => {
         console.error
     }
 }
-export const getCategory = async() => {
+export const getCategories = async() => {
     try {
 
         const response = await fetch(`${import.meta.env.VITE_API_URL}/apis/categories`)

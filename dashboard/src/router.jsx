@@ -1,24 +1,20 @@
-import { createBrowserRouter } from 'react-router-dom'
+import {createBrowserRouter} from 'react-router-dom'
 import App from './App'
 import { HomeAdminPage } from './pages/HomeAdminPage'
-import { ProductsListPage } from './pages/ProductsListPage'
-import { loader as ProductListLoader} from './pages/ProductList/loader'
+import { ProductsListPage } from './pages/ProductList'
 
 export const router = createBrowserRouter([
     {
         path: '/',
-        // este es el layout, componentes en comun header, footer
-        element: <App />,
-        children: [
+        element :<App/>,
+        children : [
             {
-                // por default
-                index: true,
-                element: <HomeAdminPage />
+                index : true,
+                element : <HomeAdminPage/>
             },
             {
-                path: 'products',
-                element: <ProductsListPage />,
-                loader: ProductListLoader
+                path : 'products',
+                element: <ProductsListPage/>,
             }
         ]
     }

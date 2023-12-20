@@ -1,30 +1,24 @@
-import { useState } from 'react'
 import { Outlet } from 'react-router-dom'
-import './assets/css/app.css'
-import { SideBar } from './components/SideBar'
-import { TopBar } from './components/TopBar'
 import { Footer } from './components/Footer'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Sidebar } from './components/Sidebar'
+import { TopBar } from './components/TopBar'
+import './assets/css/app.css'
 
 function App() {
-  const [show, setShow] = useState(-250);
-
   return (
-    <Row>
-      <SideBar  show={show} setShow={setShow}/>
-      <Col sm={12}>
-      <TopBar setShow={setShow}/>
-      
-      </Col>
-      <Col sm={12}>
-      <Container>
-      <Outlet/>
-      </Container>
-      </Col>
-      <Col>
-      <Footer />
-      </Col>
-      </Row>
+    <div id="wrapper">
+      <Sidebar/>
+      <div id="content-wrapper" className="d-flex flex-column">
+        <div id="content">
+          <TopBar/>
+          <div className="container-fluid">
+            <Outlet/>
+          </div>
+        </div>
+
+        <Footer/>
+      </div>
+    </div>
   )
 }
 

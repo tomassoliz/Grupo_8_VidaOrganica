@@ -14,6 +14,7 @@ import PropTypes from "prop-types";
 import {
   createProduct,
   getBrands,
+  getCategories,
   getSections,
   updateProduct,
 } from "../services/products";
@@ -27,6 +28,7 @@ export const FormProduct = ({
   const [data, setData] = useState({
     brands: [],
     sections: [],
+    categories: [],
     loading: true,
   });
 
@@ -40,15 +42,18 @@ export const FormProduct = ({
       try {
         const sections = await getSections();
         const brands = await getBrands();
+        const categories = await getCategories();
 
         if (!sections) throw new Error("Error al traer las secciones");
         if (!brands) throw new Error("Error al traer las marcas");
+        if (!categories) throw new Error('Error al traer las categorías')
 
-        if (sections.ok && brands.ok) {
+        if (sections.ok && brands.ok && categories.ok) {
           setData({
             ...data,
             sections: sections.data,
             brands: brands.data,
+            categories: categories.data,
             loading: false,
           });
         }
@@ -68,17 +73,17 @@ export const FormProduct = ({
 
   const handleCleanForm = () => {
     setFormValues({
-      id: null,
       name: "",
-      price: "",
-      discount: "",
+      price: 0,
+      discount: 0,
       brandId: "",
       sectionId: "",
+      categoryId: "",
       description: "",
       image: "",
     });
     btnPrev.current.classList.remove('fa-sync-alt');
-    imgPrev.current.src = "/images/producto-sin-imagen.png";
+    imgPrev.current.src = "/images/sin-imagen.png";
     setChangeImage(false)
 
   };
@@ -123,6 +128,7 @@ export const FormProduct = ({
       </CardHeader>
       <CardBody>
         <Form className="row" onSubmit={handleSubmitForm}>
+
           <div className="d-flex mb-3 col-12">
            
               <div
@@ -130,7 +136,7 @@ export const FormProduct = ({
                 style={{ height: "100px" }}
               >
                 <img
-                  src={changeImage? URL.createObjectURL(formValues.image) : formValues.id ? formValues.image : "/images/producto-sin-imagen.png"}
+                  src={changeImage? URL.createObjectURL(formValues.image) : formValues.id ? formValues.image : "/images/sin-imagen.png"}
                   alt=""
                   height={150}
                   width={100}
@@ -154,9 +160,9 @@ export const FormProduct = ({
                 </FormLabel>                  
 
               </div>
-  
+          </div>
 
-            <Form.Group className="mb-3">
+            <Form.Group className="mb-3 col-12">
               <Form.Label>Nombre</Form.Label>
               <Form.Control
                 type="text"
@@ -165,8 +171,6 @@ export const FormProduct = ({
                 value={formValues.name}
               />
             </Form.Group>
-          </div>
-
           <Form.Group className="mb-3 col-12 col-md-6">
             <Form.Label>Precio</Form.Label>
             <Form.Control
@@ -229,6 +233,31 @@ export const FormProduct = ({
               {data.sections &&
                 data.sections.map(({ id, name }) =>
                   formValues.sectionId == id ? (
+                    <option key={id} selected value={id}>
+                      {name}
+                    </option>
+                  ) : (
+                    <option key={id} value={id}>
+                      {name}
+                    </option>
+                  )
+                )}
+            </Form.Select>
+          </Form.Group>
+
+          <Form.Group className="mb-3 col-12">
+            <Form.Label>Categoria</Form.Label>
+            <Form.Select
+              className={`form-control`}
+              name="categoryId"
+              onChange={handleInputChange}
+            >
+              <option hidden defaultValue>
+                Selecciona la sección...
+              </option>
+              {data.categories &&
+                data.categories.map(({ id, name }) =>
+                  formValues.categoryId == id ? (
                     <option key={id} selected value={id}>
                       {name}
                     </option>
