@@ -3,9 +3,9 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
 const methodOverride = require('method-override');
 const session = require('express-session');
+const cors = require('cors');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
@@ -13,12 +13,14 @@ const productsRouter = require('./routes/products');
 const categoriesRouter = require('./routes/categories');
 // const brandsRouter = require('./routes/brands');
 const cartRouter = require('./routes/cart')
+const apiRouter = require('./routes/apis');
 
 const cookieCheck = require('./middlewares/cookieCheck');
 const localsCheck = require('./middlewares/localsCheck');
 
 const app = express();
 
+app.use(cors());
 
 // view engine setup
 app.set('views', [
@@ -59,6 +61,7 @@ app.use('/products',productsRouter)
 app.use('/categories',categoriesRouter)
 // app.use('/brands', brandsRouter)
 app.use('/cart', cartRouter)
+app.use('/apis', apiRouter)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -13,6 +13,7 @@ module.exports = {
           brandId: 1,
           categoryId: 1,
           sectionId: 2,
+          image: ,
           createdAt: new Date(),
           updatedAt: new Date(),
         },
