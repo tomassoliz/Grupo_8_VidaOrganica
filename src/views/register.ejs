@@ -53,7 +53,11 @@
 
                             <div class="espacio">
                                 <label for="password">Contraseña<p>*</p></label>
-                                <input type="password" id="password" name="password" value="<%= locals.old && (old.password && old.password) %>" class="completar">
+                                <div style="position: relative;">
+                                    <input type="password" id="password" name="password" value="<%= locals.old && (old.password && old.password) %>" class="completar">
+                                    <a type="button" style="background-color: transparent; border: none; position: absolute; top: 7px; right: 15px; padding: 0;"><i  class="fa-solid fa-xl fa-eye"></i></a>
+                                </div>
+                                
                                 <small class="small_danger" id="msgError-password"><%= locals.errors && (errors.password && errors.password.msg) %></small>
                             </div>
 
@@ -76,6 +80,7 @@
                                 <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a></p>
                                 <p><a href="/users/login">¿Ya Tienes Cuenta?</a></p>
                             </section>
+                            <span class="small_danger" id="msgError-empty"></span>
                             <button type="submit" class="btn-submit"><span class="">CREAR CUENTA</span></button>
                         </form>
                     </div>

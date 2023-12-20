@@ -145,25 +145,6 @@ window.onload = function () {
         }
     });
 
-    // esto es para poner el ojo 
-    // al hacer click hace algo
-    $('viewPassword').addEventListener('click', function (e) {
-
-        $('msgError-password').innerHTML = null
-        $('password').classList.remove('is-invalid');
-        $('password').classList.remove('is-valid');
-
-        $('password').type = $('password').type === "text" ? "password" : "text"
-
-        this.classList.toggle("fa");
-        this.classList.toggle("fa-eye");
-
-        this.classList.toggle("fa-solid");
-        this.classList.toggle("fa-eye-slash");
-
-    });
-
-
     $('password2').addEventListener('focus', function (e) {
         $('msgError-password2').innerHTML = null
         this.classList.remove('is-invalid');
@@ -198,10 +179,11 @@ window.onload = function () {
         const elementsForm = this.elements;
         let error = false;
 
-        for (let i = 0; i < elementsForm.length - 1; i++) {
+        for (let i = 0; i < elementsForm.length - 3; i++) {
 
             // si esta vacio o esta invalido hace...
             if (!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')) {
+                console.log(!elementsForm[i].value && elementsForm[i]);
                 error = true;
                 elementsForm[i].classList.add('is-invalid');
                 $('msgError-empty').innerHTML = "El formulario tiene errors"
