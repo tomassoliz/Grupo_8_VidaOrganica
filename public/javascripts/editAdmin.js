@@ -51,7 +51,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-brand').innerHTML = "La marca es obligatorio"
+                $('msgError-brand').innerHTML = "La marca es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -66,7 +66,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-category').innerHTML = "La categoria es obligatorio"
+                $('msgError-category').innerHTML = "La categoría es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -81,7 +81,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-section').innerHTML = "La seccion es obligatorio"
+                $('msgError-section').innerHTML = "La sección es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -96,15 +96,15 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-description').innerHTML = "La descripcion es obligatorio"
+                $('msgError-description').innerHTML = "La descripción es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 10:
-                $('msgError-description').innerHTML = "Tiene que tenes por lo menos 10 letras";
+                $('msgError-description').innerHTML = "Debe contener como mínimo 10  letras";
                 this.classList.add('is-invalid')
                 break
             case !/^[A-Za-z\s\d!]+$/.test(this.value.trim()):
-                $('msgError-description').innerHTML = "No se permite caracteres especiales";
+                $('msgError-description').innerHTML = "No se permiten caracteres especiales";
                 this.classList.add('is-invalid')
                 break
             default:
@@ -129,7 +129,7 @@ window.onload = function () {
             if (!elementsForm[i].value.trim() || elementsForm[i].classList.contains('is-invalid')) {
                 error = true;
                 elementsForm[i].classList.add('is-invalid');
-                $('msgError-empty').innerHTML = "El formulario tiene errores, complete nuevamente"
+                $('msgError-empty').innerHTML = "El formulario tiene errores, volvé a intentarlo"
             }
         }
         // si no hay error mandame el formulario

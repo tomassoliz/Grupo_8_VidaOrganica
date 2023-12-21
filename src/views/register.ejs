@@ -31,7 +31,7 @@
                         <form class="formu" id="form-register" method="POST">
                             <div class="espacio">
                                 <label for="name">Nombre<p>*</p></label>
-                                <input type="text" id="name" name="name" placeholder="Ej: Maria Perez" value="<%= locals.old && (old.name && old.name) %>"
+                                <input type="text" id="name" name="name" placeholder="Ej: Maria" value="<%= locals.old && (old.name && old.name) %>"
                                     class="completar">
                                     <small class="small_danger" id="msgError-name"><%= locals.errors && (errors.name && errors.name.msg) %></small>
                                 
@@ -39,14 +39,14 @@
 
                             <div class="espacio">
                                 <label for="surname">Apellido<p>*</p></label>
-                                <input type="text" id="surname" name="surname" placeholder="Ej: Maria Perez" value="<%= locals.old && (old.surname && old.surname) %>"
+                                <input type="text" id="surname" name="surname" placeholder="Ej: Perez" value="<%= locals.old && (old.surname && old.surname) %>"
                                     class="completar">
                                     <small class="small_danger" id="msgError-surname"><%= locals.errors && (errors.surname && errors.surname.msg) %></small>
                             </div>
 
                             <div class="espacio">
                                 <label for="email">E-mail<p>*</p></label>
-                                <input type="email" id="email" name="email" placeholder="Ej: mariaperez@mercadoliebre.com" value="<%= locals.old && (old.email && old.email) %>"
+                                <input type="email" id="email" name="email" placeholder="Ej: mariaperez@vidasana.com" value="<%= locals.old && (old.email && old.email) %>"
                                     class="completar">
                                     <small class="small_danger" id="msgError-email"><%= locals.errors && (errors.email && errors.email.msg) %></small>
                             </div>
@@ -57,7 +57,6 @@
                                     <input type="password" id="password" name="password" value="<%= locals.old && (old.password && old.password) %>" class="completar">
                                     <a type="button" style="background-color: transparent; border: none; position: absolute; top: 7px; right: 15px; padding: 0;"><i  class="fa-solid fa-xl fa-eye"></i></a>
                                 </div>
-                                
                                 <small class="small_danger" id="msgError-password"><%= locals.errors && (errors.password && errors.password.msg) %></small>
                             </div>
 
@@ -75,13 +74,17 @@
                                     <label for="newsletter">Suscribirme al newsletter </label>
                                     <input type="checkbox" value="Suscripción" class="completar">
                                 </div>
+                                <div>
+                                    <label for="terminos-condiciones">Estoy de acuerdo con <a href="#"> Terminos y Condiciones  </label>
+                                    <input type="checkbox" value="Suscripción" class="completar">
+                                </div>
                             </section>
-                            <section class="register_terminos">
-                                <p>Estoy de acuerdo con <a href="#"> Terminos y Condiciones</a></p>
-                                <p><a href="/users/login">¿Ya Tienes Cuenta?</a></p>
+                            <br>
+                            <section class="register_">
+                                <p><a href="/users/login"><b>¿Ya Tienes Cuenta?</b></a></p>
                             </section>
                             <span class="small_danger" id="msgError-empty"></span>
-                            <button type="submit" class="btn-submit"><span class="">CREAR CUENTA</span></button>
+                            <button type="submit" class="btn-submit"  style="display:flex"><span class="">CREAR CUENTA</span></button>
                         </form>
                     </div>
                 </section>

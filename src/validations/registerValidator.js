@@ -10,6 +10,7 @@ module.exports = [
     .bail()
     .isAlpha('es-ES')
     .withMessage("Solo se permiten caracteres alfabéticos"),
+
   check("surname")
     .isLength({
       min: 2,
@@ -18,6 +19,7 @@ module.exports = [
     .bail()
     .isAlpha()
     .withMessage("Solo se permiten caracteres alfabéticos"),
+
   check("email")
     .notEmpty()
     .withMessage("El email es obligatorio")
@@ -39,6 +41,7 @@ module.exports = [
           .catch(() => Promise.reject('El email ya se encuentra registrado'))
 
     }),
+    
   check("password")
     .isLength({
       min: 6,

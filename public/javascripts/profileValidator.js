@@ -8,7 +8,7 @@ window.onload = async function(e){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-name').innerHTML = "El nombre es obligatorio!!!"
+                $('msgError-name').innerHTML = "El nombre es obligatorio!"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -33,7 +33,7 @@ window.onload = async function(e){
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-surname').innerHTML = "El apellido es obligatorio!!!"
+                $('msgError-surname').innerHTML = "El apellido es obligatorio"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:
@@ -62,11 +62,11 @@ window.onload = async function(e){
     
         switch (true) {
             case !this.value.trim():
-                $('msgError-email').innerHTML = "El email es obligatorioo!!!"
+                $('msgError-email').innerHTML = "El email es obligatorioo!"
                 this.classList.add('is-invalid')
                 break;
             case !/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(this.value.trim()):
-                $('msgError-email').innerHTML = "El formato es inválido";
+                $('msgError-email').innerHTML = "Formato inválido";
                 this.classList.add('is-invalid')
                 break
             default:
@@ -87,11 +87,11 @@ window.onload = async function(e){
         switch (true) {
 
             case birthday.isBefore(minDate):
-                $('msgError-birthday').innerHTML = "Llego a una fecha maxima";
+                $('msgError-birthday').innerHTML = "La fecha que seleccionaste es inválida";
                 this.classList.add('is-invalid')
                 break
             case birthday.isAfter(currentDate):
-                $('msgError-birthday').innerHTML = "Tiene que poner una fecha antes de la actual";
+                $('msgError-birthday').innerHTML = "La fecha que seleccionaste es inválida, seleccioná una anterior";
                 this.classList.add('is-invalid')
                 break
             default:
@@ -154,7 +154,7 @@ window.onload = async function(e){
             
             if(!elementsForm[i].value.trim()){
                 error = true;
-                $('msgError-empty').innerHTML = "El formulario tiene errores, vuelva a intentarlo"
+                $('msgError-empty').innerHTML = "El formulario tiene errores, volvé a intentarlo"
             }
 
         }

@@ -1,53 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<%- include('partials/head', {
-    title: 'Productos'
-}) %>
+<%- include('partials/head', { title: 'Productos' }) %>
 
     <body>
 
         <%- include('partials/header') %>
-        <div class="carrito_body-title">
-            <p class="cart_detail"><a href="/">home</a> <i class="fa-solid fa-chevron-right"></i> <a
-                    href="#"><%= product.name %></a></p>
-            <h2 class="carrito_main_title">Detalle de producto</h2>
-        </div>
+            <div class="carrito_body-title">
+                <p class="cart_detail"><a href="/">Home</a> <i class="fa-solid fa-chevron-right"></i> <a href="#">
+                        <%= product.name %>
+                    </a></p>
+                <h2 class="carrito_main_title">Detalle del producto</h2>
+            </div>
             <main class="container-general">
                 <div class="container-img">
                     <img src="/images/img-products/<%= product.image %>" alt="">
                 </div>
-                <div class="container-info-product">
+                <div class="container-info-product" style="font-size: 17px;">
                     <div class="container-name">
-                        <span><%= product.name %></span>
+                        <span><b>
+                                <%= product.name %>
+                            </b></span>
                     </div>
-                    <div class="container-price">
-                        <span>$<%= product.price - (product.discount * product.price / 100) %></span>
-                        
-                    </div>
+
                     <div class="container-description">
-                        <div class="title-decription">
-                            <h4>Descripción</h4>
+                        <div class="title-decription" style="font-size: 15px;">
+                            <p><u>Descripción</u></p>
                         </div>
-                        <div class="text-description">
-                            <p><%= product.description %>
+                        <div class="text-description" style="font-size: 18px;">
+                            <p>
+                                <%= product.description %>
                             </p>
                         </div>
                     </div>
-                    
+
                     <div class="container-reviews">
                         <div class="title-reviews">
-                            <h4>Reseñas</h4>
+                            <p><u>Reseñas</u></p>
                             <i class="fa-solid fa-chevron-down"></i>
                         </div>
-                        <div class="text-reviews">
-                            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus praesentium cum culpa soluta corporis ipsa mollitia esse expedita eaque asperiores consequuntur consequatur impedit, molestiae voluptatum iusto unde laboriosam molestias obcaecati? </p>
+                        <div class="text-reviews" style="font-size: 15px;">
+                            <p> Producto de primera calidad y natural, fue un cambio rotundo para comenzar una
+                                alimentación y estilo de vida saludable. El empaque fomenta la sustentabilidad, siendo
+                                amigables con el medio ambiente. No contiene colorantes, conservantes ni edulcorantes
+                                artificiales.
+                                Recomiendo este producto a todos aquellos que buscan una alternativa deliciosa y
+                                consciente para mejorar su alimentación diaria. </p>
                         </div>
                     </div>
                     <div class="container-details-product">
+                        <div class="container-price" style="text-align: center;">
+                            <span>$<%= product.price - (product.discount * product.price / 100) %></span>
+                        </div>
                         <div class="form-group">
                             <select name="cantidad" id="cantidad">
-                                <option disabled selected value="">Escoge una Opción</option>
+                                <option disabled selected value="">Escoge una opción</option>
                                 <option value="medida-uno">300gr</option>
                                 <option value="medida-dos">500gr</option>
                                 <option value="medida-tres">1kg</option>
@@ -55,20 +62,24 @@
                             </select>
                         </div>
                     </div>
-                    <span class="span_exist">Hay existencias</span>
-                    <div class="container-add-cart">
-                        <div class="container-quantity">
+                    <span class="span_exist" style="text-align: center;">
+                        <h5>Tenemos stock 🥳</h5>
+                    </span>
+                    <div class="container-add-cart" >
+                        <div class="container-quantity" >
                             <input class="input-quantity" type="number" placeholder="1" value="1" min="1">
                             <div class="btn-increment-decrement">
                                 <i class="fa-solid fa-chevron-up"></i>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </div>
                         </div>
-                        <button type="button" onclick="addItemToCart(1,'<%= product.id %>')" class="btn btn-dark">Comprar</button>
+                        <button type="button" onclick="addItemToCart(1,'<%= product.id %>')"
+                            class="btn btn-dark">Comprar</button>
                     </div>
                     <div class="container-social">
-                        <span>Compartir</span>
-                        <div class="container-buttons-social">
+
+                        <div class="container-buttons-social" style="padding-left: 40%;">
+                            <span>Compartir</span>
                             <a href="#"><i class="fa-brands fa-facebook"></i></a>
                             <a href="#"><i class="fa-brands fa-twitter"></i></a>
                             <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -133,7 +144,7 @@
             </section> -->
             </div>
             <%- include('partials/scripts') %>
-            <%- include('partials/footer') %>
+                <%- include('partials/footer') %>
 
     </body>
 
