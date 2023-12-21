@@ -10,6 +10,7 @@ module.exports = [
         .bail()
         .isAlpha('es-ES', { ignore: ' ' })
         .withMessage("Solo se permiten caracteres alfabéticos"),
+
     check("surname")
         .isLength({
             min: 2,
@@ -18,6 +19,7 @@ module.exports = [
         .bail()
         .isAlpha('es-ES', { ignore: ' ' })
         .withMessage("Solo se permiten caracteres alfabéticos"),
+
     body('birthday')
         .custom((value) => {
             const birthday = moment(value);
@@ -33,7 +35,7 @@ module.exports = [
             const currentDate = moment();
 
             if (birthday.isAfter(currentDate)) {
-                throw new Error("Elija una fecha anterior a la actual")
+                throw new Error("Fecha inválida. Eligí una anterior")
             }
             return true
         })

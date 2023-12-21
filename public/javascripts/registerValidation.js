@@ -186,7 +186,7 @@ window.onload = function () {
                 console.log(!elementsForm[i].value && elementsForm[i]);
                 error = true;
                 elementsForm[i].classList.add('is-invalid');
-                $('msgError-empty').innerHTML = "El formulario tiene errors"
+                $('msgError-empty').innerHTML = "El formulario tiene errores"
             }
         }
         // si no hay error mandame el formulario

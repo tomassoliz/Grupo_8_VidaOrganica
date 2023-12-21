@@ -5,9 +5,10 @@ const db = require('../database/models')
 module.exports = [
     body('email')
         .notEmpty().withMessage('El email es requerido').bail()
-        .isEmail().withMessage('El formato no es correcto!'),
+        .isEmail().withMessage('El formato no es correcto'),
+
         body('password')
-        .notEmpty().withMessage('La contraseña es requerida!!')
+        .notEmpty().withMessage('La contraseña es requerida')
         .custom((value, {req}) => {
 
             return db.User.findOne({ //porque no tengo el id pero tengo el email

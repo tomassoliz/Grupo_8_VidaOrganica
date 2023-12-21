@@ -51,7 +51,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-brand').innerHTML = "La marca es obligatorio"
+                $('msgError-brand').innerHTML = "La marca es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -66,7 +66,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-category').innerHTML = "La marca es obligatorio"
+                $('msgError-category').innerHTML = "La categoría es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -81,7 +81,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-section').innerHTML = "La marca es obligatorio"
+                $('msgError-section').innerHTML = "La sección es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             default:
@@ -96,7 +96,7 @@ window.onload = function () {
 
         switch (true) {
             case !this.value.trim():
-                $('msgError-description').innerHTML = "El nombre es obligatorio"
+                $('msgError-description').innerHTML = "La descripción es obligatoria"
                 this.classList.add('is-invalid')
                 break;
             case this.value.trim().length < 2:

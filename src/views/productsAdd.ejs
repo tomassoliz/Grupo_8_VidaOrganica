@@ -7,7 +7,7 @@
         <%- include('partials/header') %>
 
             <main>
-                <p class="cart_detail"><a href="/">home</a><i class="fa-solid fa-chevron-right"></i><a href="#"> añadir
+                <p class="cart_detail"><a href="/">Home</a><i class="fa-solid fa-chevron-right"></i><a href="#"> Añadir
                         producto</a></p>
 
                 <h2 class="title_form-add">Añadir productos</h2>
@@ -36,7 +36,7 @@
                         <label for="brand" class="form__label">Marca</label>
                         <div class="form__grupo-input">
                             <select class="form-select <%= locals.errors && (errors.brand && 'is-invalid') %>" aria-label="Default select example" name="brand" id="brand">
-                                <option selected hidden value="">Seleccione...</option>
+                                <option selected hidden value="">Selecciona...</option>
                                 <% brands.forEach(brand=> { %>
                                   <option value="<%= brand.id %>" <%= locals.old && (old.brand === brand.id && 'selected' )%> >
                                     <%= brand.name %>
@@ -48,10 +48,10 @@
                     </div>
 
                     <div class="form__grupo" id="grupo__categoria">
-                        <label for="category" class="form__label">Categoria</label>
+                        <label for="category" class="form__label">Categoría</label>
                         <div class="form__grupo-input">
                             <select class="form-select <%= locals.errors && (errors.category && 'is-invalid') %>" aria-label="Default select example" name="category" id="category">
-                                <option selected hidden value="">Seleccione...</option>
+                                <option selected hidden value="">Selecciona...</option>
                                 <% categories.forEach(category=> { %>
                                   <option value="<%= category.id %>" <%= locals.old && (old.category === category.id && 'selected' )%> >
                                     <%= category.name %>
@@ -66,7 +66,7 @@
                         <label for="category" class="form__label">Seccion</label>
                         <div class="form__grupo-input">
                             <select class="form-select <%= locals.errors && (errors.section && 'is-invalid') %>" aria-label="Default select example" name="section" id="section">
-                                <option selected hidden value="">Seleccione...</option>
+                                <option selected hidden value="">Selecciona...</option>
                                 <% sections.forEach(section=> { %>
                                   <option value="<%= section.id %>" <%= locals.old && (old.section === section.id && 'selected' )%> >
                                     <%= section.name %>

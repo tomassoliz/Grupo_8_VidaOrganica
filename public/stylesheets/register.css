@@ -73,17 +73,18 @@
 
 .extras {
     margin: 20px auto;
-}
-
-.container-promociones label,
-.container-newsletter label {
     font-size: 15px;
 }
+
+/* .container-promociones label,
+.container-newsletter label {
+    font-size: 15px;
+} */
 
 
 .container-promociones input,
 .container-newsletter input {
-    margin: 0px 5px;
+    margin: 0px 7px;
 }
 
 .formulario-register a {
