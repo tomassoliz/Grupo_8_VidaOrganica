@@ -94,14 +94,13 @@
 
                         <div class="col-12 d-flex justify-content-end align-items-center gap-2 mb-3">
                             <small class="ms-2 text-danger" id="msgError-images"><%= locals.errors && (errors.images && errors.images.msg) %></small>
-                            <label for="image" class="btn btn-secondary">Imagen principal</label>
+                            <label for="image" class="btn btn-secondary">Imagen</label>
                             <input hidden class="form-control" type="file" id="image" name="image" >
-                            <label for="images" class="btn btn-secondary">Agregar imágenes</label>
-                            <input hidden class="form-control" type="file" id="images" name="images" multiple>
+                            <!-- <label for="images" class="btn btn-secondary">Agregar imágenes</label> -->
+                            <!-- <input hidden class="form-control" type="file" id="images" name="images" multiple> -->
 
                             <small  id="msgError-empty"  class="ms-2 text-danger"></small>
                             <button class="btn btn-dark" type="submit">Guardar cambios</button>
-                            <button type="reset" class="form__btn">Cancelar</button>
                           </div>
                     </div>
 

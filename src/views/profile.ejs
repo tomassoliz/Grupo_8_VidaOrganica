@@ -70,7 +70,11 @@
                                             <div class="col-12 mb-3">
                                               <label for="province">Provincia</label>
                                                 <select id="province" class="form-control" name="province" >
+                                                    <% if (addressApi) { %>
+                                                        <option selected value="<%= addressApi.province %>"><%= addressApi.province %></option>
+                                                    <% } else { %>
                                                   <option selected hidden>Elija la provincia...</option>
+                                                  <% } %>
                                                 </select>
                                             </div>
                                             <div class="col-12 mb-3">

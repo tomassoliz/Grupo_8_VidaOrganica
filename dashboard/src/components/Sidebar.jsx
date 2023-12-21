@@ -36,7 +36,7 @@ export const Sidebar = () => {
 
       <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
         <Link className="nav-link" to="/products">
-          <i className="fas fa-fw fa-film"></i>
+          <i className="fa-solid fa-box-open"></i>
           <span>Productos</span>
         </Link>
       </li>
@@ -44,14 +44,15 @@ export const Sidebar = () => {
       <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
         <Link className="nav-link" to="/products">
           <i className="fas fa-fw fa-mobile"></i>
-          <span>Sin Azucar</span>
+          
+          <span>Endulzados</span>
         </Link>
       </li>
 
       <li className={`nav-item ${location.pathname === '/products' && 'active'}`}>
         <Link className="nav-link" to="/products">
-          <i className="fas fa-fw fa-headphones"></i>
-          <span>Bebidas Dieteticas</span>
+          <i className="fa-solid fa-bottle-water"></i>
+          <span>Bebidas Nutritivas</span>
         </Link>
       </li>
 

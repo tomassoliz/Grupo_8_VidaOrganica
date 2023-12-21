@@ -206,7 +206,7 @@ export const FormProduct = ({
                     Seleccione...
                   </option>
                   {data.brands.map(({ id, name }) =>
-                    formValues.brandId == id ? (
+                    formValues.brandId === id ? (
                       <option key={id} selected value={id}>
                         {name}
                       </option>
@@ -232,7 +232,7 @@ export const FormProduct = ({
               </option>
               {data.sections &&
                 data.sections.map(({ id, name }) =>
-                  formValues.sectionId == id ? (
+                  formValues.sectionId === id ? (
                     <option key={id} selected value={id}>
                       {name}
                     </option>
@@ -257,7 +257,7 @@ export const FormProduct = ({
               </option>
               {data.categories &&
                 data.categories.map(({ id, name }) =>
-                  formValues.categoryId == id ? (
+                  formValues.categoryId === id ? (
                     <option key={id} selected value={id}>
                       {name}
                     </option>

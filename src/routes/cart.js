@@ -1,5 +1,5 @@
 const express = require('express');
-const { showAll, addItem, removeItem, emptyCart, removeAllItem } = require('../controllers/apiCartController');
+const { showAll, addItem, removeItem, emptyCart, removeAllItem, finallyCart, } = require('../controllers/apiCartController');
 const router = express.Router();
 
 /* /cart */
@@ -9,5 +9,6 @@ router
     .delete('/', removeItem)
     .delete('/item-all',removeAllItem)
     .delete('/all',emptyCart)
+    .delete('/finally',finallyCart)
 
 module.exports = router;

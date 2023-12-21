@@ -200,7 +200,7 @@ const getAllBrands = async (req, res) => {
 
 const getAllCategories = async (req, res) => {
     try {
-      const products = await db.category.findAll();
+      const products = await db.Category.findAll();
   
       return res.status(200).json({
         ok: true,

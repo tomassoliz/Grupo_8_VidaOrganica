@@ -31,7 +31,8 @@ module.exports = {
     // agrega items al carrito
     addItem: async (req, res) => {
         try {
-
+            
+            console.log(req.body, "---------------------------------------------------");
             if (!req.session.cart) {
                 let error = new Error()
                 error.message = 'Tienes que iniciar sesion';
@@ -238,6 +239,50 @@ module.exports = {
                 ok: true,
                 cart: req.session.cart,
                 message: "Carrito vacio"
+            })
+
+        } catch (error) {
+            console.log(error);
+            return res.status(error.status || 500).json({
+                ok: false,
+                cart: null,
+                message: error.message || 'Hubo un error'
+            })
+        }
+    },
+
+    // Vendido 
+    finallyCart: async (req, res) => {
+        try {
+
+            if (!req.session.cart) {
+                let error = new Error()
+                error.message = 'Tienes que iniciar sesion';
+                error.status = 404;
+                throw error
+            }
+
+            req.session.cart = {
+                // recibe todo la propiedad que tiene
+                ...req.session.cart,
+                products: [],
+                total: 0,
+            }
+
+            /* base de datos */
+            await db.Item.destroy(
+                {
+                    where: {
+                        // solo borrar todo lo que corresponden a la orden
+                        orderId: req.session.cart.orderId,
+                    }
+                }
+            )
+
+            return res.status(200).json({
+                ok: true,
+                cart: req.session.cart,
+                message: "!Tu compra ha sido exitosa!"
             })
 
         } catch (error) {

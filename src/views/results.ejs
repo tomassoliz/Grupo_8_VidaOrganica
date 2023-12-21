@@ -19,7 +19,7 @@
 								<% results.forEach(product => { %>
 									
 										<%- include('partials/products',{
-											...product.dataValues,
+											product,
 											toThousand
 										}) %>
 									

@@ -11,7 +11,7 @@ const showProductInCart = (products, total) => {
         $("cart-table").innerHTML += `
         <tr>
             <th scope="row">
-            <img src="/images/${image}" width="100" alt="" />
+            <img src="/images/img-products/${image}" width="100" alt="" />
             </th>
             <td>${name}</td>
             <td>
@@ -31,6 +31,7 @@ const showProductInCart = (products, total) => {
       $("showTotal").innerHTML = total;
       // si es que hay algoo ebn el carrito se remueve el disabled
       $('btn-empty-cart').classList.remove('disabled')
+      $('btn-finally-cart').classList.remove('disabled')
     }
     // si no...
   } else {
@@ -41,6 +42,7 @@ const showProductInCart = (products, total) => {
 `;
     // aca lo añadis el disabled
     $('btn-empty-cart').classList.add('disabled')
+    $('btn-finally-cart').classList.add('disabled')
 
   }
 };
@@ -60,7 +62,7 @@ const showMessageInfo = (message) => {
     toast: true,
     position: "top-end",
     showConfirmButton: false,
-    timer: 1000,
+    timer: 1500,
     timerProgressBar: true,
     didOpen: (toast) => {
       toast.onmouseenter = Swal.stopTimer;
@@ -68,7 +70,7 @@ const showMessageInfo = (message) => {
     }
   });
   Toast.fire({
-    icon: "info",
+    icon: "success",
     title: message
   });
 }
@@ -92,7 +94,7 @@ const addItemToCart = async (quantity, product) => {
 
     const {
       ok,
-      cart: { products, total },
+      cart,
       message,
     } = await response.json();
 
@@ -100,23 +102,23 @@ const addItemToCart = async (quantity, product) => {
       throw new Error(message);
       // esto es como un return, te corta la ejecucion
     }
-
+    const { products, total } = cart
     // (*)
     showProductInCart(products, total);
     // (**)
     showCountCart(products);
     // (***)
     showMessageInfo(message)
-
+  
   } catch (error) {
+   console.log(error, "**********************************************");
     Swal.fire({
       title: "Hay un error",
       text: error.message,
-      icon: "Error",
+      icon: "error",
     });
   }
 };
-
 
 const removeItemToCart = async (id) => {
   try {
@@ -145,7 +147,7 @@ const removeItemToCart = async (id) => {
     Swal.fire({
       title: "Hay un error",
       text: error.message,
-      icon: "Error",
+      icon: "error",
     });
   }
 };
@@ -175,7 +177,7 @@ const removeAllItem = async (id) => {
     Swal.fire({
       title: "Hay un error",
       text: error.message,
-      icon: "Error",
+      icon: "error",
     });
   }
 };
@@ -184,6 +186,36 @@ const removeAllItem = async (id) => {
 const emptyCart = async () => {
   try {
     const response = await fetch('/cart/all', {
+      method: 'delete'
+    })
+
+    const {
+      ok,
+      cart: { products, total },
+      message,
+    } = await response.json();
+
+    if (!ok) {
+      throw new Error(message);
+    }
+
+    showProductInCart(products, total);
+    showCountCart(products);
+    showMessageInfo(message);
+
+
+  } catch (error) {
+    Swal.fire({
+      title: "Hay un error",
+      text: error.message,
+      icon: "error",
+    });
+  }
+}
+
+const finallyCart = async () => {
+  try {
+    const response = await fetch('/cart/finally', {
       method: 'delete'
     })
 

@@ -8,7 +8,7 @@ module.exports = async (req, res) => {
 
         if (errors.isEmpty()) {
 
-            const { name, surname, email, birthday, address, call, about } = req.body
+            const { name, surname, email, birthday, address, call, about, province, city } = req.body
             // creo una constante con la data del usuario
 
             const data = {
@@ -17,7 +17,7 @@ module.exports = async (req, res) => {
                 email: email.trim(),
                 birthday: birthday || null,
                 address,
-                call,
+                call: call || null,
                 about
                 // avatar: req.file?.filename || user.avatar ------> si existe accede = con el signo ?
             }
@@ -29,6 +29,17 @@ module.exports = async (req, res) => {
                 {
                     where: {
                         id: req.session.userLogin.id
+                    }
+                })
+
+            await db.Address.update({
+                city,
+                province,
+                address
+            },
+                {
+                    where: {
+                        userId: req.session.userLogin.id
                     }
                 })
 

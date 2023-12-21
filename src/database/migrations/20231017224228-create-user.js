@@ -31,7 +31,8 @@ module.exports = {
         type: Sequelize.TEXT
       },
       call: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: true,
       },
       avatar: {
         type: Sequelize.STRING

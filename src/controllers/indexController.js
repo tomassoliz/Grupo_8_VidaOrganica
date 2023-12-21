@@ -159,16 +159,16 @@ module.exports = {
 			}
 		})
 			.then(results => {
+                // return res.send(results)
 				return res.render('results',{
 					results,
 					toThousand,
 					keywords
 				})
 			})
-			.catch(error => console.log(error))
-
-		
+			.catch(error => console.log(error))		
 	},
+
     checkEmail : async (req, res) => {
         try {
           if (!req.query.email) {

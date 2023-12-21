@@ -1,34 +1,17 @@
 const db = require('../../database/models');
 
 module.exports = async (req, res) => {
-
-
-        try {
-            
+        try {  
           const { name } = req.body;
-      
-          // Validar si el nombre de la categoría ya existe
-          /*const existingCategory = await db.Category.findAll({
-            order: ['name']
-
-          });
-      
-          if (existingCategory) {
-            console.log('Error: La categoría ya existe');
-            return res.status(400).send('La categoría ya existe');
-          }*/
-          // Crear la nueva categoría
           const categories = await db.Category.create({
             name: name,
           });
       
-          return res.redirect('/admin'
-              
-        );// Redirigir a la lista de categorías
+          return res.render('/admin', {
+            categories
+          })         
         } catch (error) {
           console.error('Error al crear la categoría:', error);
           res.status(500).send('Error interno del servidor');
         }
-      
-
 }

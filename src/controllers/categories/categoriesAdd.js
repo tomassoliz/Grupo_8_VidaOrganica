@@ -2,9 +2,9 @@ const db = require('../../database/models')
 
 module.exports = async (req, res) => {
   try {
-    const categories = await db.Category.findAll({
-      include: Product,
-    });
+    const categories = db.Category.findAll({
+      order: ['name']
+    })
 
     return res.render('admin', {
       categories,
